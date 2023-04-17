@@ -1,18 +1,62 @@
-body {
+.row-main {
 
-    background: url('/media/cpr-first-aid-training-concept-97130033resizededited.jpg') no-repeat center center fixed;
+    background: url('/media/front-view-hands-holding-safety-first-signb.jpg');
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    
+    filter: grayscale(100%);
+    opacity: 0.3;
+    
+}
+
+.main-container {
+    
+}
+
+.row-header1 {
+    background-color: #CC0000;
+    height: 5vh;
+}
+
+.row-header2 {
+    background-color: #CCCCCC;
+    height: 10vh;
+}
+
+.row-header3 {
+    background-color: #CC0000;
+    height: 5vh;
+}
+
+.row-main {
+    background-color: #CCCCCC;
+    height: 60vh;
    
 }
 
-.container-header {
+.row-footer1 {
     background-color: #CC0000;
-
+    height: 5vh;
 }
 
-/* .row-header {
+.row-footer2 {
     background-color: #CCCCCC;
-} */
-
-.container-middle {
-    background-color: #CCCCCC;
+    height: 10vh;
 }
+
+.row-footer3 {
+    background-color: #CC0000;
+    height: 5vh;
+}
+
+.fab {
+    color: black;
+}
+
+.socal-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
