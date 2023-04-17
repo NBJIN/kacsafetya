@@ -1,0 +1,18 @@
+body {
+
+    background: url('/media/cpr-first-aid-training-concept-97130033resizededited.jpg') no-repeat center center fixed;
+   
+}
+
+.container-header {
+    background-color: #CC0000;
+
+}
+
+/* .row-header {
+    background-color: #CCCCCC;
+} */
+
+.container-middle {
+    background-color: #CCCCCC;
+}
