@@ -6,7 +6,8 @@
     padding: 0px;
     margin: 0px;
     filter: grayscale(100%);
-    opacity: 0.3;  
+    opacity: 0.3; 
+    z-index: -1; 
 }
 
 .company-logo {
@@ -44,6 +45,22 @@
     background-color: #CCCCCC;
     height: 60vh;
    
+}
+
+.jumbotron-main {
+   
+    position: relative;
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron-main h1,
+.jumbotron-main p {
+    position: abosolute;
+    /* top: 50%;
+    left: 50%; */
+    /* transform: trnaslate(-50%, -50%); */
+    color:black;
 }
 
 .row-footer1 {

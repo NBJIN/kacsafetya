@@ -46,36 +46,48 @@
   <div class="container-fluid ">
       <div class="row-header1">
         <div class="col">
-          Top Header -Red
         </div>
-      
       </div>
+  </div>
 
-      <div class="row-header2">
-        <div class="col col-logo">
-          <img src="{% static '/media/logo.jpg' %}" alt="company-logo" class="company-logo">
-        </div>
-        <div class="col">
-         nav items 
-        </div>
+  <div class="row-header2">
+    <div class="col col-logo">
+      <img src="{% static '/media/logo.jpg' %}" alt="company-logo" class="company-logo">
+    </div>
+
+    <div class="col">
+      nav items 
+    </div>
        
-      </div>
+  </div>
 
       <div class="row-header3">
         <div class="col">
-         Bottom Header - Red
+        
         </div>
     </div>
   </div>
+
+
 
   <div class="container-fluid main-container">
     <div class="col">
       <div class="row-main">
+
+        <div class="container">
+          {% block content %}
+      
+          
+          {% endblock %}
+      
+        </div>
+
+
           
       </div>
     </div>
   </div>
-
+  
 
   <div class="container-fluid">
     <div class="row-footer1">
@@ -124,11 +136,7 @@
 
     {% block page_header %}
     {% endblock %}
-
-    {% block content %}
-
-    
-    {% endblock %}
+ 
 
     {% block postloadjs %}
     {% endblock %}
