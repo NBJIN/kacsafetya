@@ -1,13 +1,21 @@
 .row-main {
-
     background: url('/media/front-view-hands-holding-safety-first-signb.jpg');
     background-size: cover;
     max-width: 100%;
     height: auto;
-    
+    padding: 0px;
+    margin: 0px;
     filter: grayscale(100%);
-    opacity: 0.3;
-    
+    opacity: 0.3;  
+}
+
+.company-logo {
+    height: 95px;
+}
+
+.col-logo {
+    padding: 0px;
+    margin: 0px;
 }
 
 .main-container {
