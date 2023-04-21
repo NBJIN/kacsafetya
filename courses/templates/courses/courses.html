@@ -10,10 +10,25 @@
 {% endblock %}
 
 {% block content %}
-<div class="conainter">
+<div class="conainter-fluid">
     <div class="row">
-        <div class="col">
-            {{ courses }}
+        <div class="col logo-font text-center">
+            <h2>All Courses</h2>
+          <hr>
+          {% for course in courses}
+          <div class="card h-100 border-0">
+            <img class="card-img-top" src="" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-title">Abrasive Wheels</h4>
+              <p class="card-text">
+                Name: Abrasive Wheels
+                Location: Classroom/Online
+                Price: €80.00
+                Category: Safety
+              </p>
+              <a href="#!" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
 
         </div>
     </div>
