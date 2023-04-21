@@ -29,6 +29,7 @@
     height: 65px;
     padding-left: 0px;
     margin: 0px;
+    margin-top: 0px;   
 }
 
 .col {
@@ -152,4 +153,8 @@
 .nav-link-basket,
 .nav-item-profile {
     justify-content: space-around;
+}
+
+.navbar-expand-lg {
+    padding: 0;
 }
