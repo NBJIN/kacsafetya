@@ -1,17 +1,13 @@
 .row-main {
-    background: url('/media/front-view-hands-holding-safety-first-signb.jpg');
-    background-size: cover; 
-
-
-
-    filter: grayscale(100%);
-    opacity: 0.1; 
+   
 
     padding-left: 0px;
     padding-right: 0px;
 
     margin-right: auto;
     margin-left: auto;
+    height: 100%;
+    width: auto;
 
 
 
@@ -32,6 +28,15 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }*/
+
+.image-main {
+    filter:grayscale(1);
+    width: 100%;
+    height: auto;
+    opacity: 0.2;
+
+
+}
 .company-logo { 
     height: 65px;
     padding-left: 0px;
@@ -80,11 +85,13 @@
 }
 
 .jumbotron-main {
-    position: relative;
+    position: absolute;
     text-align: center;
     background-color: transparent; 
     opacity: 1; 
     color: black; 
+    width: 100%;
+    top: 0px;
 
     
 
@@ -94,10 +101,11 @@
 .jumbotron-main p {
     font-weight: bold;
     color: #000;
-    position: abosolute;
-    top: 50%;
+    position: relative;
+    
+    /* top: 50%;
     left: 50%;
-    transform: trnaslate(-50%, -50%); 
+    transform: translate(-50%, -50%);  */
 
     
 } 
