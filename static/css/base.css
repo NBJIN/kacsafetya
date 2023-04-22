@@ -31,12 +31,21 @@
 
 .image-main {
     filter:grayscale(1);
+    /* width: 90%;
+    max-height: 100%; */
+    opacity: 0.5;
+
+
+}
+
+/* .image-main {
+    filter:grayscale(1);
     width: 100%;
     height: auto;
     opacity: 0.2;
 
 
-}
+} */
 .company-logo { 
     height: 65px;
     padding-left: 0px;
@@ -78,6 +87,11 @@
     height: 5vh;
 }
 
+.form-control {
+    height: 33px;
+   
+}
+
 .row-main {
     background-color: #CCCCCC;
     height: 66vh;
@@ -99,9 +113,14 @@
 
 .jumbotron-main h1,
 .jumbotron-main p {
-    font-weight: bold;
+    /* font-weight: bold; */
     color: #000;
     position: relative;
+    font: Archivo;
+    padding-top: 20px;
+    font-weight: 450;
+    
+   
     
     /* top: 50%;
     left: 50%;
@@ -153,10 +172,12 @@
     margin-left: auto;
 }
 
-.navbar-nav, 
+
+
+
 .nav-link-allcourses,
 .nav-link-basket,
-.nav-item-profile,
+.nav-link-dropdown,
 .dropdown-itemregister,
 .dropdown-itemlogin,
 .dropdown-itemmanagecourses {
@@ -164,12 +185,10 @@
    justify-content: space-around; 
 }
 
-.nav-link-allcourses,
-.nav-link-basket,
-.nav-item-profile {
-    justify-content: space-around;
-}
+
+/** positioning of nav bar item in container 2 to fit in between lines */
 
 .navbar-expand-lg {
     padding: 0;
 }
+
