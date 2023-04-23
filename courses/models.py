@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Location(models.Model):
+    class Meta:
+        verbose_name_plural = "Location"
+
     name = models.CharField(max_length=30)
 
     def __str__(self):
@@ -9,6 +12,9 @@ class Location(models.Model):
 
 
 class Group_By(models.Model):
+    class Meta:
+        verbose_name_plural = "Group By"
+
     name = models.CharField(max_length=30)
 
     def __str__(self):
