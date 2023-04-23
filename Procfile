@@ -1,1 +1,1 @@
-web: gunicorn kacsafetya.wsgi:application
+web: gunicorn kac-safety.wsgi:application

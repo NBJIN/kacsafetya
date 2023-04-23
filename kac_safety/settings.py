@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
-
 import dj_database_url
 
 from pathlib import Path
@@ -31,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['kacsafetya.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['kac-safetya.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -108,11 +107,18 @@ WSGI_APPLICATION = 'kac_safety.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# if 'DATABASE_URL' in os.environ:
+#     DATABASES = {
+#         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+#     }
+
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
+
 else:
+
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
