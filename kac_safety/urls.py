@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from courses import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include('landing.urls')),
     path('courses/', include('courses.urls')),
+    path('all_courses/', views.all_courses, name='all_courses'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
