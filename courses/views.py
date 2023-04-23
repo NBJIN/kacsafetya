@@ -10,4 +10,4 @@ def courses(request):
         'courses': courses,
     }
 
-    return render(request, 'courses/courses.html', context)
+    return render(request, 'courses/courses_list.html', context)
