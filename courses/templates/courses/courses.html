@@ -10,30 +10,46 @@
 {% endblock %}
 
 {% block content %}
-<!-- <div class="conainter-fluid">
+<div class="overlay"></div>
+<div class="conainter-fluid">
     <div class="row">
-        <div class="col logo-font text-center">
-            <h2>All Courses</h2>
-          <hr>
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">All Courses</h2>
+            <hr class="w-50 mb-1">
+            </div>
+            </div>
+
+
+          <div class="row">
           {% for course in courses}
           <div class="card h-100 border-0">
-            <img class="card-img-top" src="" alt="Card image cap">
+            <img class="card-img-top" src="media/engineer-businessman-handshake-construction-site-smiling-shaking-hands-happy-architect-cheerful-african-164999718.jpg" alt="Card image cap">
             <div class="card-body">
-              <h4 class="card-title">Abrasive Wheels</h4>
+              <h4 class="card-title">{{ Courses.title }}</h4>
               <p class="card-text">
-                Name: Abrasive Wheels
-                Location: Classroom/Online
+                {{ Courses.title }}
+                {{ Courses.location }}
+
                 Price: €80.00
-                Category: Safety
+                Category: Safety}}
               </p>
               <a href="#!" class="btn btn-primary">Go somewhere</a>
             </div>
+            </div>
           </div>
 
-        </div>
+        <!-- </div> -->
+      </div>
     </div>
-</div>
+
 
 
 
 {% endblock %}
+ title = models.CharField(max_length=250)
+    location = models.ForeignKey('Location', null=True, blank=True, on_delete=models.SET_NULL)
+    details = models.CharField(max_length=5000)
+    image = models.ImageField(null=True, blank=True)
+    group_by = models.ForeignKey('Group_By', null=True, blank=True, on_delete=models.SET_NULL)
+    fee = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    date_of_course = models.DateTimeField(auto_now_add=True)

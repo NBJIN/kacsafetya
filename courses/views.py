@@ -1,11 +1,10 @@
 from django.shortcuts import render
-from .models import Courses
-
+from .models import Courses, Location, Group_By
 
 def courses(request):
     """ A view to show list of all courses """
 
-    # course = Courses.details.all()
+    courses = Courses.objects.all()
 
     context = {
         'courses': courses,
