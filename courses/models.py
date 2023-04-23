@@ -21,11 +21,11 @@ class Courses(models.Model):
 
     title = models.CharField(max_length=250)
     location = models.ForeignKey('Location', null=True, blank=True, on_delete=models.SET_NULL)
-    fee = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     details = models.CharField(max_length=5000)
     image = models.ImageField(null=True, blank=True)
-    date_of_course = models.DateTimeField(auto_now_add=True)
     group_by = models.ForeignKey('Group_By', null=True, blank=True, on_delete=models.SET_NULL)
+    fee = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    date_of_course = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title
