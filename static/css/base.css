@@ -68,7 +68,9 @@
     padding-right: 0px;
     margin-right: auto;
     margin-left: auto;
-    padding-bottom: 300px; /* this needs to be taken out as it is only there to stretch container for cards */
+    /* padding-bottom: 300px; */
+    /*this needs to be taken out as it is only there to stretch container for cards*/
+
     
 }
 
@@ -200,7 +202,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
-} */
+    /* position: fixed; */
+    /* background: white; */
+    /* z-index: 1; was at -1 */
+/* }  */
