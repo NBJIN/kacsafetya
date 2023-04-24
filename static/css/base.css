@@ -195,7 +195,7 @@
 }
 
 /** overlay on courses page */
-.overlay {
+/* .overlay {
     height: 100%;
     width: 100%;
     top: 0;
@@ -203,4 +203,4 @@
     position: fixed;
     background: white;
     z-index: -1;
-}
+} */

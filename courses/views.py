@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Courses, Location, Group_By
 
 
@@ -14,9 +14,9 @@ def all_courses(request):
     return render(request, 'courses/all_courses.html', context)
 
 
-def detailed_courses(request):
+def detailed_courses(request, course_id):
     """ A view to show each course in more detail """
-    courses = get_object_or_404(Courses, pk=courses_id)
+    courses = get_object_or_404(Courses, pk=course_id)
 
     context = {
         'courses': courses,
