@@ -28,24 +28,24 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }*/
-
+/* 
 .image-main {
     filter:grayscale(1);
     /* width: 90%;
     max-height: 100%; */
-    opacity: 0.5;
+    /* opacity: 0.5; */
 
 
-}
+/* } */
 
-.image-main {
+/* .image-main {
     filter:grayscale(1);
     width: 100%;
     height: auto;
     opacity: 0.2;
 
 
-} 
+}  */
 
 .company-logo { 
     height: 65px;
@@ -206,3 +206,8 @@
     /* background: white; */
     /* z-index: 1; was at -1 */
 /* }  */
+
+
+.card {
+    float: left
+}
