@@ -29,13 +29,13 @@
       </header>
       <div class="filter-content collapse show" id="collapse_1">
       <div class="card-body">
-        <ul class="list-menu">
-          <li><a href="{% url 'all_courses' %}?group_by=safety">Safety</a></li>
-          <li><a href="{% url 'all_courses' %}?group_by=health">Health</a></li>
-        </ul>
+        <p>
+          <input type="checkbox"><a href="{{ courses.group_by }}?group_by=safety">&nbsp;&nbsp;Safety</a><br>
+          <input type="checkbox"><a href="{{ request.path }}?group_by=health">&nbsp;&nbsp;Health</a>
+        </p>
       </div>
       </div>
-      <a class="btn btn-sm btn-secondary" href="" role="button">Search</a>
+      <a class="btn btn-sm btn-secondary" href="{% url 'all_courses' %}" role="button">Search</a>
     </article>
     <article class="filter-group">
       <header class="card-header">
@@ -47,13 +47,15 @@
       </header>
       <div class="filter-content collapse show" id="collapse_1">
       <div class="card-body">
-        <ul class="list-menu">
-          <li><a href="{% url 'all_courses' %}?location=classroom">Classroom</a></li>
-          <li><a href="{% url 'all_courses' %}?location=online">Online</a></li>
-        </ul>
+  
+          <p>
+          <input type="checkbox"><a href="{{ courses.location }}?location=classroom">&nbsp;&nbsp;Classroom</a><br>
+          <input type="checkbox"><a href="{{ courses.location }}?location=online">&nbsp;&nbsp;Online</a>
+
+          </p>
       </div>
       </div>
-      <a class="btn btn-sm btn-secondary" href="" role="button">Search</a>
+      <a class="btn btn-sm btn-secondary" href="{{ courses.location }}" role="button">Search</a>
     </article>
   </div> 
 

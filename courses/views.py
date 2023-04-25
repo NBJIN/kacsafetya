@@ -12,9 +12,9 @@ def all_courses(request):
 
     if request.GET:
         if 'Location' in request.GET:
-            locations = request.GET['Locatiion'].split(',')
-            courses = courses.filter(Location__name__in=locations)
-            locations = Location.objects.filter(name__in=categories)
+            Locations = request.GET['Location'].split(',')
+            courses = all_courses.filter(Location__name__in=Locations)
+            Locations = Location.objects.filter(name__in=Locations)
 
         # lookup is not working when i enter a word that is not on the website 
         if 'lookup' in request.GET:
@@ -29,7 +29,7 @@ def all_courses(request):
     context = {
         'courses': courses,
         'search_term': lookup,
-        'current_location': Location,
+        'current_Location': Location,
     }
 
     return render(request, 'courses/all_courses.html', context)
@@ -37,7 +37,7 @@ def all_courses(request):
 
 def detailed_courses(request, course_id):
     """ A view to show each course in more detail """
-    courses = get_object_or_404(Courses, pk=course_id)
+    courses = get_object_or_404(Courses, pk=int(course_id))
 
     context = {
         'courses': courses,
