@@ -30,8 +30,8 @@
       <div class="filter-content collapse show" id="collapse_1">
       <div class="card-body">
         <ul class="list-menu">
-          <li><a href="">Safety</a></li>
-          <li><a href="">Health</a></li>
+          <li><a href="{% url 'all_courses' %}?group_by=safety">Safety</a></li>
+          <li><a href="{% url 'all_courses' %}?group_by=health">Health</a></li>
         </ul>
       </div>
       </div>
@@ -48,8 +48,8 @@
       <div class="filter-content collapse show" id="collapse_1">
       <div class="card-body">
         <ul class="list-menu">
-          <li><a href="">Classroom</a></li>
-          <li><a href="">Online</a></li>
+          <li><a href="{% url 'all_courses' %}?location=classroom">Classroom</a></li>
+          <li><a href="{% url 'all_courses' %}?location=online">Online</a></li>
         </ul>
       </div>
       </div>
