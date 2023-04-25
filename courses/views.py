@@ -8,6 +8,7 @@ def all_courses(request):
     """ A view to show list of all courses """
 
     courses = Courses.objects.all()
+    Locations = None
     lookup = None
 
     if request.GET:
@@ -29,7 +30,8 @@ def all_courses(request):
     context = {
         'courses': courses,
         'search_term': lookup,
-        'current_Location': Location,
+        'current_Locations': Locations,
+
     }
 
     return render(request, 'courses/all_courses.html', context)
