@@ -11,10 +11,10 @@ def all_courses(request):
     lookup = None
 
     if request.GET:
-        if 'group_by' in request.GET:
-            group_by = request.GET['group_by'].split(',')
-            courses = courses.filter(group_by__name__in=group_by)
-            group_by = Group_By.objects.filter(name__in=group_by)
+        if 'Location' in request.GET:
+            locations = request.GET['Locatiion'].split(',')
+            courses = courses.filter(Location__name__in=locations)
+            locations = Location.objects.filter(name__in=categories)
 
         # lookup is not working when i enter a word that is not on the website 
         if 'lookup' in request.GET:
@@ -29,7 +29,7 @@ def all_courses(request):
     context = {
         'courses': courses,
         'search_term': lookup,
-        'group': group_by,
+        'current_location': Location,
     }
 
     return render(request, 'courses/all_courses.html', context)
@@ -45,3 +45,15 @@ def detailed_courses(request, course_id):
     }
 
     return render(request, 'courses/detailed_courses.html', context)
+
+
+def edit_courses(request, course_id):
+    """ A view to show each course in more detail """
+    courses = get_object_or_404(Courses, pk=course_id)
+
+    context = {
+        'courses': courses,
+
+    }
+
+    return render(request, 'courses/edit_courses.html', context)
