@@ -211,3 +211,11 @@
 .card {
     float: left
 }
+
+.button-options {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    padding-bottom: 180px;
+    padding-right: 5px;
+}
