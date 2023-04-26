@@ -219,3 +219,21 @@
     padding-bottom: 180px;
     padding-right: 5px;
 }
+
+/* arrow button at the bottom of all courses page  */
+
+.btt-button {
+    height: 30px;
+    width: 25px;
+    position: absolute;
+    align-items: center;
+    bottom: 10px;
+    right: 10px;
+  
+}
+
+/* arrow button at the bottom of all courses page  */
+
+.btt-link {
+    cursor: pointer;  
+}
