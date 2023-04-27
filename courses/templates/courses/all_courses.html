@@ -30,8 +30,10 @@
       <div class="filter-content collapse show" id="collapse_1">
       <div class="card-body">
         <p>
-          <input type="checkbox"><a href="{{ courses.group_by }}?group_by=safety">&nbsp;&nbsp;Safety</a><br>
-          <input type="checkbox"><a href="{{ request.path }}?group_by=health">&nbsp;&nbsp;Health</a>
+         
+          <input type="radio" name="group_by"><a href="{% url 'all_courses' %}?group_by=safety">&nbsp;&nbsp;Safety</a><br>
+          <input type="radio" name="group_by"><a href="{% url 'all_courses' %}?group_by=health">&nbsp;&nbsp;Health</a>
+          
         </p>
       </div>
       </div>
@@ -49,8 +51,8 @@
       <div class="card-body">
   
           <p>
-          <input type="checkbox"><a href="{{ courses.location }}?location=classroom">&nbsp;&nbsp;Classroom</a><br>
-          <input type="checkbox"><a href="{{ courses.location }}?location=online">&nbsp;&nbsp;Online</a>
+          <input type="radio" name="location"><a href="{% url 'all_courses' %}?location=classroom">&nbsp;&nbsp;Classroom</a><br>
+          <input type="radio" name="location"><a href="{% url 'all_courses' %}?location=online">&nbsp;&nbsp;Online</a>
 
           </p>
       </div>

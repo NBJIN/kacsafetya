@@ -34,6 +34,5 @@ class Courses(models.Model):
     date_of_course = models.DateTimeField(auto_now_add=True)
     image_url = models.URLField(max_length=1500, null=True, blank=True)
 
-
     def __str__(self):
         return self.title
