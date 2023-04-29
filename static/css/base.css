@@ -237,3 +237,20 @@
 .btt-link {
     cursor: pointer;  
 }
+
+/* button outline black on the detailed courses page */
+
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to overife link color for <a> elements */
+    border: 1px solid black;
+
+}
+
+/* button outline black on the detailed courses page */
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}

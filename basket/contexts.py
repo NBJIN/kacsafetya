@@ -15,7 +15,7 @@ def basket_contents(request):
         grand_total = total * Decimal(settings.STANDARD_DISCOUNT_PERCENTAGE*10/100)
         free_discount_delta = FREE_DISCOUNT - total
     free_discount_delta = FREE_DISCOUNT - total
- 
+
     # else:
     #     discount = 0
     #     free_discount_delta = 0

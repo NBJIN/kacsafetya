@@ -39,6 +39,30 @@
                     <p class="mt-3">{{ courses.details }}</p>
                     <p class="mt-3">{{ courses.date_of_course }}</p>
                     <p class="mt-3">{{ courses.fee }}</p>
+                    <form class="form" action="{% url 'add_to_basket' course.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <p class="mt-3"><strong>Quantity:</strong></p>
+                                <div class="form-group w-50">
+                                    <div class="input-group">
+                                        <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ course.id }}" id="id_qty_{{ course.id }}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <a href="{% url 'all_courses' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                    <span class="icon">
+                                        <i class="fa fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add Item To Basket">
+                            </div>
+                            <input type="hidden" name="redirect_url" vlaue="{{ request.path }}">
+
+                        </div>
+                    </form>
                 </div>
                 <a class="btn btn-sm btn-light" href="" role="button">Edit</a>      
                 <a class="btn btn-sm btn-light" href="" role="button">Delete</a>
@@ -55,11 +79,3 @@
     </p>
 {% endblock %}
 
-<!-- title = models.CharField(max_length=250)
-location = models.ForeignKey('Location', null=True, blank=True, on_delete=models.SET_NULL)
-details = models.CharField(max_length=5000)
-image = models.ImageField(null=True, blank=True)
-group_by = models.ForeignKey('Group_By', null=True, blank=True, on_delete=models.SET_NULL)
-fee = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-date_of_course = models.DateTimeField(auto_now_add=True)
-image_url = models.URLField(max_length=1500, null=True, blank=True) -->
