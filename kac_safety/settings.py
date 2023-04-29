@@ -173,5 +173,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-Discount = 200
-STANDARD_DISCOUNT = 10
+DISCOUNT = 200
+STANDARD_DISCOUNT_PERCENTAGE = 10
