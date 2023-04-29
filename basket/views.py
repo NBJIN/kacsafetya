@@ -9,8 +9,9 @@ def view_basket(request):
     return render(request, 'basket/basket.html')
 
 
-def add_to_basket(request, item_id, course_id):
+def add_to_basket(request, item_id):
     """ Add a quantity of courses to the basket """
+    courses = get_object_or_404(Courses, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     basket = request.session.get('basket', {})
@@ -21,5 +22,5 @@ def add_to_basket(request, item_id, course_id):
         basket[item_id] = quantity
 
     request.session['basket'] = basket
-    print(request.session['bag'])
+
     return redirect(redirect_url)
