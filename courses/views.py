@@ -17,7 +17,7 @@ def all_courses(request):
             courses = all_courses.filter(Location__name__in=Locations)
             Locations = Location.objects.filter(name__in=Locations)
 
-        # lookup is not working when i enter a word that is not on the website 
+        # lookup is not working when i enter a word that is not on the website
         if 'lookup' in request.GET:
             lookup = request.GET['lookup']
             if not lookup:

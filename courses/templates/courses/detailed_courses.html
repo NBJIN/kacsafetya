@@ -57,8 +57,9 @@
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                               
+                               <a href="{% url 'view_basket' %}" >
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add Item To Basket">
+                               </a>
                             </div>
                             <input type="hidden" name="redirect_url" vlaue="{{ request.path }}">
 

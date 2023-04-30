@@ -10,4 +10,4 @@ class Basket(models.Model):
     grand_total = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
 
     def __str__(self):
-        return self.course_title
+        return self.title
