@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Basket(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Basket"
     title = models.CharField(max_length=250)
     quantity = models.PositiveIntegerField(default=0)
     fee = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
