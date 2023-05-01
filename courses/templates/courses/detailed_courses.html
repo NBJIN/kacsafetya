@@ -100,3 +100,8 @@
     </p>
 {% endblock %}
 
+{% block postloadjs %}
+{{ block.super }}
+{% include 'courses/includes/quantity_input_script.html' %}
+{% endblock %}
+
