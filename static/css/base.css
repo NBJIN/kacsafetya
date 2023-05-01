@@ -256,3 +256,24 @@
     background: black;
     color: white !important;
 }
+
+
+/* bootstrap toasts */
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px:
+    z-index: 99999999999;
+}
+
+/* .custom-toast {
+    overflow: visible;
+
+}
+
+.toast-capper {
+    height: 2px;
+} */
+
+
+/* dont have the above two css styling elements in code as of yet  */
