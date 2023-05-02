@@ -42,8 +42,8 @@ class Purchase(models.Model):
     def save(self, *args, **kwargs):
         """ set purchase_no if its not set already by overiding the original save method """
 
-        if not self.order_number:
-            self.order_number = self._generate_purchase_no()
+        if not self.purchase_no:
+            self.purchase_no = self._generate_purchase_no()
         super().save(*args, **kwargs)
 
     def __str__(self):
