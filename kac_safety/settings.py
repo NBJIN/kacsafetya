@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'landing',
     'courses',
     'basket',
+    'purchase',
 ]
 
 MIDDLEWARE = [
