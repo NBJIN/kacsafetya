@@ -6,4 +6,4 @@ class PurchaseConfig(AppConfig):
     name = 'purchase'
 
     def ready(self):
-        import checkout.signals
+        import purchase.signals
