@@ -12,7 +12,6 @@ class PurchaseForm(forms.ModelForm):
                   'quantity', 'fee', 'total', 'discount',
                   'grand_total',)
 
-
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
