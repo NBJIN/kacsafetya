@@ -75,33 +75,38 @@
         </div>
         <div class="col-12 col-lg-6">
             <p class="text-muted">Please fill out the form below to complete your order </p>
-            <form action="{% 'purchase' %}" method="POST" id="purchase-form">
+            <form action="{%  url 'purchase' %}" method="POST" id="purchase-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Customer Details</legend>
-                    {{ purchase-form.fname | as_crispy_field }}
-                    {{ purchase-form.lname | as_crispy_field }}
+                    {% crispy purchase-form.fname %}
+                    {% crispy purchase-form.lname %}
+                
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Contact Details</legend>
-                    {{ purchase-form.company | as_crispy_field }}
-                    {{ purchase-form.address1 | as_crispy_field }}
-                    {{ purchase-form.address2 | as_crispy_field }}
-                    {{ purchase-form.address3 | as_crispy_field }}
-                    {{ purchase-form.postcode | as_crispy_field }}
-                    {{ purchase-form.telephone | as_crispy_field }}
-                    {{ purchase-form.email | as_crispy_field }}
-                    {{ purchase-form.lname | as_crispy_field }}
+                    {% crispy purchase-form.company %}
+                    {% crispy purchase-form.address1 %}
+                    {% crispy purchase-form.address2 %}
+                    {% crispy purchase-form.address3 %}
+                    {% crispy purchase-form.postcode %}
+                    {% crispy purchase-form.telephone %}
+                    {% crispy purchase-form.email %}
+                    {% crispy purchase-form.lname %}
+
+              
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Course Details</legend>
+
+                    {% crispy purchase-form.course_title %}
+                    {% crispy purchase-form.quantity %}
+                    {% crispy purchase-form.fee %}
+                    {% crispy purchase-form.total %}
+                    {% crispy purchase-form.discount %}
+                    {% crispy purchase-form.grand_total %}
                    
-                    {{ purchase-form.course_title | as_crispy_field }}
-                    {{ purchase-form.quantity | as_crispy_field }}
-                    {{ purchase-form.fee | as_crispy_field }}
-                    {{ purchase-form.total | as_crispy_field }}
-                    {{ purchase-form.discount | as_crispy_field }}
-                    {{ purchase-form.grand_total | as_crispy_field }}
+                   
                     <div class="form-check form-check-inline float-right mr-0">
                         {% if user.is_authenticated %}   
                             <label class="form-check-label" for="id-save-info">Save these order details to my profile</label>

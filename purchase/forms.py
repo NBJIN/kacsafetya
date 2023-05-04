@@ -8,7 +8,7 @@ class PurchaseForm(forms.ModelForm):
         fields = ('fname', 'lname',
                   'company', 'address1', 'address2',
                   'address3', 'postcode', 'telephone',
-                  'email', 'date_added', 'course_title',
+                  'email', 'course_title',
                   'quantity', 'fee', 'total', 'discount',
                   'grand_total',)
 

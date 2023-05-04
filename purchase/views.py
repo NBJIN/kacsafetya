@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 
-from .forms import ProductForm
+from .forms import PurchaseForm
 
 
 def purchase(request):
@@ -14,7 +14,6 @@ def purchase(request):
     template = 'purchase/purchase.html'
     context = {
         'purchase_form': purchase_form,
-
     }
 
     return render(request, template, context)
