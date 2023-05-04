@@ -19,7 +19,8 @@ def add_to_basket(request, item_id):
 
     course = get_object_or_404(Courses, pk=item_id)
     quantity = int(request.POST.get('quantity'))
-    redirect_url = request.POST.get('redirect_url')
+   
+    # redirect_url = request.POST.get('add_to_basket')
     basket = request.session.get('basket', {})
 
     if item_id in list(basket.keys()):
@@ -28,9 +29,8 @@ def add_to_basket(request, item_id):
     else:
         basket[item_id] = quantity
         messages.success(request, f'Added {courses.title} to your basket')
-
     request.session['basket'] = basket
-    return redirect('redirect_url')
+    return redirect('view_basket')
 
 
 def update_basket(request, item_id):
@@ -70,8 +70,8 @@ def delete_from_basket(request, item_id):
 
         del basket[item_id]
         if not basket[item_id]:
-                bag.pop(item_id)
-                messages.success(request, f'Successfully removed {basket.title} from your basket')
+            bag.pop(item_id)
+            messages.success(request, f'Successfully removed {basket.title} from your basket')
         else:
             bag.pop[item_id]
             messages.success(request, f'Successfully removed {basket.title} from your basket')

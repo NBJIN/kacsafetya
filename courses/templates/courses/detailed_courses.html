@@ -49,9 +49,9 @@
                                         <div class="input-group-prepend">
                                             <button class="decrement-qty btn btn-black rounded-0"
                                             data-item_id="{{ courses.id }}" id="decrement-qty_{{ courses.id }}">
-                                            <span class="icon">
-                                                <i class="fas fa-minus"></i>
-                                            </span>
+                                            <!-- <span class="icon">
+                                                <i class="fas fa-minus"></i> -->
+                                            <!-- </span>  -->
                                             </button>
                                         </div>
                                         <input class="form-control qty_input" type="number" 
@@ -61,9 +61,9 @@
                                         <div class="input-group-append">
                                             <button class="increment-qty btn bnt-black rounded-0"
                                                 data-item_id="{{ courses.id }}" id="increment-qty_{{ courses.id }}">
-                                                <span class="icon">
+                                                <!-- <span class="icon">
                                                     <i class="fas fa-plus"></i>
-                                                </span>
+                                                </span> -->
                                             </button>
                                         </div>
                                     </div>
@@ -80,7 +80,7 @@
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add Item To Basket">
                                </a>
                             </div>
-                            <input type="hidden" name="redirect_url" vlaue="{{ request.path }}">
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
 
                         </div>
                     </form>
