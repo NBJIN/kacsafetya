@@ -25,13 +25,13 @@ def basket_contents(request):
     #         'courses': courses,
     #     })
 
-    if total < settings.FREE_DISCOUNT:
-        grand_total = total * Decimal(settings.STANDARD_DISCOUNT_PERCENTAGE * 10 / 100)
-        free_discount_delta = total + settings.FREE_DISCOUNT
+    if total > settings.FREE_DISCOUNT: # if my total is greater than 200
+        discount = total * Decimal(settings.STANDARD_DISCOUNT_PERCENTAGE * 10/100)  # grand total is = to total
+        free_discount_delta = settings.FREE_DISCOUNT - total  # free discount delta is equal to free discount minus total
     # free_discount_delta = settings.FREE_DISCOUNT - total
 
     else:
-        # discount = 0
+        discount = 0
         free_discount_delta = 0
 
     grand_total = total + discount
@@ -41,9 +41,10 @@ def basket_contents(request):
         'grand_total': grand_total,
         'total': total,
         'courses_count': courses_count,
-        'settings.FREE_DISCOUNT': settings.FREE_DISCOUNT,
+        'discount': discount,
+        'free_discount': settings.FREE_DISCOUNT,
         'free_discount_delta': free_discount_delta,
-        'settings.STANDARD_DISCOUNT_PERCENTAGE': settings.STANDARD_DISCOUNT_PERCENTAGE,
+        'standard_discount_percentage': settings.STANDARD_DISCOUNT_PERCENTAGE,
     }
 
     return context
