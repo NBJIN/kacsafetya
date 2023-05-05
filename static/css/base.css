@@ -332,3 +332,37 @@
 
 
 /* dont have the above two css styling elements in code as of yet  */
+
+
+/* Media Queries - slightly larger container on xl screens - THESE DO NOT WORK  */
+@media (mid-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        positiion: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
