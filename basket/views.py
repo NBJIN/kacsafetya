@@ -9,7 +9,6 @@ from basket.models import Basket
 
 def view_basket(request):
     """ View to return basket page """
-
     return render(request, 'basket/basket.html')
 
 
