@@ -39,6 +39,7 @@ def all_courses(request):
 
 def detailed_courses(request, course_id):
     """ A view to show each course in more detail """
+    course_id = int(course_id)
     courses = get_object_or_404(Courses, pk=int(course_id))
 
     context = {

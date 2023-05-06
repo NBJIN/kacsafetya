@@ -234,9 +234,9 @@
 
 /* arrow button at the bottom of all courses page  */
 
-.btt-link
-.update-link
-.remove-item {
+.btt-link,
+.update-link,
+.delete-item {
     cursor: pointer;  
 }
 
