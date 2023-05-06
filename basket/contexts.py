@@ -46,5 +46,6 @@ def basket_contents(request):
         'free_discount_delta': free_discount_delta,
         'standard_discount_percentage': settings.STANDARD_DISCOUNT_PERCENTAGE,
     }
+   
 
     return context
