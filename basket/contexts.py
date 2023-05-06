@@ -15,15 +15,15 @@ def basket_contents(request):
     basket = request.session.get('basket', {})
     discount = total * 10 / 100
 
-    # for item_id, quantity in basket.items():
-    # #     courses = get_object_or_404(Courses, pk=item_id)
-    #     total += quantity * courses.fee
-    #     courses_count += quantity
-    #     basket_items.append({
-    #         'item_id': item_id,
-    #         'quantity': quantity,
-    #         'courses': courses,
-    #     })
+    for item_id, quantity in basket.items():
+        courses = get_object_or_404(Courses, pk=item_id)
+        total += quantity * courses.fee
+        courses_count += quantity
+        basket_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'courses': courses,
+        })
 
     if total > settings.FREE_DISCOUNT: # if my total is greater than 200
         discount = total * Decimal(settings.STANDARD_DISCOUNT_PERCENTAGE * 10/100)  # grand total is = to total
