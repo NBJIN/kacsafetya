@@ -9,8 +9,7 @@ class PurchaseForm(forms.ModelForm):
                   'company', 'address1', 'address2',
                   'address3', 'postcode', 'telephone',
                   'email', 'course_title',
-                  'quantity', 'fee', 'total', 'discount',
-                  'grand_total',)
+                  'quantity',)
 
     def __init__(self, *args, **kwargs):
         """
@@ -19,7 +18,6 @@ class PurchaseForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
-            'purchase_no': 'Purchase Order Number',
             'fname': 'First Name',
             'lname': 'Last Name',
             'company': 'Company',
@@ -29,13 +27,9 @@ class PurchaseForm(forms.ModelForm):
             'postcode': 'Postcode',
             'telephone': 'Telephone',
             'email': 'Email',
-            'date_added': 'Date Added',
             'course_title': 'Course Title',
             'quantity': 'Quantity',
-            'fee': 'Fee',
-            'total': 'Total',
-            'discount': 'Discount',
-            'grand_total': 'Grand Total',
+
         }
 
         self.fields['fname'].widget.attrs['autofocus'] = True
