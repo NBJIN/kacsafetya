@@ -10,7 +10,6 @@ class PurchaseOrderItemAdminInline(admin.TabularInline):
 class PurchaseAdmin(admin.ModelAdmin):
     inlines = (PurchaseOrderItemAdminInline,)
 
-
     readonly_fields = ('purchase_no', 'date_added',
                        'fee', 'total', 'discount',
                        'grand_total')
@@ -21,7 +20,6 @@ class PurchaseAdmin(admin.ModelAdmin):
               'email', 'date_added', 'course_title',
               'quantity', 'fee', 'total', 'discount',
               'grand_total',)
-
 
     list_display = ('purchase_no', 'date_added', 'fname', 'lname',
                     'total', 'grand_total',)

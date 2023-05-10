@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load bag_tools %}
-
+{% load crispy_forms_tags %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'purchase/css/purchase.css' %}">
@@ -27,8 +27,11 @@
         </div>
     </div>
 
+ 
+
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <p class="text-muted">Purchase Summary (({ course_count }))</p>
             <div class="row">
                 <div class="col-7 offset-2">
                     <p class="mb-1 mt-0 small text-muted">Item</p>
@@ -81,32 +84,29 @@
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-3 w-auto">Customer Details</legend>
-                    {% crispy purchase_form.fname %}
-                    {% crispy purchase_form.lname %}
+                    {{ purchase_form.fname | as_crispy_field }}
+                    {{ purchase_form.lname | as_crispy_field }}
                 
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-3 w-auto">Contact Details</legend>
-                    {% crispy purchase_form.company %}
-                    {% crispy purchase_form.address1 %}
-                    {% crispy purchase_form.address2 %}
-                    {% crispy purchase_form.address3 %}
-                    {% crispy purchase_form.postcode %}
-                    {% crispy purchase_form.telephone %}
-                    {% crispy purchase_form.email %}
-                    {% crispy purchase_form.lname %}
+                    {{ purchase_form.company | as_crispy_field }}
+                    {{ purchase_form.address1 | as_crispy_field }}
+                    {{ purchase_form.address2 | as_crispy_field }}
+                    {{ purchase_form.address3 | as_crispy_field }}
+                    {{ purchase_form.postcode | as_crispy_field }}
+                    {{ purchase_form.telephone | as_crispy_field }}
+                    {{ purchase_form.email | as_crispy_field }}
+                    {{ purchase_form.lname | as_crispy_field }}
 
               
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Course Details</legend>
 
-                    {% crispy purchase_form.course_title %}
-                    {% crispy purchase_form.quantity %}
-                    {% crispy purchase_form.fee %}
-                    {% crispy purchase_form.total %}
-                    {% crispy purchase_form.discount %}
-                    {% crispy purchase_form.grand_total %}
+                    {{ purchase_form.course_title | as_crispy_field }}
+                    {{ purchase_form.quantity | as_crispy_field }}
+                   
                    
                    
                     <div class="form-check form-check-inline float-right mr-0">

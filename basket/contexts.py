@@ -13,7 +13,6 @@ def basket_contents(request):
     # FREE_DISCOUNT = 0
     # discount = 0
     basket = request.session.get('basket', {})
-    discount = total * 10 / 100
 
     for item_id, quantity in basket.items():
         courses = get_object_or_404(Courses, pk=item_id)
@@ -25,8 +24,11 @@ def basket_contents(request):
             'courses': courses,
         })
 
+    discount = total * 10 / 100
+    print(discount)
+
     if total > settings.FREE_DISCOUNT:  # if my total is greater than 200
-        discount = total * Decimal(settings.STANDARD_DISCOUNT_PERCENTAGE * 10/100)  # grand total is = to total
+        discount = total * Decimal(settings.STANDARD_DISCOUNT_PERCENTAGE/100)  # grand total is = to total
         free_discount_delta = settings.FREE_DISCOUNT - total  # free discount delta is equal to free discount minus total
     # free_discount_delta = settings.FREE_DISCOUNT - total
 
@@ -34,7 +36,9 @@ def basket_contents(request):
         discount = 0
         free_discount_delta = 0
 
-    grand_total = total + discount
+    print(discount)
+
+    grand_total = total - discount
 
     context = {
         'basket_items': basket_items,
