@@ -27,8 +27,8 @@ def purchase(request):
             'postcode': request.POST['postcode'],
             'telephone': request.POST['telephone'],
             'email': request.POST['email'],
-            'course_title': request.POST['course_title'],
-            'quantity': request.POST['quantity'],
+            # 'course_title': request.POST['course_title'],
+            # 'quantity': request.POST['quantity'],
         }
         purchase_form = PurchaseForm(form_data)
         if purchase_form.is_valid():
@@ -38,13 +38,14 @@ def purchase(request):
                     courses = Courses.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         purchase_order_item = PurchaseOrderItem(
-                            purchase_no=purchase_no,
+                            # purchase_no=purchase_no,
+                            purchase = purchase,
                             courses=courses,
                             quantity=item_data,
                         )
                         purchase_order_item.save()
-                    else:
-                        purchase_order_item.save()
+                    # else:
+                    #     purchase_order_item.save()
                 except Courses.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your basket wasn't found in our database. "
@@ -52,7 +53,8 @@ def purchase(request):
                     )
                     order.delete()
                     return redirect(reverse('view_basket'))
-            request.sesstion['save_info'] = 'save-info' in request.POST
+
+            request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('purchase_success', args[purchase.purchase_no]))
         else:
             messages.error(request, 'There was an error with your form. \
@@ -69,9 +71,9 @@ def purchase(request):
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
-            currency=settings.STRIPE_CURRENCY, 
-
+            currency=settings.STRIPE_CURRENCY,
         )
+        # print(intent)
         purchase_form = PurchaseForm()
 
     if not stripe_public_key:
@@ -82,8 +84,8 @@ def purchase(request):
         'purchase_form': purchase_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
-    }
 
+    }
     return render(request, template, context)
 
 
@@ -93,7 +95,7 @@ def purchase_success(request, purchase_no):
     """
     save_info = request.session.get('save_info')
     purchase = get_object_or_404(Purchase, purchase_no=purchase_no)
-    messages.success(request, f'Purchase succfully processed \
+    messages.success(request, f'Purchase successfully processed \
         Your purchase order number is {purchase_no}. Confirmation \
         of your purchase has been sent to {purchase.email}')
 

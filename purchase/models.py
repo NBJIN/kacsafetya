@@ -31,7 +31,7 @@ class Purchase(models.Model):
 
     def update_total(self):
         """ Every time a new course is added update grand total """
-        self.purchase_total = self.orderitems.aggregate(Sum('orderitem_total'))['orderitem_total__sum'] or 0 
+        self.purchase_total = self.orderitems.aggregate(Sum('orderitem_total'))['orderitem_total__sum'] or 0
         if self.purchase_total < settings.FREE_DISCOUNT:
             self.discount = self.purchase_total * settings.STANDARD_DISCOUNT_PERCENTAGE * 10 / 100
         else:
