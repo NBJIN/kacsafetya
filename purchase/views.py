@@ -13,6 +13,7 @@ import stripe
 def purchase(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+    # global intent
 
     if request.method == 'POST':
         basket = request.session.get('basket', {})
@@ -39,7 +40,7 @@ def purchase(request):
                     if isinstance(item_data, int):
                         purchase_order_item = PurchaseOrderItem(
                             # purchase_no=purchase_no,
-                            purchase = purchase,
+                            purchase=purchase,
                             courses=courses,
                             quantity=item_data,
                         )
@@ -61,6 +62,7 @@ def purchase(request):
             Please check your details.')
     else:
         basket = request.session.get('basket', {})
+        # intent = None
         if not basket:
             messages.error(request, "No items in your bag at present")
             return redirect(reverse('all_courses'))
@@ -78,14 +80,14 @@ def purchase(request):
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in your environment?')
+            Did you forget to set it in your environment?'
+    )
     template = 'purchase/purchase.html'
     context = {
         'purchase_form': purchase_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
-
-    }
+        }
     return render(request, template, context)
 
 
@@ -106,5 +108,4 @@ def purchase_success(request, purchase_no):
     context = {
         'purchase': purchase,
     }
-
     return render(request, template, context)
