@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
@@ -17,30 +16,30 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <hr>
-            <h1 class="logo-font mb-2">Thank You For Your Purchase</h1>
-            <hr>
-            <p class="text-black">Please find order details below.  Confirmation of this order has been sent to <strong>{{ purchase.email }}</strong></p>
-        </div>
-    </div>
+    <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                <hr>
+                <h1 class="logo-font mb-2">Thank You For Your Purchase</h1>
+                <hr>
+                <p class="text-black">Please find order details below.  Confirmation of this order has been sent to <strong>{{ purchase.email }}</strong></p>
+                </div>
+            </div>
 
  
 
-    <div class="row">
-        <div class="col-12 col-lg-3">
-            <div class="order-confirmation-wrapper p-2 boarder">
-                <div class="row">
-                    <div class="col">
-                        <small class="text-muted">Purchase Info:</small>
-                    </div>
-                </div>
+            <div class="row">
+                <div class="col-12 col-lg-7">
+                    <div class="order-confirmation-wrapper p-2 boarder">
+                        <div class="row">
+                            <div class="col">
+                                <small class="text-muted">Purchase Info:</small>
+                            </div>
+                        </div>
                 <div class="row">
                     <div class="col-12 col-md-4">
-                        <p>Purchase No</p>
+                        <p class="mb-0 text-black font-weight-bold">Purchase No</p>
                     </div>
                     <div class="col-12 col-md-4 text-md-right">
                         <p class="mb-0">{{ purchase.purchase_no }}</p>
@@ -49,10 +48,10 @@
 
                 <div class="row">
                     <div class="col-12 col-md-4">
-                        <p>Purchase No</p>
+                        <p class="mb-0 text-black font-weight-bold">Order Date</p>
                     </div>
-                    <div class="col-12 col-md-4 text-md-right">
-                        <p class="mb-0">{{ purchase.purchase_no }}</p>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ purchase.date_added }}</p>
                     </div>
                 </div>
 
@@ -60,37 +59,154 @@
                 <div class="row">
                     <div class="col">
                         <small class="text-muted">Purchase Details:</small>
-
                     </div>
-
                 </div>
+
+                {% for item in purchase.orderitem.all %}
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="small mb-0 text-black font-weight-bold">
+                            {{ item.courses.title}}
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="small mb-0">{{ item.quantity }} @ ${{ item.courses.fee }} each</p>
+                    </div>
+                </div>
+                {% endfor %}
                 <div class="row">
                     <div class="col">
-                        <small class="text-muted">To </small>
-
+                        <small class="text-muted"> deliverying to : </small>
                     </div>
-
                 </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">First Name</p>
+                        </div>  
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ purchase.fname }}</p>
+                        </div>
+                </div>
+
+                <div  class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Last Name</p>
+                        </div>  
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ purchase.lname }}</p>
+                    </div>       
+                </div>
+
+                <div  class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Company</p>
+                        </div>  
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ purchase.company }}</p>
+                    </div>       
+                </div>
+
+                <div  class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Address 1</p>
+                        </div>  
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ purchase.address1 }}</p>
+                    </div>       
+                </div>
+
+                <div  class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Address 2</p>
+                        </div>  
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ purchase.address2 }}</p>
+                    </div>       
+                </div>
+
+                <div  class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Address 3</p>
+                        </div>  
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ purchase.address3 }}</p>
+                    </div>       
+                </div>
+
+                <div  class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Postcode</p>
+                        </div>  
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ purchase.postcode }}</p>
+                    </div>       
+                </div>
+
+                <div  class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Telephone</p>
+                        </div>  
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ purchase.telephone }}</p>
+                    </div>       
+                </div>
+
+                <div  class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Email</p>
+                        </div>  
+                        <div class="col-12 col-md-8 text-md-right">
+                            <p class="mb-0">{{ purchase.email }}</p>
+                    </div>       
+                </div>
+
                 <div class="row">
                     <div class="col">
-                        <small class="text-muted">Billing Info</small>
-
+                        <small class="text-muted">Purchase Details</small>
                     </div>
+                </div>
 
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Total</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ purchase.total }}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Discount</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ purchase.discount }}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Grand Total</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ purchase.grand_total }}</p>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-7 text-right">
+                    <a href="{% url 'all_courses' %}" class="btn btn-black rounded-0 my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-gifts"></i>
+                        </span>
+                        <span class="text-uppercase">Return To All Courses </span>
+                    </a>
                 </div>
             </div>
         </div>
-       
-</div>
-<div class="row">
-    <div class="col-12 col-lg-3 text-right">
-        <a href="{% url 'all_courses' %}" class="btn btn-black rounded-0 my-2">
-            <span class="icon mr-2">
-                <i class="fas fa-gifts"></i>
-            </span>
-            <span class="text-uppercase">Place another order</span>
-        </a>
-    </div>
-</div>
-</div>
+
+                
 {% endblock %}
