@@ -74,6 +74,7 @@
                     </div>
                 </div>
                 {% endfor %}
+
                 <div class="row">
                     <div class="col">
                         <small class="text-muted"> deliverying to : </small>
@@ -116,6 +117,7 @@
                     </div>       
                 </div>
 
+               
                 <div  class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-black font-weight-bold">Address 2</p>
@@ -124,7 +126,9 @@
                             <p class="mb-0">{{ purchase.address2 }}</p>
                     </div>       
                 </div>
+              
 
+                {% if purchase.address3 %}
                 <div  class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-black font-weight-bold">Address 3</p>
@@ -133,7 +137,10 @@
                             <p class="mb-0">{{ purchase.address3 }}</p>
                     </div>       
                 </div>
+                {% endif %}
 
+
+                {$ if purchase.postcode $}
                 <div  class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-black font-weight-bold">Postcode</p>
@@ -142,6 +149,7 @@
                             <p class="mb-0">{{ purchase.postcode }}</p>
                     </div>       
                 </div>
+                {% endif %}
 
                 <div  class="row">
                     <div class="col-12 col-md-4">
@@ -163,7 +171,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <small class="text-muted">Purchase Details</small>
+                        <small class="text-muted">Purchase Billing Details</small>
                     </div>
                 </div>
 
