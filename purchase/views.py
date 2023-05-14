@@ -52,7 +52,11 @@ def purchase(request):
         }
         purchase_form = PurchaseForm(form_data)
         if purchase_form.is_valid():
-            purchase = purchase_form.save()
+            purchase = purchase_form.save(commit=False)
+            pip = request.POST.get('client_secret').split('_secret')[0]
+            purchase.stripe_pid = pid
+            purchase.original_basket = json.dumps(basket)
+            purchase.save()
             for item_id, item_data in basket.items():
                 try:
                     courses = Courses.objects.get(id=item_id)

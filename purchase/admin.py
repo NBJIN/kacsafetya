@@ -12,14 +12,16 @@ class PurchaseAdmin(admin.ModelAdmin):
 
     readonly_fields = ('purchase_no', 'date_added',
                        'fee', 'total', 'discount',
-                       'grand_total')
+                       'grand_total', 'original_basket', 
+                       'stripe_pid')
 
     fields = ('purchase_no', 'fname', 'lname',
               'company', 'address1', 'address2',
               'address3', 'postcode', 'telephone',
               'email', 'date_added', 'course_title',
               'quantity', 'fee', 'total', 'discount',
-              'grand_total',)
+              'grand_total', 'original_basket',
+              'stripe_pid')
 
     list_display = ('purchase_no', 'date_added', 'fname', 'lname',
                     'total', 'grand_total',)
