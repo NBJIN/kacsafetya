@@ -34,56 +34,56 @@ class StripeWH_Handler:
         stripe_charge = stripe.Charge.retrieve(
             intent.latest_charge
         )
-         # need to check the following code
-        customer_details = stripe_charge.customer_details # updated
-        contact_details = intent.shipping
-        grand_total = round(stripe_charge.amount / 100, 2) # updated
+        # need to check the following code
+        billing_details = stripe_charge.billing_details  # updated
+        shipping_details = intent.shipping
+        grand_total = round(stripe_charge.amount / 100, 2)  # updated
 
-
-        # Clean data in the shipping details - need to check the following code 
-        for field, value in contact_details.address.items():
+        # Clean data in the shipping details - need to check the following code
+        for field, value in shipping_details.address.items():
             if value == "":
-                contact_details.address[field] = None 
+                shipping_details.address[field] = None
 
         purchase_exists = False
         attempt = 1
         while attempt <= 5:
             try:
                 purchase = Purchase.objects.get(
-                    fname_name__iexact=contact_details.fname,
-                    lname_name__iexact=contact_details.lname,
-                    company_name__iexact=contact_details.company,
-                    address1_iexact=contact_details.address.address1,
-                    address2_iexact=contact_details.address.address2,
-                    address3_iexact=contact_details.address.address3,
-                    postcode__iexact=contact_details.address.postcode,
-                    telephone__iexact=contact_details.telephone,
-                    email__iexact=contact_details.email,
+                    fname_name__iexact=shipping_details.fname,
+                    lname_name__iexact=shipping_details.lname,
+                    company_name__iexact=shipping_details.company,
+                    address1_iexact=shipping_details.address.address1,
+                    address2_iexact=shipping_details.address.address2,
+                    address3_iexact=shipping_details.address.address3,
+                    postcode__iexact=shipping_details.address.postcode,
+                    telephone__iexact=shipping_details.telephone,
+                    email__iexact=billing_details.email,
                     original_basket=basket,
                     stripe_pid=pid,
                 )
                 purchase_exists = True
                 break
-                
+
             except Purchase.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
-        if order_exists:
+        if purchase_exists:
             return HttpResponse(
                 content=f'Webhook recieved: {event["type"]} | SUCCESS: Verified purchase already in the database',
                 status=200)
         else:
+            purchase = None
             try:
                 purchase = Purchase.objects.create(
-                    fname=contact_details.fname,
-                    lname=contact_details.lname,
-                    company=contact_details.company,
-                    address1=contact_details.address.address1,
-                    address2=contact_details.address.address2,
-                    address3=contact_details.address.address3,
-                    postcode=contact_details.address.postcode,
-                    telephone=contact_details.telephone,
-                    email=contact_details.email,
+                    fname=shipping_details.fname,
+                    lname=shipping_details.lname,
+                    company=shipping_details.company,
+                    address1=shipping_details.address.address1,
+                    address2=shipping_details.address.address2,
+                    address3=shipping_details.address.address3,
+                    postcode=shipping_details.address.postcode,
+                    telephone=shipping_details.telephone,
+                    email=billing_details.email,
                     original_basket=basket,
                     stripe_pid=pid,
                 )
@@ -103,7 +103,6 @@ class StripeWH_Handler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
-
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)

@@ -12,7 +12,7 @@ class PurchaseAdmin(admin.ModelAdmin):
 
     readonly_fields = ('purchase_no', 'date_added',
                        'fee', 'total', 'discount',
-                       'grand_total', 'original_basket', 
+                       'grand_total', 'original_basket',
                        'stripe_pid')
 
     fields = ('purchase_no', 'fname', 'lname',
@@ -27,5 +27,6 @@ class PurchaseAdmin(admin.ModelAdmin):
                     'total', 'grand_total',)
 
     ordering = ('date_added',)
+
 
 admin.site.register(Purchase, PurchaseAdmin)
