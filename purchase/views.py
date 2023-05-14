@@ -30,6 +30,7 @@ def cache_purchase_data(request):
 
 
 def purchase(request):
+
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
     # global intent
@@ -109,10 +110,8 @@ def purchase(request):
     context = {
         'purchase_form': purchase_form,
         'stripe_public_key': stripe_public_key,
-        # 'client_secret': intent.client_secret,
-        'client_secret': 'test client secret',
-    }
-
+        'client_secret': intent.client_secret,
+        }
     return render(request, template, context)
 
 
