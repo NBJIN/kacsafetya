@@ -6,6 +6,7 @@ from courses.models import Courses
 import json
 import time
 
+
 class StripeWH_Handler:
     """ Handle Stripe Webhooks"""
 
