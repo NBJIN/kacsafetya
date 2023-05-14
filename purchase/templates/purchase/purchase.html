@@ -67,7 +67,7 @@
                 <div class="row text-black text-right">
                     <div class="col-7 offset-2">
                         <p class="my-0">Order Total:</p>
-                        <p class="my-0">Delivery:</p>
+                        <p class="my-0">Discount:</p>
                         <p class="my-0">Grand Total:</p>
                     </div>
                     <div class="col-3">
@@ -86,7 +86,6 @@
                     <legend class="fieldset-label small text-black px-3 w-auto">Customer Details</legend>
                     {{ purchase_form.fname | as_crispy_field }}
                     {{ purchase_form.lname | as_crispy_field }}
-                
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-3 w-auto">Contact Details</legend>
@@ -97,9 +96,6 @@
                     {{ purchase_form.postcode | as_crispy_field }}
                     {{ purchase_form.telephone | as_crispy_field }}
                     {{ purchase_form.email | as_crispy_field }}
-                 
-
-              
                 </fieldset>
                 <fieldset class="rounded px-3 mb-5">
                     <!-- <legend class="fieldset-label small text-black px-2 w-auto">Course Details</legend> -->
@@ -119,9 +115,7 @@
                             <a class="text-info" href="{ url 'accouont_login' %}">Login</a> to save order information
                         </label>
                         {% endif %}
-                 
                     </div>
-                   
                 </fieldset>
                 <fieldset class="px-3">
                     <legend class="fieldset-label small text-black px-2 w-auto">Stripe Payment Details</legend>

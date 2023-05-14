@@ -30,6 +30,7 @@ def cache_purchase_data(request):
 
 
 def purchase(request):
+    
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
     # global intent

@@ -36,9 +36,9 @@
     border: 1px solid #000;
 }
 
-#card-element {
+/* #card-element {
     padding-top: 30px;
-}
+} */
 
 #loading-overlay {
     display: none;
