@@ -1,3 +1,11 @@
+/*
+    Core logic/payment flow for this comes from here:
+    https://stripe.com/docs/payments/accept-a-payment
+
+    CSS from here: 
+    https://stripe.com/docs/stripe-js
+*/
+
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripePublicKey);
@@ -63,8 +71,8 @@ form.addEventListener('submit', function(ev) {
             payment_method: {
                 card: card,
                 billing_details: {
-                    name1: $.trim(form.fname.value),
-                    name2: $.trim(form.lname.value),
+                    fname: $.trim(form.fname.value),
+                    lname: $.trim(form.lname.value),
                     telephone: $.trim(form.telephone.value),
                     email: $.trim(form.email.value),
                     company: $.trim(form.company.value),
@@ -75,8 +83,8 @@ form.addEventListener('submit', function(ev) {
                 }
             },
             shipping: {
-                name1: $.trim(form.fname.value),
-                name2: $.trim(form.lname.value),
+                fname: $.trim(form.fname.value),
+                lname: $.trim(form.lname.value),
                 telephone: $.trim(form.telephone.value),
                 company: $.trim(form.company.value),
                 address1: $.trim(form.address1.value),
@@ -85,7 +93,7 @@ form.addEventListener('submit', function(ev) {
                 postcode: $.trim(form.postcode.value),
                 postcode: $.trim(form.postcode.value),
                 }
-            },
+            }
         }).then(function(result) {
             if (result.error) {
                 var errorDiv = document.getElementById('card-errors');
@@ -106,7 +114,7 @@ form.addEventListener('submit', function(ev) {
             }
         });  
     }).fail(function () {
-        // just reload the page, the error will be in django messages
+        just reload the page, the error will be in django messages
         location.reload();
     })
 });

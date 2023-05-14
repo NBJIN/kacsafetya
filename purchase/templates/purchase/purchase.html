@@ -17,21 +17,21 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <hr>
-            <h1 class="logo-font mb-2">Secure Purchase Page</h1>
-            <hr>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h1 class="logo-font mb-4">Secure Purchase Page</h1>
+                <hr>
+            </div>
         </div>
-    </div>
 
  
 
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <p class="text-muted">Purchase Summary (({ course_count }))</p>
+            <p class="text-muted">Purchase Summary ({{ courses_count }})</p>
             <div class="row">
                 <div class="col-7 offset-2">
                     <p class="mb-1 mt-0 small text-muted">Item</p>
@@ -52,17 +52,15 @@
                         </a>
                     </div>
                     <div class="col-7">
-                        <p class="my-0"><strong>{{ item.courses.title }}</strong></p>
-                        <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
+                        <p class="my-0"><strong>Name: {{ item.purchase.course_title }}</strong></p>
+                        <p class="my-0 small text-muted">Quantity: {{ item.basket.quantity }}</p>
                     </div>
                     <div class="col-3 text-right">
                         <p class="my-0 small text-muted">€{{ item.courses.fee | calc_total:item.quantity }}</p>
-                        
                     </div>
                 </div>
                 {% endfor%}
-                
-
+            
                 <hr class="my-0">
                 <div class="row text-black text-right">
                     <div class="col-7 offset-2">
@@ -76,38 +74,30 @@
                         <p class="my-0"><strong>€{{ grand_total | floatformat:2 }} </strong></p>
                     </div>
                 </div>
-
         </div>
         <div class="col-12 col-lg-6">
             <p class="text-muted">Please fill out the form below to complete your order </p>
             <form action="{%  url 'purchase' %}" method="POST" id="payment-form">
                 {% csrf_token %}
+
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small text-black px-3 w-auto">Customer Details</legend>
+                    <legend class="fieldset-label small text-black px-3 w-auto">Customer Contact Information </legend>
                     {{ purchase_form.fname | as_crispy_field }}
                     {{ purchase_form.lname | as_crispy_field }}
+                    {{ purchase_form.email | as_crispy_field }}
                 </fieldset>
+
                 <fieldset class="rounded px-3 mb-5">
-                    <legend class="fieldset-label small text-black px-3 w-auto">Contact Details</legend>
+                    <legend class="fieldset-label small text-black px-2 w-auto">Customer Shipping Details</legend>
                     {{ purchase_form.company | as_crispy_field }}
                     {{ purchase_form.address1 | as_crispy_field }}
                     {{ purchase_form.address2 | as_crispy_field }}
                     {{ purchase_form.address3 | as_crispy_field }}
                     {{ purchase_form.postcode | as_crispy_field }}
                     {{ purchase_form.telephone | as_crispy_field }}
-                    {{ purchase_form.email | as_crispy_field }}
-                </fieldset>
-                <fieldset class="rounded px-3 mb-5">
-                    <!-- <legend class="fieldset-label small text-black px-2 w-auto">Course Details</legend> -->
-
-                    <!-- {{ purchase_form.course_title | as_crispy_field }}
-                    {{ purchase_form.quantity | as_crispy_field }} -->
-                   
-                   
-                   
                     <div class="form-check form-check-inline float-right mr-0">
                         {% if user.is_authenticated %}   
-                            <label class="form-check-label" for="id-save-info">Save these order details to my Account</label>
+                            <label class="form-check-label" for="id-save-info">Save order details to my account</label>
                             <input class="form-check_input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
                         {% else %}
                         <label class="form-check-label" for="id-save-info">
@@ -126,13 +116,12 @@
                     <!--Pass the client secret to the view so we can get the paument intent id-->
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
-
                 <div class="submit-button text-right mt-5 mb-2">
                     <a href="{% url 'view_basket' %}" class="btn btn-outline-black rounded-0">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="font-weight-bold">Adjust Basket </span>
+                        <span class="font-weight-bold">Adjust Basket</span>
                     </a>
                     <button id="submit-button" class="btn btn-black rounded-0">
                         <span class="font-weight-bold">Complete order</span>
@@ -147,12 +136,9 @@
                         <span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
                     </p>
                 </div>
-
-
-
             </form>
+        </div>
     </div>
-</div>
 </div>
 <div id="loading-overlay">
     <h1 class="text-light logo-font loading-spinner">

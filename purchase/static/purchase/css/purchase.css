@@ -9,6 +9,8 @@
     box-shadow: 0 1px 3px 0 #e6ebf1;
     -webkit-transition: box-shadow 150ms ease;
     transition: box-shadow 150ms ease;
+    /** added may need to be remeoved*/
+    padding-bottom: 30px;
 }
 
 .StripeElement--focus,
@@ -35,10 +37,10 @@
     color: #000;
     border: 1px solid #000;
 }
-
-/* #card-element {
+    /** added may need to be remeoved*/
+#card-element {
     padding-top: 30px;
-} */
+}
 
 #loading-overlay {
     display: none;
