@@ -26,7 +26,6 @@ var style = {
     }
 };
 var card = elements.create('card', {style: style});
-
 card.mount('#card-element');
 
 // Handle realtime validation errors on the card element
@@ -42,7 +41,6 @@ card.addEventListener('change', function (event) {
         $(errorDiv).html(html);
     } else {
         errorDiv.textContent = '';
-
     }
 });
 
@@ -57,7 +55,7 @@ form.addEventListener('submit', function(ev) {
     $('#loading-overlay').fadeToggle(100);
 
     var saveInfo = Boolean($('#id-save-info').attr('checked'));
-    // Form using {% csrf_token %} in the form
+    // From using {% csrf_token %} in the form
     var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     var postData = {
         'csrfmiddlewaretoken': csrfToken,
@@ -66,7 +64,7 @@ form.addEventListener('submit', function(ev) {
     };
     var url = '/purchase/cache_purchase_data/';
 
-    $.post(url, postData).done(function() {
+    $.post(url, postData).done(function () {
         stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: card,
@@ -80,7 +78,6 @@ form.addEventListener('submit', function(ev) {
                     address2: $.trim(form.address2.value),
                     address3: $.trim(form.address3.value),
                     }
-                }
             },
             shipping: {
                 fname: $.trim(form.fname.value),
@@ -93,7 +90,6 @@ form.addEventListener('submit', function(ev) {
                 postcode: $.trim(form.postcode.value),
                 postcode: $.trim(form.postcode.value),
                 }
-            }
         }).then(function(result) {
             if (result.error) {
                 var errorDiv = document.getElementById('card-errors');
@@ -114,7 +110,7 @@ form.addEventListener('submit', function(ev) {
             }
         });  
     }).fail(function () {
-        just reload the page, the error will be in django messages
+        // just reload the page, the error will be in django messages
         location.reload();
     })
 });
