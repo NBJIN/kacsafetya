@@ -30,7 +30,6 @@ def cache_purchase_data(request):
 
 
 def purchase(request):
-
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
     # global intent
@@ -99,7 +98,7 @@ def purchase(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-        # print(intent)
+     
         purchase_form = PurchaseForm()
 
     if not stripe_public_key:

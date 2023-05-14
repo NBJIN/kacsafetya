@@ -17,5 +17,4 @@ def update_on_delete(sender, instance, **kwargs):
     """
     Update order total on PurchaseOrderItem when deleting a record
     """
-    print('delete signal received')
     instance.purchase.update_total()
