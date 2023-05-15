@@ -36,8 +36,42 @@
                 </form>
             </div>
             <div class="col-12 col-lg-6">
-                <p class="text-muted">Purchase History</p>
-                {{ purchase }}
+                <p class="text-muted">Purchase Records</p>
+                <div class="purchase-records table-responsive">
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>
+                                <th>Purchase Number</th>
+                                <th>Date</th>
+                                <th>Course</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for purchase in purchases %}
+                                <tr>
+                                    <td>
+                                        <a href="{% url 'purchase_records' purchase.purchase_no %}" 
+                                        title="{{ purchase.purchase_no }}">
+                                            {{ purchase.purchase_no|truncatechars:6 }}
+                                        </a>
+                                    </td>
+                                    <td>{{ purchase.date_added }}</td>
+                                    <td>
+                                        <ul class="list-unstyled">
+                                            {% for item in purchase.orderitem.all %}   
+                                                <li class="small">
+                                                    {{ item.courses.title }} x {{ item.quantity }}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    <td>€{{ purchase.grand_total }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <!-- {{ dashboard}} -->

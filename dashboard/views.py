@@ -4,6 +4,8 @@ from django.contrib import messages
 from .models import UserDashboard
 from .forms import UserDashboardForm
 
+from purchase.models import Purchase
+
 
 def dashboard(request):
     """
@@ -25,6 +27,23 @@ def dashboard(request):
         'form': form,
         'purchase': purchase,
         'on_dashboard_page': True
+    }
+
+    return render(request, template, context)
+
+
+def purchase_records(request, purchase_no):
+    purchase = get_object_or_404(Purchase, purchase_no=purchase_no)
+
+    messages.info(request, (
+        f"This is a previous pruchase confirmation for purchase number {purchase_no}. "
+        'An email confirmation same was sent on the purchase date.'
+    ))
+
+    template = 'purchase/purchase_success.html'
+    context = {
+        'purchase': purchase,
+        'from_dashboard': True,
     }
 
     return render(request, template, context)
