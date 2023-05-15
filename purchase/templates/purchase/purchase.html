@@ -89,12 +89,12 @@
 
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Customer Shipping Details</legend>
+                    {{ purchase_form.telephone | as_crispy_field }}
                     {{ purchase_form.company | as_crispy_field }}
                     {{ purchase_form.address1 | as_crispy_field }}
                     {{ purchase_form.address2 | as_crispy_field }}
                     {{ purchase_form.address3 | as_crispy_field }}
                     {{ purchase_form.postcode | as_crispy_field }}
-                    {{ purchase_form.telephone | as_crispy_field }}
                     <div class="form-check form-check-inline float-right mr-0">
                         {% if user.is_authenticated %}   
                             <label class="form-check-label" for="id-save-info">Save order details to my account</label>
