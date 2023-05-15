@@ -1,0 +1,8 @@
+#dashboard-update-form .form-control {
+    color: #000;
+}
+
+
+#dashboard-update-form input::placeholder {
+    color: #aab7c4;
+}
