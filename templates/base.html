@@ -79,15 +79,21 @@
               </li>
              
               <li class="nav-item dropdown">
-                <a class="nav-link-dropdown dropdown-toggle mr-5" href="{% url 'dashboard' %}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link-dropdown dropdown-toggle mr-5" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Dashboard
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
-                  <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
-                  <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
-                  <a class="dropdown-item" href="#">Manage Courses</a>
-                </div>
+                  {% if request.user.is_authenticated %}   
+                    {% if request.user.is_superuser %}
+                      <a class="dropdown-item" href="#">Manage Courses</a>
+                    {% endif %}
+                    <a class="dropdown-item" href="{% url 'dashboard' %}">My Dashboard</a>
+                    <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                  {% else %}
+                    <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
+                    <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+                  {% endif %}
+               </div>
               </li>
             </ul>
           </div>
