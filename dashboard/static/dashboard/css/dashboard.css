@@ -1,14 +1,11 @@
 .purchase-records {
     max-height: 416px;
     overflow-y: auto;
-
-
 }
 
 #dashboard-update-form .form-control {
     color: #000;
 }
-
 
 #dashboard-update-form input::placeholder {
     color: #aab7c4;

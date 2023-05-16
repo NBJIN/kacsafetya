@@ -36,7 +36,7 @@ def purchase_records(request, purchase_no):
     purchase = get_object_or_404(Purchase, purchase_no=purchase_no)
 
     messages.info(request, (
-        f"This is a previous pruchase confirmation for purchase number {purchase_no}. "
+        f'This is a previous pruchase confirmation for purchase number {purchase_no}. '
         'An email confirmation same was sent on the purchase date.'
     ))
 
