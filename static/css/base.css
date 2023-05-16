@@ -354,7 +354,7 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content input {
     border-color: #000;
-    border-radious: 0;
+    border-radius: 0;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {

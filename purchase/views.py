@@ -141,9 +141,11 @@ def purchase_success(request, purchase_no):
 
     if request.user.is_authenticated:
         dashboard = UserDashboard.objects.get(user=request.user)
+        # Attach the users profile to the order
         purchase.user_dashboard = dashboard
         purchase.save()
 
+        # Save the users info
         if save_info:
             dashboard_data = {
                 'default_company': purchase.company,

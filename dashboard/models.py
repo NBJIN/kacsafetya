@@ -6,7 +6,7 @@ from django.dispatch import receiver
 
 class UserDashboard(models.Model):
     """
-    User Dashboard to display users delivery 
+    User Dashboard to display users delivery
     and purchase details
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
