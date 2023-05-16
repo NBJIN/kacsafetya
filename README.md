@@ -1,108 +1,120 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# KACSafety
 
-Welcome noreen,
+## About
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+#### This is a fictional website for educational purposed for a health and safety training company called KAC Safety.  It is a training provider which offers both online and classroom based courses in health and in safety.  This is a full stack e commerce project.  The following languages have been used while building this project: Django, Python, Html, CSS and JavaScript.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+## UX
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+#### When researching the UX principles and thinking about the clients needs, the target audience and what needs to be included so that they would benefit from same I considered the following.
 
-`python3 -m http.server`
+#### Bearing in mind that this is a start up and more courses will be added over time as the company and website evolves but the target audience for this site are as follows:
+#### -	Companies and Private clients in the health and construction industries 
+#### -	Companies interested in providing health and safety training to their employees to ensure compliance with legal requirements and to create a safe and health work environment.  
+#### -	Health and Safety courses are essential for promoting workplace safety and prevent accidents and injuries and by undertaking these courses they can benefit both individuals and the company by providing the knowledge and skills necessary to maintain a safe and health work environment.  
+#### -	Private clients who are looking to upskill in order to gain a promotion or a change of career or maybe to stay up to date with industry standards.  .  
+#### -	Also by offering courses online there is the opportunity to reach a wider audience including people who might not be able to attend in person classes due to time constrains and location 
+#### -	Also with an online offering thee is the potential of increased revenue. 
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## What the visitors will be looking for:
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### - -	Visitors to the site are looking for a an ecommerce site that provides easy access to a range of courses and training materials that are relevant to their individual needs.  
+#### -	An information source which has a bank of courses in relation to health and safety 
+#### -	Visitors will require some detail on each course selected.
+#### -	Visitors will want to see the cost of each course. 
+#### -	Visitors will also want to know whether the course is delivered online or in classroom setting.
+#### -	Select a training date for a specific course 
+#### -	And be able to carry this selection through to the checkout process 
+#### -	Be able to set up an account if they are a frequent visitor to the site so that they can view order history 
+#### -	Be able to keep up to date with company announcements by way of newsletter and social media link 
+#### -	Be able to easily naviage around the site to view the specific information that a user want to see.
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## Agile Development 
+#### Github was used to record the project milestone / epics and the kanban board within github was used to record all the user stories for the project. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+### User Stories
+#### This project has 5 Milestone and they are as follows: 
+#### 1	Project Planning Design and Setup (Admin)
+#### 2	Authentication & Access (Admin and User)
+#### 3	Functionality (Admin and User)
+#### 4	Management of courses and site (Admin)
+#### 5	Testing and Deployment (Admin)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### Each one of the above Milestones/Epics are further divided down into their own user stories: 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Milestone/Epic : Project Planning Design and Setup (Admin)
+#### -	#2 Developer – Document project user requirements, scope and goals – (This was entered twice by mistake under the project milestone above)
+#### -	#3 Developer – Create wireframes, mock-ups, layouts and interface, user stories and kanban board. 
+#### -	#4 Developer – Setup project workspace on hosting platform 
 
-------
+### Milestone/Epic : Authentication & Access (Admin and User)
+#### -	#5 (35) Admin have full access to the site 
+#### -	#6 Admin – Manage user accounts
+#### -	#7 User – Register for a new account
+#### -	#8 User – login to account
+#### -	#9 User – Manage Account Information 
+#### -	#10 – User – Reset password 
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Milestone/Epic : Authentication & Access (Admin and User)
+#### -	#11 User – View full list of courses
+#### -	#12 User – View the course in more detail
+#### -	#13 User – Search courses by category 
+#### -	#14 User – Search courses by location
+#### -	#15 User – Add courses to bag 
+#### -	#16 (36) User – View courses in bag 
+#### -	#17 User – Change qty in bag 
+#### -	#18 User – Enter payment details
+#### -	#19 User – See order confirmation 
+#### -	#20 User – See order history on login 
+#### -	#21 User – Make purchase without registration 
+#### -	#22 User – Sign up to company newsletter
+#### -	#23 User – Submit a contact form 
+#### -	#24 User – Access company social media page 
+#### -	#25 User – See confirmation of actions completed 
+	
+### Milestone/Epic : Management of courses and site (Admin)
+#### -	#26 Admin – Add new courses
+#### -	#27 Admin – Edit a course 
+#### -	#28 Admin – Delete a course 
+#### -	#29 Admin – Update general content 
+#### -	#30 Admin – Manage in-coming orders 
+#### -	#31 Admin – Manage all in-coming contact requests
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Milestone/Epic : Testing and Deployment (Admin)
+#### -	#32 Developer – Test all parts of the Django site 
+#### -	#33 Developer – Deploy successfully
+#### -	#34 Developer – Ensure site is responsive 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Scope  ( Need to put in screen shot of all pages when completed *********************)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+NOT COMPLETED  - All Courses Page
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Categorize 
+On the all courses page there is an option to categorise information by location or group by
+-	Location is where the visitor can search by online or classroom 
+-	Group_by is where the visitor can search by either health or safety courses 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Also on the all courses pages you will see a list of all courses giving the name of each course, fee 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Future Features 
+Something that you have not yet implemented 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Structure 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
-------
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
