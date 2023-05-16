@@ -6,6 +6,8 @@ from django.conf import settings
 from .forms import PurchaseForm
 from .models import Purchase, PurchaseOrderItem
 from courses.models import Courses
+from dashboard.forms import UserDashboardForm
+from dashboard.models import UserDashboard
 from basket.contexts import basket_contents
 
 import stripe
@@ -99,7 +101,24 @@ def purchase(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        purchase_form = PurchaseForm()
+        if request.user.is_authenticated:
+            try:
+                dashboard = UserDashboard.objects.get(user=request.user)
+                purchase_form = PurchaseForm(initial={
+                    'fname': dashboard.user.get_fname(),
+                    'lname': dashboard.user.get_lname(),
+                    'company': dashboard.user.get_company,
+                    'address1': dashboard.user.get_address1,
+                    'address2': dashboard.user.get_address2,
+                    'address3': dashboard.user.get_address3,
+                    'postcode': dashboard.user.get_postcode,
+                    'telephone': dashboard.user.get_telephone,
+                    'email': dashboard.user.get_email,
+                })
+            except UserDashboard.DoesNotExist:
+                purchase_form = PurchaseForm()
+        else:
+            purchase_form = PurchaseForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
@@ -119,6 +138,26 @@ def purchase_success(request, purchase_no):
     """
     save_info = request.session.get('save_info')
     purchase = get_object_or_404(Purchase, purchase_no=purchase_no)
+
+    if request.user.is_authenticated:
+        dashboard = UserDashboard.objects.get(user=request.user)
+        purchase.user_dashboard = dashboard
+        purchase.save()
+
+        if save_info:
+            dashboard_data = {
+                'default_company': purchase.company,
+                'default_address1': purchase.address1,
+                'default_address2': purchase.address2,
+                'default_address3': purchase.address3,
+                'default_postcode': purchase.postcode,
+                'default_telephone': purchase.telephone,
+                'default_email': purchase.email,
+            }
+            user_dashboard_form = UserDashboardForm(dashboard_data, instance=dashboard)
+            if user_dashboard_form.is_valid():
+                user_dashboard_form.save()
+
     messages.success(request, f'Purchase successfully processed \
         Your purchase order number is {purchase_no}. Confirmation \
         of your purchase has been sent to {purchase.email}')
