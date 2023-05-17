@@ -34,6 +34,7 @@ def cache_purchase_data(request):
 
 
 def purchase(request):
+    # intent = None
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
     # global intent
@@ -58,7 +59,7 @@ def purchase(request):
         purchase_form = PurchaseForm(form_data)
         if purchase_form.is_valid():
             purchase = purchase_form.save(commit=False)
-            pip = request.POST.get('client_secret').split('_secret')[0]
+            pid = request.POST.get('client_secret').split('_secret')[0]
             purchase.stripe_pid = pid
             purchase.original_basket = json.dumps(basket)
             purchase.save()
