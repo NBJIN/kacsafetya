@@ -17,7 +17,7 @@ import json
 @require_POST
 def cache_purchase_data(request):
     try:
-        pip = request.POST.get('client_secret').split('_secret')[0]
+        pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
             'basket': json.dumps(request.session.get('basket', {})),
@@ -28,6 +28,7 @@ def cache_purchase_data(request):
     except Exception as e:
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
+        print('cache_purchase_data: ', e)
         return HttpResponse(content=e, status=400)
     print('cache_purchase_data')
 

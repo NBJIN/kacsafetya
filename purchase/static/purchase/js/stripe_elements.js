@@ -69,26 +69,30 @@ form.addEventListener('submit', function(ev) {
             payment_method: {
                 card: card,
                 billing_details: {
-                    fname: $.trim(form.fname.value),
-                    lname: $.trim(form.lname.value),
-                    telephone: $.trim(form.telephone.value),
+                    name: $.trim(form.fname.value),
+                    name: $.trim(form.lname.value),
+                    phone: $.trim(form.telephone.value),
                     email: $.trim(form.email.value),
-                    company: $.trim(form.company.value),
-                    address1: $.trim(form.address1.value),
-                    address2: $.trim(form.address2.value),
-                    address3: $.trim(form.address3.value),
+                    // company: $.trim(form.company.value),
+                    address:{
+                        line1: $.trim(form.address1.value),
+                        line2: $.trim(form.address2.value),
+                        line3: $.trim(form.address3.value),
+                    }
                     }
             },
             shipping: {
-                fname: $.trim(form.fname.value),
-                lname: $.trim(form.lname.value),
-                telephone: $.trim(form.telephone.value),
-                company: $.trim(form.company.value),
-                address1: $.trim(form.address1.value),
-                address2: $.trim(form.address2.value),
-                address3: $.trim(form.address3.value),
-                postcode: $.trim(form.postcode.value),
-                postcode: $.trim(form.postcode.value),
+                name: $.trim(form.fname.value),
+                name: $.trim(form.lname.value),
+                phone: $.trim(form.telephone.value),
+                // company: $.trim(form.company.value),
+                address: {
+                    line1: $.trim(form.address1.value),
+                    line2: $.trim(form.address2.value),
+                    line3: $.trim(form.address3.value),
+                    postal_code: $.trim(form.postcode.value),
+                
+                }
                 }
         }).then(function(result) {
             if (result.error) {
