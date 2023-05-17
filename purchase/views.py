@@ -105,15 +105,15 @@ def purchase(request):
             try:
                 dashboard = UserDashboard.objects.get(user=request.user)
                 purchase_form = PurchaseForm(initial={
-                    'fname': dashboard.user.get_fname(),
-                    'lname': dashboard.user.get_lname(),
-                    'company': dashboard.user.get_company,
-                    'address1': dashboard.user.get_address1,
-                    'address2': dashboard.user.get_address2,
-                    'address3': dashboard.user.get_address3,
-                    'postcode': dashboard.user.get_postcode,
-                    'telephone': dashboard.user.get_telephone,
-                    'email': dashboard.user.get_email,
+                    'user': dashboard.user.default_user(),
+                 
+                    'default_company': dashboard.default_company,
+                    'address1': dashboard.default_address1,
+                    'address2': dashboard.default.address2,
+                    'address3': dashboard.default.address3,
+                    'postcode': dashboard.default.postcode,
+                    'telephone': dashboard.default.telephone,
+                    'email': dashboard.default.email,
                 })
             except UserDashboard.DoesNotExist:
                 purchase_form = PurchaseForm()
@@ -162,7 +162,7 @@ def purchase_success(request, purchase_no):
 
     messages.success(request, f'Purchase successfully processed \
         Your purchase order number is {purchase_no}. Confirmation \
-        of your purchase has been sent to {purchase.email}')
+        of your purchase has been sent to {purchase.email}.')
 
     if 'basket' in request.session:
         del request.session['basket']
