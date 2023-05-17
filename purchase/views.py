@@ -29,12 +29,14 @@ def cache_purchase_data(request):
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
         return HttpResponse(content=e, status=400)
+    print('cache_purchase_data')
 
 
 def purchase(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
     # global intent
+    # print('purchase')
 
     if request.method == 'POST':
         basket = request.session.get('basket', {})
@@ -105,15 +107,14 @@ def purchase(request):
             try:
                 dashboard = UserDashboard.objects.get(user=request.user)
                 purchase_form = PurchaseForm(initial={
-                    'user': dashboard.user.default_user(),
-                 
-                    'default_company': dashboard.default_company,
+                    # 'user': dashboard.user.default_user(),
+                    'company': dashboard.default_company,
                     'address1': dashboard.default_address1,
-                    'address2': dashboard.default.address2,
-                    'address3': dashboard.default.address3,
-                    'postcode': dashboard.default.postcode,
-                    'telephone': dashboard.default.telephone,
-                    'email': dashboard.default.email,
+                    'address2': dashboard.default_address2,
+                    'address3': dashboard.default_address3,
+                    'postcode': dashboard.default_postcode,
+                    'telephone': dashboard.default_telephone,
+                    'email': dashboard.default_email,
                 })
             except UserDashboard.DoesNotExist:
                 purchase_form = PurchaseForm()

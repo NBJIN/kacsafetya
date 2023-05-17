@@ -9,7 +9,7 @@ import time
 
 class StripeWH_Handler:
     """ Handle Stripe Webhooks"""
-    print('StripeWH_Handler')
+    # print('StripeWH_Handler')
 
     def __init__(self, request):
         self.request = request
@@ -62,6 +62,7 @@ class StripeWH_Handler:
                     postcode__iexact=shipping_details.address.postcode,
                     telephone__iexact=shipping_details.telephone,
                     email__iexact=billing_details.email,
+                    grand_total=grand_total,
                     original_basket=basket,
                     stripe_pid=pid,
                 )
