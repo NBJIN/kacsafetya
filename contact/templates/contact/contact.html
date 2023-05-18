@@ -30,25 +30,17 @@
 
 <div class="jumbotron jumbotron-main overlay">
     <p class="text-muted">If you need to contact us please complete the form below. </p>
-            <form action="" method="POST" id="payment-form">
+            <form action="{% url 'view_contact' %}" method="POST" id="contact-form">
                 {% csrf_token %}
-        <fieldset class="rounded px-3 mb-5">
-            <legend class="fieldset-label small text-black px-3 w-auto"></legend>
-            {{ contact_form.fname | as_crispy_field }}
-            {{ contact_form.lname | as_crispy_field }}
-            {{ contact_form.company | as_crispy_field }}
-        </fieldset>
+                {{ form|crispy }}
 
-        <fieldset class="rounded px-3 mb-5">
-            <legend class="fieldset-label small text-black px-2 w-auto"></legend>
-            {{ contact_form.telephone | as_crispy_field }}
-            {{ contact_form.email | as_crispy_field }}
-            {{ contact_form.date_added | as_crispy_field }}
-            {{ contact_form.course_title | as_crispy_field }}
-         
-            {{ contact_form.message | as_crispy_field }}
+            <fieldset class="rounded px-3 mb-5">
+                <legend class="fieldset-label small text-black px-3 w-auto"></legend>
+                 {{ contactform.email | as_crispy_field }}
+            </fieldset>
             <div class="form-check form-check-inline float-right mr-0">
 </div>
+</for
 
 
 
