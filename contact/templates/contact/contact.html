@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load bag_tools %}
+{% load crispy_forms_tags %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h1 class="logo-font mb-4">Contact Page</h1>
+            <hr>
+        </div>
+    </div>
+
+<div class="jumbotron jumbotron-main overlay">
+    <p class="text-muted">If you need to contact us please complete the form below. </p>
+            <form action="" method="POST" id="payment-form">
+                {% csrf_token %}
+        <fieldset class="rounded px-3 mb-5">
+            <legend class="fieldset-label small text-black px-3 w-auto"></legend>
+            {{ contact_form.fname | as_crispy_field }}
+            {{ contact_form.lname | as_crispy_field }}
+            {{ contact_form.company | as_crispy_field }}
+        </fieldset>
+
+        <fieldset class="rounded px-3 mb-5">
+            <legend class="fieldset-label small text-black px-2 w-auto"></legend>
+            {{ contact_form.telephone | as_crispy_field }}
+            {{ contact_form.email | as_crispy_field }}
+            {{ contact_form.date_added | as_crispy_field }}
+            {{ contact_form.course_title | as_crispy_field }}
+         
+            {{ contact_form.message | as_crispy_field }}
+            <div class="form-check form-check-inline float-right mr-0">
+</div>
+
+
+
+{% endblock %}
+
