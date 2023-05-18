@@ -7,7 +7,7 @@ class ContactForm(ModelForm):
         model = Contact
         fields = ('fname', 'lname',
                   'company', 'telephone',
-                  'email', 'date_added', 'course_title',
+                  'email', 'course_title',
                   'message',)
 
     def __init__(self, *args, **kwargs):
@@ -26,4 +26,15 @@ class ContactForm(ModelForm):
             'course_title': 'Course Title',
             'message': 'Message',
         }
+        labels = {
+            'fname': 'First Name',
+            'lname': 'Last Name',
+            'company': 'Company',
+            'telephone': 'Telephone',
+            'email': 'Email',
+            'date_added': 'Date',
+            'course_title': 'Course Title',
+            'message': 'Message',
+        }
+
         # print('fields')

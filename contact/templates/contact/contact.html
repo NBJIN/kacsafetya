@@ -21,26 +21,34 @@
 <div class="overlay"></div>
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-12 col-lg-6">
             <hr>
             <h1 class="logo-font mb-4">Contact Page</h1>
             <hr>
         </div>
     </div>
 
-<div class="jumbotron jumbotron-main overlay">
-    <p class="text-muted">If you need to contact us please complete the form below. </p>
+    <div class="col-12 col-lg-6">
+    <p class="text-muted">
+    
+        If you need to contact us please complete the form below.
+
+ </p>
             <form action="{% url 'view_contact' %}" method="POST" id="contact-form">
                 {% csrf_token %}
-                {{ form|crispy }}
+                {% crispy form %}
+
+                <button type="submit">Submit Details</button>
 
             <fieldset class="rounded px-3 mb-5">
                 <legend class="fieldset-label small text-black px-3 w-auto"></legend>
-                 {{ contactform.email | as_crispy_field }}
+                
             </fieldset>
             <div class="form-check form-check-inline float-right mr-0">
 </div>
-</for
+
+</form>
+    </div>
 
 
 
