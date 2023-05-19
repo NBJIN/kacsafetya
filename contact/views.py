@@ -9,9 +9,23 @@ def view_contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-
-            form.save()
-            messages.success(request, 'Your inquiry has been submitted, we will get back to you shortly.')
-    else: 
+            fname = form.cleaned_data['fname']
+            lname = form.cleaned_data['lname']
+            company = form.cleaned_data['company']
+            telephone = form.cleaned_data['telephone']
+            email = form.cleaned_data['email']
+            # 'date_added': 'Date',
+            course_title = form.cleaned_data['course_title']
+            message = form.cleaned_data['message']
+            return redirect('contact_approved')
+    else:
         form = ContactForm()
+
     return render(request, 'contact/contact.html', {'form': form})
+
+
+def contact_approved(request):
+    """
+    A veiw to return the contact approved  page
+    """
+    return render(request, 'contact/contact_approved.html')

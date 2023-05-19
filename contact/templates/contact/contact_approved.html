@@ -23,29 +23,20 @@
     <div class="row">
         <div class="col-12 col-lg-6">
             <hr>
-            <h1 class="logo-font mb-4">Contact Page</h1>
+            <h1 class="logo-font mb-4">Contact Succes</h1>
             <hr>
         </div>
     </div>
 
-
         <div class="col-12 col-lg-6">
             <p class="text-muted">
-                If you need to contact us please complete the form below.
+               Hi {{ user}},
+               Your message has been received.
+               We will respond within 24h.
+               Thank you for your enquiry.
+               KACSafety Team
             </p>
-            <form action="{% url 'view_contact' %}" method="POST" id="contact-form">
-                {% csrf_token %}
-                {% crispy form %}
-                <button type="submit">Submit Details</button>   
-            <fieldset class="rounded px-3 mb-5">
-                <legend class="fieldset-label small text-black px-3 w-auto"></legend>
-                
-            </fieldset>
-            <div class="form-check form-check-inline float-right mr-0">
-         </div>
-
-        </form>
+        
         </div>
-
 {% endblock %}
 
