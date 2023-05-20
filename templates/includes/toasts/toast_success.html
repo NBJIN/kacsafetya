@@ -17,16 +17,16 @@
       {% if grand_total and not on_dashboard_page %}
         <p class="logo-font bg-white text-black py-1 ">Your Basket ({{ courses_count }})</p>
         <div class="bag-notification-wrapper">
-      {% for item in basket_items %}
-        <div class="row">
-          <div class="col-3 my-1">
-            <img class="w-100" src="{{ item.courses.image.url }}">
-          </div>
-          <div class="col-9">
-            <p class="my-0"><strong>{{ item.courses.title }}</strong></p>
-            <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
-          </div>
-        </div>
+          {% for item in basket_items %}
+            <div class="row">
+              <div class="col-3 my-1">
+                <img class="w-100" src="{{ item.courses.image.url }}">
+              </div>
+              <div class="col-9">
+                <p class="my-0"><strong>{{ item.courses.title }}</strong></p>
+                <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
+              </div>
+            </div>
 
       {% endfor %}
     </div>

@@ -21,8 +21,7 @@ class Purchase(models.Model):
     telephone = models.CharField(max_length=30, null=False, blank=False)
     email = models.EmailField(max_length=300, null=False, blank=False)
     date_added = models.DateTimeField(auto_now_add=True)
-    course_title = models.CharField(max_length=250)
-    quantity = models.PositiveIntegerField(default=0)
+
     fee = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     total = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     discount = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)

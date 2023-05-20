@@ -17,7 +17,7 @@ def dashboard(request):
         form = UserDashboardForm(request.POST, instance=dashboard)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your Dashboard has been updated successfully')
+            messages.success(request, 'Your Dashboard has been updated successfully with your details')
 
     form = UserDashboardForm(instance=dashboard)
     purchase = dashboard.purchase.all()

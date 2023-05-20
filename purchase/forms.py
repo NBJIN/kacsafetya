@@ -8,8 +8,7 @@ class PurchaseForm(ModelForm):
         fields = ('fname', 'lname',
                   'company', 'address1', 'address2',
                   'address3', 'postcode', 'telephone',
-                  'email', 'course_title',
-                  'quantity',)
+                  'email',)
 
     def __init__(self, *args, **kwargs):
         """

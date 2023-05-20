@@ -41,6 +41,7 @@ def purchase(request):
     # print('purchase')
 
     if request.method == 'POST':
+        print(request.POST)
         basket = request.session.get('basket', {})
 
         form_data = {
@@ -53,10 +54,11 @@ def purchase(request):
             'postcode': request.POST['postcode'],
             'telephone': request.POST['telephone'],
             'email': request.POST['email'],
-            # 'course_title': request.POST['course_title'],
-            # 'quantity': request.POST['quantity'],
+            'course_title': request.POST['course_title'],
+            'quantity': request.POST['quantity'],
         }
         purchase_form = PurchaseForm(form_data)
+        print("ERRORS: ", purchase_form.errors)
         if purchase_form.is_valid():
             purchase = purchase_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
@@ -68,9 +70,9 @@ def purchase(request):
                     courses = Courses.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         purchase_order_item = PurchaseOrderItem(
-                            # purchase_no=purchase_no,
-                            purchase=purchase,
-                            courses=courses,
+
+                            purchase_no=purchase_no,
+                            course_title=courses,
                             quantity=item_data,
                         )
                         purchase_order_item.save()
