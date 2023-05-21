@@ -33,7 +33,6 @@ def cache_purchase_data(request):
 
 
 def purchase(request):
-
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -66,7 +65,6 @@ def purchase(request):
                     courses = Courses.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         purchase_order_item = PurchaseOrderItem(
-
                             purchase_no=purchase_no,
                             course_title=courses,
                             quantity=item_data,
