@@ -12,7 +12,7 @@ class Purchase(models.Model):
     user_dashboard = models.ForeignKey(UserDashboard, on_delete=models.SET_NULL,
                                        null=True, blank=True, related_name='purchase')
     fullname = models.CharField(max_length=150, null=False, blank=False, default='')
-    # lname = models.CharField(max_length=60, null=False, blank=False)
+  
     company = models.CharField(max_length=200, null=False, blank=False)
     address1 = models.CharField(max_length=100, null=False, blank=False)
     address2 = models.CharField(max_length=100, null=False, blank=False)
