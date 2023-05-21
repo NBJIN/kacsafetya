@@ -18,7 +18,6 @@ class ContactForm(ModelForm):
         super().__init__(*args, **kwargs)
         placeholders = {
             'fullname': 'Full Name',
-         
             'company': 'Company',
             'telephone': 'Telephone',
             'email': 'Email',
@@ -28,7 +27,6 @@ class ContactForm(ModelForm):
         }
         labels = {
             'fullname': 'Full Name',
-          
             'company': 'Company',
             'telephone': 'Telephone',
             'email': 'Email',
@@ -36,5 +34,3 @@ class ContactForm(ModelForm):
             'course_title': 'Course Title',
             'message': 'Message',
         }
-
-        # print('fields')

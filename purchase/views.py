@@ -30,18 +30,15 @@ def cache_purchase_data(request):
             processed right now. Please try again later.')
         print('cache_purchase_data: ', e)
         return HttpResponse(content=e, status=400)
-    print('cache_purchase_data')
 
 
 def purchase(request):
-    # intent = None
+
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
-    # global intent
-    # print('purchase')
 
     if request.method == 'POST':
-        print(request.POST)
+
         basket = request.session.get('basket', {})
 
         form_data = {

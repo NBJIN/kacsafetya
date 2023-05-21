@@ -25,7 +25,6 @@ def basket_contents(request):
         })
 
     discount = total * 10 / 100
-    print(discount)
 
     if total > settings.FREE_DISCOUNT:  # if my total is greater than 200
         discount = total * Decimal(settings.STANDARD_DISCOUNT_PERCENTAGE/100)  # grand total is = to total
@@ -35,8 +34,6 @@ def basket_contents(request):
     else:
         discount = 0
         free_discount_delta = 0
-
-    print(discount)
 
     grand_total = total - discount
 

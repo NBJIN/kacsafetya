@@ -23,7 +23,7 @@ class PurchaseAdmin(admin.ModelAdmin):
               'grand_total', 'original_basket',
               'stripe_pid')
 
-    list_display = ('purchase_no', 'date_added', 'fullname', 
+    list_display = ('purchase_no', 'date_added', 'fullname',
                     'total', 'grand_total',)
 
     ordering = ('date_added',)

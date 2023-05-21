@@ -1,11 +1,12 @@
 from django.forms import ModelForm
-from .models import Purchase
+from .models import Purchase, PurchaseOrderItem
 
 
 class PurchaseForm(ModelForm):
     class Meta:
         model = Purchase
-        fields = ('fullname', 
+
+        fields = ('fullname',
                   'company', 'address1', 'address2',
                   'address3', 'postcode', 'telephone',
                   'email',)
