@@ -5,7 +5,7 @@ from contact.models import Contact
 class ContactForm(ModelForm):
     class Meta:
         model = Contact
-        fields = ('fname', 'lname',
+        fields = ('fullname',
                   'company', 'telephone',
                   'email', 'course_title',
                   'message',)
@@ -17,8 +17,8 @@ class ContactForm(ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
-            'fname': 'First Name',
-            'lname': 'Last Name',
+            'fullname': 'Full Name',
+            # 'lname': 'Last Name',
             'company': 'Company',
             'telephone': 'Telephone',
             'email': 'Email',
@@ -27,8 +27,8 @@ class ContactForm(ModelForm):
             'message': 'Message',
         }
         labels = {
-            'fname': 'First Name',
-            'lname': 'Last Name',
+            'fullname': 'Full Name',
+            # 'lname': 'Last Name',
             'company': 'Company',
             'telephone': 'Telephone',
             'email': 'Email',
