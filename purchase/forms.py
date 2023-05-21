@@ -18,7 +18,6 @@ class PurchaseForm(ModelForm):
         super().__init__(*args, **kwargs)
         placeholders = {
             'fullname': 'Full Name',
-            # 'lname': 'Last Name',
             'company': 'Company',
             'address1': 'Address 1',
             'address2': 'Address 2',

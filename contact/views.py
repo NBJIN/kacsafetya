@@ -10,7 +10,6 @@ def view_contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             fullname = form.cleaned_data['fullname']
-            # lname = form.cleaned_data['lname']
             company = form.cleaned_data['company']
             telephone = form.cleaned_data['telephone']
             email = form.cleaned_data['email']

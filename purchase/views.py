@@ -46,7 +46,6 @@ def purchase(request):
 
         form_data = {
             'fullname': request.POST['fullname'],
-            # 'lname': request.POST['lname'],
             'company': request.POST['company'],
             'address1': request.POST['address1'],
             'address2': request.POST['address2'],

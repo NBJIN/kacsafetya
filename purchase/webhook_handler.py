@@ -55,7 +55,6 @@ class StripeWH_Handler:
             try:
                 purchase = Purchase.objects.get(
                     fullname__iexact=shipping_details.fullname,
-                    # lname__iexact=shipping_details.lname,
                     company__iexact=shipping_details.company,
                     address1__iexact=shipping_details.address.address1,
                     address2__iexact=shipping_details.address.address2,
@@ -84,7 +83,6 @@ class StripeWH_Handler:
             try:
                 purchase = Purchase.objects.create(
                     fullname=shipping_details.fullname,
-                    # lname=shipping_details.lname,
                     company=shipping_details.company,
                     address1=shipping_details.address.address1,
                     address2=shipping_details.address.address2,
