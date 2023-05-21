@@ -5,7 +5,7 @@ from .models import Purchase
 class PurchaseForm(ModelForm):
     class Meta:
         model = Purchase
-        fields = ('fname', 'lname',
+        fields = ('fullname', 
                   'company', 'address1', 'address2',
                   'address3', 'postcode', 'telephone',
                   'email',)
@@ -17,8 +17,8 @@ class PurchaseForm(ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
-            'fname': 'First Name',
-            'lname': 'Last Name',
+            'fullname': 'Full Name',
+            # 'lname': 'Last Name',
             'company': 'Company',
             'address1': 'Address 1',
             'address2': 'Address 2',
@@ -31,7 +31,7 @@ class PurchaseForm(ModelForm):
 
         }
 
-        self.fields['fname'].widget.attrs['autofocus'] = True
+        self.fields['fullname'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'

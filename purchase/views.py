@@ -45,8 +45,8 @@ def purchase(request):
         basket = request.session.get('basket', {})
 
         form_data = {
-            'fname': request.POST['fname'],
-            'lname': request.POST['lname'],
+            'fullname': request.POST['fullname'],
+            # 'lname': request.POST['lname'],
             'company': request.POST['company'],
             'address1': request.POST['address1'],
             'address2': request.POST['address2'],

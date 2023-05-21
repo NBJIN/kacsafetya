@@ -11,8 +11,8 @@ class Purchase(models.Model):
     purchase_no = models.CharField(max_length=40, null=False, editable=False)
     user_dashboard = models.ForeignKey(UserDashboard, on_delete=models.SET_NULL,
                                        null=True, blank=True, related_name='purchase')
-    fname = models.CharField(max_length=60, null=False, blank=False)
-    lname = models.CharField(max_length=60, null=False, blank=False)
+    fullname = models.CharField(max_length=150, null=False, blank=False, default='')
+    # lname = models.CharField(max_length=60, null=False, blank=False)
     company = models.CharField(max_length=200, null=False, blank=False)
     address1 = models.CharField(max_length=100, null=False, blank=False)
     address2 = models.CharField(max_length=100, null=False, blank=False)

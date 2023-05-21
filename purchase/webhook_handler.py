@@ -54,8 +54,8 @@ class StripeWH_Handler:
         while attempt <= 5:
             try:
                 purchase = Purchase.objects.get(
-                    fname__iexact=shipping_details.fname,
-                    lname__iexact=shipping_details.lname,
+                    fullname__iexact=shipping_details.fullname,
+                    # lname__iexact=shipping_details.lname,
                     company__iexact=shipping_details.company,
                     address1__iexact=shipping_details.address.address1,
                     address2__iexact=shipping_details.address.address2,
@@ -83,8 +83,8 @@ class StripeWH_Handler:
             purchase = None
             try:
                 purchase = Purchase.objects.create(
-                    fname=shipping_details.fname,
-                    lname=shipping_details.lname,
+                    fullname=shipping_details.fullname,
+                    # lname=shipping_details.lname,
                     company=shipping_details.company,
                     address1=shipping_details.address.address1,
                     address2=shipping_details.address.address2,

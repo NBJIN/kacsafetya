@@ -15,7 +15,7 @@ class PurchaseAdmin(admin.ModelAdmin):
                        'grand_total', 'original_basket',
                        'stripe_pid')
 
-    fields = ('purchase_no', 'user_dashboard', 'fname', 'lname',
+    fields = ('purchase_no', 'user_dashboard', 'fullname',
               'company', 'address1', 'address2',
               'address3', 'postcode', 'telephone',
               'email', 'date_added', 'course_title',
@@ -23,7 +23,7 @@ class PurchaseAdmin(admin.ModelAdmin):
               'grand_total', 'original_basket',
               'stripe_pid')
 
-    list_display = ('purchase_no', 'date_added', 'fname', 'lname',
+    list_display = ('purchase_no', 'date_added', 'fullname', 
                     'total', 'grand_total',)
 
     ordering = ('date_added',)
