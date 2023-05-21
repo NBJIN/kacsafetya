@@ -54,17 +54,17 @@ class StripeWH_Handler:
         while attempt <= 5:
             try:
                 purchase = Purchase.objects.get(
-                    fullname__iexact=shipping_details.fullname,
-                    company__iexact=shipping_details.company,
-                    address1__iexact=shipping_details.address.address1,
-                    address2__iexact=shipping_details.address.address2,
-                    address3__iexact=shipping_details.address.address3,
-                    postcode__iexact=shipping_details.address.postcode,
-                    telephone__iexact=shipping_details.telephone,
+                    fullname__iexact=shipping_details.name,
+                    # company__iexact=shipping_details.company,
+                    address1__iexact=shipping_details.address.line1,
+                    address2__iexact=shipping_details.address.line2,
+                    address3__iexact=shipping_details.address.county,
+                    postcode__iexact=shipping_details.address.postal_code,
+                    telephone__iexact=shipping_details.phone,
                     email__iexact=billing_details.email,
                     grand_total=grand_total,
-                    course_title__iexact=billing_details.course_title,
-                    quantity__iexact=billing_details.course_title,
+                    # course_title__iexact=billing_details.course_title,
+                    # quantity__iexact=billing_details.course_title,
                     original_basket=basket,
                     stripe_pid=pid,
                 )
@@ -82,16 +82,16 @@ class StripeWH_Handler:
             purchase = None
             try:
                 purchase = Purchase.objects.create(
-                    fullname=shipping_details.fullname,
-                    company=shipping_details.company,
-                    address1=shipping_details.address.address1,
-                    address2=shipping_details.address.address2,
-                    address3=shipping_details.address.address3,
+                    fullname=shipping_details.name,
+                    # company=shipping_details.company,
+                    address1=shipping_details.address.line1,
+                    address2=shipping_details.address.line2,
+                    address3=shipping_details.address.county,
                     postcode=shipping_details.address.postcode,
-                    telephone=shipping_details.telephone,
+                    telephone=shipping_details.phone,
                     email=billing_details.email,
-                    course_title=billing_details.course_title,
-                    quantity=billing_details.course_title,
+                    # course_title=billing_details.course_title,
+                    # quantity=billing_details.course_title,
                     original_basket=basket,
                     stripe_pid=pid,
                 )

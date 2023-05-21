@@ -8,9 +8,19 @@
     margin-left: auto;
     height: 100%;
     width: auto;
+}
 
 
 
+
+.container-fluidfooter {
+    padding-top: 200px;
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    }
 
     /* max-width: 100%;
     height: auto; */

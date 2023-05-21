@@ -49,11 +49,12 @@ def purchase(request):
             'postcode': request.POST['postcode'],
             'telephone': request.POST['telephone'],
             'email': request.POST['email'],
-            'course_title': request.POST['course_title'],
-            'quantity': request.POST['quantity'],
+            # 'course_title': request.POST['course_title'],
+            # 'quantity': request.POST['quantity'],
         }
+        print('form_data')
         purchase_form = PurchaseForm(form_data)
-        print("ERRORS: ", purchase_form.errors)
+        # print("ERRORS: ", purchase_form.errors)
         if purchase_form.is_valid():
             purchase = purchase_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]

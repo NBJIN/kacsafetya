@@ -1,4 +1,5 @@
 from django.forms import ModelForm
+from django import forms
 from .models import Purchase, PurchaseOrderItem
 
 
@@ -7,9 +8,24 @@ class PurchaseForm(ModelForm):
         model = Purchase
 
         fields = ('fullname',
-                  'company', 'address1', 'address2',
-                  'address3', 'postcode', 'telephone',
-                  'email',)
+                  'company', 
+                  'address1', 
+                  'address2',
+                  'address3', 
+                  'postcode', 
+                  'telephone',
+                  'email',
+                #   'course_title',
+                #   'quantity',
+                  )
+
+
+# class PurchaseOrderItem(ModelForm):
+#     course_title = forms.CharField(label='Course Title', max_length=100)
+#     quantity = forms.IntegerField(label='Quantity')
+
+
+
 
     def __init__(self, *args, **kwargs):
         """
@@ -26,8 +42,8 @@ class PurchaseForm(ModelForm):
             'postcode': 'Postcode',
             'telephone': 'Telephone',
             'email': 'Email',
-            # 'course_title': 'Course Title',
-            # 'quantity': 'Quantity',
+            'course_title': 'Course Title',
+            'quantity': 'Quantity',
 
         }
 
