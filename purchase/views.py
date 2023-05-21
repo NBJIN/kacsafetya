@@ -12,6 +12,7 @@ from basket.contexts import basket_contents
 
 import stripe
 import json
+import uuid
 
 
 @require_POST
@@ -52,11 +53,12 @@ def purchase(request):
             # 'course_title': request.POST['course_title'],
             # 'quantity': request.POST['quantity'],
         }
-        print('form_data')
+        # print('form_data')
         purchase_form = PurchaseForm(form_data)
         # print("ERRORS: ", purchase_form.errors)
         if purchase_form.is_valid():
             purchase = purchase_form.save(commit=False)
+            purchase_no = purchase
             pid = request.POST.get('client_secret').split('_secret')[0]
             purchase.stripe_pid = pid
             purchase.original_basket = json.dumps(basket)
@@ -82,7 +84,7 @@ def purchase(request):
                     return redirect(reverse('view_basket'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('purchase_success', args[purchase.purchase_no]))
+            return redirect(reverse('purchase_success', args=(purchase.purchase_no,)))
         else:
             messages.error(request, 'There was an error with your form. \
             Please check your details.')

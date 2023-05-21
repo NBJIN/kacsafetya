@@ -32,14 +32,17 @@ class Purchase(models.Model):
         """ create a purchase no using uuid """
         return uuid.uuid4().hex.upper()
 
+    # def purchaseitems(self):
+    #     return self.orderitem.all()
+
     def update_total(self):
         """ Every time a new course is added update grand total """
-        self.purchase_total = self.orderitems.aggregate(Sum('orderitem_total'))['orderitem_total__sum'] or 0
-        if self.purchase_total < settings.FREE_DISCOUNT:
-            self.discount = self.purchase_total * settings.STANDARD_DISCOUNT_PERCENTAGE * 10 / 100
+        self.total = self.orderitems.aggregate(Sum('orderitem_total'))['orderitem_total__sum'] or 0
+        if self.total < settings.FREE_DISCOUNT:
+            self.discount = self.total * settings.STANDARD_DISCOUNT_PERCENTAGE * 10 / 100
         else:
             self.discount = 0
-        self.grand_total = self.purchase_total + self.discount
+        self.grand_total = self.total + self.discount
         self.save()
 
     def save(self, *args, **kwargs):
@@ -54,7 +57,7 @@ class Purchase(models.Model):
 
 
 class PurchaseOrderItem(models.Model):
-    purchase_no = models.ForeignKey(Purchase, null=False, blank=False, on_delete=models.CASCADE, related_name='orderitem')
+    purchase_no = models.ForeignKey(Purchase, null=False, blank=False, on_delete=models.CASCADE, related_name='orderitems')
     date_added = models.DateTimeField(auto_now_add=True)
     course_title = models.ForeignKey(Courses, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=0)
@@ -63,7 +66,7 @@ class PurchaseOrderItem(models.Model):
 
     def save(self, *args, **kwargs):
         """ set purchase_no if its not set already by overiding the original save method """
-        self.orderitem_total = self.courses.fee * self.quantity
+        self.orderitem_total = self.fee * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):

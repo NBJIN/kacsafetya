@@ -9,7 +9,7 @@ def update_on_save(sender, instance, created, **kwargs):
     """
     Update order total on PurchaseOrderItem when creating and updating
     """
-    instance.purchase.update_total()
+    instance.purchase_no.update_total()
 
 
 @receiver(post_delete, sender=PurchaseOrderItem)
@@ -17,4 +17,4 @@ def update_on_delete(sender, instance, **kwargs):
     """
     Update order total on PurchaseOrderItem when deleting a record
     """
-    instance.purchase.update_total()
+    instance.purchase_no.update_total()
