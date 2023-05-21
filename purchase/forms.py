@@ -6,7 +6,7 @@ class PurchaseForm(ModelForm):
     class Meta:
         model = Purchase
 
-        fields = ('fullname',
+        fields = ('fullname', 
                   'company', 'address1', 'address2',
                   'address3', 'postcode', 'telephone',
                   'email',)
