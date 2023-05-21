@@ -69,7 +69,7 @@ form.addEventListener('submit', function(ev) {
             payment_method: {
                 card: card,
                 billing_details: {
-                    name: $.trim(form.fname.value) + ' ' + $.trim(form.lname.value),
+                    name: $.trim(form.fullname.value),
                   
                     phone: $.trim(form.telephone.value),
                     email: $.trim(form.email.value),
@@ -82,7 +82,7 @@ form.addEventListener('submit', function(ev) {
                 }
             },
             shipping: {
-                name: $.trim(form.fname.value) + ' ' +$.trim(form.lname.value),
+                name: $.trim(form.fullname.value),
                 phone: $.trim(form.telephone.value),
                 // company: $.trim(form.company.value),
                 address: {
