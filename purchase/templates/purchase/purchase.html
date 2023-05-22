@@ -40,11 +40,11 @@
                     <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                 </div>
             </div>
-            {% for item in bag_items %}
+            {% for item in basket_items %}
                 <div class="row">
                     <div class="col-2 mb-1">
                         <a href="{% url 'detailed_courses' item.courses.id %}">
-                            {% if item.product.image %}
+                            {% if item.courses.image %}
                                 <img class="w-100" src="{{ item.courses.image.url }}" alt="{{ courses.title }}">
                             {% else %}
                                 <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ courses.title }}">
@@ -52,8 +52,8 @@
                         </a>
                     </div>
                     <div class="col-7">
-                        <p class="my-0"><strong>Name: {{ item.purchaseorderitem.course_title }}</strong></p>
-                        <p class="my-0 small text-muted">Quantity: {{ item.basket.quantity }}</p>
+                        <p class="my-0"><strong>Name: {{ item.courses.title }}</strong></p>
+                        <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
                     </div>
                     <div class="col-3 text-right">
                         <p class="my-0 small text-muted">€{{ item.courses.fee | calc_total:item.quantity }}</p>
