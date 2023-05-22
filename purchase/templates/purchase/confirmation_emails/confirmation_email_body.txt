@@ -1,0 +1,31 @@
+Hi {{ purchase.fullname }}
+
+Please find below confirmation details of your order.
+
+Purchase Number: {{ purchase.purchase_no }}
+
+Date: {{ purchase.date_added }}
+
+Total: {{ purchase.total }}
+
+Discount: {{ purchase.discount }}
+
+Grand Total: {{ purchase.grand_total }}
+
+Your goods will be delivered withing the next 3 to 5 working days.  
+
+Delivery will be made to the address provided: 
+
+{{ purchase.company }}
+{{ purchase.address1 }}
+{{ purchase.address2 }}
+{{ purchase.address3 }}
+{{ purchase.postcode }}
+{{ purchase.telephone }}
+
+
+Should your order not arrive within the time specified please reach out to {{ contact_email }}.
+
+Many thanks for your order. 
+
+The KACSafety Sales Team 
