@@ -53,7 +53,7 @@ class Purchase(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.purchase_no
+        return str(self.fullname)
 
 
 class PurchaseOrderItem(models.Model):
@@ -70,4 +70,4 @@ class PurchaseOrderItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.purchase_no
+        return str(self.course_title)

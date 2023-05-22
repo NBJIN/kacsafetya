@@ -50,6 +50,19 @@ class StripeWH_Handler:
             if value == "":
                 shipping_details.address[field] = None
 
+        # Update dashboard details when save_info is checked
+        dashboard = None 
+        username = intent.metadata.username
+        if username != 'AnonymousUser':
+            dashboard = UserDashboard.objects.get(user__username=username)
+            if save_info:
+                dashboard.default_address1 = shipping_details.address.line1
+                dashboard.default_address2 = shipping_details.address.line2
+                # dashboard.default_address3 = shipping_details.address.county
+                dashboard.default_postcode = shipping_details.address.postal_code
+                dashboard.default_telephone = shipping_details.phone
+                dashboard.save()
+
         purchase_exists = False
         attempt = 1
         while attempt <= 5:
@@ -84,6 +97,7 @@ class StripeWH_Handler:
             try:
                 purchase = Purchase.objects.create(
                     fullname=shipping_details.name,
+                    user_dashboard=dashboard,
                     # company=shipping_details.company,
                     address1=shipping_details.address.line1,
                     address2=shipping_details.address.line2,
