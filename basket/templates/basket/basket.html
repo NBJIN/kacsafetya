@@ -32,9 +32,9 @@
                             <th scope="col"></th>
                             <th scope="col">Quantity</th>
                             <th scope="col">Fee</th>
-                            <th scope="col">Total</th>
+                            <!-- <th scope="col">Total</th>
                             <th scope="col">Discount</th>
-                            <th scope="col">Grand Total</th>
+                            <th scope="col">Grand Total</th> -->
                         </tr>
                     </thead>
                     {% for item in basket_items %} 
@@ -87,26 +87,38 @@
                                 <th></th>
                                 <th></th>
                                 <th> -->
+
+
+
                                     <td class="py-3">
                                     <p class="my-0"><strong>{{ item.courses.fee }}</strong></p>
                                     </td>
+
+
+
                                 <!-- </th>
                                 <th> -->
-                                    <td class="py-3">
+
+
+
+                                    <!-- <td class="py-3">
                                     <p class="my-0"><strong>{{ total  }}</strong></p>
-                                    </td>
+                                    </td> -->
+
+
+
                                 <!-- </th>
                                 <th> -->
-                                    <th>
+                                    <!-- <th>
                                     <td class="py-3">
                                     <p class="my-0"><strong>{{ discount | floatformat:2 }}</strong></p>
                                     </td>
-                                    </th>
+                                    </th> -->
                                 <!-- </th>
-                                <th> -->
-                                    <td class="py-3">
+                                <!-- <th> -->
+                                    <!-- <td class="py-3">
                                     <p class="my-0"><strong>{{ grand_total | floatformat:2 }}</strong></p>
-                                </td>
+                                </td> --> -->
                                 <!-- </th>
                             </tr> -->
                             </tr>
