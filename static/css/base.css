@@ -1,17 +1,11 @@
 .row-main {
-   
-
     padding-left: 0px;
     padding-right: 0px;
-
     margin-right: auto;
     margin-left: auto;
     height: 100%;
     width: auto;
 }
-
-
-
 
 .container-fluidfooter {
     padding-top: 200px;
@@ -29,7 +23,7 @@
     
     /* z-index: 1;  */
    /* opacity: 0.1; */
-} 
+
 /* .overlay {
     position: absolute;
     top: 0;
@@ -58,10 +52,10 @@
 }  */
 
 .company-logo { 
-    height: 65px;
+    height: 60px;
     padding-left: 0px;
     margin: 0px;
-    margin-top: 0px;   
+    margin-top: -4px;   
 }
 
 .col {
@@ -71,24 +65,20 @@
     padding-right: 0px;
 }
 
-
-
 .main-container {
     padding-left: 0px;
     padding-right: 0px;
     margin-right: auto;
     margin-left: auto;
-    padding-bottom:300px;
+    padding-bottom:100px;
+    height: auto;
     /* padding-bottom: 300px; */
-    /*this needs to be taken out as it is only there to stretch container for cards*/
-
-    
+    /*this needs to be taken out as it is only there to stretch container for cards*/  
 }
 
 .row-header1 {
-   
     background-color: #CC0000;
-    height: 5vh;
+    height: 6vh;
 }
 
 .row-header2 {
@@ -99,21 +89,20 @@
 
 .row-header3 {
     background-color: #CC0000;
-    height: 5vh;
+    height: 6vh;
 }
 
 .form-control {
-    height: 33px;
-   
+    height: 33px;  
 }
 
 .row-main {
-    background-color: #CCCCCC;
-    height: 66vh;
-   
+    /* background-color: #CCCCCC; */
+    /* height: 66vh; */
+    height: auto;
 }
 
-.jumbotron-main {
+.container-home {
     position: absolute;
     text-align: center;
     background-color: transparent; 
@@ -121,9 +110,7 @@
     color: black; 
     width: 100%;
     top: 0px;
-
-    
-
+    padding-top: 20px;
 }
 
 .jumbotron-main h1,
@@ -133,21 +120,15 @@
     position: relative;
     font: Archivo;
     padding-top: 20px;
-    font-weight: 450;
-    
-   
-    
+    font-weight: 450; 
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);  
-
-    
+    transform: translate(-50%, -50%);    
 } 
-
 
 .row-footer1 {
     background-color: #CC0000;
-    height: 5vh;
+    height: 6vh;
 }
 
 .row-footer2 {
@@ -157,7 +138,7 @@
 
 .row-footer3 {
     background-color: #CC0000;
-    height: 5vh;
+    height: 6vh;
 }
 
 .fab {
@@ -167,8 +148,6 @@
 .row-footer3  p, i {
     color: black;
     font-size: small;
-   
-
 }
 
 .container-fluidbaseheader {
@@ -187,9 +166,6 @@
     margin-left: auto;
 }
 
-
-
-
 .nav-link-allcourses,
 .nav-link-basket,
 .nav-link-dropdown,
@@ -199,7 +175,6 @@
    color: black;   
    justify-content: space-around; 
 }
-
 
 /** positioning of nav bar item in container 2 to fit in between lines */
 
@@ -217,7 +192,6 @@
     /* background: white; */
     /* z-index: 1; was at -1 */
 /* }  */
-
 
 .card {
     float: left
@@ -240,7 +214,6 @@
     align-items: center;
     bottom: 10px;
     right: 10px;
-  
 }
 
 /* arrow button at the bottom of all courses page  */
@@ -261,7 +234,6 @@ input[name='q']::placeholder {
     background: white;
     color: black !important; /* use important to overife link color for <a> elements */
     border: 1px solid black;
-
 }
 
 /* button outline black on the detailed courses page */
@@ -303,7 +275,6 @@ input[name='q']::placeholder {
 
 .arrow-secondary {
     border-bottom-color: #6c757d !important;
-
 }
 
 .arrow-success {
@@ -393,7 +364,6 @@ input[name='q']::placeholder {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0;
-
     /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
@@ -404,15 +374,12 @@ input[name='q']::placeholder {
     color: #fff;
     background-color: #222;
     border-color: #222;
-
 }
 
 /* link text info color from bootstrap */
 .allauth-form-inner-content a {
     color: #17a2b8;
 }
-
-
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {

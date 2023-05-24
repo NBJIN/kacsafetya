@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'purchase',
     'dashboard',
     'contact',
+    'mailchimpnews',
 
     # other
     'crispy_forms',
@@ -196,3 +197,7 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 DEFAULT_FROM_EMAIL = 'kacsafety@example.com'
+
+# Mailchimp
+MAILCHIMP_KEY = os.getenv('MAILCHIMP_KEY', '')
+MAILCHIMP_AUDIENCE_ID = os.getenv('MAILCHIMP_AUDIENCE_ID', '')

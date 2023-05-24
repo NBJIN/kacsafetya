@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load bag_tools %}
+{% load crispy_forms_tags %}
+
+<!-- {% block extra_css %}
+    <link rel="stylesheet" href="{% static 'success/css/success.css' %}">
+{% endblock %} -->
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <hr>
+            <h1 class="logo-font mb-4">Newletter Signup </h1>
+            <p>Congratulations you just signed up to KACSafety Newsletter where we provide updates on company news and courses.</p>
+            <p>Thank you for your subscription</p>
+            <p>KACSafety Team</p>
+            <hr>
+        </div>
+    </div>
+
+  
+
+{% endblock %}
+
