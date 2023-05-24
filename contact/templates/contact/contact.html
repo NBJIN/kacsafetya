@@ -28,12 +28,12 @@
         </div>
     </div>
 
-    {% if submitted %}
-        <p class="success">
+    <!-- {% if submitted %} -->
+        <!-- <p class="success">
             Your contact form has been submitted.
         </p>    
 
-    {% else %}
+    {% else %} -->
 
         <div class="col-12 col-lg-6">
             <p class="text-muted">
@@ -42,7 +42,7 @@
             <form method="POST" id="contact-form">
                 {% csrf_token %}
                 {% crispy form %}
-                <button type="submit" value="Submit">Submit Details</button>   
+                <input type="submit" value="Submit">
             <fieldset class="rounded px-3 mb-5">
                 <legend class="fieldset-label small text-black px-3 w-auto"></legend>
                 
@@ -51,7 +51,7 @@
          </div>
 
         </form>
-    {% endif %}
+    <!-- {% endif %} -->
         </div>
 
 {% endblock %}

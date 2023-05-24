@@ -18,15 +18,22 @@ def contact(request):
             course_title = form.cleaned_data['course_title']
             message = form.cleaned_data['message']
             form.save()
-            return redirect('contact.html')
+            return redirect('contact_approved')
 
     else:
         form = ContactForm()
-    return render(request, 'contact.html', {'form': form})
+    return render(request, 'contact/contact.html', {'form': form})
 
 
 def contact_approved(request):
     return render(request, 'contact/contact_approved.html')
+
+
+
+
+
+
+
 
     # if request.method == 'POST':
     #     form = ContactForm(request.POST)
