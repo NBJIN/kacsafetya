@@ -209,11 +209,19 @@
       <div class="col">
         <!-- <footer> -->
           <h8>Subscribe to our newsletter. <i class="fa-brands fa-mailchimp fa-lg" style="color: #050505;"></i></h8>
-          <form method="post" action="">
+          <form method="post" action="subscribe/" enctype="mul">
             {% csrf_token %}
             <input type="email" name="email" placeholder="Your Email"> <input type="text" name="fullname" placeholder="Full Name"> <input type="text" name="company" placeholder="Company">
             <button class="btn btn-sm btn-secondary" type="submit">Submit</button>
           </form>
+
+
+    
+
+
+
+
+
         
           <!-- <footer class="footer mt-auto py-3 dark-bg"> -->
       </div>
