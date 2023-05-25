@@ -7,6 +7,7 @@ from .models import Contact
 
 def contact(request):
     """ A view to return the contact page """
+
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -19,14 +20,13 @@ def contact(request):
             message = form.cleaned_data['message']
             form.save()
             return redirect('contact_approved')
-
     else:
         form = ContactForm()
     return render(request, 'contact/contact.html', {'form': form})
 
 
 def contact_approved(request):
-    return render(request, 'contact/contact_approved.html')
+    return render(request, 'contact_approved.html')
 
 
 
