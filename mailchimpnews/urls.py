@@ -4,8 +4,9 @@ from . import views
 
 
 urlpatterns = [
-    path("", views.subscribe, name="subscribe"),
+    path("subscribe/", views.subscribe_view, name="subscribe_view"),
+    path("success/", views.success, name="success"),
     # path("failure", views.failure, name="failure"),
 ]
 # path("admin/", admin.site.urls),
-# path("success/", views.success, name="success"),
+# 

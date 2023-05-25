@@ -28,5 +28,5 @@ urlpatterns = [
     path('purchase/', include('purchase.urls')),
     path('dashboard/', include('dashboard.urls')),
     path('contact/', include('contact.urls')),
-
+    path('mailchimpnews/', include('mailchimpnews.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

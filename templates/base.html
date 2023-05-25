@@ -65,19 +65,9 @@
               <li class="nav-item active">
                 <a class="nav-link-allcourses mr-5" href="{% url 'all_courses' %}">All Courses <span class="sr-only">(current)</span></a>
               </li>
+              
               <li class="nav-item">
-                  <a class="nav-link-basket mr-5" href="{% url 'view_basket' %}">Basket</a>
-                  <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_basket' %}"></a>
-                <div class="text-align-left">
-                  <!-- <div><i class="fal fa-shopping-basket"></i></div> -->
-                  <p class="my-0">
-                    {% if grand_total %}  
-                        €{{ grand_total|floatformat:2 }}
-                    {% else %}    
-                        €0.00
-                    {% endif %}
-                  </p>
-                </div>
+                <a class="nav-link-basket mr-5" href="{% url 'contact_view' %}">Contact Us</a>
               </li>
              
               <li class="nav-item dropdown">
@@ -98,8 +88,30 @@
                </div>
 
               </li>
+
               <li class="nav-item">
-                <a class="nav-link-basket mr-5" href="{% url 'contact_view' %}">Contact Us</a>
+                <a class="nav-link-basket mr-5" href="{% url 'view_basket' %}">Basket</a>
+                
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_basket' %}"></a>
+              <div class="text-align-left">
+                <!-- <div><i class="fal fa-shopping-basket"></i></div> -->
+                <p class="my-0">
+                  {% if grand_total %}  
+                      €{{ grand_total|floatformat:2 }}
+                  {% else %}    
+                      €0.00
+                  {% endif %}
+                </p>
+                
+              </div>
+            </li>
+              
+              <li class="nav-item">
+                <a class="nav-link-basket mr-5" href="{% url 'subscribe_view' %}">Sign-up 
+                
+                  <i class="fa-brands fa-mailchimp fa-xl" style="color: #050505;"></i>
+                
+                </a>
               </li>
             </ul>
           </div>
@@ -208,12 +220,12 @@
     <div class="row-footer2">
       <div class="col">
         <!-- <footer> -->
-          <h8>Subscribe to our newsletter. <i class="fa-brands fa-mailchimp fa-lg" style="color: #050505;"></i></h8>
+          <!-- <h8>Subscribe to our newsletter. <i class="fa-brands fa-mailchimp fa-lg" style="color: #050505;"></i></h8>
           <form method="post" action="subscribe/" enctype="mul">
             {% csrf_token %}
             <input type="email" name="email" placeholder="Your Email"> <input type="text" name="fullname" placeholder="Full Name"> <input type="text" name="company" placeholder="Company">
             <button class="btn btn-sm btn-secondary" type="submit">Submit</button>
-          </form>
+          </form> -->
 
 
     

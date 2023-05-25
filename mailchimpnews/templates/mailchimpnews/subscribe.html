@@ -24,10 +24,34 @@
         <div class="col-12 col-lg-6">
             <hr>
             <h1 class="logo-font mb-4">Newletter Signup </h1>
-            <p>Congratulations you just signed up to KACSafety Newsletter where we provide updates on company news and courses.</p>
-            <p>Thank you for your subscription</p>
+            <br>
+            <h4>Please enter your details below to subscribe to our newsletter.</h4>
+            <br>
+
+            <form method="post" action="success" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="Your Email"> 
+            <br>
+            <input type="text" name="fullname" placeholder="Full Name"> 
+            <br>
+            <input type="text" name="company" placeholder="Company">
+            <br>
+            <br>
+            <button class="btn btn-sm btn-secondary" type="submit">Submit</button>
+          </form>
+
+
+    
+
+
+
+
+
+        
+          <!-- <footer class="footer mt-auto py-3 dark-bg"> -->
+            <!-- <p>Thank you for your subscription</p>
             <p>KACSafety Team</p>
-            <hr>
+            <hr> -->
         </div>
     </div>
 

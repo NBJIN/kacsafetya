@@ -1,9 +1,9 @@
 from django.contrib import admin
 from .models import Mailchimp
-from .views import subscribe
+from .views import subscribe_view
 
 
-class Subscribe(admin.ModelAdmin):
+class SubscribeAdmin(admin.ModelAdmin):
     list_display = (
         'fullname', 'company', 'email',
         )

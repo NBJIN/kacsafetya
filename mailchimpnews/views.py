@@ -3,6 +3,7 @@ from django.shortcuts import get_object_or_404
 from mailchimp_marketing import Client
 from mailchimp_marketing.api_client import ApiClientError
 from django.contrib import messages
+from .models import Mailchimp
 import os
 
 MAILCHIMP_API_KEY = os.getenv('MAILCHIMP_API_KEY', '')
@@ -10,15 +11,23 @@ MAILCHIMP_DATA_CENTER = os.getenv('MAILCHIMP_DATA_CENTER', '')
 MAILCHIMP_EMAIL_LIST_ID = os.getenv('MAILCHIMP_EMAIL_LIST_ID', '')
 
 
-def subscribe(request):
+def subscribe_view(request):
     if request.method == "POST":
-
-        fullname = request.POST['fullname']
-        company = request.POST['company']
         email = request.POST['email']
-       
-    return render(request, 'subscribe.html')
+        Mailchimp.objects.create(email=email)
+        # print(email)
+        messages.success(request, "You details have been received. Thank You")
 
+    return render(request, "mailchimpnews/subscribe.html")
+
+# ********
+
+    #     fullname = request.POST['fullname']
+    #     company = request.POST['company']
+    #     email = request.POST['email']
+       
+    # return render(request, 'subscribe.html')
+# ********
 #  def contact_view(request):
 #     """ A view to return the contact page """
 
