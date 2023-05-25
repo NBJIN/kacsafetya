@@ -172,6 +172,5 @@ def purchase_success(request, purchase_no):
     template = 'purchase/purchase_success.html'
     context = {
         'purchase': purchase,
-       
     }
     return render(request, template, context)

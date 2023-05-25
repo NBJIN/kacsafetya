@@ -11,4 +11,4 @@ class ContactAdmin(admin.ModelAdmin):
     ordering = ('email',)
 
 
-admin.site.register(Contact)
+admin.site.register(Contact, ContactAdmin)
