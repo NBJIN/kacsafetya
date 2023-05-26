@@ -39,8 +39,6 @@ def success(request):
 def error(request):
     return render(request, 'error.html')
 
-
-
 # def subscribe_view(request):
 #     if request.method == "POST":
 #         email = request.POST['email']
@@ -49,10 +47,6 @@ def error(request):
 #         messages.success(request, "You details have been received. Thank You")
 
 #     return render(request, "mailchimpnews/subscribe.html")
-
-
-
-
 
 # ********
 
@@ -81,7 +75,6 @@ def error(request):
 #         form = ContactForm()
 #     return render(request, 'contact/contact.html', {'form': form})
 
-
 # def contact_approved(request):
 #     return render(request, 'contact/contact_approved.html')
 
@@ -104,8 +97,6 @@ def error(request):
 #             return redirect("error")
 
 #     return redner(request, "index.html")
-
-
 
 # ******    SubscribeForm.instance.email = request.user.email
         #     SubscribeForm.instance.fullname = request.user.username
