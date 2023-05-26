@@ -21,6 +21,7 @@ def subscribe_view(request):
         form = SubscribeForm(request.POST)
         if form.is_valid():
             # print("in post valid")
+         
             fullname = form.cleaned_data['fullname']
             company = form.cleaned_data['company']
             email = form.cleaned_data['email']
@@ -29,6 +30,16 @@ def subscribe_view(request):
     else:
         form = SubscribeForm()
     return render(request, 'mailchimpnews/subscribe.html', {'form': form})
+
+
+def success(request):
+    return render(request, 'mailchimpnews/success.html')
+
+
+def error(request):
+    return render(request, 'error.html')
+
+
 
 # def subscribe_view(request):
 #     if request.method == "POST":
@@ -40,12 +51,8 @@ def subscribe_view(request):
 #     return render(request, "mailchimpnews/subscribe.html")
 
 
-def success(request):
-    return render(request, 'mailchimpnews/success.html')
 
 
-def error(request):
-    return render(request, 'error.html')
 
 # ********
 
@@ -97,3 +104,25 @@ def error(request):
 #             return redirect("error")
 
 #     return redner(request, "index.html")
+
+
+
+# ******    SubscribeForm.instance.email = request.user.email
+        #     SubscribeForm.instance.fullname = request.user.username
+        #     SubscribeForm.instance.company = request.user.company 
+        #     Subscribe = subscribeform.save(commit=False)
+        #     subscribe.post = POST
+        #     subscribe.save()
+        # else:
+        #     SubscribeForm = SubscribeForm()
+
+        # return render(
+        #     request,
+        #     "success.html",
+        #     {
+        #         "post": post,
+        #         "Subscribe": Subscribe,
+
+        #         "SubscribeForm": SubscribeForm()
+        #     },
+        # )
