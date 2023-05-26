@@ -18,8 +18,10 @@ def dashboard(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your Dashboard has been updated successfully with your details')
-
-    form = UserDashboardForm(instance=dashboard)
+        else:
+            messages.error(request, 'Failed to update dashboard please check form.')
+    else:
+        form = UserDashboardForm(instance=dashboard)
     purchase = dashboard.purchase.all()
 
     template = 'dashboard/dashboard.html'

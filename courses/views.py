@@ -67,10 +67,19 @@ def add_courses(request):
     """
     Add Courses
     """
-    form = CoursesForm()
+    if request.method == 'POST':
+        form = CoursesForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save() 
+            messages.success(request, 'Course added.')
+            return redirect(reverse('add_courses'))
+        else:
+            messages.error(request, 'Course has not been added please check your form.')
+    else:
+        form = CoursesForm()
+
     template = 'courses/add_courses.html'
     context = {
         'form': form,
     }
-
     return render(request, template, context)
