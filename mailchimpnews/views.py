@@ -4,6 +4,7 @@ from mailchimp_marketing import Client
 from mailchimp_marketing.api_client import ApiClientError
 from django.contrib import messages
 from .models import Mailchimp
+from .forms import SubscribeForm
 import os
 
 MAILCHIMP_API_KEY = os.getenv('MAILCHIMP_API_KEY', '')
@@ -12,20 +13,46 @@ MAILCHIMP_EMAIL_LIST_ID = os.getenv('MAILCHIMP_EMAIL_LIST_ID', '')
 
 
 def subscribe_view(request):
-    if request.method == "POST":
-        email = request.POST['email']
-        Mailchimp.objects.create(email=email)
-        # print(email)
-        messages.success(request, "You details have been received. Thank You")
+    """ A view to return the contact page """
 
-    return render(request, "mailchimpnews/subscribe.html")
+    if request.method == 'POST':
+        form = SubscribeForm(data=request.POST)
+        # print("in post")
+        form = SubscribeForm(request.POST)
+        if form.is_valid():
+            # print("in post valid")
+            fullname = form.cleaned_data['fullname']
+            company = form.cleaned_data['company']
+            email = form.cleaned_data['email']
+            form.save()
+            return redirect('success')
+    else:
+        form = SubscribeForm()
+    return render(request, 'mailchimpnews/subscribe.html', {'form': form})
+
+# def subscribe_view(request):
+#     if request.method == "POST":
+#         email = request.POST['email']
+#         Mailchimp.objects.create(email=email)
+#         # print(email)
+#         messages.success(request, "You details have been received. Thank You")
+
+#     return render(request, "mailchimpnews/subscribe.html")
+
+
+def success(request):
+    return render(request, 'mailchimpnews/success.html')
+
+
+def error(request):
+    return render(request, 'error.html')
 
 # ********
 
-    #     fullname = request.POST['fullname']
-    #     company = request.POST['company']
-    #     email = request.POST['email']
-       
+    #     fullname = form.cleaned_data['fullname']
+    #     company = form.cleaned_data['company']
+        #   email = form.cleaned_data['email']
+
     # return render(request, 'subscribe.html')
 # ********
 #  def contact_view(request):
@@ -70,11 +97,3 @@ def subscribe_view(request):
 #             return redirect("error")
 
 #     return redner(request, "index.html")
-
-
-def success(request):
-    return render(request, 'success.html')
-
-
-def error(request):
-    return render(request, 'error.html')

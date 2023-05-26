@@ -4,9 +4,9 @@
 {% load bag_tools %}
 {% load crispy_forms_tags %}
 
-<!-- {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'success/css/success.css' %}">
-{% endblock %} -->
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'mailchimpnews/css/mailchimpnews.css' %}">
+{% endblock %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -23,29 +23,25 @@
     <div class="row">
         <div class="col-12 col-lg-6">
             <hr>
-            <h1 class="logo-font mb-4">Newletter Signup </h1>
+            <h1 class="logo-font mb-4">Newsletter Signup </h1>
             <br>
             <h4>Please enter your details below to subscribe to our newsletter.</h4>
             <br>
 
-            <form method="post" action="success" enctype="multipart/form-data">
-            {% csrf_token %}
-            <input type="email" name="email" placeholder="Your Email"> 
-            <br>
-            <input type="text" name="fullname" placeholder="Full Name"> 
-            <br>
-            <input type="text" name="company" placeholder="Company">
-            <br>
-            <br>
-            <button class="btn btn-sm btn-secondary" type="submit">Submit</button>
+            <form method="POST" action="success/" enctype="multipart/form-data">
+             {% csrf_token %}
+             {{ form | crispy }}
+
+             <input type="submit" value="Submit" class="btn btn-secondary">
+                <!-- <input type="email" name="email" placeholder="Your Email"> 
+                <br>
+             <input type="text" name="fullname" placeholder="Full Name"> 
+                <br>
+                <input type="text" name="company" placeholder="Company">
+                <br>
+                <br> -->
+                <!-- <button class="btn btn-sm btn-secondary" type="submit">Submit</button> -->
           </form>
-
-
-    
-
-
-
-
 
         
           <!-- <footer class="footer mt-auto py-3 dark-bg"> -->
@@ -54,8 +50,6 @@
             <hr> -->
         </div>
     </div>
+</div>
 
-  
-
-{% endblock %}
-
+  {% endblock %}

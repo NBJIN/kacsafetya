@@ -47,7 +47,7 @@
                             </td>
                             
                             <td class="py-3 w-25">
-                                <!-- <p class="my-0"><strong>{{ item.basket.quantity }}</strong></p> -->
+
                                 <form class="form update-form" method="POST" action="{% url 'update_basket' item.item_id %}">
                                     {% csrf_token %}
                                     <div class="form-group">
@@ -82,45 +82,10 @@
                                 <a class="delete-item text-danger float-right" id="delete_{{ item.item_id }}"><small>Remove</small></a>
 
                             </td>
-                            <!-- <tr>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th> -->
-
-
-
                                     <td class="py-3">
                                     <p class="my-0"><strong>{{ item.courses.fee }}</strong></p>
                                     </td>
 
-
-
-                                <!-- </th>
-                                <th> -->
-
-
-
-                                    <!-- <td class="py-3">
-                                    <p class="my-0"><strong>{{ total  }}</strong></p>
-                                    </td> -->
-
-
-
-                                <!-- </th>
-                                <th> -->
-                                    <!-- <th>
-                                    <td class="py-3">
-                                    <p class="my-0"><strong>{{ discount | floatformat:2 }}</strong></p>
-                                    </td>
-                                    </th> -->
-                                <!-- </th>
-                                <!-- <th> -->
-                                    <!-- <td class="py-3">
-                                    <p class="my-0"><strong>{{ grand_total | floatformat:2 }}</strong></p>
-                                </td> --> -->
-                                <!-- </th>
-                            </tr> -->
                             </tr>
 
                            

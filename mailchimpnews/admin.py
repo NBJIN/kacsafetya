@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Mailchimp
-from .views import subscribe_view
+from .forms import SubscribeForm
 
 
 class SubscribeAdmin(admin.ModelAdmin):
@@ -9,4 +9,6 @@ class SubscribeAdmin(admin.ModelAdmin):
         )
 
     ordering = ('fullname',)
-    admin.site.register(Mailchimp)
+    
+
+admin.site.register(Mailchimp)
