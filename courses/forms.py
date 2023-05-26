@@ -1,5 +1,6 @@
 from django import forms
 from .models import Courses, Group_By, Location
+from collections import OrderedDict
 
 
 class CoursesForm(forms.ModelForm):
@@ -8,11 +9,23 @@ class CoursesForm(forms.ModelForm):
         model = Courses
         fields = '__all__'
 
-    # def __init__(self, *args, **kwargs):
-    #     super().__init__(*args, **kwargs)
-    #     locations = Location.objects.all()
-    #     friendly_names = [(l.id, l.get_friendly_name()) for l in locations]
-
-    #     self.fields['location'].choices = friendly_names
-    #     for field_name, field in self.fields.items():
-    #         field.widget.attrs['class'] = 'border-black rounded-0'
+    def __init__(self, *args, **kwargs):
+        """
+        Add placeholders and classes, remove auto-generated
+        labels and set autofocus on first field
+        """
+        super().__init__(*args, **kwargs)
+        print(self.fields.keys())
+        self.fields = OrderedDict(
+            (field_name, self.fields[field_name])
+            for field_name in [
+                'title',
+                'group_by',
+                'location',
+                'image',
+                'image_url',
+                'details',
+                # 'date_of_course',
+                'fee',
+            ]
+            )
