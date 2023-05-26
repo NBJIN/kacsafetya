@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.db.models import Q
 from django.contrib import messages
 from .models import Courses, Location, Group_By
+from .forms import CoursesForm
 
 
 def all_courses(request):
@@ -60,3 +61,16 @@ def edit_courses(request, course_id):
     }
 
     return render(request, 'courses/edit_courses.html', context)
+
+
+def add_courses(request):
+    """
+    Add Courses
+    """
+    form = CoursesForm()
+    template = 'courses/add_courses.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
