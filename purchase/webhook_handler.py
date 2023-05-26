@@ -99,6 +99,8 @@ class StripeWH_Handler:
                     postcode__iexact=shipping_details.address.postal_code,
                     telephone__iexact=shipping_details.phone,
                     email__iexact=billing_details.email,
+                    total=total,
+                    discount=discount,
                     grand_total=grand_total,
                     # course_title__iexact=billing_details.course_title,
                     # quantity__iexact=billing_details.course_title,
@@ -150,7 +152,7 @@ class StripeWH_Handler:
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
-        self._send_confirmation_email(order)
+        self._send_confirmation_email(purchase)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)

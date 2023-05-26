@@ -1,4 +1,4 @@
-Hi {{ purchase.fullname }}
+Hi {{ purchase.fullname }},
 
 Please find below confirmation details of your order.
 
