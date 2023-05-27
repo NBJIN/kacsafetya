@@ -88,8 +88,11 @@
                         </div>
                     </form>
                 </div>
-                <a class="btn btn-sm btn-light" href="" role="button">Edit</a>      
-                <a class="btn btn-sm btn-light" href="" role="button">Delete</a>
+                {% if request.user.is_superuser %}
+                    <a class="btn btn-sm btn-secondary" href="{% url 'edit_courses' courses.id %}" role="button">Edit</a>  
+                    <a class="btn btn-sm btn-secondary" href="{% url 'delete_courses' courses.id %}" role="button">Delete</a>
+                    {% endif %}    
+                
             </div>
            
         </div>

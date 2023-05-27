@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import UserDashboard
 from .forms import UserDashboardForm
@@ -7,6 +8,7 @@ from .forms import UserDashboardForm
 from purchase.models import Purchase
 
 
+@login_required
 def dashboard(request):
     """
     Display the users dashboard

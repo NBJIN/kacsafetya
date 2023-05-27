@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.db.models import Q
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .models import Courses, Location, Group_By
 from .forms import CoursesForm
 
@@ -50,9 +51,13 @@ def detailed_courses(request, course_id):
 
     return render(request, 'courses/detailed_courses.html', context)
 
-
+@login_required
 def edit_courses(request, courses_id):
     """ A view to show each course in more detail """
+    if not request.user.is_superuser:
+        messages.error(request, 'This is a restricted view for the admin user.')
+        return redirect(reverse('index'))
+
     courses = get_object_or_404(Courses, pk=courses_id)
 
     if request.method == 'POST':
@@ -77,17 +82,21 @@ def edit_courses(request, courses_id):
 
     return render(request, 'courses/edit_courses.html', context)
 
-
+@login_required
 def add_courses(request):
     """
     Add Courses
     """
+    if not request.user.is_superuser:
+        messages.error(request, 'This is a restricted view for the admin user.')
+        return redirect(reverse('index'))
+
     if request.method == 'POST':
         form = CoursesForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            courses = form.save()
             messages.success(request, 'Course added.')
-            return redirect(reverse('add_courses'))
+            return redirect(reverse('detailed_courses', args=[courses.id]))
         else:
             messages.error(request, 'Course has not been added please check your form.')
     else:
@@ -98,3 +107,17 @@ def add_courses(request):
         'form': form,
     }
     return render(request, template, context)
+
+@login_required
+def delete_courses(request, courses_id):
+    """ 
+    A view to show that course is deleted 
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'This is a restricted view for the admin user.')
+        return redirect(reverse('index'))
+
+    courses = get_object_or_404(Courses, pk=courses_id)
+    courses.delete()
+    messages.success(request, 'The course has been deleted')
+    return redirect(reverse('all_courses'))
