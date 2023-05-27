@@ -1,4 +1,5 @@
 from django import forms
+from .widgets import CustomClearableFileInput
 from .models import Courses, Group_By, Location
 from collections import OrderedDict
 
@@ -9,6 +10,9 @@ class CoursesForm(forms.ModelForm):
         model = Courses
         fields = '__all__'
 
+    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+
+    
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
