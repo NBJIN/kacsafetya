@@ -51,11 +51,26 @@ def detailed_courses(request, course_id):
     return render(request, 'courses/detailed_courses.html', context)
 
 
-def edit_courses(request, course_id):
+def edit_courses(request, courses_id):
     """ A view to show each course in more detail """
-    courses = get_object_or_404(Courses, pk=course_id)
+    courses = get_object_or_404(Courses, pk=courses_id)
+
+    if request.method == 'POST':
+        form = CoursesForm(request.POST, request.FILES, instance=courses)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Course has been edited.')
+            return redirect(reverse('detailed_courses', args=[courses.id]))
+        else:
+            messages.error(request, 'Course has not been edited please check your form.')
+    else:
+        form = CoursesForm(instance=courses)
+        messages.info(request, f'You are editing {courses.title}')
+
+    template = 'courses/edit_courses.html'
 
     context = {
+        'form': form,
         'courses': courses,
 
     }
@@ -70,7 +85,7 @@ def add_courses(request):
     if request.method == 'POST':
         form = CoursesForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save() 
+            form.save()
             messages.success(request, 'Course added.')
             return redirect(reverse('add_courses'))
         else:
