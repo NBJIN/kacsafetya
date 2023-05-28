@@ -113,7 +113,7 @@ def add_courses(request):
 
 @login_required
 def delete_courses(request, courses_id):
-    """ 
+    """
     A view to show that course is deleted
     """
     if not request.user.is_superuser:

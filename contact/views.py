@@ -27,4 +27,3 @@ def contact_view(request):
 
 def contact_approved(request):
     return render(request, 'contact/contact_approved.html')
-    
