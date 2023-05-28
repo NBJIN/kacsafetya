@@ -27,18 +27,4 @@ def contact_view(request):
 
 def contact_approved(request):
     return render(request, 'contact/contact_approved.html')
-
-
-
-    # if request.method == 'POST':
-    #     form = ContactForm(request.POST)
-    #     if form.is_valid():
-    #         cd = form.cleaned_data
-    #         return HttpResponseRedirect('/contact?submitted=True')
-    #     else:
-    #         form = ContactForm()
-    #         if 'submitted' in request.GET:
-    #             submitted = True
-
-    #     return render(request, 'view_contact', {'form': form, 'submitted': submitted})
-
+    

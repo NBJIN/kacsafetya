@@ -9,6 +9,6 @@ class SubscribeAdmin(admin.ModelAdmin):
         )
 
     ordering = ('fullname',)
-    
+
 
 admin.site.register(Mailchimp)

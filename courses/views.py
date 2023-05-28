@@ -51,6 +51,7 @@ def detailed_courses(request, course_id):
 
     return render(request, 'courses/detailed_courses.html', context)
 
+
 @login_required
 def edit_courses(request, courses_id):
     """ A view to show each course in more detail """
@@ -82,6 +83,7 @@ def edit_courses(request, courses_id):
 
     return render(request, 'courses/edit_courses.html', context)
 
+
 @login_required
 def add_courses(request):
     """
@@ -108,10 +110,11 @@ def add_courses(request):
     }
     return render(request, template, context)
 
+
 @login_required
 def delete_courses(request, courses_id):
     """ 
-    A view to show that course is deleted 
+    A view to show that course is deleted
     """
     if not request.user.is_superuser:
         messages.error(request, 'This is a restricted view for the admin user.')
