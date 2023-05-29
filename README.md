@@ -110,21 +110,6 @@
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/0d998bfa-8ed6-459d-87bd-c1d57af1a1d4)
 
 
-## Scope  ( Need to put in screen shot of all pages when completed *********************)
-
-NOT COMPLETED  - All Courses Page
-
-Categorize 
-On the all courses page there is an option to categorise information by location or group by
--	Location is where the visitor can search by online or classroom 
--	Group_by is where the visitor can search by either health or safety courses 
-
-Also on the all courses pages you will see a list of all courses giving the name of each course, fee 
-
-
-Future Features 
-Something that you have not yet implemented 
-
 
 ## Structure 
 
@@ -548,10 +533,11 @@ Instagram
 #### - Responsiveness - ran out of time in order to ge this finalised.  
 #### - Stripe - When i make a payment It successfully allows me to enter details but when i proceed to the purchase success page it is not bringinig threw my total, discount and grand total.  It is also not bringing threw the course fee for this page.  
 #### - On the all courses page the Group By and Location need to be addressed as it is not working. 
+#### - I had to leave debug = True in this project in order to get project to display in gitpod. In the Heroku app it is displaying without static and css. Currently trying to resolve an issue with deployment.  
 
 
 ### Features Testing
-#### Each feature in the ecommerce site was tested to ensure that it functioned correctly and met the requirements of the project and user stories.  Feature testing involved the testing of forms, navigation, search functionality and user authentication. 
+#### Each feature in the ecommerce site was tested to ensure that it functioned correctly there are some features that still need to be implemented.  
 
 ### Responsiveness 
 #### The above is a work in progress at the minute which will need to be addressed ran out of time for this project.  
