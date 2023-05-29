@@ -90,6 +90,25 @@
 #### -	#33 Developer – Deploy successfully
 #### -	#34 Developer – Ensure site is responsive 
 
+#### - Please see screenshots below of Kanban board from Github
+#### - This is a full list of all user stories on github at the start of the project.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/97b0aabe-06b7-4cb8-a191-30aeb132c35d)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/8fa6578d-735e-4261-928f-6005f5d4b184)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/71d9cf8e-91d8-49ec-b48f-3f47af2ab969)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b732b6b8-c426-4889-aecc-4c6879ac9dfb)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/21e0979e-36f8-4d2e-83d8-d74381cfe141)
+
+#### - Presently this is the status of the kanban board in github.
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/31ceca72-5d33-4d63-ab34-59b90c3d9ade)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/38bce8f5-69cc-4627-8334-22e843f3c541)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a74c4049-7ac0-432f-a05b-01a3aed2a13b)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/e506e76f-1e45-493e-bdca-108298743275)
+
+### Product Backlog
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/3eb6a500-4b6a-4304-890a-b65df0c556d4)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/0d998bfa-8ed6-459d-87bd-c1d57af1a1d4)
+
 
 ## Scope  ( Need to put in screen shot of all pages when completed *********************)
 
@@ -110,22 +129,64 @@ Something that you have not yet implemented
 ## Structure 
 
 #### The site is divided into a number of apps so that the user can easily navigate around the site and these are as follows:
--   Dashboard - the user can view orders and update shipping information
--	Landing – this is the home page for this ecommerce site
--	Courses – which contains details about all the courses
--	Basket – which will allow user to add their items to the basket and view same 
--	Purchase – which is basically the checkout app which collects all the information about the payment for the courses.
--	Mail chimp
--	Contact us
+#### -  Dashboard - the user can view orders and update shipping information
+#### -	Landing – this is the home page for this ecommerce site
+#### -	Courses – which contains details about all the courses
+#### -	Basket – which will allow user to add their items to the basket and view same 
+#### -	Purchase – which is basically the checkout app which collects all the information about the payment for the courses.
+#### -	Mailchimpnews - marketing Tool 
+#### -	Contact - should a user want to get in contact with kacsafety
 
 ## Site map (Diagram showing all pages ************)
 
 ## Wireframes
-#### All wireframes were created using Balsamiq.  Wireframes for mobile and desktop are linked here or are below (ADD LINK ***********)
+#### All wireframes were created using Balsamiq.  
+#### Home Page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/35b4be24-fdaa-44a4-8c2a-a6ad707a1df9)
+
+#### Sign In Page
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/11cb3cb8-7b8f-4867-a010-a8c3d23d78cc)
+
+#### Sign Up Page
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1238ac32-4adc-4747-bf16-609988db267a)
+
+#### Logout 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9f930e47-7aa6-4376-84b8-41100ebad9f5)
+
+
+#### All Courses Page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/d9256ef2-225d-4bdc-8be8-cff87c88aa14)
+
+#### Detailed Courses Page - When the superuser is logged in they will be able to 
+#### edit and delete courses 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9804d3d7-ea19-4422-835e-e3e01d612ef2)
+
+#### Contact Us 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/fdd053c4-fdee-49e2-aacf-b21fd6185070)
+
+#### Basket
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/e754ae74-b5f7-4a5b-bbe2-d84ef0f24f86)
+
+#### Purchase Success
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/bb2d6803-a38d-4211-8bda-19fe76f4e311)
+
+#### Newsletter Signup
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/ed3c56aa-2a83-4a3b-bb3b-0b5dc555b22d)
+
+#### Add Course Page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/27e993ad-4125-46bb-b2f7-207d59bdeba2)
+
+#### Edit Course
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/4a24b634-4e26-42b9-a280-f5eef5691f76)
+
+#### Dashboard Page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1217fa51-504f-4146-a9ba-6588e433be8f)
+
 
 
 ## Database Schema
-#### (Put in final draw sql ************)
+#### The design for the database were drawn up in draw sql - In total there are 9 tables for this project which are as follows: Courses, Purchase, Purchase_Order, Location, Group_By, UserDashboard, Basket, Mail_Chimp and contact.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/8bd0c220-9d12-49f6-a545-4e38689e2a86)
 
 ## Business Model 
 #### The business model for this ecommerce projects is a Business to Business and Business to Customer (B2B and B2C).  As mentioned above the site is aimed at both companies who are trying to fullfill training and legal requirements and to private clients who want to upskill or career change.  
@@ -153,10 +214,22 @@ Something that you have not yet implemented
 #### -	By providing a choice of social media platforms it ensure that the company is reaching a wider audience and keeps customers up to date on all company events and updates and allows the company to engage wit their audience.  
 #### -	Mail Chimp allows user again to keep up to date with all company updates.  Location 
 #### -	Contact Us Form allows the company to engage with their customers and also gives their customers the opportunity to enquire about different course and get extra information.  Location 
+#### Below is screenshots of facebook page, contact page and mailchimp signup.
+### Facebook 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/3b7958e4-b406-47c8-b375-8fed77b3e115)
+### Contact Page
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/24100feb-2eea-4b84-993e-4548c476c1f4)
+### Mailchimp example
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/ce607efd-b517-4607-8f7e-1f56daea84b7)
+
 
 
 ### SEO – Search Engine Optimisation
-#### A sitemap.xml has been included in the root directory of this project.  This will aid search engine crawlers discover and crawl all of the pages on the ecommerce site including those that may be difficult to find through normal navigation or links.  A robots.txt file is also included in the root directory of this project.  This will instruct search engine crawlers which pages or sections of the website should not be crawled or indexed.  
+#### A sitemap.xml has been included in the root directory of this project.  This will aid search engine crawlers discover and crawl all of the pages on the ecommerce site including those that may be difficult to find through normal navigation or links.  A robots.txt file is also included in the root directory of this project.  This will instruct search engine crawlers which pages or sections of the website should not be crawled or indexed. The following keywords were drawn up for DEV-Tees keyword research - 
+ ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a82ab574-4cfc-4d9d-9248-516154a099b8)
+ ### These keywords were also put into the meta tag in the base.html page of the project root.  
+ ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b02db7dd-dfdd-42dc-abe6-45e70f64f1e6)
+
 
 ## Surface 
 ### Design Choice 
@@ -169,17 +242,17 @@ https://mycolor.space/ was used to research these color types.
 
 #### Red Ral Color #CC0000 
 
-PUT IN PICTURE OF COLOR **********************************************
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a512b104-fe36-4ea1-b312-7baf455aa7cc)
 
 #### Grey Ral Color # CCCCCC
  
- PUT IN PICTURE OF COLOR **********************************************
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a46852c7-5f00-4da3-ae22-a5a3140f0d29)
  
  ### Logo
 
 ### Reseached different websites for logo creation and I took inspiration from https://www.canva.com/ - The main colors used in the logo is red / black and white.  The logo sits in the same position on each page in the top left hand corner and will bring the visitor back to the home page when clicked.   
 
- PUT IN PICTURE OF Logo **********************************************
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1f847253-21c5-44fc-9d49-249c5eb4b96e)
 
  ### Typography 
 
@@ -187,12 +260,12 @@ PUT IN PICTURE OF COLOR **********************************************
 
 ## Technologies Used
 ## Languages
-#### -HTML5
-#### - CSS
-#### - Javascript 
-#### - python
+#### -HTML5 - https://en.wikipedia.org/wiki/HTML5
+#### - CSS - https://en.wikipedia.org/wiki/CSS
+#### - Javascript  - https://en.wikipedia.org/wiki/JavaScript
+#### - python - https://en.wikipedia.org/wiki/Python_(programming_language)
 
-**** LINK ALL OF THE ABOVE TO WIKI
+
 
 ## Frameworks, Libraries & Programs Used
 
@@ -477,28 +550,6 @@ Instagram
 #### - On the all courses page the Group By and Location need to be addressed as it is not working. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Features Testing
 #### Each feature in the ecommerce site was tested to ensure that it functioned correctly and met the requirements of the project and user stories.  Feature testing involved the testing of forms, navigation, search functionality and user authentication. 
 
@@ -758,6 +809,19 @@ pip3 freeze > requirements.txt
 13.	            'NAME': BASE_DIR / 'db.sqlite3',
 14.	        }
 15.	}
+
+
+
+# Credits
+## Content
+### Content for courses were taken from HSA website.  
+
+## Media
+### Most pictures were taken form pexels.com
+
+# Acknowledgements
+#### Thanks to our Cohort Facilitator Iris, Class Lead Ivette, to my amazing class mates for their time and knowlege, to the all the patient people in Tutor Assitance and to Student Care.  
+#### Also want to say a big thank you to Mentor Sammy and also to Marcel for all their help and support along this journey.  
 
 
 
