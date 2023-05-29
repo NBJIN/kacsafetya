@@ -52,10 +52,12 @@
 }  */
 
 .company-logo { 
-    height: 60px;
+    height: 68px;
     padding-left: 0px;
+    padding-top: 5px;
     margin: 0px;
-    margin-top: -4px;   
+    margin-top: -4px;  
+  
 }
 
 .col {
@@ -90,6 +92,7 @@
 .row-header3 {
     background-color: #CC0000;
     height: 6vh;
+
 }
 
 .form-control {

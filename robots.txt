@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /accounts/
+Sitemap:  https://kac-safetya.herokuapp.com/sitemap.xml    
+
+

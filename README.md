@@ -226,20 +226,286 @@ PUT IN PICTURE OF COLOR **********************************************
 ## Testing
 
 ## Testing under the following headings 
+### Even though there still work to be completed on this project I was able to carry out the folloiwng testing .   
 ### Validators
-#### -	Lighthouse report – Lighthouse was used to evaluate the ecommerce site performance, accessibility, best practices and SEO. 
+#### -	Lighthouse report – Lighthouse was used to evaluate the ecommerce site performance, accessibility, best practices and SEO. The following is a screenshot.
+ ![Screenshot of Lighthouse Report](https://github.com/NBJIN/kacsafetya/assets/106515976/47ff3fbf-69a5-4a19-b06b-356f737c4090)
+
 #### -	HTML – code was validated using the W3C HTML Markup Validation 
 #### -	CSS – code was validated using the W3C CSS Validation 
 #### -	JavaScript – code was validated using JSHint
-#### -	PEP8
+#### -	PEP8 - At present the PEP8 Sreenshot has all erros with trailing white 
+#### - spaces, insertion of lines before functions and classes and removal of extra
+#### - line removed. 
 
 ### User Stories Testing 
-#### Each user story was tested to ensure that it met its intended purpose by ensuring it met its acceptance criteria.  Results of same have been documented.  
+#### Each user story was tested to ensure that it met its intended purpose by ensuring it met its acceptance criteria.  Results of same have been documented. 
+
+### 1 As a developer document project user requirements, scope and goals 
+#### Requirements, scope and goals are all recoreded in this readme documents and 
+#### discused with user.  
+
+### 2 As a Developer create wireframes and mockups on the layouts and interface and compile list of user stories. 
+#### Home Page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/35b4be24-fdaa-44a4-8c2a-a6ad707a1df9)
+
+#### Sign In Page
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/11cb3cb8-7b8f-4867-a010-a8c3d23d78cc)
+
+#### Sign Up Page
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1238ac32-4adc-4747-bf16-609988db267a)
+
+#### Logout 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9f930e47-7aa6-4376-84b8-41100ebad9f5)
+
+
+#### All Courses Page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/d9256ef2-225d-4bdc-8be8-cff87c88aa14)
+
+#### Detailed Courses Page - When the superuser is logged in they will be able to 
+#### edit and delete courses 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9804d3d7-ea19-4422-835e-e3e01d612ef2)
+
+#### Contact Us 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/fdd053c4-fdee-49e2-aacf-b21fd6185070)
+
+#### Basket
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/e754ae74-b5f7-4a5b-bbe2-d84ef0f24f86)
+
+#### Purchase Success
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/bb2d6803-a38d-4211-8bda-19fe76f4e311)
+
+#### Newsletter Signup
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/ed3c56aa-2a83-4a3b-bb3b-0b5dc555b22d)
+
+#### Add Course Page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/27e993ad-4125-46bb-b2f7-207d59bdeba2)
+
+#### Edit Course
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/4a24b634-4e26-42b9-a280-f5eef5691f76)
+
+#### Dashboard Page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1217fa51-504f-4146-a9ba-6588e433be8f)
+
+### 3 As a developer I want to be able to setup project workspace on hosting platform using githug and gitpod - installing django, secret key hidden, settings for development and production have been specified in the settings.py 
+### Github
+-	Login to GitHub and create your new repository 
+-	Go to the Repositories tab click on New 
+-	Then enter the name of the repository you wish to create 
+-	Click on create repository 
+-	New repository is now ready to use 
+
+#### Setting Up Django 
+This project uses the Django framework 
+-	First of all the user needs to install Django so in the terminal enter the command –                        pip3 install django
+-	Then to create a new project the user needs to type the following command in the terminal  - django-admin startproject ‘insert your project name here’
+-	Then the user needs to add a gitignore file in the command line type the following command – touch .gitignore
+-	The user will add the following files to the .gitignore file 
+    #### o	*.sqlite3
+    #### o	*.pyc
+    #### o	__pycache__
+
+-	Then the user needs to run the server to see if base project is running by inputting the following in the terminal – python3 manage.py runserver which will open the 8000 port in which the user will be able to view the base project in the browser when they open this port.
+-	The user will then need to run the migrate command by inputting the following command in the terminal – python3 manage.py migrate 
+-	The user will then have to create a superuser in order to access the admin panel so that they can view the information for the site and make the necessary changes.  To create a superuser in the terminal the user will input – python3 manage.py createsuperusere. 
+-	The user will then be prompted to enter a username, email and a password.
+- The secret key needs to be set in the env.py file (this can be generated from a secret key generator for example Djecrety).  In the settings file you will just refrence the secret key which is located in the env.py file.  
+- Also add your database url secret from ElephantSQL and add same to the env.py file.  Again reference same in the settings file.  
+- The value for the secret key and key for database url will be also set in heroku under config vars.  
+-	The user will then make the initial commit to github wit the following commands in the terminal : 
+    #### o	git add .
+    #### o	git commit -m “initial commit”
+    #### o	git push
+-	This will push all the setup and changes for this project up to GitHub.
+
+### 4 As an administrator have full access to the site. 
+#### The admin user can log by accessing the Dashboard link on the navbar which will then have a dropdown menu where login can be selected.  
+ ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/c36aa026-1bd3-4be8-b5bc-2286675a6dbf)
+#### Once logged in the admin user will have access to Course Administration, My Dashboard and will also be able to logout.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/2d452d72-4296-4e5d-afcd-fbd79c34343c)
+#### In the course administration page the admin user will be able to add the details for a new course.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/ce28fe95-b688-45c3-944f-187d80aaec13)
+### When the user clicks on the add course button the course will be added to the list of courses on the website or the admin user can cancel the page by clicking on the cancel button.  The admin user can also edit a course by clicking on the edit link in the detailed course making the necessary amendments  and updating the details 
+##### At the time of testing page was not availabe after deploying to heroku 
+##### some of the static files are missing and will need to be looked at.  *************
+##### Also the admin user can delete a course by clicking on the delete link on the detailed course above 
+#### ******* missing screenshot due to deployment issue 
+
+
+### 5 As an administrator manage user accounts - As an admin user they have access to the admin panel where they can see all users been reigtered email addresses and orderes placed.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1e21822b-fb68-4e5e-aae5-69c7fb277a28)
+
+### 6 As a user enter my details on a form so that i can register for my own account.  
+#### When the user goes to the Dashboard and clicks on Register in the dropdown meanu they will be brought to the Sign Up Page where the user will enter their email, username and password.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/7d5c266a-2462-4c2d-9f5b-b09c179491bd)
+
+### 7 As a user I want to be able to login to my account so i can view my details and order history 
+#### If the user goes to the Dashboard click on the option to login they will be able to login to their account 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/5f729c74-3caa-4581-b8e7-1b33bb4eb090)
+#### Once logged in the user can proceed to My Dashboard in the Dashboard menu and they will be brought to the My Dashboard Page where they can enter shpping details and also see their previous purchases. 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/078ae835-1107-42ba-91fa-d64457f4c313)
+
+### 8 As a user I want to be able to manage my account information so that it is up to date. 
+#### In point 7 above the user will be able to enter their details and then click on update information so the information is available on their profile.  When the user makes a purchase it will be recorded in the Purchase records section of the aobve page. 
+
+
+### 9 As a user I want to be able to reset my password in case i forget same.  
+#### When the user goes to sign in they have the option to reset password by clicking on "Forgot Password?" and they can then proceed to reset a new password.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6fe0aa7f-9b29-4bbd-b0ea-7e27c9b34d59)
+
+
+### 10 As a user i want to be able to view a full list of courses.  
+#### To proceed to all courses the user can click on all courses in the navbar at the top of the page.  The learn more button also on the home page will them them to the all courses page.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/30c240cd-638e-4333-bebd-a4db77510e93)
+#### the user will then be brought to the all courses page where a list of courses will display but due to deployment issues the courses are not displaying at present.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/8b65acff-71ff-4034-9451-a029068acc64)
+
+### 11 As a user i want to be able to view the course in more details so that I can make an informed decision wheather this course is suitable for my needs. #### Once the user navigates to the all_courses page they will see a list of course cards and on each course card there is a link to course details which brings the user to the detailed courses page.  
+#### screenshot not available at the minute due to deployment issue 
+
+### 12 As a user search courses by category of healthcare or safety so that i can choose which category is of more interest.  
+#### This is located in the all_courses page at the left hand side and there is a Group By search and Location serach.  This feature is not functional at present 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/2d0dbe06-1e9c-4b87-ba74-6dd71bc524b2)
+
+### 13 As a user I want to be able to search by location either online or onsite in the classroom.  
+#### From the screenshot in point no 12 this feature is present but not functioning at present.  
+
+### 14 As a user I want to be able to add courses to the basket so that i can clearly see total cose of each course or courses.  
+#### When the user navigates to the Basket on the nav bar they can see first of all if they have items in the basket as the amount is displayed under the heading and once they click on the basket link they will be carried to the basket page where they will see items if they have added to the basket. 
+ ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/ed175545-ae4b-4a16-9453-0d83a4e42a99)
+#### if there is not items in the basket they will be brought to the following page.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a3e879c4-379b-41db-9426-8bfb007d1573)
+
+### 15 As a user I want to be able to view all courses in the basket so that i can clearly see the total cose of each course or courses.  
+#### When the user clicks on the basket on the nav bar they will be brought to the basket page where they will be able to see the items added to the basket.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/3780b411-7ced-41fe-94af-eabedeb3b5dc)
+
+### 16 As a user I want to be able to change the quantity of courses in the bag so that I can accommodate my requirements should they change.  
+#### When the user navigates to the basket page they can increase or decrease the amount in the basket with the increment and deincrement option. - see point 15 above for screenshot - The remove link is not currently working on this page.  
+
+### 17 As a user enter my payment details so that I can complete the purchase.  
+#### When the user is in the basket page they can proceed to make a purchase and they will be brought to the secure purchase page where they will see their details if they are registered but if they are not registered the user will have to enter their details.    
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a471a384-cd93-4d27-a295-17d80d136ad9)
+
+### 18 See order confriamtion once purchase is complete.  
+#### When the user is on the Secure Purchase Page above and they have all their details entered they can then click on Complete Order.  Once this is clicked the spinner will appear on a red background and when successfull will navigate to the purchase success page where the user can see their order. 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a4fdb312-e260-475a-a6c0-d2c4c2ee9ba4)
+Purchase Success Page
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a64a65b8-2558-4a0b-a9f8-d98e3cd2d4a5)
+#### On this page Total, discount and grand_total and fee do not appear but all other details do appear on the page.  
+
+### 19 User can see an order history once logged in.  
+#### Once the user is logged in they will be able to navigate to My Dashboard where they will be able to see a list of purchase records once an order is place.  
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/23a81ef8-da58-455d-a8f7-8538e69d025d)
+
+### 20 As a user I want to be able to make a purchase without having to register 
+#### When an unregisterd user accesses the all courses page they can choose a course to go to the detailed view and once on this page they can add the cousre to the basket and proceed to purchase and then purchase success page.  On the screenshot following one can see that the user is not logged in when making the purchase 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/d81fd12b-a053-454d-98de-f13846b40674)
+
+### 21 As a user i want to be able to sign up to the company newsletter 
+#### On the nav bar at the top of each page there is a link to sign up.  When the user clicks on this link they will navigate to the newslwetter signup page where they will enter their fullname, company and email.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/15e37385-64e8-47a9-b857-e3508fe9af58)
+#### Once these details are entered they can then click on the submit button they will be then brought to Newsletter Signup confirmation page.  
+
+### 22 As a user I want to be able to submit a contact form 
+#### In the top nav bar there is a link to Contact Us once the user clicks on this link they will be brought to the Contact KACSafety Page where the user can enter their details and their query.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/07a2a497-a7f7-452e-998c-282f33a1d825)
+#### Once the useer has entered the details and clicked on submit they will then be brought to the Contact Success Page. 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9fc77033-ef09-4733-840f-79b5bd980327)
+
+### 23 As a user I want to be able to access company social media page 
+#### If the user naviages to the bottom footer they will see a list of links for social meida platforms like facebook, instagram, twitter and youtube.  If the user click on the icon of their choice they will be brought to the website page for that social media option. 
+
+Youtube
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/f0978a29-e8fb-41a6-a826-e6a445fb1abf)
+Facebook
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/bce6d3d7-1db6-4242-9e6d-25946f1f4513)
+Twitter
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/11b45a84-4445-43c5-9014-2d6407801203)
+Instagram
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9c9babe8-8022-46a7-8057-c5eff4182965)
+
+### 24 As a user i want to be able to see confirmation of actions completed.
+#### When a user registers, logins etc a message will appear in the top right hand corner.  At present it is only displaying for a second so timing will have to be adjusted. 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b3f03587-2c46-4c0a-b191-3f73365ef54d)
+
+### 25 As an administrator I want to be able to add new courses.  
+#### When an administrator logs in they will be able to add courses through the nav link dashboard / course administration.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/c548a49b-04ac-4bf9-b89e-1704ff06c642)
+#### When the form is completed and the user clicks on the Add Course button 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/29ead29d-d340-46a9-820e-1858ea2cd26e)
+
+#### they will then be brought to the detailed courses page where they will see that course added.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/bf2a18c7-1317-4917-b0ff-f24dccf5ba60)
+
+### 26 As an administrator I want to be able to edit a course.  
+#### An administrator will be able to edit the courses page from the above link and they will be brought to the edit course page. 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/baad6537-9564-49d9-b9f2-66b918235f31)
+#### Here once they have updated the details they can choose update course or cancel.  They will also be able to access the edit course page when the administrator goes to the all courses page then click on course details and the will be brought to the detailed course page where there is an option to edit and delete course.  
+#### All courses page which shows the two courses just added (the rest of courses not rendering due to deployment issue at present.)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/e33acaf7-ab16-4384-8852-88948096bfbe)
+#### From the above screenshot an administrator can click on course details and then navigate to the detailed courses page where they have the option to edit or delete.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/08058f25-89ff-495c-a6c5-123bfc9897e4)
+
+### 27 As an administrator I want to be able to delete a course.
+#### Please see user story no 26 above to see the delete option.  
+
+### 28 As an administrator I want to be able to update the general content on all pages 
+#### As the administrator the user will be able to access all parts of the site and the admin panel where they will be able to manage users.  
+
+### 29 As an administrator I want to be able to manage all incomming orders.
+#### As per point 28 above. 
+
+###  30 As an administrator I want to be able to manage all incomming contact requests. 
+#### As per point 28 above 
+
+### 31 As a developer I want to be able to test all parts of the django ecommerce website 
+#### In progress not fully completed refer to this readme document.  
+
+### 32 As a developer I want to be able to deploy successfully
+#### At present there is an issue with deployement to Heroku due to static file configuration which needs to be resolved.
+
+### 34 As a developer I want to be able to ensure that the site is responsive.  
+#### This is a work in progress due to time constraints for this project.  
+
+
+## Bugs & Items To Be Addressed
+#### - There is an issue with deployment and static files and alot of my images and details for my courses are not displaying at present. There are two couses there which i have added durining testing.    
+#### - Responsiveness - ran out of time in order to ge this finalised.  
+#### - Stripe - When i make a payment It successfully allows me to enter details but when i proceed to the purchase success page it is not bringinig threw my total, discount and grand total.  It is also not bringing threw the course fee for this page.  
+#### - On the all courses page the Group By and Location need to be addressed as it is not working. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Features Testing
 #### Each feature in the ecommerce site was tested to ensure that it functioned correctly and met the requirements of the project and user stories.  Feature testing involved the testing of forms, navigation, search functionality and user authentication. 
 
 ### Responsiveness 
+#### The above is a work in progress at the minute which will need to be addressed ran out of time for this project.  
+
+
 #### Milestone/Epic : Project Planning Design and Setup (Admin)
 -	#2 Developer – Document project user requirements, scope and goals – (This was entered twice by mistake under the project milestone above)
 -	#3 Developer – Create wireframes, mock-ups, layouts and interface, user stories and kanban board. 

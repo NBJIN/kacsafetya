@@ -34,4 +34,4 @@ urlpatterns = [
     path('mailchimpnews/', include('mailchimpnews.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'kac_safetya.views.handler404'
+handler404 = 'kac_safety.views.handler404'
