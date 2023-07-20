@@ -24,6 +24,25 @@ html {
     margin-left: auto;
     }
 
+
+/* Discount Banner on index.html */
+
+#discount-banner {
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: black;
+    }
+
+.text-color {
+    color: red;
+    }
+
+.fa-arrow-right {
+    font-size: 25px;
+    }
+    
+
     /* max-width: 100%;
     height: auto; */
     /* padding: 0px;
@@ -114,9 +133,10 @@ html {
 }
 
 .container-home {
-    position: absolute;
+    margin-top: 20px;
+ 
     text-align: center;
-    background-color: transparent; 
+    background-color: white; 
     opacity: 1; 
     color: black; 
     width: 100%;
