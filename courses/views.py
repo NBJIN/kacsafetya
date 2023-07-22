@@ -12,12 +12,14 @@ def all_courses(request):
     courses = Courses.objects.all()
     Locations = None
     lookup = None
+    group_by = None
 
     if request.GET:
-        if 'Location' in request.GET:
-            Locations = request.GET['Location'].split(',')
-            courses = all_courses.filter(Location__name__in=Locations)
-            Locations = Location.objects.filter(name__in=Locations)
+        if 'location' in request.GET:
+            # Locations = request.GET['Location'].split(',')
+            locations = request.GET.getlist('location')
+            courses = all_courses.filter(Location__name__in=locations)
+            locations = Location.objects.filter(name__in=locations)
 
         # lookup is not working when i enter a word that is not on the website
         if 'lookup' in request.GET:
@@ -29,10 +31,18 @@ def all_courses(request):
             lookup = Q(title__icontains=lookup) | Q(details__icontains=lookup)
             courses = courses.filter(lookup)
 
+        if 'group_by' in request.GET:
+            group_by = request.GET['group_by']
+            if group_by == 'health':
+                courses = courses.filter(group='Health')
+            elif group_by == 'safety':
+                courses = courses.filter(group='Safety')
+
     context = {
         'courses': courses,
         'search_term': lookup,
         'current_Locations': Locations,
+        'current_group': group_by,
 
     }
 
