@@ -21,6 +21,7 @@ class CoursesForm(forms.ModelForm):
         print(self.fields.keys())
         self.fields = OrderedDict(
             (field_name, self.fields[field_name])
+
             for field_name in [
                 'title',
                 'group_by',
@@ -32,3 +33,22 @@ class CoursesForm(forms.ModelForm):
                 'fee',
             ]
             )
+
+    def __init__(self, *args, **kwargs):
+        """
+        Add placeholders and classes, remove auto-generated
+        labels and set autofocus on first field
+        """
+        super().__init__(*args, **kwargs)
+
+        self.fields['group_by'].widget = forms.Select()
+
+        group_by = [
+            ('health', 'Health'),
+            ('Safety', 'Safety'),
+        ]
+        self.fields['location'].widget = forms.Select()
+        location = [
+            ('online', 'Online'),
+            ('classroom', 'Classroom'),
+        ]

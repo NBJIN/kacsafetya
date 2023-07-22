@@ -32,8 +32,12 @@
         <p>
          
           <!-- <input type="radio" name="group_by"><a href="{% url 'all_courses' %}?group_by=safety">&nbsp;&nbsp;Safety</a><br> -->
-          <input type="radio" name="group_by"><a href="{% url 'all_courses' %}?group_by=health">&nbsp;&nbsp;Health</a>
-          
+          <!-- <input type="radio" name="group_by"><a href="{% url 'all_courses' %}?group_by=health">&nbsp;&nbsp;Health</a> -->
+          <!-- <input type="radio" name="group_by" value="health"><a href="{% url 'all_courses' %}?group_by=health">&nbsp;&nbsp;Health</a> -->
+          <input type="radio" name="group_by" value="health"><a href="{% url 'all_courses_group_by' 'health' %}">&nbsp;&nbsp;Health</a>
+        </p>
+        <p>
+          <input type="radio" name="group_by" value="safety"><a href="{% url 'all_courses_group_by' 'safety' %}">&nbsp;&nbsp;Safety</a>
         </p>
       </div>
       </div>
@@ -52,10 +56,10 @@
   
           <p>
           <!-- <input type="radio" name="location"><a href="{% url 'all_courses' %}?location=classroom">&nbsp;&nbsp;Classroom</a><br> -->
-          <input type="radio" name="location"><a href="/all_courses/location/classroom/">&nbsp;&nbsp;Classroom</a><br>
+          <input type="radio" name="location" value="classroom"><a href="{% url 'all_courses_location' 'classroom' %}">&nbsp;&nbsp;Classroom</a><br>
           <!-- <input type="radio" name="location"><a href="{% url 'all_courses' %}?location=online">&nbsp;&nbsp;Online</a> -->
-          <input type="radio" name="location"><a href="/all_courses/location/online/">&nbsp;&nbsp;Online</a>
-
+          <!-- <input type="radio" name="location"><a href="/all_courses/location/online/">&nbsp;&nbsp;Online</a> -->
+          <input type="radio" name="location" value="online"><a href="{% url 'all_courses_location' 'online' %}">&nbsp;&nbsp;Online</a>
           </p>
       </div>
       </div>

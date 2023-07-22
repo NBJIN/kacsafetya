@@ -10,9 +10,14 @@ def all_courses(request):
     """ A view to show list of all courses """
 
     courses = Courses.objects.all()
-    Locations = None
+    # Locations = None
+    locations = Location.objects.all()
+    group_by = Group_By.objects.all()
     lookup = None
-    group_by = None
+    # group_by = None
+
+
+def all_courses_location(request, location):
 
     if request.GET:
         if 'location' in request.GET:
@@ -31,12 +36,15 @@ def all_courses(request):
             lookup = Q(title__icontains=lookup) | Q(details__icontains=lookup)
             courses = courses.filter(lookup)
 
-        if 'group_by' in request.GET:
-            group_by = request.GET['group_by']
-            if group_by == 'health':
-                courses = courses.filter(group='Health')
-            elif group_by == 'safety':
-                courses = courses.filter(group='Safety')
+
+def all_courses_group_by(request, group_by):
+
+    if 'group_by' in request.GET:
+        group_by = request.GET['group_by']
+        if group_by == 'health':
+            courses = courses.filter(group='Health')
+        elif group_by == 'safety':
+            courses = courses.filter(group='Safety')
 
     context = {
         'courses': courses,
