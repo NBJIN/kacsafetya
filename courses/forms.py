@@ -9,46 +9,48 @@ class CoursesForm(forms.ModelForm):
     class Meta:
         model = Courses
         fields = '__all__'
+        widgets = {
+            'image': CustomClearableFileInput,
+        }
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    # Group_By = forms.ModelChoiceField(queryset=Group_By.objects.all(), empty_label=None)
+    # Location = forms.ModelChoiceField(queryset=Location.objects.all(), empty_label=None)
+    # def __init__(self, *args, **kwargs):
+    """
+    Add placeholders and classes, remove auto-generated
+    labels and set autofocus on first field
+    """
+        # super().__init__(*args, **kwargs)
+        # print(self.fields.keys())
+        # self.fields = OrderedDict(
+        #     (field_name, self.fields[field_name])
 
-    def __init__(self, *args, **kwargs):
+        #     for field_name in [
+        #         'title',
+        #         'group_by',
+        #         'location',
+        #         'image',
+        #         'image_url',
+        #         'details',
+                # 'date_of_course', 'fee',
+            # ]
+            # )
+
+    # def __init__(self, *args, **kwargs):
+    """
+    Add placeholders and classes, remove auto-generated
+    labels and set autofocus on first field
         """
-        Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
-        """
-        super().__init__(*args, **kwargs)
-        print(self.fields.keys())
-        self.fields = OrderedDict(
-            (field_name, self.fields[field_name])
+        # super().__init__(*args, **kwargs)
 
-            for field_name in [
-                'title',
-                'group_by',
-                'location',
-                'image',
-                'image_url',
-                'details',
-                # 'date_of_course',
-                'fee',
-            ]
-            )
+        # self.fields['group_by'].widget = forms.Select()
 
-    def __init__(self, *args, **kwargs):
-        """
-        Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
-        """
-        super().__init__(*args, **kwargs)
-
-        self.fields['group_by'].widget = forms.Select()
-
-        group_by = [
-            ('health', 'Health'),
-            ('Safety', 'Safety'),
-        ]
-        self.fields['location'].widget = forms.Select()
-        location = [
-            ('online', 'Online'),
-            ('classroom', 'Classroom'),
-        ]
+        # group_by = [
+        #     ('health', 'Health'),
+        #     ('Safety', 'Safety'),
+        # ]
+        # self.fields['location'].widget = forms.Select()
+        # location = [
+        #     ('online', 'Online'),
+        #     ('classroom', 'Classroom'),
+        # ]

@@ -27,12 +27,13 @@ def all_courses(request):
 
 
 def all_courses_location(request, location):
+    lookup = None
 
     if request.GET:
         if 'location' in request.GET:
             # Locations = request.GET['Location'].split(',')
             locations = request.GET.getlist('location')
-            courses = all_courses.filter(Location__name__in=locations)
+            courses = Courses.objects.filter(Location__name__in=locations)
             locations = Location.objects.filter(name__in=locations)
 
         # lookup is not working when i enter a word that is not on the website
@@ -47,6 +48,9 @@ def all_courses_location(request, location):
 
 
 def all_courses_group_by(request, group_by):
+
+    courses = Courses.objects.all()
+    lookup = None
 
     if 'group_by' in request.GET:
         group_by = request.GET['group_by']

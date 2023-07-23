@@ -2,20 +2,30 @@ from django.db import models
 
 
 class Location(models.Model):
+    location_choices = (
+        ('online', 'online'),
+        ('classroom', 'classroom'),
+    )
+
     class Meta:
         verbose_name_plural = "Location"
 
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=30, choices=location_choices)
 
     def __str__(self):
         return self.name
 
 
 class Group_By(models.Model):
+    group_by_choices = (
+        ('health', 'health'),
+        ('safety', 'safety'),
+    )
+
     class Meta:
         verbose_name_plural = "Group By"
 
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=30, choices=group_by_choices)
 
     def __str__(self):
         return self.name
