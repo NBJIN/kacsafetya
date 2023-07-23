@@ -16,6 +16,15 @@ def all_courses(request):
     lookup = None
     # group_by = None
 
+    context = {
+        'courses': courses,
+        'locations': locations,
+        'group_by': group_by,
+        'search_term': lookup,
+    }
+
+    return render(request, 'courses/all_courses.html', context)
+
 
 def all_courses_location(request, location):
 
