@@ -3,6 +3,10 @@ html {
     height: 100%;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* base.html */
 
 
@@ -19,7 +23,7 @@ html {
 
 
 .container-fluidfooter {
-    padding-top: 200px;
+    /* padding-top: 200px; */
     width: 100%;
     padding-right: 0px;
     padding-left: 0px;
@@ -262,6 +266,10 @@ html {
 
 input[name='q']::placeholder {
     color: #aab7c4;
+}
+
+.product-container {
+    margin-left: 10%;
 }
 
 /* button outline black on the detailed courses page */
