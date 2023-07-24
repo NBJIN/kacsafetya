@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True  # 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['kac-safetya.herokuapp.com', 'localhost', '8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu102.gitpod.io']
-## was previously this 8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu101.gitpod.io
+# was previously this 8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu101.gitpod.io
 
 # Application definition
 
@@ -179,10 +179,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'  # this was originally in project 
+# STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'  # this was originally in project
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  ## this was originally in project 
-
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  ## this was originally in project
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
@@ -193,7 +192,7 @@ if 'USE_AWS' in os.environ:
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
-    
+
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'kac-safetya'
     AWS_S3_REGION_NAME = 'eu-west-1'

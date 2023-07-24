@@ -31,6 +31,8 @@
               <div class="col-9">
                 <p class="my-0"><strong>{{ item.courses.title }}</strong></p>
                 <p class="my-0 small text-muted">&nbsp; Quantity: {{ item.quantity }}</p>
+                <p class="my-0 small text-muted">&nbsp; Fee: {{ courses.fee }}</p>
+
               </div>
             </div>
 
@@ -40,18 +42,18 @@
     <div class="row">
       <div class="col">
         <strong><p class="mt-3 mb-1 text-black">
-                  &nbsp; Total{% if free_discount_delta > 0 %} ( Exc. discount){% endif %}:
+                  &nbsp; Total{% if free_discount > 0 %} ( Exc. discount){% endif %}:
           <span class="text-center">€{{ total|floatformat:2 }}</span>
         </p></strong>
-        {% if free_discount_delta > 0 %}
+        {% if free_discount > 0 %}
         <p class="mb-0 p-2 bg-warning shadow-sm text-black text-center">
-          Spend <strong>€{{ free_discount_delta }}</strong> to get your free discount.
+          Spend <strong>€{{ free_discount }}</strong> to get your free discount.
         </p>
         {% endif %}
-        <a href="{% url 'view_basket' %}" class="btn btn-black btn-block rounded-0">
-          <span class="text-uppercase">Proceed to payment</span>
+        <a href="{% url 'view_basket' %}" class="btn btn-black btn-block rounded-0 banner-strip">
+          <span class="text-uppercase text-white">Proceed to payment</span>
           <span class="icon">
-            <i class="fas fa-lock"></i>
+            <i class="fas fa-lock text-white"></i>
           </span>
         </a>
       </div>
