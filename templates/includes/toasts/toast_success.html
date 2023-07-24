@@ -1,21 +1,23 @@
-<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-      <img src="..." class="rounded mr-2" alt="...">
+<div class="toast custom-toast rounded-0 border-top-0" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+  <div class="arrow-up arrow-success"></div>
+  <div class="w-100 toast-capper bg-success"></div>
+    <div class="toast-header bg-white  text-dark">
+      <!-- <img src="..." class="rounded mr-2" alt="..."> -->
       <strong class="mr-auto">Success</strong>
-      <small class="text-muted">.......</small>
+      <small class="text-muted mr-auto">.......</small>
       <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
+        <span aria-hidden="true">&nbsp; &times;</span>
       </button>
     </div>
     <div class="toast-body bg-white">
       <div class="row">
-        <div class="col">
-      {{ message }}
-      <hr class="mt-1 mb-3">
+        <div class="col ml-3">
+          {{ message }}
+      <hr class="mt-1 mb-4">
         </div>
       </div>
       {% if grand_total and not on_dashboard_page %}
-        <p class="logo-font bg-white text-black py-1 ">Your Basket ({{ courses_count }})</p>
+        <p class="logo-font bg-white text-black py-2 ">Your Basket ({{ courses_count }})</p>
         <div class="bag-notification-wrapper">
           {% for item in basket_items %}
             <div class="row">
@@ -23,12 +25,12 @@
                 {% if item.courses.image %}
                 <img class="w-100" src="{{ item.courses.image.url }}" alt="{{ item.courses.title }}">
                 {% else %}
-                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.courses.title }}">
+                <img class="w-100" src="{{ MEDIA_URL }}placeholder.jpg" alt="{{ item.courses.title }}">
                 {% endif %}
               </div>
               <div class="col-9">
                 <p class="my-0"><strong>{{ item.courses.title }}</strong></p>
-                <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
+                <p class="my-0 small text-muted">&nbsp; Quantity: {{ item.quantity }}</p>
               </div>
             </div>
 
@@ -38,8 +40,8 @@
     <div class="row">
       <div class="col">
         <strong><p class="mt-3 mb-1 text-black">
-          Total{% if free_discount_delta > 0 %} ( Exc. discount){% endif %}:
-          <span class="float-right">€{{ total|floatformat:2 }}</span>
+                  &nbsp; Total{% if free_discount_delta > 0 %} ( Exc. discount){% endif %}:
+          <span class="text-center">€{{ total|floatformat:2 }}</span>
         </p></strong>
         {% if free_discount_delta > 0 %}
         <p class="mb-0 p-2 bg-warning shadow-sm text-black text-center">
