@@ -24,13 +24,15 @@
     <div class="row">
         <div class="col">
             {% if basket_items %}  <!-- only want to render the table if there is somthing in shopping bag -->
-            <div class="table-responsive rounded">
-                <table class="table table-sm table-borderless">
+            <!-- <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless"> -->
+            <div class="table-responsive rounded border-left border-bottom">
+                <table class="table table-sm border-right">
                     <thead class="text-black">
                         <tr>
-                            <th scope="col">Course Title</th>
-                            <th scope="col"></th>
-                            <th scope="col">Quantity</th>
+                            <th scope="col border-right" class="border-right">Course Title</th>
+                            <th scope="col border-right" class="border-right"></th>
+                            <th scope="col" class="border-right">Quantity</th>
                             <th scope="col">Fee</th>
                             <!-- <th scope="col">Total</th>
                             <th scope="col">Discount</th>
@@ -39,19 +41,19 @@
                     </thead>
                     {% for item in basket_items %} 
                         <tr>
-                            <td class="py-3">
-                                <p class="my-0"><strong>{{ item.courses.title }}</strong></p>
+                            <td class="py-3 border-right">
+                                <p class="my-0">{{ item.courses.title }}</p>
                             </td>
-                            <td class="p-3 w-25">
+                            <td class="p-3 w-25 border-right">
                                 {% if item.courses.image %}
-                                <img class="img-fluid rounded" src="{{ item.courses.image.url }}" alt="{{ item.courses.title }}">
+                                <img class="img-fluid rounded border-right" src="{{ item.courses.image.url }}" alt="{{ item.courses.title }}">
                                 {% else %}
-                                <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.courses.title }}">
+                                <img class="img-fluid rounded border-right" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.courses.title }}">
                                 {% endif %}
                                 
                             </td>
                             
-                            <td class="py-3 w-25">
+                            <td class="py-3 w-25 border-right">
 
                                 <form class="form update-form" method="POST" action="{% url 'update_basket' item.item_id %}">
                                     {% csrf_token %}
@@ -88,7 +90,7 @@
 
                             </td>
                                     <td class="py-3">
-                                    <p class="my-0"><strong>{{ item.courses.fee }}</strong></p>
+                                    <p class="my-0">€{{ item.courses.fee }}</p>
                                     </td>
 
                             </tr>
@@ -96,16 +98,16 @@
                            
                                
                             </td>
-                            <td class="py-3">
+                            <td class="py-3 border-right">
                              <p class="mb-0">{{ item.basket.fee | calc_total:item.quantity }}</p>
                             </td>
-                            <td class="py-3">
+                            <td class="py-3 border-right">
                                 <p class="mt-3">{{ item.basket.total|floatformat:2 }}</p>
                             </td>
-                            <td class="py-3">
+                            <td class="py-3 border-right">
                                 <p class="mb-3">{{ item.basket.discount|floatformat:2 }}</p>
                             </td>
-                            <td class="py-3">
+                            <td class="py-3 border-right">
                                 <p class="mt-3">{{ item.basket.grand_total|floatformat:2 }}</p>
                             </td>
                         </div>
@@ -116,14 +118,14 @@
                     {% endfor %}
                     <tr>
                         <td colspan="7" class="pt-5 text-right">
-                            <h6><strong>Basket Total: €{{ total | floatformat:2 }}</strong></h6>
-                            <h6><strong>Free Discount: €{{ discount | floatformat:2 }}</strong></h6>
-                            <h4 class="mt-4"><strong>Grand Total: €{{ grand_total | floatformat:2 }}</strong></h4>
+                            <h6>Basket Total: €{{ total | floatformat:2 }}</h6>
+                            <h6>Free Discount: €{{ discount | floatformat:2 }}</h6>
+                            <h5 class="mt-4"><strong>Grand Total: €{{ grand_total | floatformat:2 }}</strong></h5>
                             {% if free_discount_delta > 0 %}   
                                 <p class="mb-1 text-danger">
                                     Get free discount by spending <strong>€{{ free_discount_delta | floatformat:2  }}</strong>
                                 </p>
-                                {% endif %}
+                            {% endif %}
                         </td>
                     </tr>
                     <tr>
