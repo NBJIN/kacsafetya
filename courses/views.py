@@ -28,6 +28,7 @@ def all_courses(request):
 
 def all_courses_location(request, location):
     lookup = None
+    location = None
 
     if request.GET:
         if 'location' in request.GET:
