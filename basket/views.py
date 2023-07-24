@@ -42,19 +42,19 @@ def update_basket(request, item_id):
 
     if quantity > 0:
         basket[item_id] = quantity
-        # messages.success(request, f'Updated {basket.title} quantity to {basket[item_id]}')
+        messages.success(request, f'Updated {courses.title} quantity to {basket[item_id]}')
     elif quantity == 0:
         del basket[item_id]
         if not basket[item_id]:
             basket.pop(item_id)
-            # messages.success(request, f'Successfully deleted {basket.title} from your basket')
+            messages.success(request, f'Successfully deleted {courses.title} from your basket')
     else:
         if quantity > 0:
             basket[item_id] = quantity
-            # messages.success(request, f'updated {basket.title} quantity to {basket[item_id]}')
+            messages.success(request, f'updated {courses.title} quantity to {basket[item_id]}')
         else:
             basket.pop(item_id)
-            # messages.success(request, f'Successfully removed {basket.title} from your basket')
+            messages.success(request, f'Successfully removed {courses.title} from your basket')
 
     request.session['basket'] = basket
     return redirect(reverse('view_basket'))
@@ -70,10 +70,10 @@ def delete_from_basket(request, item_id):
         del basket[item_id]
         if not basket[item_id]:
             basket.pop(item_id)
-            # messages.success(request, f'Successfully removed {basket.title} from your basket')
+            messages.success(request, f'Successfully removed {courses.title} from your basket')
         else:
             basket.pop[item_id]
-            # messages.success(request, f'Successfully removed {basket.title} from your basket')
+            messages.success(request, f'Successfully removed {courses.title} from your basket')
 
         request.session['basket'] = basket
         return HttpResponse(status=200)
