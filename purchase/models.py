@@ -38,11 +38,11 @@ class Purchase(models.Model):
     def update_total(self):
         """ Every time a new course is added update grand total """
         self.total = self.orderitems.aggregate(Sum('orderitem_total'))['orderitem_total__sum'] or 0
-        if self.total < settings.FREE_DISCOUNT:
-            self.discount = self.total * settings.STANDARD_DISCOUNT_PERCENTAGE * 10 / 100
+        if self.total >= settings.FREE_DISCOUNT:
+            self.discount = self.total * settings.STANDARD_DISCOUNT_PERCENTAGE / 100
         else:
             self.discount = 0
-        self.grand_total = self.total + self.discount
+        self.grand_total = self.total - self.discount
         self.save()
 
     def save(self, *args, **kwargs):
@@ -66,8 +66,11 @@ class PurchaseOrderItem(models.Model):
 
     def save(self, *args, **kwargs):
         """ set purchase_no if its not set already by overiding the original save method """
-        self.orderitem_total = self.fee * self.quantity
+        self.orderitem_total = self.course_title.fee * self.quantity
+        # self.grand_total = self.orderitem_total - self.discount
         super().save(*args, **kwargs)
+
+        self.purchase_no.update_total()
 
     def __str__(self):
         return str(self.course_title)

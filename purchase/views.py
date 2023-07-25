@@ -162,7 +162,7 @@ def purchase_success(request, purchase_no):
             if user_dashboard_form.is_valid():
                 user_dashboard_form.save()
 
-    messages.success(request, f'Purchase successfully processed \
+    messages.info(request, f'Purchase successfully processed \
         Your purchase order number is {purchase_no}. Confirmation \
         of your purchase has been sent to {purchase.email}.')
 
@@ -170,7 +170,16 @@ def purchase_success(request, purchase_no):
         del request.session['basket']
 
     template = 'purchase/purchase_success.html'
+
+    total = purchase.total
+    discount = purchase.discount
+    grand_total = purchase.grand_total
+
     context = {
         'purchase': purchase,
+        'total': total,
+        'discount': discount,
+        'grand_total': grand_total,
     }
-    return render(request, template, context)
+    # return render(request, template, context)
+    return render(request, 'purchase/purchase_success.html', context)
