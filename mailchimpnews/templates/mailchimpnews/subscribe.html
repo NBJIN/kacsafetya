@@ -5,15 +5,15 @@
 {% load crispy_forms_tags %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'mailchimpnews/css/mailchimpnews.css' %}">
+<link rel="stylesheet" href="{% static 'mailchimpnews/css/mailchimpnews.css' %}">
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -29,10 +29,10 @@
             <br>
 
             <form method="POST" action="success/" enctype="multipart/form-data">
-             {% csrf_token %}
-             {{ form | crispy }}
+                {% csrf_token %}
+                {{ form | crispy }}
 
-             <input type="submit" value="Submit" class="btn btn-secondary">
+                <input type="submit" value="Submit" class="btn btn-secondary">
                 <!-- <input type="email" name="email" placeholder="Your Email"> 
                 <br>
              <input type="text" name="fullname" placeholder="Full Name"> 
@@ -41,10 +41,10 @@
                 <br>
                 <br> -->
                 <!-- <button class="btn btn-sm btn-secondary" type="submit">Submit</button> -->
-          </form>
+            </form>
 
-        
-          <!-- <footer class="footer mt-auto py-3 dark-bg"> -->
+
+            <!-- <footer class="footer mt-auto py-3 dark-bg"> -->
             <!-- <p>Thank you for your subscription</p>
             <p>KACSafety Team</p>
             <hr> -->
@@ -52,4 +52,4 @@
     </div>
 </div>
 
-  {% endblock %}
+{% endblock %}

@@ -2,44 +2,46 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
 {% endblock %}
 
 {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col text-center mt-3">
-            <h2 class="logo-font">All Courses</h2>
-            <hr class="w-50 mb-1">
-        </div>
+  <div class="row">
+    <div class="col text-center mt-3">
+      <h2 class="logo-font">All Courses</h2>
+      <hr class="w-50 mb-1">
     </div>
+  </div>
 
   <div class="card" style="width: 200px;">
     <article class="filter-group">
-      <header class="card-header col-md6"> 
+      <header class="card-header col-md6">
         <a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
           <i class="icon-control fa fa-chevron-down"></i>
-         <h6 class="title">Group By</h6>
+          <h6 class="title">Group By</h6>
         </a>
       </header>
       <div class="filter-content collapse show" id="collapse_1">
-      <div class="card-body">
-        <p>
-         
-          <!-- <input type="radio" name="group_by"><a href="{% url 'all_courses' %}?group_by=safety">&nbsp;&nbsp;Safety</a><br> -->
-          <!-- <input type="radio" name="group_by"><a href="{% url 'all_courses' %}?group_by=health">&nbsp;&nbsp;Health</a> -->
-          <!-- <input type="radio" name="group_by" value="health"><a href="{% url 'all_courses' %}?group_by=health">&nbsp;&nbsp;Health</a> -->
-          <input type="radio" name="group_by" value="health"><a href="{% url 'all_courses_group_by' 'health' %}">&nbsp;&nbsp;Health</a>
-        </p>
-        <p>
-          <input type="radio" name="group_by" value="safety"><a href="{% url 'all_courses_group_by' 'safety' %}">&nbsp;&nbsp;Safety</a>
-        </p>
-      </div>
+        <div class="card-body">
+          <p>
+
+            <!-- <input type="radio" name="group_by"><a href="{% url 'all_courses' %}?group_by=safety">&nbsp;&nbsp;Safety</a><br> -->
+            <!-- <input type="radio" name="group_by"><a href="{% url 'all_courses' %}?group_by=health">&nbsp;&nbsp;Health</a> -->
+            <!-- <input type="radio" name="group_by" value="health"><a href="{% url 'all_courses' %}?group_by=health">&nbsp;&nbsp;Health</a> -->
+            <input type="radio" name="group_by" value="health"><a
+              href="{% url 'all_courses_group_by' 'health' %}">&nbsp;&nbsp;Health</a>
+          </p>
+          <p>
+            <input type="radio" name="group_by" value="safety"><a
+              href="{% url 'all_courses_group_by' 'safety' %}">&nbsp;&nbsp;Safety</a>
+          </p>
+        </div>
       </div>
       <a class="btn btn-sm btn-secondary" href="{% url 'all_courses' %}" role="button">Search</a>
     </article>
@@ -49,86 +51,89 @@
           <i class="icon-control fa fa-chevron-down"></i>
           <h6 class="title">Location</h6>
         </a>
-        
+
       </header>
       <div class="filter-content collapse show" id="collapse_1">
-      <div class="card-body">
-  
+        <div class="card-body">
+
           <p>
-          <!-- <input type="radio" name="location"><a href="{% url 'all_courses' %}?location=classroom">&nbsp;&nbsp;Classroom</a><br> -->
-          <input type="radio" name="location" value="classroom"><a href="{% url 'all_courses_location' 'classroom' %}">&nbsp;&nbsp;Classroom</a><br>
-          <!-- <input type="radio" name="location"><a href="{% url 'all_courses' %}?location=online">&nbsp;&nbsp;Online</a> -->
-          <!-- <input type="radio" name="location"><a href="/all_courses/location/online/">&nbsp;&nbsp;Online</a> -->
-          <input type="radio" name="location" value="online"><a href="{% url 'all_courses_location' 'online' %}">&nbsp;&nbsp;Online</a>
+            <!-- <input type="radio" name="location"><a href="{% url 'all_courses' %}?location=classroom">&nbsp;&nbsp;Classroom</a><br> -->
+            <input type="radio" name="location" value="classroom"><a
+              href="{% url 'all_courses_location' 'classroom' %}">&nbsp;&nbsp;Classroom</a><br>
+            <!-- <input type="radio" name="location"><a href="{% url 'all_courses' %}?location=online">&nbsp;&nbsp;Online</a> -->
+            <!-- <input type="radio" name="location"><a href="/all_courses/location/online/">&nbsp;&nbsp;Online</a> -->
+            <input type="radio" name="location" value="online"><a
+              href="{% url 'all_courses_location' 'online' %}">&nbsp;&nbsp;Online</a>
           </p>
-      </div>
+        </div>
       </div>
       <a class="btn btn-sm btn-secondary" href="{{ courses.location }}" role="button">Search</a>
     </article>
-  </div> 
+  </div>
 
-    <div class="row">
-        <div class="product-container col-10 offset-3">
-            <div class="row mt-1 mb-2"></div>
-            <div class="row">
-                {% for course in courses %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card h-100 border-0">
-                            {% if course.image %}
-                            <a href="{% url 'detailed_courses' course_id=course.id %}">
-                                <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.title }}">
-                            </a>
-                            {% else %}
-                            <a href="{% url 'detailed_courses' course_id=course.id %}">
-                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.title }}">
-                            </a>
-                            {% endif %}
-                            <div class="card-body pb-0">
-                                <p class="mb-0">{{ course.title }}</p>
-                            </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <div class="row">
-                                    <div class="col">
-                                        <p class="lead mb-0 text-left font-weight-bold">€{{ course.fee }}</p>
-                                        <a class="course-details mr-5" href="{% url 'detailed_courses' course_id=course.id %}">Course Details</a>
-                                    </div>
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-                    {% if forloop.counter|divisibleby:1 %}
-                        <div class="col-12 d-sm-none mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}                        
-                    {% if forloop.counter|divisibleby:2 %}
-                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
-                    {% if forloop.counter|divisibleby:3 %}
-                        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
-                    {% if forloop.counter|divisibleby:4 %}
-                        <div class="col-12 d-none d-xl-block mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
-                {% endfor %}
+  <div class="row">
+    <div class="product-container col-10 offset-3">
+      <div class="row mt-1 mb-2"></div>
+      <div class="row">
+        {% for course in courses %}
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+          <div class="card h-100 border-0">
+            {% if course.image %}
+            <a href="{% url 'detailed_courses' course_id=course.id %}">
+              <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.title }}">
+            </a>
+            {% else %}
+            <a href="{% url 'detailed_courses' course_id=course.id %}">
+              <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.title }}">
+            </a>
+            {% endif %}
+            <div class="card-body pb-0">
+              <p class="mb-0">{{ course.title }}</p>
             </div>
+            <div class="card-footer bg-white pt-0 border-0 text-left">
+              <div class="row">
+                <div class="col">
+                  <p class="lead mb-0 text-left font-weight-bold">€{{ course.fee }}</p>
+                  <a class="course-details mr-5" href="{% url 'detailed_courses' course_id=course.id %}">Course
+                    Details</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
+        {% if forloop.counter|divisibleby:1 %}
+        <div class="col-12 d-sm-none mb-5">
+          <hr>
+        </div>
+        {% endif %}
+        {% if forloop.counter|divisibleby:2 %}
+        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+          <hr>
+        </div>
+        {% endif %}
+        {% if forloop.counter|divisibleby:3 %}
+        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+          <hr>
+        </div>
+        {% endif %}
+        {% if forloop.counter|divisibleby:4 %}
+        <div class="col-12 d-none d-xl-block mb-5">
+          <hr>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
     </div>
+  </div>
 </div>
 
 
 <p class="d-lg-block button-options">
-    
-    <a class="btn btn-sm btn-secondary" href="" role="button">Next</a>
-    <a class="btn btn-sm btn-secondary" href="" role="button">Previous</a>
-    <a class="btn btn-sm btn-secondary" href="{% url 'landing' %}" role="">Home</a>
+
+  <a class="btn btn-sm btn-secondary" href="" role="button">Next</a>
+  <a class="btn btn-sm btn-secondary" href="" role="button">Previous</a>
+  <a class="btn btn-sm btn-secondary" href="{% url 'landing' %}" role="">Home</a>
 
   <div class="btt-button btn-secondary">
     <a class="btt-link h-100 d-flex">
@@ -155,12 +160,12 @@
 
 {% endblock %}
 
-{% block postloadjs %}   
-    {{ block.super }}
-    <script type="text/javascript">
-      $('.btt-link').click(function(e) {
-        window.scrollTo(0,0)
-      }) 
-    </script>
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+  $('.btt-link').click(function (e) {
+    window.scrollTo(0, 0)
+  })
+</script>
 
-  {% endblock %}
+{% endblock %}
