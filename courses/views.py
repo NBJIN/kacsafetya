@@ -88,7 +88,10 @@ def detailed_courses(request, course_id):
 def edit_courses(request, courses_id):
     """ A view to show each course in more detail """
     if not request.user.is_superuser:
-        messages.error(request, 'This is a restricted view for the admin user.')
+        messages.error(
+            request,
+            'This is a restricted view for the admin user.'
+        )
         return redirect(reverse('index'))
 
     courses = get_object_or_404(Courses, pk=courses_id)
@@ -100,7 +103,10 @@ def edit_courses(request, courses_id):
             messages.success(request, 'Course has been edited.')
             return redirect(reverse('detailed_courses', args=[courses.id]))
         else:
-            messages.error(request, 'Course has not been edited please check your form.')
+            messages.error(
+                request,
+                'Course has not been edited please check your form.'
+            )
     else:
         form = CoursesForm(instance=courses)
         messages.info(request, f'You are editing {courses.title}')
@@ -122,7 +128,10 @@ def add_courses(request):
     Add Courses
     """
     if not request.user.is_superuser:
-        messages.error(request, 'This is a restricted view for the admin user.')
+        messages.error(
+            request,
+            'This is a restricted view for the admin user.'
+        )
         return redirect(reverse('index'))
 
     if request.method == 'POST':
@@ -132,7 +141,10 @@ def add_courses(request):
             messages.success(request, 'Course added.')
             return redirect(reverse('detailed_courses', args=[courses.id]))
         else:
-            messages.error(request, 'Course has not been added please check your form.')
+            messages.error(
+                request,
+                'Course has not been added please check your form.'
+            )
     else:
         form = CoursesForm()
 
@@ -149,7 +161,10 @@ def delete_courses(request, courses_id):
     A view to show that course is deleted
     """
     if not request.user.is_superuser:
-        messages.error(request, 'This is a restricted view for the admin user.')
+        messages.error(
+            request,
+            'This is a restricted view for the admin user.'
+        )
         return redirect(reverse('index'))
 
     courses = get_object_or_404(Courses, pk=courses_id)

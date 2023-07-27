@@ -4,7 +4,12 @@ from datetime import datetime
 
 
 class Contact(models.Model):
-    fullname = models.CharField(max_length=150, null=False, blank=False, default='')
+    fullname = models.CharField(
+        max_length=150,
+        null=False,
+        blank=False,
+        default=''
+    )
 
     company = models.CharField(max_length=200, null=False, blank=False)
     telephone = models.CharField(max_length=30, null=False, blank=False)

@@ -19,9 +19,13 @@ def dashboard(request):
         form = UserDashboardForm(request.POST, instance=dashboard)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your Dashboard has been updated successfully with your details')
+            messages.success(request,
+                             'Your Dashboard has been updated \
+                                successfully with your details')
         else:
-            messages.error(request, 'Failed to update dashboard please check form.')
+            messages.error(request,
+                           'Failed to update dashboard \
+                                please check form.')
     else:
         form = UserDashboardForm(instance=dashboard)
     purchase = dashboard.purchase.all()
@@ -40,7 +44,8 @@ def purchase_records(request, purchase_no):
     purchase = get_object_or_404(Purchase, purchase_no=purchase_no)
 
     messages.info(request, (
-        f'This is a previous pruchase confirmation for purchase number {purchase_no}. '
+        f'This is a previous pruchase confirmation '
+        f'for purchase number {purchase_no}. '
         'An email confirmation same was sent on the purchase date.'
     ))
 
