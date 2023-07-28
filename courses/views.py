@@ -100,7 +100,7 @@ def edit_courses(request, courses_id):
         form = CoursesForm(request.POST, request.FILES, instance=courses)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Course has been edited.')
+            messages.info(request, 'Course has been edited.')
             return redirect(reverse('detailed_courses', args=[courses.id]))
         else:
             messages.error(
@@ -138,7 +138,7 @@ def add_courses(request):
         form = CoursesForm(request.POST, request.FILES)
         if form.is_valid():
             courses = form.save()
-            messages.success(request, 'Course added.')
+            messages.info(request, 'Course added.')
             return redirect(reverse('detailed_courses', args=[courses.id]))
         else:
             messages.error(

@@ -31,7 +31,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True   # 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['kac-safetya.herokuapp.com', 'localhost', '8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu102.gitpod.io']
+ALLOWED_HOSTS = ['kac-safetya.herokuapp.com', 'localhost',
+                 '8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu102.gitpod.io']
 # was previously this 8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu101.gitpod.io
 
 # Application definition
@@ -113,7 +114,8 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # was not added here originally
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# was not added here originally
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True

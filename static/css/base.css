@@ -368,6 +368,10 @@ input[name='q']::placeholder {
     background-color: #CC0000;
 }
 
+.toast-body {
+    padding: 1rem;
+}
+
 /* .custom-toast {
     overflow: visible;
 

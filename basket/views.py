@@ -51,9 +51,9 @@ def update_basket(request, item_id):
         del basket[item_id]
         if not basket[item_id]:
             basket.pop(item_id)
-            messages.success(request,
-                             f'Successfully deleted '
-                             f'{courses.title} from your basket')
+            messages.info(request,
+                          f'Successfully deleted '
+                          f'{courses.title} from your basket')
     else:
         if quantity > 0:
             basket[item_id] = quantity
