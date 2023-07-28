@@ -240,7 +240,8 @@ body {
 .button-options {
     bottom: 0;
     right: 0;
-    position: fixed;
+    /* position: fixed; */
+    text-align: center;
     padding-bottom: 180px;
     padding-right: 5px;
 }
@@ -288,6 +289,10 @@ input[name='q']::placeholder {
     color: white !important;
 }
 
+.form-control { 
+    height:
+}
+
 
 /* bootstrap toasts */
 .message-container {
@@ -322,6 +327,7 @@ input[name='q']::placeholder {
     top: -10px;
     right: 36px;
 }
+
 
 
 /* Convenience classes - colors copied from Bootstrap */
@@ -365,7 +371,7 @@ input[name='q']::placeholder {
 }
 
 .banner-strip {
-    background-color: #CC0000;
+    background-color: #cc0000;
 }
 
 .toast-body {

@@ -53,7 +53,7 @@
                                         <button class="decrement-qty btn btn-black rounded-0"
                                             data-item_id="{{ courses.id }}" id="decrement-qty_{{ courses.id }}">
                                             <span class="icon">
-                                                <i class="fas fa-minus"></i>
+                                                <i class="fa-solid fa-square-minus fa-2xl" style="color: #cc0000;"></i>
                                             </span>
                                         </button>
                                     </div>
@@ -63,7 +63,7 @@
                                         <button class="increment-qty btn btn-black rounded-0"
                                             data-item_id="{{ courses.id }}" id="increment-qty_{{ courses.id }}">
                                             <span class="icon">
-                                                <i class="fas fa-plus"></i>
+                                                <i class="fa-sharp fa-solid fa-square-plus fa-2xl" style="color: rgb(204, 0, 0);"></i>
                                             </span>
                                         </button>
                                     </div>
@@ -71,38 +71,39 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <a href="{% url 'all_courses' %}" class="btn btn-outline-black rounded-0 mt-5">
+                            <a href="{% url 'all_courses' %}" class="btn btn-dark rounded-0 mt-5">
                                 <span class="icon">
-                                    <i class="fa fa-chevron-left"></i>
+                                    <i class="fa-solid fa-chevron-left" style="color: #cc0000;"></i>
                                 </span>
-                                <span class="text-uppercase">Keep Shopping</span>
+                                <span >Keep Shopping</span>
                             </a>
                             <!-- <a href="{% url 'view_basket' %}" > -->
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5"
+                            <input type="submit" class="btn btn-dark rounded-0 mt-5"
                                 value="Add Item To Basket">
                             <!-- </a> -->
+                            {% if request.user.is_superuser %}
+                            <a class="btn btn-dark rounded-0 mt-5" href="{% url 'edit_courses' courses.id %}" role="button">Edit</a>
+                            <a class="btn btn-dark rounded-0 mt-5" href="{% url 'delete_courses' courses.id %}" role="button">Delete</a>
+                            {% endif %}
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
 
                     </div>
                 </form>
             </div>
-            {% if request.user.is_superuser %}
-            <a class="btn btn-sm btn-secondary" href="{% url 'edit_courses' courses.id %}" role="button">Edit</a>
-            <a class="btn btn-sm btn-secondary" href="{% url 'delete_courses' courses.id %}" role="button">Delete</a>
-            {% endif %}
+           
 
         </div>
 
     </div>
 
 </div>
-<p class="d-lg-block button-options">
+<!-- <p class="d-lg-block button-options">
     <a class="btn btn-sm btn-secondary" href="" role="button">Add To Basket</a>
     <a class="btn btn-sm btn-secondary" href="" role="button">Add To Wishlist</a>
     <a class="btn btn-sm btn-secondary" href="{% url 'all_courses' %}" role="button">All Courses</a>
     <a class="btn btn-sm btn-secondary" href="{% url 'landing' %}" role="">Home</a>
-</p>
+</p> -->
 {% endblock %}
 
 {% block postloadjs %}
