@@ -11,7 +11,7 @@ class PurchaseAdmin(admin.ModelAdmin):
     inlines = (PurchaseOrderItemAdminInline,)
 
     readonly_fields = ('purchase_no', 'date_added',
-                        'total', 'discount',
+                       'total', 'discount',
                        'grand_total', 'original_basket',
                        'stripe_pid')
 
