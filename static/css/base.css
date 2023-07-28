@@ -289,11 +289,6 @@ input[name='q']::placeholder {
     color: white !important;
 }
 
-.form-control { 
-    height:
-}
-
-
 /* bootstrap toasts */
 .message-container {
     position: fixed;
