@@ -171,7 +171,8 @@
   </div>
   </div>
 
-
+  {% block page_header %}
+  {% endblock %}
 
   <div class="container-fluid main-container">
     <div class="col">
@@ -213,8 +214,7 @@
   </div>
   {% endif %}
 
-  {% block page_header %}
-  {% endblock %}
+
 
 
   {% block postloadjs %}
@@ -223,7 +223,7 @@
   </script>
   {% endblock %}
 
-</body>
+
 
 <footer>
   <div class="container-fluidfooter">
@@ -269,5 +269,6 @@
 
   </div>
 </footer>
+</body>
 
 </html>
