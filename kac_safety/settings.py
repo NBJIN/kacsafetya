@@ -193,7 +193,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # ## this was originally in project
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'   ## MAY HAVE TO REMOVE 
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'   ## MAY HAVE TO REMOVE 
 
 if 'USE_AWS' in os.environ:
     # Cache control
