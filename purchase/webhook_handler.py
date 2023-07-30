@@ -43,6 +43,7 @@ class StripeWH_Handler:
         """
         Handle a generic/unknown/unexpected webhook event
         """
+        print("handle event")
         return HttpResponse(
             content=f'Unhandled Webhook received: {event["type"]}',
             status=200)
@@ -52,7 +53,7 @@ class StripeWH_Handler:
         Handle the payment_intent.succeeded webhook from Stripe
         """
 
-        # print('handle_payment_intent_succeeded')
+        print('handle_payment_intent_succeeded')
 
         intent = event.data.object
         pid = intent.id
@@ -113,8 +114,8 @@ class StripeWH_Handler:
                 attempt += 1
                 time.sleep(1)
         if purchase_exists:
-            self._send_confirmation_email(purchase)
-
+            # self._send_confirmation_email(purchase)
+            print("puchase exists success")
             return HttpResponse(
                 content=f'Webhook recieved: {event["type"]} | SUCCESS: Verified purchase already in the database',
                 status=200)
@@ -149,10 +150,12 @@ class StripeWH_Handler:
             except Exception as e:
                 if purchase:
                     purchase.delete()
+                    print("failed webhook success")
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
-        self._send_confirmation_email(purchase)
+        # self._send_confirmation_email(purchase)#
+        print("Before return payment succeeded")
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
