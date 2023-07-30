@@ -9,5 +9,5 @@ urlpatterns = [
          views.purchase_success, name='purchase_success'),
     path('cache_purchase_data/', views.cache_purchase_data,
          name='cache_purchase_data'),
-    path('purchase/wh/', webhook, name='webhook'),
+    path('wh/', webhook, name='webhook'),
 ]
