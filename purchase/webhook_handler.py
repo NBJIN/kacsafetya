@@ -30,11 +30,7 @@ class StripeWH_Handler:
             {'purchase': purchase})
         body = render_to_string(
             'purchase/confirmation_emails/confirmation_email_body.txt',
-            {
-                'purchase': purchase,
-                'contact_email': settings.DEFAULT_FROM_EMAIL
-            }
-        )
+            {'purchase': purchase, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
         send_mail(
             subject,
@@ -86,8 +82,7 @@ class StripeWH_Handler:
                 dashboard.default_address1 = shipping_details.address.line1
                 dashboard.default_address2 = shipping_details.address.line2
                 # dashboard.default_address3 = shipping_details.address.county
-                dashboard.default_postcode = \
-                    shipping_details.address.postal_code
+                dashboard.default_postcode = shipping_details.address.postal_code
                 dashboard.default_telephone = shipping_details.phone
                 dashboard.save()
 
@@ -121,8 +116,7 @@ class StripeWH_Handler:
             self._send_confirmation_email(purchase)
 
             return HttpResponse(
-                content=f'Webhook recieved: {event["type"]} | SUCCESS: '
-                f'Verified purchase already in the database',
+                content=f'Webhook recieved: {event["type"]} | SUCCESS: Verified purchase already in the database',
                 status=200)
         else:
             purchase = None
@@ -160,8 +154,7 @@ class StripeWH_Handler:
                     status=500)
         self._send_confirmation_email(purchase)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: '
-            f'Created order in webhook',
+            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
 
     def handle_payment_intent_payment_failed(self, event):
