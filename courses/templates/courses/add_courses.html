@@ -22,7 +22,7 @@
     <div class="row">
         <div class="col-12 col-md-6">
             {% if not courses.image %}
-            <img class="card-img" src="{% static 'placeholder.jpg' %}">
+            <img class="card-img" src="{% static 'placeholder.jpg' %}" alt="placeholder-image">
             {% else %}
             <img src="{{ courses.image.url }}" class="card-img" alt="courses-image">
             {% endif %}
@@ -41,9 +41,7 @@
                 </div>
             </form>
         </div>
-
     </div>
-
 </div>
 
 

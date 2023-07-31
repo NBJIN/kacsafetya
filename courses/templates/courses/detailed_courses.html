@@ -84,6 +84,7 @@
                             {% if request.user.is_superuser %}
                             <a class="btn btn-dark rounded-0 mt-5" href="{% url 'edit_courses' courses.id %}" role="button">Edit</a>
                             <a class="btn btn-dark rounded-0 mt-5" href="{% url 'delete_courses' courses.id %}" role="button">Delete</a>
+                            <a class="btn btn-dark rounded-0 mt-5" href="{% url 'landing' %}" >Home</a>
                             {% endif %}
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
@@ -98,12 +99,7 @@
     </div>
 
 </div>
-<!-- <p class="d-lg-block button-options">
-    <a class="btn btn-sm btn-secondary" href="" role="button">Add To Basket</a>
-    <a class="btn btn-sm btn-secondary" href="" role="button">Add To Wishlist</a>
-    <a class="btn btn-sm btn-secondary" href="{% url 'all_courses' %}" role="button">All Courses</a>
-    <a class="btn btn-sm btn-secondary" href="{% url 'landing' %}" role="">Home</a>
-</p> -->
+
 {% endblock %}
 
 {% block postloadjs %}
