@@ -323,10 +323,7 @@ input[name='q']::placeholder {
     right: 36px;
 }
 
-/* basket page */
-.border-right {
-    border-right: 1px solid black;
-}
+
 
 /* Convenience classes - colors copied from Bootstrap */
 
