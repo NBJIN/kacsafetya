@@ -51,11 +51,9 @@
           <i class="icon-control fa fa-chevron-down"></i>
           <h6 class="title">Location</h6>
         </a>
-
       </header>
       <div class="filter-content collapse show" id="collapse_1">
         <div class="card-body">
-
           <p>
             <!-- <input type="radio" name="location"><a href="{% url 'all_courses' %}?location=classroom">&nbsp;&nbsp;Classroom</a><br> -->
             <input type="radio" name="location" value="classroom"><a
@@ -98,7 +96,6 @@
                     Details</a>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -130,16 +127,9 @@
 
 
 <p class="d-lg-block button-options">
-
   <a class="btn btn-dark rounded-0 mt-5" href="" role="button">Next</a>
   <a class="btn btn-dark rounded-0 mt-5" href="" role="button">Previous</a>
-  <a class="btn btn-dark rounded-0 mt-5" href="{% url 'landing' %}" role="">Home</a>
-
-  <div class="btt-button btn-secondary">
-    <a class="btt-link h-100 d-flex">
-      <i class="fa-solid fa-arrow-up" style="font-size: 30px;"></i>
-    </a>
-  </div>
+  <a class="btn btn-dark rounded-0 mt-5" href="{% url 'landing' %}">Home</a>
 </p>
 
 <!-- <nav aria-label="...">
@@ -162,7 +152,7 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
   $('.btt-link').click(function (e) {
     window.scrollTo(0, 0)
   })
