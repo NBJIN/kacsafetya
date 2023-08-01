@@ -1,5 +1,4 @@
 html {
-
     height: 100%;
 }
 
@@ -8,8 +7,6 @@ body {
 }
 
 /* base.html */
-
-
 .row-main {
     padding-left: 0px;
     padding-right: 0px;
@@ -20,8 +17,6 @@ body {
     background-color: lightgray;
 }
 
-
-
 .container-fluidfooter {
     /* padding-top: 200px; */
     width: 100%;
@@ -30,26 +25,23 @@ body {
     margin-right: auto;
     margin-left: auto;
     background-color: lightgray;
-    }
-
+}
 
 /* Discount Banner on index.html */
-
 #discount-banner {
     /* margin-top: 20px; */
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: black;
-    }
+}
 
 .text-color {
     color: red;
-    }
+}
 
 .fa-arrow-right {
     font-size: 25px;
-    }
-    
+}
 
     /* max-width: 100%;
     height: auto; */
@@ -92,7 +84,6 @@ body {
     /* padding-top: 5px; */
     margin: 0px;
     margin-top: -4px;  
-  
 }
 
 .col {
@@ -127,8 +118,6 @@ body {
 .row-header3 {
     background-color: #CC0000;
     height: 6vh;
-
-
 }
 
 .form-control {
@@ -158,7 +147,7 @@ body {
     font-weight: bold;
     color: #000;
     position: relative;
-    font: Archivo;
+    font-family: 'Roboto', sans-serif;
     padding-top: 20px;
     font-weight: 450; 
     top: 50%;
@@ -217,7 +206,6 @@ body {
 }
 
 /** positioning of nav bar item in container 2 to fit in between lines */
-
 .navbar-expand-lg {
     padding: 0;
 }
@@ -258,7 +246,6 @@ body {
 }
 
 /* arrow button at the bottom of all courses page  */
-
 .btt-link,
 .update-link,
 .delete-item {
@@ -274,7 +261,6 @@ input[name='q']::placeholder {
 }
 
 /* button outline black on the detailed courses page */
-
 .btn-outline-black {
     background: white;
     color: black !important; /* use important to overife link color for <a> elements */
@@ -296,14 +282,11 @@ input[name='q']::placeholder {
     top: 120px;
     right: 15px;
     /* z-index: 99999999999; */
- 
- 
 }
 
 .custom-toast {
     overflow: visible;
-    /* width: 1000px; */
-   
+    /* width: 1000px; */  
 }
 
 .toast-capper {
@@ -311,7 +294,6 @@ input[name='q']::placeholder {
 }
 
 /* from css-tricks - have not used yet */
-
 .arrow-up {
     width: 0;
     height: 0;
@@ -323,10 +305,7 @@ input[name='q']::placeholder {
     right: 36px;
 }
 
-
-
 /* Convenience classes - colors copied from Bootstrap */
-
 .arrow-primary {
     border-bottom-color: #007bff !important;
 }
@@ -447,8 +426,6 @@ input[name='q']::placeholder {
     color: #17a2b8;
 }
 
-
-
 /* Courses Form */
 .btn-file {
     position: relative;
@@ -476,8 +453,6 @@ input[name='q']::placeholder {
     border-color: #dc3545;
     border-radius: 0;
 }
-
-
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
