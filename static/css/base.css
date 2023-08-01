@@ -260,12 +260,18 @@ input[name='q']::placeholder {
     margin-left: 10%;
 }
 
+
 /* button outline black on the detailed courses page */
 .btn-outline-black {
     background: white;
     color: black !important; /* use important to overife link color for <a> elements */
     border: 1px solid black;
 }
+
+/* a.page-link-previous {
+    color: black;
+    background-color: #343a40;
+} */
 
 /* button outline black on the detailed courses page */
 .btn-outline-black:hover,

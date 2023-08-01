@@ -4,23 +4,33 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Courses, Location, Group_By
 from .forms import CoursesForm
+from django.core.paginator import Paginator 
 
 
 def all_courses(request):
     """ A view to show list of all courses """
+    queryset = Courses.objects.all()
+    # courses = Courses.objects.order_by('id')
+    paginate_by = 4
 
-    courses = Courses.objects.all()
+    paginator = Paginator(queryset, paginate_by)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
     # Locations = None
-    locations = Location.objects.all()
-    group_by = Group_By.objects.all()
-    lookup = None
+    # locations = Location.objects.all()
+    # group_by = Group_By.objects.all()
+    # lookup = None
     # group_by = None
+    # paginate_by = 4
 
     context = {
-        'courses': courses,
-        'locations': locations,
-        'group_by': group_by,
-        'search_term': lookup,
+        'page_obj': page_obj,
+        'is_paginated': True,
+        # 'courses': courses,
+        # 'locations': locations,
+        # 'group_by': group_by,
+        # 'search_term': lookup,
     }
 
     return render(request, 'courses/all_courses.html', context)
@@ -28,7 +38,7 @@ def all_courses(request):
 
 def all_courses_location(request, location):
     lookup = None
-    location = None
+    # location = None
 
     if request.GET:
         if 'location' in request.GET:
@@ -46,6 +56,20 @@ def all_courses_location(request, location):
 
             lookup = Q(title__icontains=lookup) | Q(details__icontains=lookup)
             courses = courses.filter(lookup)
+    else:
+        courses = Courses.objects.all()
+
+    paginator = Paginator(courses, 4)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'page_obj': page_obj,
+        'locations': locations,
+        'search_term': lookup,
+    }
+
+    return render(request, 'courses/all_courses.html', context)
 
 
 def all_courses_group_by(request, group_by):
@@ -60,10 +84,14 @@ def all_courses_group_by(request, group_by):
         elif group_by == 'safety':
             courses = courses.filter(group='Safety')
 
+    paginator = Paginator(courses, 4)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
     context = {
-        'courses': courses,
+        'page_obj': page_obj,
         'search_term': lookup,
-        'current_Locations': Locations,
+        # 'current_Locations': Locations,
         'current_group': group_by,
 
     }
