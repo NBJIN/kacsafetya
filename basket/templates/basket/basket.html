@@ -105,11 +105,11 @@
                                 <p class="mt-3">{{ item.basket.grand_total|floatformat:2 }}</p>
                             </td>         
                         </tr>
-            </div>
+            <!-- </div> -->
 
             {% endfor %}
             <tr>
-                <td colspan="7" class="pt-5 text-right">
+                <td colspan="4" class="pt-5 text-right">
                     <h6>Basket Total: €{{ total | floatformat:2 }}</h6>
                     <h6>Free Discount: €{{ discount | floatformat:2 }}</h6>
                     <h5 class="mt-4"><strong>Grand Total: €{{ grand_total | floatformat:2 }}</strong></h5>
@@ -121,18 +121,14 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="5" class="text-right">
-                    <a href="{% url 'all_courses' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left"></i>
-                        </span>
+                <td colspan="4" class="text-right">
+                    <a href="{% url 'all_courses' %}" class="btn rounded-0 btn-lg">
+                       
                         <span class="btn btn-dark rounded-0 mt-5">Continue Browsing</span>
                     </a>
-                    <a href="{% url 'purchase' %}" class="btn btn-outline-black btn-black rounded-0 btn-lg">
-                        <span class="text-uppercase">Make A Purchase</span>
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>
+                    <a href="{% url 'purchase' %}" class="btn rounded-0 btn-lg">
+                        <span class="btn btn-dark rounded-0 mt-5">Make A Purchase</span>
+                        
                     </a>
                 </td>
             </tr>

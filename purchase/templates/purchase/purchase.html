@@ -102,7 +102,7 @@
                         {% else %}
                         <label class="form-check-label" for="id-save-info">
                             <a class="text-info" href="{% url 'account_signup' %}">Register for an account</a> or
-                            <a class="text-info" href="{ url 'accouont_login' %}">Login</a> to save order information
+                            <a class="text-info" href="{% url 'accouont_login' %}">Login</a> to save order information
                         </label>
                         {% endif %}
                     </div>
@@ -143,7 +143,7 @@
     </div>
 </div>
 <div id="loading-overlay">
-    <h1 class="text-light logo-font loading-spinner">
+    <h1 class="text-light logo-font loading-spinner">Processing Payment &nbsp;
         <span class="icon">
             <!-- <i class="fas fa-3x fa-sync-alt fa-spin"></i> -->
             <i class="fa-sharp fa-3x fa-solid fa-compact-disc fa-spin" style="color: #8c929b;"></i>
