@@ -7,6 +7,10 @@ class CoursesAdmin(admin.ModelAdmin):
         'title', 'location', 'group_by', 'fee',
     )
 
+    list_filter = (
+        'location', 'group_by',
+    )
+
     ordering = ('title',)
 
 

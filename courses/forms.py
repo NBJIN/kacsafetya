@@ -12,6 +12,15 @@ class CoursesForm(forms.ModelForm):
         widgets = {
             'image': CustomClearableFileInput,
         }
+        # labels = {
+        #     'title',
+        #     'location',
+        #     'details',
+        #     'image',
+        #     'group_by',
+        #     'fee',
+        #     'image_url',
+        # }
 
     # Group_By = forms.ModelChoiceField(queryset=Group_By.objects.all(), empty_label=None)
     # Location = forms.ModelChoiceField(queryset=Location.objects.all(), empty_label=None)
