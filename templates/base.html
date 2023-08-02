@@ -63,11 +63,18 @@
   </div>
 
   <div class="row-header2">
-    <nav class="navbar navbar-expand-lg">
-      <div class="col col-logo">
-        <a class="logo-home" href="{% url 'landing' %}"><img src="{% static 'media/logo.jpg' %}" alt="company-logo"
+    <!-- <nav class="navbar navbar-expand-lg"> -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- <div class="col col-logo"> --><div class="container">
+        <a class="navbar-brand" class="logo-home float-left" href="{% url 'landing' %}"><img src="{% static 'media/logo.jpg' %}" alt="company-logo"
             class="company-logo"></a>
-      </div>
+      <!-- </div> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target='#navbarNavDropdown'
+          aria-controls="navbarNavDropdown" aria-expaned="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
 
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -123,22 +130,32 @@
                 <i class="fa-brands fa-mailchimp fa-xl" style="color: #050505;"></i>
               </a>
             </li>
+            <li class="pt-3 float-right">
+            <form method="GET" class="form-inline my-2 my-lg-0" action="{% url 'all_courses' %}">
+              <div class="input-group w-100">
+                <input class="form-control border border-black rounded-0" type="text" name="lookup"
+                  placeholder="Search our site">
+              <!-- </div>
+                <div class="input-group-append"> -->
+                  <a class="btn btn-sm btn-light mr-2" href="{% url 'all_courses' %}"><i
+                      class="fas fa-search"></i> Search</a>
+                </div>
+            </form>
+            </li>
+          </ul>
+          
+        </div>
+       
+      </div>
           </ul>
         </div>
-      </div>
+        </div>
+      </nav>
+  </div>
 
       <!-- <form class="form-inline my-2 my-lg-0"> -->
 
-      <form method="GET" class="form-inline my-2 my-lg-0" action="{% url 'all_courses' %}">
-        <div class="input-group w-100">
-          <input class="form-control border border-black rounded-0" type="text" name="lookup"
-            placeholder="Search our site">
-        <!-- </div>
-          <div class="input-group-append"> -->
-            <a class="btn btn-sm btn-light mr-2" href="{% url 'all_courses' %}"><i
-                class="fas fa-search"></i> Search</a>
-          </div>
-      </form>
+ 
     </nav>
   </div>
 
