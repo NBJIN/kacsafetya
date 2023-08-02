@@ -87,17 +87,24 @@
             </a>
             {% endif %}
             <div class="card-body pb-0">
-              <p class="mb-0">{{ course.title }}</p>
+              <p class="mb-0"><strong>Course Title:</strong> &nbsp {{ course.title }}</p>
             </div>
-            <div class="card-footer bg-white pt-0 border-0 text-left">
-              <div class="row">
-                <div class="col">
-                  <p class="lead mb-0 text-left font-weight-bold">€{{ course.fee }}</p>
+            <div class="card-body pb-0">
+              <p class="mb-0"><strong>Course Location:</strong> &nbsp {{ course.location }}</p>
+            </div>
+            <div class="card-body pb-0">
+              <p class="mb-0"><strong>Group By:</strong> {{ course.group_by }}</p>
+            </div>
+            <!-- <div class="card-footer bg-white pt-0 border-0 text-left"> -->
+              <!-- <div class="row"> -->
+                <div class="card-body pb-0">
+                  <p class="mb-0"><strong>Course Fee:</strong> €{{ course.fee }}</p>
+                  <br>
                   <a class="course-details mr-5" href="{% url 'detailed_courses' course_id=course.id %}">Course
                     Details</a>
                 </div>
-              </div>
-            </div>
+              <!-- </div> -->
+            <!-- </div> -->
           </div>
         </div>
         {% if forloop.counter|divisibleby:1 %}
