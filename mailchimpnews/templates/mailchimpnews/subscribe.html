@@ -31,23 +31,8 @@
             <form method="POST" action="success/" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
-
                 <input type="submit" value="Submit" class="btn btn-dark rounded-0 mt-5 mb-3">
-                <!-- <input type="email" name="email" placeholder="Your Email"> 
-                <br>
-             <input type="text" name="fullname" placeholder="Full Name"> 
-                <br>
-                <input type="text" name="company" placeholder="Company">
-                <br>
-                <br> -->
-                <!-- <button class="btn btn-sm btn-secondary" type="submit">Submit</button> -->
             </form>
-
-
-            <!-- <footer class="footer mt-auto py-3 dark-bg"> -->
-            <!-- <p>Thank you for your subscription</p>
-            <p>KACSafety Team</p>
-            <hr> -->
         </div>
     </div>
 </div>
