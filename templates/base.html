@@ -66,19 +66,18 @@
     <!-- <nav class="navbar navbar-expand-lg"> -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <!-- <div class="col col-logo"> --><div class="container">
-        <a class="navbar-brand" class="logo-home float-left" href="{% url 'landing' %}"><img src="{% static 'media/logo.jpg' %}" alt="company-logo"
+        <a class="navbar-brand logo-home float-left" href="{% url 'landing' %}"><img src="{% static 'media/logo.jpg' %}" alt="company-logo"
             class="company-logo"></a>
       <!-- </div> -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target='#navbarNavDropdown'
-          aria-controls="navbarNavDropdown" aria-expaned="false" aria-label="Toggle navigation">
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span></button>
 
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ml-auto">
-
+        <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown"> -->
+          
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link-basket mr-5" href="{% url 'landing' %}">Home</a>
             </li>
@@ -114,7 +113,6 @@
               <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                 href="{% url 'view_basket' %}"></a>
               <div class="text-align-left">
-                <!-- <div><i class="fal fa-shopping-basket"></i></div> -->
                 <p class="my-0">
                   {% if grand_total %}
                   €{{ grand_total|floatformat:2 }}
@@ -143,35 +141,22 @@
             </form>
             </li>
           </ul>
-          
         </div>
        
       </div>
-          </ul>
-        </div>
+        <!-- </div> -->
         </div>
       </nav>
   </div>
-
-      <!-- <form class="form-inline my-2 my-lg-0"> -->
-
- 
-    </nav>
-  </div>
-
 
   <div class="col">
 
   </div>
 
-
   <div class="row-header3">
     <div class="col">
     </div>
   </div>
-
-
-
 
   <div class="container-fluid main-container">
     <div class="col">
