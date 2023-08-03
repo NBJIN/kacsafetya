@@ -17,6 +17,8 @@ def all_courses(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
+    selected_location = request.GET.get('location', '')
+
     # Locations = None
     # locations = Location.objects.all()
     # group_by = Group_By.objects.all()
@@ -27,6 +29,7 @@ def all_courses(request):
     context = {
         'page_obj': page_obj,
         'is_paginated': True,
+        'selected_location': selected_location,
         # 'courses': courses,
         # 'locations': locations,
         # 'group_by': group_by,
@@ -38,7 +41,7 @@ def all_courses(request):
 
 def all_courses_location(request, location):
     lookup = None
-    # location = None
+    locations = Location.objects.all()
 
     if request.GET:
         if 'location' in request.GET:
@@ -67,6 +70,7 @@ def all_courses_location(request, location):
         'page_obj': page_obj,
         'locations': locations,
         'search_term': lookup,
+        'selected_location': location,
     }
 
     return render(request, 'courses/all_courses.html', context)
