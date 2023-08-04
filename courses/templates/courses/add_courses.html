@@ -15,25 +15,35 @@
     <div class="row">
         <div class="col-12 col-md-6">
             <h1 class="logo-font mb-4">Course Administration</h1>
-            <h6 class="text-muted">Add A Course</h6>
+            <h6 class="text-bold">Add A Course</h6>
+            <p>If an image is not added the placeholder image below will be displayed else
+                click on "Select Image" to add your chosen image which will displayed on the 
+                detailed courses page.</p>
         </div>
     </div>
 
     <div class="row">
         <div class="col-12 col-md-6">
             {% if not courses.image %}
-            <img class="card-img" src="{% static 'placeholder.jpg' %}" alt="placeholder-image">
+            <img class="card-img" src="https://res.cloudinary.com/dc4lcot1r/image/upload/v1690042411/media/placeholder_p0bu0d.jpg" alt="placeholder-image">
             {% else %}
             <img src="{{ courses.image.url }}" class="card-img" alt="courses-image">
             {% endif %}
             <form method="POST" action="{% url 'add_courses' %}" class="form mb-2" enctype="multipart/form-data">
+                
                 {% csrf_token %}
+                
+                <br> 
+                <br>  
                 {% for field in form %}
-                {% if field.name != 'image' %}
-                {{ field | as_crispy_field }}
-                {% else %}
-                {{ field }}
-                {% endif %}
+                    <div class="form-group">
+                        {% if field.name != 'image' %}
+                      
+                        {{ field | as_crispy_field }}
+                    {% else %}
+                        {{ field }}
+                    {% endif %}
+                    </div>
                 {% endfor %}
                 <div class="text-right">
                     <a class="btn btn-dark rounded-0 mt-5" href="{% url 'all_courses' %}">Cancel</a>
@@ -52,7 +62,7 @@
     <script>
         $('#new-image').change(function () {
             var file = $('#new-image')[0].files[0];
-            $('#filename').text(`Image will be set to: ${file.name}`)
+            $('#filename').text(`Image will be set to: ${file.name}`);
         });
     </script>
 {% endblock %}

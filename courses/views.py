@@ -147,7 +147,7 @@ def edit_courses(request, courses_id):
 
     context = {
         'form': form,
-        'courses': courses,
+        # 'courses': courses,
 
     }
 
