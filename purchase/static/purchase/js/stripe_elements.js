@@ -64,7 +64,7 @@ form.addEventListener('submit', function(ev) {
     };
     var url = '/purchase/cache_purchase_data/';
 
-    $.post(url, postData).done(function() {
+    $.post(url, postData).done(function () {
         stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: card,
@@ -91,7 +91,7 @@ form.addEventListener('submit', function(ev) {
                     // line3: $.trim(form.address3.value),
                     postal_code: $.trim(form.postcode.value),
                                 }
-                }
+                },
         }).then(function(result) {
             if (result.error) {
                 var errorDiv = document.getElementById('card-errors');
