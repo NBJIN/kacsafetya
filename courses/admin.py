@@ -4,7 +4,7 @@ from .models import Courses, Location, Group_By
 
 class CoursesAdmin(admin.ModelAdmin):
     list_display = (
-        'title', 'location', 'group_by', 'fee',
+        'title', 'location', 'image', 'group_by', 'fee', 'date_of_course', 'image_url'
     )
 
     list_filter = (

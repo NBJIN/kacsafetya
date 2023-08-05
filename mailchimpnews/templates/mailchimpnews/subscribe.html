@@ -19,19 +19,19 @@
 {% block content %}
 
 <div class="overlay"></div>
-<div class="container">
+<div class="container-subscribe">
     <div class="row">
         <div class="col-12 col-lg-6">
             <hr>
-            <h1 class="logo-font mb-4">Newsletter Signup </h1>
+            <h1 class="logo-font mt-5 mb-5">Newsletter Signup </h1>
             <br>
-            <h4>Please enter your details below to subscribe to our newsletter.</h4>
+            <h4 class="mt-5">Please enter your details below to subscribe to our newsletter.</h4>
             <br>
 
-            <form method="POST" action="success/" enctype="multipart/form-data">
+            <form method="POST" action="success/" enctype="multipart/form-data" class="mt-5">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <input type="submit" value="Submit" class="btn btn-dark rounded-0 mt-5 mb-3">
+                <input type="submit" value="Submit" class="btn btn-dark rounded-0 mt-5 mb-5">
             </form>
         </div>
     </div>

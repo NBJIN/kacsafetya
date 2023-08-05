@@ -12,6 +12,10 @@ class CoursesForm(forms.ModelForm):
         widgets = {
             'image': CustomClearableFileInput,
         }
+
+        widgets = {
+            'date_of_course': forms.DateInput(attrs={'type': 'datetime-local', 'placeholder': 'Select the date and time' }),
+        }
         # labels = {
         #     'title',
         #     'location',

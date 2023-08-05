@@ -56,7 +56,7 @@ class Courses(models.Model):
         null=True,
         blank=True
     )
-    date_of_course = models.DateTimeField(auto_now_add=True)
+    date_of_course = models.DateTimeField(null=True, blank=True)
     image_url = models.URLField(max_length=1500, null=True, blank=True)
 
     def __str__(self):

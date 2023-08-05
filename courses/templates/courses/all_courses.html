@@ -11,60 +11,38 @@
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container-fluid">
+<div class="container-fluid-allcourses">
   <div class="row">
     <div class="col text-center mt-3">
-      <h2 class="logo-font">All Courses</h2>
+      <h2 class="logo-font mt-5">All Courses</h2>
       <hr class="w-50 mb-1">
     </div>
   </div>
-
-
-  <div class="card" style="width: 200px;">
+  <div class="card col-md-3 d-none d-md-block" style="width: 200px;">
     <article class="filter-group">
-      <header class="card-header col-md6 bg-secondary">
-        <!-- <a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class=""> -->
-       
+      <header class="card-header bg-secondary">       
           <h6 class="title">Group By</h6>
-        <!-- </a> -->
       </header>
       <div class="filter-content">
-        <div class="card-body">
-          
+        <div class="card-body"> 
             <form method="GET" action="{% url 'all_courses' %}" class="form">
               {% for group in group_by_options %}
                 <input type="radio" name="group_by" value="{{ group.name }}">
                 <a href="{% url 'all_courses' %}?group_by={{ group.name}}">&nbsp; {{ group.name|capfirst }}</a>
                 <br>
-                {% endfor %}
-                
+                {% endfor %}         
                 <button class="btn btn-sm btn-dark rounded-0" type="submit">Search</button>
             </form>
-            <!-- <input type="radio" name="group_by"><a href="{% url 'all_courses' %}?group_by=safety">&nbsp;&nbsp;Safety</a><br> -->
-            <!-- <input type="radio" name="group_by"><a href="{% url 'all_courses' %}?group_by=health">&nbsp;&nbsp;Health</a> -->
-            <!-- <input type="radio" name="group_by" value="health"><a href="{% url 'all_courses' %}?group_by=health">&nbsp;&nbsp;Health</a> -->
-            <!-- <input type="radio" name="group_by" value="health"><a
-              href="{% url 'all_courses_group_by' 'health' %}">&nbsp; &nbsp; Health</a> -->
-        
-          <!-- <p>
-            <input type="radio" name="group_by" value="safety"><a
-              href="{% url 'all_courses_group_by' 'safety' %}">&nbsp; &nbsp; Safety</a>
-          </p> -->
         </div>
       </div>
-      <!-- <a class="btn btn-sm btn-dark rounded-0" href="{% url 'all_courses' %}" role="button">Search</a> -->
     </article>
     <article class="filter-group">
       <br>
-      <header class="card-header bg-secondary">
-        <!-- <a href="#"  aria-expanded="true" class=""> -->
-     
+      <header class="card-header bg-secondary">     
           <h6 class="title">Location</h6>
-        <!-- </a> -->
       </header>
       <div class="filter-content">
         <div class="card-body">
-          
             <form method="GET" action="{% url 'all_courses' %}" class="form">
               {% for location in locations %}
                 <input type="radio" name="location" value="{{ location.name }}">
@@ -73,33 +51,14 @@
                 {% endfor %}
                 
                 <button class="btn btn-sm btn-dark rounded-0" type="submit">Search</button>
-            </form>
-
-            
-            
-            <!-- <input type="radio" name="location"><a href="{% url 'all_courses' %}?location=classroom">&nbsp;&nbsp;Classroom</a><br> -->
-            
-            <!-- <input type="radio" name="location" value="classroom"><a href="{% url 'all_courses_location' 'classroom' %}">&nbsp; &nbsp; Classroom</a><br>  ## code i was using -->
-
-            <!-- <input type="radio" name="location"><a href="{% url 'all_courses' %}?location=online">&nbsp;&nbsp;Online</a> -->
-            <!-- <input type="radio" name="location"><a href="/all_courses/location/online/">&nbsp;&nbsp;Online</a> -->
-            
-            <!-- <input type="radio" name="location" value="online"><a -->  
-              <!-- href="{% url 'all_courses_location' 'online' %}">&nbsp; &nbsp; Online</a> # code i was using --> 
-          
+            </form>          
         </div>
       </div>
-      <!-- {% if selected_location %}
-        <a class="btn btn-sm btn-dark" href="{% url 'all_courses_location' selected_location %}" role="button">Search</a>
-      {% endif %} -->
       </article>
       <a class="btn btn-dark rounded-0" href="{% url 'all_courses' %}" role="button">Reset To All Courses</a>
   </div>
 
   <div class="row">
-    <!-- <div class="product-container col-10 offset-3"> -->
-      <!-- <div class="row mt-1 mb-2"></div> -->
-      <!-- <div class="row"> -->
         {% for course in page_obj %}
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
           <div class="card h-100 border-danger">
@@ -121,16 +80,12 @@
             <div class="card-body pb-0">
               <p class="mb-0"><strong>Group By:</strong> {{ course.group_by }}</p>
             </div>
-            <!-- <div class="card-footer bg-white pt-0 border-0 text-left"> -->
-              <!-- <div class="row"> -->
                 <div class="card-body pb-0">
                   <p class="mb-0"><strong>Course Fee:</strong> €{{ course.fee }}</p>
                   <br>
                   <a class="course-details mr-5" href="{% url 'detailed_courses' course_id=course.id %}">Course
                     Details</a>
                 </div>
-              <!-- </div> -->
-            <!-- </div> -->
           </div>
         </div>
         {% if forloop.counter|divisibleby:1 %}
@@ -154,9 +109,10 @@
         </div>
         {% endif %}
         {% endfor %}
-      <!-- </div> -->
-    <!-- </div> -->
   </div>
+  <br>
+  <br>
+  <br>
 
 
 
@@ -180,15 +136,6 @@
       </ul>
     </nav>
   {% endif %}
-
-  <!-- <p class="d-lg-block button-options"> -->
-    <!-- <a class="btn btn-dark rounded-0 mt-5" href="" role="button">Next</a>
-    <a class="btn btn-dark rounded-0 mt-5" href="" role="button">Previous</a> -->
-    <!-- <a class="btn btn-dark rounded-0 mt-5" href="{% url 'landing' %}">Home</a>
-  </p> -->
-
-
-
 </div>
 
 {% endblock %}

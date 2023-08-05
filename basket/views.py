@@ -24,7 +24,7 @@ def add_to_basket(request, item_id):
 
     if item_id in list(basket.keys()):
         basket[item_id] += quantity
-        messages.success(request,
+        messages.info(request,
                          f'Updated {courses.title} quantity to '
                          f'{basket[item_id]}')
     else:
@@ -44,7 +44,7 @@ def update_basket(request, item_id):
 
     if quantity > 0:
         basket[item_id] = quantity
-        messages.success(request,
+        messages.info(request,
                          f'Updated {courses.title} quantity to '
                          f'{basket[item_id]}')
     elif quantity == 0:
@@ -57,12 +57,12 @@ def update_basket(request, item_id):
     else:
         if quantity > 0:
             basket[item_id] = quantity
-            messages.success(request,
+            messages.info(request,
                              f'updated {courses.title} '
                              f'quantity to {basket[item_id]}')
         else:
             basket.pop(item_id)
-            messages.success(request,
+            messages.info(request,
                              f'Successfully removed {courses.title} '
                              f'from your basket')
 
@@ -74,18 +74,19 @@ def delete_from_basket(request, item_id):
     """ Delete an item from basket  """
 
     try:
+        print("Attempting to delete item:", item_id)
         courses = get_object_or_404(Courses, pk=item_id)
         basket = request.session.get('basket', {})
 
         del basket[item_id]
-        if not basket[item_id]:
-            basket.pop(item_id)
-            messages.success(request,
+        if not basket.get(item_id):
+            # basket.pop(item_id)
+            messages.info(request,
                              f'Successfully removed {courses.title} '
                              f'from your basket')
         else:
-            basket.pop[item_id]
-            messages.success(request,
+            basket.pop(item_id)
+            messages.info(request,
                              f'Successfully removed {courses.title} '
                              f'from your basket')
 
@@ -93,5 +94,6 @@ def delete_from_basket(request, item_id):
         return HttpResponse(status=200)
 
     except Exception as e:
+        print("Error:", e)
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)

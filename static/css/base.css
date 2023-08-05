@@ -30,9 +30,19 @@ body {
 /* Discount Banner on index.html */
 #discount-banner {
     /* margin-top: 20px; */
+    margin-top: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: black;
+ 
+}
+
+.fontstyle {
+    font-size: 25px;
+}
+
+.paragraphstyle {
+    font-size: 25px;
 }
 
 .text-color {
@@ -83,7 +93,7 @@ body {
     padding-left: 0px;
     /* padding-top: 5px; */
     margin: 0px;
-    margin-top: -4px;  
+    /* margin-top: -4px;   */
 }
 
 .col {
@@ -140,6 +150,7 @@ body {
     width: 100%;
     top: 0px;
     padding-top: 20px;
+    height: 100vh;
 }
 
 .jumbotron-main h1,
@@ -245,6 +256,10 @@ body {
     right: 10px;
 }
 
+.container-fluid-allcourses {
+    height: 100vh;
+}
+
 /* arrow button at the bottom of all courses page  */
 .btt-link,
 .update-link,
@@ -281,14 +296,19 @@ input[name='q']::placeholder {
     color: white !important;
 }
 
+.container-fluid-detailedcourses {
+    height: 100vh;
+}
+
 /* bootstrap toasts */
 .message-container {
     position: fixed;
    
     top: 120px;
     right: 15px;
-    /* z-index: 99999999999; */
+    z-index: 9999;
 }
+
 
 .custom-toast {
     overflow: visible;
@@ -356,6 +376,9 @@ input[name='q']::placeholder {
 
 .toast-body {
     padding: 1rem;
+    /* background: rgba(0, 0, 0, 0.9); */
+    /* color: white; */
+    
 }
 
 /* .custom-toast {
@@ -366,6 +389,41 @@ input[name='q']::placeholder {
 .toast-capper {
     height: 2px;
 } */
+
+/* Contact Approved */
+.container-contact-approved {
+    height: 100vh;
+    padding: 30px;
+}
+
+/* dashboard page */
+.container-main-dashboard {
+    height: 100vh;
+    margin: 30px;
+}
+
+
+/* Logout Page */
+
+.main-container-logout {
+    height: 100vh;
+}
+
+/* Basket */
+
+.container-basket {
+    height: 100vh;
+    margin: 60px;
+}
+
+/* Mailchimpnews Subscribe Page */
+
+.container-subscribe,
+.container-success {
+    height: 100vh;
+    padding: 40px;
+}
+
 
 
 /* dont have the above two css styling elements in code as of yet  */
@@ -529,3 +587,62 @@ input[name='q']::placeholder {
     
 
 }
+
+
+/* -------------------------------------------------------------------------------- */
+/* Media Queries */ 
+
+/* For larger to medium screens size from 1200px wide and down */
+@media screen and (max-width: 1200px) {
+
+    }
+      
+    /** For medium screen sizes from 950px wide and down  */
+    @media screen and (max-width: 950px) {
+    
+    }
+
+    /** For max width 767px */
+
+    @media (max-width: 767px ) {
+        .container-home,
+        .container-fluid-allcourses,
+        .container-fluid-detailedcourses,
+        .container-contact-approved,
+        .container-main-dashboard,
+        .container-subscribe,
+        .container-success,
+        .main-container-logout {
+            height: auto;
+        }
+
+        /* .container-success {
+            overflow: hidden;
+        } */
+
+        #discount-banner {
+            margin-top: 0px;
+            padding-top: 0px;
+            padding: 0px;
+       
+        }
+
+        .display-10,
+        .lead {
+            font-size: 20px;
+
+        }
+
+        .fontstyle,
+        .paragraphstyle {
+            font-size: 15px;
+        }
+
+        .container-basket {
+            height: 100vh;
+            margin: 0;
+            margin-left: 5px;
+            margin-right: 1px;
+        }
+    }
+    
