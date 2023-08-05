@@ -52,12 +52,8 @@ def purchase(request):
             'postcode': request.POST['postcode'],
             'telephone': request.POST['telephone'],
             'email': request.POST['email'],
-            # 'course_title': request.POST['course_title'],
-            # 'quantity': request.POST['quantity'],
         }
-        # print('form_data')
         purchase_form = PurchaseForm(form_data)
-        # print("ERRORS: ", purchase_form.errors)
         if purchase_form.is_valid():
             purchase = purchase_form.save(commit=False)
             purchase_no = purchase
@@ -75,8 +71,7 @@ def purchase(request):
                             quantity=item_data,
                         )
                         purchase_order_item.save()
-                    # else:
-                    #     purchase_order_item.save()
+
                 except Courses.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your basket wasn't found in "
@@ -95,7 +90,6 @@ def purchase(request):
             Please check your details.')
     else:
         basket = request.session.get('basket', {})
-        # intent = None
         if not basket:
             messages.error(request, "No items in your bag at present")
             return redirect(reverse('all_courses'))
@@ -113,7 +107,6 @@ def purchase(request):
             try:
                 dashboard = UserDashboard.objects.get(user=request.user)
                 purchase_form = PurchaseForm(initial={
-                    # 'user': dashboard.user.default_user(),
                     'company': dashboard.default_company,
                     'address1': dashboard.default_address1,
                     'address2': dashboard.default_address2,
@@ -189,5 +182,4 @@ def purchase_success(request, purchase_no):
         'discount': discount,
         'grand_total': grand_total,
     }
-    # return render(request, template, context)
     return render(request, 'purchase/purchase_success.html', context)

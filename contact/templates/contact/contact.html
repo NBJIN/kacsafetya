@@ -28,31 +28,15 @@
         </div>
     </div>
 
-    <!-- {% if submitted %} -->
-    <!-- <p class="success">
-            Your contact form has been submitted.
-        </p>    
-
-    {% else %} -->
-
     <div class="col-12 col-lg-6">
         <p class="text-black">
             Please complete the form below.
         </p>
         <form action="contact_approved/" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            <!-- {% crispy form %} -->
             {{ form | crispy }}
             <input type="submit" value="Submit" class="btn btn-dark rounded-0 mt-2 mb-3">
-            <!-- <fieldset class="rounded px-3 mb-5">
-                <legend class="fieldset-label small text-black px-3 w-auto"></legend>
-                
-            </fieldset>
-            <div class="form-check form-check-inline float-right mr-0">
-         </div> -->
-
         </form>
-        <!-- {% endif %} -->
     </div>
 </div>
 

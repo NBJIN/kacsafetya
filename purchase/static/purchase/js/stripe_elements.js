@@ -73,22 +73,18 @@ form.addEventListener('submit', function(ev) {
                   
                     phone: $.trim(form.telephone.value),
                     email: $.trim(form.email.value),
-                    // company: $.trim(form.company.value),
                     address:{
                         line1: $.trim(form.address1.value),
                         line2: $.trim(form.address2.value),
-                    //     line3: $.trim(form.address3.value),
                     }
                 }
             },
             shipping: {
                 name: $.trim(form.fullname.value),
                 phone: $.trim(form.telephone.value),
-                // company: $.trim(form.company.value),
                 address: {
                     line1: $.trim(form.address1.value),
                     line2: $.trim(form.address2.value),
-                    // line3: $.trim(form.address3.value),
                     postal_code: $.trim(form.postcode.value),
                                 }
                 }

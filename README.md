@@ -2,7 +2,7 @@
 
 ## About
 
-#### This is a fictional website for educational purposed for a health and safety training company called KAC Safety.  It is a training provider which offers both online and classroom based courses in health and in safety.  This is a full stack e commerce project.  The following languages have been used while building this project: Django, Python, Html, CSS and JavaScript.
+#### This is a fictional website for educational purposes for a health and safety training company called KAC Safety.  The comapny provides consulation in realtion to health and safety but also provides training courses in which a visitor can view the details on each course and purchase same through a stripe payment process.  The company offers both online and classroom based courses in health and in safety.  This is a full stack e commerce project.  The following languages have been used while building this project: Django, Python, Html, CSS and JavaScript.
 
 
 ## UX

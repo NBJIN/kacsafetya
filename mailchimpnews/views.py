@@ -17,10 +17,8 @@ def subscribe_view(request):
 
     if request.method == 'POST':
         form = SubscribeForm(data=request.POST)
-        # print("in post")
         form = SubscribeForm(request.POST)
         if form.is_valid():
-            # print("in post valid")
 
             fullname = form.cleaned_data['fullname']
             company = form.cleaned_data['company']

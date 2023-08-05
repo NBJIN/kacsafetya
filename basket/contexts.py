@@ -10,8 +10,6 @@ def basket_contents(request):
     grand_total = 0
     total = 0
     courses_count = 0
-    # FREE_DISCOUNT = 0
-    # discount = 0
     basket = request.session.get('basket', {})
 
     for item_id, quantity in basket.items():
@@ -28,11 +26,7 @@ def basket_contents(request):
 
     if total > settings.FREE_DISCOUNT:  # if my total is greater than 200
         discount = total * Decimal(settings.STANDARD_DISCOUNT_PERCENTAGE/100)
-        # grand total is = to total
         free_discount_delta = settings.FREE_DISCOUNT - total
-        # free discount delta is equal to free discount minus total
-    # free_discount_delta = settings.FREE_DISCOUNT - total
-
     else:
         discount = 0
         free_discount_delta = 0

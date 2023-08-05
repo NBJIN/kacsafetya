@@ -7,21 +7,16 @@ class PurchaseForm(ModelForm):
     class Meta:
         model = Purchase
 
-        fields = ('fullname',
-                  'company',
-                  'address1',
-                  'address2',
-                  'address3',
-                  'postcode',
-                  'telephone',
-                  'email',
-                #   'course_title',
-                #   'quantity',
-                  )
-
-# class PurchaseOrderItem(ModelForm):
-#     course_title = forms.CharField(label='Course Title', max_length=100)
-#     quantity = forms.IntegerField(label='Quantity')
+        fields = (
+            'fullname',
+            'company',
+            'address1',
+            'address2',
+            'address3',
+            'postcode',
+            'telephone',
+            'email',
+            )
 
     def __init__(self, *args, **kwargs):
         """

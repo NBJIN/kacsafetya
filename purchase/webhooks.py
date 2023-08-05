@@ -35,7 +35,7 @@ def webhook(request):
     except stripe.error.SignatureVerificationError as e:
         # Invalid signature
         print(e)
-        return HttpResponse(status=400)   # took out content = e here may need to undo
+        return HttpResponse(status=400)
     except Exception as e:
         print(e)
         return HttpResponse(content=e, status=400)

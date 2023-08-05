@@ -93,10 +93,8 @@
                                 </span>
                                 <span >Keep Shopping</span>
                             </a>
-                            <!-- <a href="{% url 'view_basket' %}" > -->
                             <input type="submit" class="btn btn-dark rounded-0 mt-5"
                                 value="Add Item To Basket">
-                            <!-- </a> -->
                             {% if request.user.is_superuser %}
                             <a class="btn btn-dark rounded-0 mt-5" href="{% url 'edit_courses' courses.id %}" role="button">Edit</a>
                             <a class="btn btn-dark rounded-0 mt-5" href="{% url 'delete_courses' courses.id %}" role="button">Delete</a>
@@ -104,16 +102,11 @@
                             {% endif %}
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-
                     </div>
                 </form>
             </div>
-           
-
         </div>
-
     </div>
-
 </div>
 
 {% endblock %}

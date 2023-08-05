@@ -4,13 +4,12 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Courses, Location, Group_By
 from .forms import CoursesForm
-from django.core.paginator import Paginator 
+from django.core.paginator import Paginator
 
 
 def all_courses(request):
     """ A view to show list of all courses """
     queryset = Courses.objects.all().order_by('title')
-    # courses = Courses.objects.order_by('id')
     paginate_by = 4
 
     selected_location = request.GET.get('location', '')
@@ -29,15 +28,6 @@ def all_courses(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
-    # selected_location = request.GET.get('location', '')
-
-    # Locations = None
-    # locations = Location.objects.all()
-    # group_by = Group_By.objects.all()
-    # lookup = None
-    # group_by = None
-    # paginate_by = 4
-
     locations = Location.objects.all()
 
     context = {
@@ -46,10 +36,8 @@ def all_courses(request):
         'selected_location': selected_location,
         'group_by_options': group_by_options,
         'selected_group_by': selected_group_by,
-        # 'courses': courses,
         'locations': locations,
-        # 'group_by': group_by,
-        # 'search_term': lookup,
+
     }
 
     return render(request, 'courses/all_courses.html', context)
@@ -61,12 +49,10 @@ def all_courses_location(request, location):
 
     if request.GET:
         if 'location' in request.GET:
-            # Locations = request.GET['Location'].split(',')
             locations = request.GET.getlist('location')
             courses = Courses.objects.filter(Location__name__in=locations)
             locations = Location.objects.filter(name__in=locations)
 
-        # lookup is not working when i enter a word that is not on the website
         if 'lookup' in request.GET:
             lookup = request.GET['lookup']
             if not lookup:
@@ -111,7 +97,6 @@ def all_courses_group_by(request, group_by):
     context = {
         'page_obj': page_obj,
         'search_term': lookup,
-        # 'current_Locations': Locations,
         'current_group': group_by,
 
     }
@@ -126,7 +111,6 @@ def detailed_courses(request, course_id):
 
     context = {
         'courses': courses,
-
     }
 
     return render(request, 'courses/detailed_courses.html', context)
@@ -134,7 +118,9 @@ def detailed_courses(request, course_id):
 
 @login_required
 def edit_courses(request, courses_id):
-    """ A view to show each course in more detail """
+    """
+    A view to show each course in more detail
+    """
     if not request.user.is_superuser:
         messages.error(
             request,

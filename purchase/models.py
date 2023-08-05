@@ -67,9 +67,6 @@ class Purchase(models.Model):
         """ create a purchase no using uuid """
         return uuid.uuid4().hex.upper()
 
-    # def purchaseitems(self):
-    #     return self.orderitem.all()
-
     def update_total(self):
         """ Every time a new course is added update grand total """
         self.total = (
@@ -132,7 +129,6 @@ class PurchaseOrderItem(models.Model):
         """ set purchase_no if its not set already by
         overiding the original save method """
         self.orderitem_total = self.course_title.fee * self.quantity
-        # self.grand_total = self.orderitem_total - self.discount
         super().save(*args, **kwargs)
 
         self.purchase_no.update_total()

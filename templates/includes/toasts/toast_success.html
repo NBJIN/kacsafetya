@@ -3,7 +3,6 @@
   <div class="arrow-up arrow-success"></div>
   <div class="w-100 toast-capper bg-success"></div>
   <div class="toast-header bg-white  text-dark">
-    <!-- <img src="..." class="rounded mr-2" alt="..."> -->
     <strong class="mr-auto">Success</strong>
     <small class="text-muted mr-auto">.......</small>
     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
@@ -42,12 +41,12 @@
 
     <div class="row">
       <div class="col">
-        <!-- <strong> -->
+
           <p class="mt-3 mb-1 font-weight-bold">
             &nbsp; Total{% if free_discount > 0 %} ( Exc. discount){% endif %}:
             <span class="text-center">€{{ total|floatformat:2 }}</span>
           </p>
-        <!-- </strong> -->
+
         {% if free_discount > 0 %}
         <p class="mb-0 p-2 bg-warning shadow-sm text-black text-center">
           Spend <strong>€{{ free_discount }}</strong> to get your free discount.

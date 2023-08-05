@@ -24,9 +24,7 @@
     <div class="row">
         <div class="col">
             {% if basket_items %}
-            <!-- only want to render the table if there is somthing in shopping bag -->
-            <!-- <div class="table-responsive rounded">
-                <table class="table table-sm table-borderless"> -->
+            <!-- Note - only want to render the table if there is somthing in shopping bag -->
             <div class="table-responsive ml-1 mr-5">
                 <table class="table table-sm border-right">
                     <thead class="text-black">
@@ -35,9 +33,6 @@
                             <th scope="col" class="border-left border-right d-none d-sm-table-cell"></th>
                             <th scope="col" class="border-left border-right">Quantity</th>
                             <th scope="col">Fee</th>
-                            <!-- <th scope="col">Total</th>
-                            <th scope="col">Discount</th>
-                            <th scope="col">Grand Total</th> -->
                         </tr>
                     </thead>
                     {% for item in basket_items %}
@@ -54,7 +49,6 @@
                                     alt="{{ item.courses.title }}">
                                 {% endif %}
                             </td>
-
                             <td class="py-3 w-25 border-right">
                                 <form class="form update-form" method="POST"
                                     action="{% url 'update_basket' item.item_id %}">
@@ -105,8 +99,6 @@
                                 <p class="mt-3">{{ item.basket.grand_total|floatformat:2 }}</p>
                             </td>         
                         </tr>
-            <!-- </div> -->
-
             {% endfor %}
             <tr>
                 <td colspan="4" class="pt-5 text-right border-left">
@@ -123,12 +115,10 @@
             <tr>
                 <td colspan="4" class="text-right">
                     <a href="{% url 'all_courses' %}" class="btn rounded-0 btn-lg  d-flex flex-column flex-sm-row">
-                       
                         <span class="btn btn-dark rounded-0 mt-md-5 mt-sm-0">Continue Browsing</span>
                     </a>
                     <a href="{% url 'purchase' %}" class="btn rounded-0 btn-lg d-flex flex-column flex-sm-row ">
-                        <span class="btn btn-dark rounded-0 mt-md-5 mt-sm-0">Make A Purchase</span>
-                        
+                        <span class="btn btn-dark rounded-0 mt-md-5 mt-sm-0">Make A Purchase</span>   
                     </a>
                 </td>
             </tr>
@@ -136,7 +126,7 @@
         </div>
         {% else %}
         <p class="lead mb-5">Your bag is empty.</p>
-        <a href="{% url 'all_courses' %}" class="btn btn-dark rounded-0 mt-5">
+        <a href="{% url 'all_courses' %}" class="btn btn-dark rounded-0 mt-5 btn-continue">
             <span class="text-uppercase">Continue Browsing</span>
         </a>
         {% endif %}

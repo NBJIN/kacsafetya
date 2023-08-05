@@ -15,7 +15,6 @@ def contact_view(request):
             company = form.cleaned_data['company']
             telephone = form.cleaned_data['telephone']
             email = form.cleaned_data['email']
-            # 'date_added': 'Date',
             course_title = form.cleaned_data['course_title']
             message = form.cleaned_data['message']
             form.save()
