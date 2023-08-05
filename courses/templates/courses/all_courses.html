@@ -30,21 +30,29 @@
       </header>
       <div class="filter-content">
         <div class="card-body">
-          <p>
-
+          
+            <form method="GET" action="{% url 'all_courses' %}" class="form">
+              {% for group in group_by_options %}
+                <input type="radio" name="group_by" value="{{ group.name }}">
+                <a href="{% url 'all_courses' %}?group_by={{ group.name}}">&nbsp; {{ group.name|capfirst }}</a>
+                <br>
+                {% endfor %}
+                
+                <button class="btn btn-sm btn-dark rounded-0" type="submit">Search</button>
+            </form>
             <!-- <input type="radio" name="group_by"><a href="{% url 'all_courses' %}?group_by=safety">&nbsp;&nbsp;Safety</a><br> -->
             <!-- <input type="radio" name="group_by"><a href="{% url 'all_courses' %}?group_by=health">&nbsp;&nbsp;Health</a> -->
             <!-- <input type="radio" name="group_by" value="health"><a href="{% url 'all_courses' %}?group_by=health">&nbsp;&nbsp;Health</a> -->
-            <input type="radio" name="group_by" value="health"><a
-              href="{% url 'all_courses_group_by' 'health' %}">&nbsp; &nbsp; Health</a>
-          </p>
-          <p>
+            <!-- <input type="radio" name="group_by" value="health"><a
+              href="{% url 'all_courses_group_by' 'health' %}">&nbsp; &nbsp; Health</a> -->
+        
+          <!-- <p>
             <input type="radio" name="group_by" value="safety"><a
               href="{% url 'all_courses_group_by' 'safety' %}">&nbsp; &nbsp; Safety</a>
-          </p>
+          </p> -->
         </div>
       </div>
-      <a class="btn btn-sm btn-dark" href="{% url 'all_courses' %}" role="button">Search</a>
+      <!-- <a class="btn btn-sm btn-dark rounded-0" href="{% url 'all_courses' %}" role="button">Search</a> -->
     </article>
     <article class="filter-group">
       <br>
@@ -56,21 +64,36 @@
       </header>
       <div class="filter-content">
         <div class="card-body">
-          <p>
+          
+            <form method="GET" action="{% url 'all_courses' %}" class="form">
+              {% for location in locations %}
+                <input type="radio" name="location" value="{{ location.name }}">
+                <a href="{% url 'all_courses' %}?location={{ location.name }}"> &nbsp; {{ location.name|capfirst }}</a>
+                <br>
+                {% endfor %}
+                
+                <button class="btn btn-sm btn-dark rounded-0" type="submit">Search</button>
+            </form>
+
+            
+            
             <!-- <input type="radio" name="location"><a href="{% url 'all_courses' %}?location=classroom">&nbsp;&nbsp;Classroom</a><br> -->
-            <input type="radio" name="location" value="classroom"><a
-              href="{% url 'all_courses_location' 'classroom' %}">&nbsp; &nbsp; Classroom</a><br>
+            
+            <!-- <input type="radio" name="location" value="classroom"><a href="{% url 'all_courses_location' 'classroom' %}">&nbsp; &nbsp; Classroom</a><br>  ## code i was using -->
+
             <!-- <input type="radio" name="location"><a href="{% url 'all_courses' %}?location=online">&nbsp;&nbsp;Online</a> -->
             <!-- <input type="radio" name="location"><a href="/all_courses/location/online/">&nbsp;&nbsp;Online</a> -->
-            <input type="radio" name="location" value="online"><a
-              href="{% url 'all_courses_location' 'online' %}">&nbsp; &nbsp; Online</a>
-          </p>
+            
+            <!-- <input type="radio" name="location" value="online"><a -->  
+              <!-- href="{% url 'all_courses_location' 'online' %}">&nbsp; &nbsp; Online</a> # code i was using --> 
+          
         </div>
       </div>
-      {% if selected_location %}
+      <!-- {% if selected_location %}
         <a class="btn btn-sm btn-dark" href="{% url 'all_courses_location' selected_location %}" role="button">Search</a>
-      {% endif %}
+      {% endif %} -->
       </article>
+      <a class="btn btn-dark rounded-0" href="{% url 'all_courses' %}" role="button">Reset To All Courses</a>
   </div>
 
   <div class="row">

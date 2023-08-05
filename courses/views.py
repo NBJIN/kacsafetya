@@ -9,15 +9,27 @@ from django.core.paginator import Paginator
 
 def all_courses(request):
     """ A view to show list of all courses """
-    queryset = Courses.objects.all()
+    queryset = Courses.objects.all().order_by('title')
     # courses = Courses.objects.order_by('id')
     paginate_by = 4
+
+    selected_location = request.GET.get('location', '')
+
+    if selected_location:
+        queryset = queryset.filter(location__name=selected_location)
+
+    group_by_options = Group_By.objects.all()
+
+    selected_group_by = request.GET.get('group_by', '')
+
+    if selected_group_by:
+        queryset = queryset.filter(group_by__name=selected_group_by)
 
     paginator = Paginator(queryset, paginate_by)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
-    selected_location = request.GET.get('location', '')
+    # selected_location = request.GET.get('location', '')
 
     # Locations = None
     # locations = Location.objects.all()
@@ -26,12 +38,16 @@ def all_courses(request):
     # group_by = None
     # paginate_by = 4
 
+    locations = Location.objects.all()
+
     context = {
         'page_obj': page_obj,
         'is_paginated': True,
         'selected_location': selected_location,
+        'group_by_options': group_by_options,
+        'selected_group_by': selected_group_by,
         # 'courses': courses,
-        # 'locations': locations,
+        'locations': locations,
         # 'group_by': group_by,
         # 'search_term': lookup,
     }
@@ -147,7 +163,7 @@ def edit_courses(request, courses_id):
 
     context = {
         'form': form,
-        # 'courses': courses,
+        'courses': courses,
 
     }
 
