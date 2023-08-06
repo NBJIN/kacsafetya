@@ -378,154 +378,165 @@ This project uses the Django framework
 
 ### 4 As an administrator have full access to the site. 
 #### The admin user can log by accessing the Dashboard link on the navbar which will then have a dropdown menu where login can be selected.  
- ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/c36aa026-1bd3-4be8-b5bc-2286675a6dbf)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9ea29b15-29b7-4a40-9ec8-2207da0297c6)
 #### Once logged in the admin user will have access to Course Administration, My Dashboard and will also be able to logout.  
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/2d452d72-4296-4e5d-afcd-fbd79c34343c)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/4d25bd09-7572-435b-bb8a-26950dce1e02)
 #### In the course administration page the admin user will be able to add the details for a new course.  
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/ce28fe95-b688-45c3-944f-187d80aaec13)
-### When the user clicks on the add course button the course will be added to the list of courses on the website or the admin user can cancel the page by clicking on the cancel button.  The admin user can also edit a course by clicking on the edit link in the detailed course making the necessary amendments  and updating the details 
-##### At the time of testing page was not availabe after deploying to heroku 
-##### some of the static files are missing and will need to be looked at.  *************
-##### Also the admin user can delete a course by clicking on the delete link on the detailed course above 
-#### ******* missing screenshot due to deployment issue 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/5c6a3753-4358-42ff-aa5c-119823da7183)
+### When the user clicks on the add course button the course will be added to the list of courses on the website or the admin user can cancel the page by clicking on the cancel button.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/779b3155-4d39-4188-9837-41b669d4851d)
+## The admin user can also edit a course by clicking on the edit link in the detailed course making the necessary amendments  and updating the details.
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6d09c7dd-5fbc-4b81-a9e7-451082d3ef92)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/af3cadab-d948-4177-bdba-b1907519b1ba)
+
+##### The admin user can delete a course by clicking on the delete link on the detailed course above 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/f817bdc4-9fc5-49e3-ae59-75ea79191210)
 
 
 ### 5 As an administrator manage user accounts - As an admin user they have access to the admin panel where they can see all users been reigtered email addresses and orderes placed.  
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1e21822b-fb68-4e5e-aae5-69c7fb277a28)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9c4a1eaf-cf31-4e24-9d03-184138bf5125)
 
 ### 6 As a user enter my details on a form so that i can register for my own account.  
 #### When the user goes to the Dashboard and clicks on Register in the dropdown meanu they will be brought to the Sign Up Page where the user will enter their email, username and password.  
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/7d5c266a-2462-4c2d-9f5b-b09c179491bd)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/c9ceaedf-73ff-4673-b473-6937e64df75a)
 
 ### 7 As a user I want to be able to login to my account so i can view my details and order history 
 #### If the user goes to the Dashboard click on the option to login they will be able to login to their account 
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/5f729c74-3caa-4581-b8e7-1b33bb4eb090)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/eff7e7a3-ae52-4538-9625-60935a58c98b)
 #### Once logged in the user can proceed to My Dashboard in the Dashboard menu and they will be brought to the My Dashboard Page where they can enter shpping details and also see their previous purchases. 
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/078ae835-1107-42ba-91fa-d64457f4c313)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/42652695-bfd1-4aaf-87ca-0197f87eec99)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/0485ef9e-21b3-4d1c-8506-c02c3f1a95ac)
 
 ### 8 As a user I want to be able to manage my account information so that it is up to date. 
 #### In point 7 above the user will be able to enter their details and then click on update information so the information is available on their profile.  When the user makes a purchase it will be recorded in the Purchase records section of the aobve page. 
-
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9437eed5-8a81-4bf7-bcfc-977145b5cfa6)
 
 ### 9 As a user I want to be able to reset my password in case i forget same.  
 #### When the user goes to sign in they have the option to reset password by clicking on "Forgot Password?" and they can then proceed to reset a new password.  
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6fe0aa7f-9b29-4bbd-b0ea-7e27c9b34d59)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/863fe263-7eab-45e0-8f49-33ca8228e521)
+ ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/14ee814e-ff5f-4751-9710-e2acad935724)
 
 
 ### 10 As a user i want to be able to view a full list of courses.  
 #### To proceed to all courses the user can click on all courses in the navbar at the top of the page.  The learn more button also on the home page will them them to the all courses page.  
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/30c240cd-638e-4333-bebd-a4db77510e93)
-#### the user will then be brought to the all courses page where a list of courses will display but due to deployment issues the courses are not displaying at present.  
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/8b65acff-71ff-4034-9451-a029068acc64)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/018f8a15-8840-4d9d-908a-5240d6d0b9c9)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/04fa3114-6d48-4332-a16c-c1eb57975b74)
+#### the user will then be brought to the all courses page where a list of courses will display.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/4f7f0113-3828-4996-afc4-876ae1357562)
 
-### 11 As a user i want to be able to view the course in more details so that I can make an informed decision wheather this course is suitable for my needs. #### Once the user navigates to the all_courses page they will see a list of course cards and on each course card there is a link to course details which brings the user to the detailed courses page.  
-#### screenshot not available at the minute due to deployment issue 
+
+### 11 As a user i want to be able to view the course in more details so that I can make an informed decision wheather this course is suitable for my needs. #### Once the user navigates to the all_courses page they will see a list of course cards and on each course card there is a link to course details which brings the user to the detailed courses page.  Example of course details link on the course details card ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/7b8dfb83-e048-4476-9b8c-51058b3643b7) Example of the detailed course page ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1e38e621-babc-4fa0-8803-3be21be0a5ac)
 
 ### 12 As a user search courses by category of healthcare or safety so that i can choose which category is of more interest.  
-#### This is located in the all_courses page at the left hand side and there is a Group By search and Location serach.  This feature is not functional at present 
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/2d0dbe06-1e9c-4b87-ba74-6dd71bc524b2)
+#### This is located in the all_courses page at the left hand side and there is a Group By search and Location serach.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/cc7f2599-8088-4c80-8c42-5d564902fd94)
 
-### 13 As a user I want to be able to search by location either online or onsite in the classroom.  
-#### From the screenshot in point no 12 this feature is present but not functioning at present.  
+### 13 As a user I want to be able to search by location either online or onsite in the classroom.  Also i want to be able to group courses in relation to health and safety. 
+List of online courses ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/cc7f2599-8088-4c80-8c42-5d564902fd94) List of classroom courses ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9430f98f-87d6-4f03-b5b1-6b796fae4735) list of health courses ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1a95a21e-5e6b-471c-b04a-3b3613386739) list of safety courses ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/f9b495fd-d422-4832-8b21-facc20b1e842)
 
 ### 14 As a user I want to be able to add courses to the basket so that i can clearly see total cose of each course or courses.  
 #### When the user navigates to the Basket on the nav bar they can see first of all if they have items in the basket as the amount is displayed under the heading and once they click on the basket link they will be carried to the basket page where they will see items if they have added to the basket. 
- ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/ed175545-ae4b-4a16-9453-0d83a4e42a99)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/989cc3db-1964-42e0-8774-a181bbb55b98)
 #### if there is not items in the basket they will be brought to the following page.  
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a3e879c4-379b-41db-9426-8bfb007d1573)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/92bcc968-7298-4ae4-a3d2-6a5759f7ad88)
 
 ### 15 As a user I want to be able to view all courses in the basket so that i can clearly see the total cose of each course or courses.  
 #### When the user clicks on the basket on the nav bar they will be brought to the basket page where they will be able to see the items added to the basket.  
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/3780b411-7ced-41fe-94af-eabedeb3b5dc)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/079b6471-4dd8-4b99-b5fc-b53e0ecd411c)
 
 ### 16 As a user I want to be able to change the quantity of courses in the bag so that I can accommodate my requirements should they change.  
-#### When the user navigates to the basket page they can increase or decrease the amount in the basket with the increment and deincrement option. - see point 15 above for screenshot - The remove link is not currently working on this page.  
+#### When the user navigates to the basket page they can increase or decrease the amount in the basket with the increment and deincrement option. 
+ ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/01c7bdf5-24e9-4c62-9dc1-f868ed3346e6)
 
 ### 17 As a user enter my payment details so that I can complete the purchase.  
 #### When the user is in the basket page they can proceed to make a purchase and they will be brought to the secure purchase page where they will see their details if they are registered but if they are not registered the user will have to enter their details.    
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a471a384-cd93-4d27-a295-17d80d136ad9)
+Proceed to payment ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/7d6666c0-a854-4875-bb04-2dea1ba7d5ef) Secure Purchase Page ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/888f869d-2842-4a84-97ba-13c32da7770d)
+
 
 ### 18 See order confriamtion once purchase is complete.  
 #### When the user is on the Secure Purchase Page above and they have all their details entered they can then click on Complete Order.  Once this is clicked the spinner will appear on a red background and when successfull will navigate to the purchase success page where the user can see their order. 
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a4fdb312-e260-475a-a6c0-d2c4c2ee9ba4)
-Purchase Success Page
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a64a65b8-2558-4a0b-a9f8-d98e3cd2d4a5)
-#### On this page Total, discount and grand_total and fee do not appear but all other details do appear on the page.  
+Loading Spinner ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/12cb4196-5105-4436-aa2d-52aa89f7f678) Thank You For Your Purchase Page ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6b619a11-f61c-4d81-803a-5f0a6b02d32d)
+
 
 ### 19 User can see an order history once logged in.  
 #### Once the user is logged in they will be able to navigate to My Dashboard where they will be able to see a list of purchase records once an order is place.  
 
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/23a81ef8-da58-455d-a8f7-8538e69d025d)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/66cee049-990d-437b-b51c-5b8fcd06e467)
 
 ### 20 As a user I want to be able to make a purchase without having to register 
 #### When an unregisterd user accesses the all courses page they can choose a course to go to the detailed view and once on this page they can add the cousre to the basket and proceed to purchase and then purchase success page.  On the screenshot following one can see that the user is not logged in when making the purchase 
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/d81fd12b-a053-454d-98de-f13846b40674)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/50d3978b-9f1b-4732-ab7a-34913cd8f64a)
 
 ### 21 As a user i want to be able to sign up to the company newsletter 
 #### On the nav bar at the top of each page there is a link to sign up.  When the user clicks on this link they will navigate to the newslwetter signup page where they will enter their fullname, company and email.  
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/15e37385-64e8-47a9-b857-e3508fe9af58)
-#### Once these details are entered they can then click on the submit button they will be then brought to Newsletter Signup confirmation page.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/433fa2c2-9e4b-4aa8-be10-2c1f9fb09939)
+#### Once these details are entered they can then click on the submit button they will be then brought to Newsletter Signup confirmation page. 
+ ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/f04eab86-9b4d-43f9-81ca-7eac304766fe)
 
 ### 22 As a user I want to be able to submit a contact form 
 #### In the top nav bar there is a link to Contact Us once the user clicks on this link they will be brought to the Contact KACSafety Page where the user can enter their details and their query.  
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/07a2a497-a7f7-452e-998c-282f33a1d825)
-#### Once the useer has entered the details and clicked on submit they will then be brought to the Contact Success Page. 
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9fc77033-ef09-4733-840f-79b5bd980327)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/c0f04159-5ff9-427b-9412-d330165ae6df)
+#### Once the user has entered the details and clicked on submit they will then be brought to the Contact Success Page. 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a8ccb9ed-e6df-4256-a2fe-8e2936cfc371)
 
 ### 23 As a user I want to be able to access company social media page 
 #### If the user naviages to the bottom footer they will see a list of links for social meida platforms like facebook, instagram, twitter and youtube.  If the user click on the icon of their choice they will be brought to the website page for that social media option. 
-
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/c4843732-b3d4-4cc7-8a15-06a4002b69c2)
 Youtube
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/f0978a29-e8fb-41a6-a826-e6a445fb1abf)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/bde0e16c-6755-4f92-ba95-09b39557d337)
 Facebook
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/bce6d3d7-1db6-4242-9e6d-25946f1f4513)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/cbc0a2ae-bb80-4827-a838-f961913041c0)
 Twitter
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/11b45a84-4445-43c5-9014-2d6407801203)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/99377b81-ac63-4c8f-a097-8ca61fffae4f)
 Instagram
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9c9babe8-8022-46a7-8057-c5eff4182965)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6c3ffbe3-fe61-4310-8afb-750e51d3d11c)
 
 ### 24 As a user i want to be able to see confirmation of actions completed.
 #### When a user registers, logins etc a message will appear in the top right hand corner.  At present it is only displaying for a second so timing will have to be adjusted. 
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b3f03587-2c46-4c0a-b191-3f73365ef54d)
+Successful Signin ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6a87f1bc-3e02-4e03-a699-a6c79a189ed2) Add Couse ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/fc3277d3-81a5-4e26-8767-837cb714f51e) Successful Payment ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6041196d-6045-452b-9275-7565150fc7db) Contact Success ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b26adccd-fda0-4115-acc8-67650f81359f)  newsletter signup ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/34437f01-2d3c-408a-88d3-0941afe036d5)
 
 ### 25 As an administrator I want to be able to add new courses.  
 #### When an administrator logs in they will be able to add courses through the nav link dashboard / course administration.  
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/c548a49b-04ac-4bf9-b89e-1704ff06c642)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1e593bd2-c72b-479b-8db0-5308b7b2d746)
 #### When the form is completed and the user clicks on the Add Course button 
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/29ead29d-d340-46a9-820e-1858ea2cd26e)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/d1c5cd75-493c-47b3-bfd2-e1374dfe960d)
 
 #### they will then be brought to the detailed courses page where they will see that course added.  
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/bf2a18c7-1317-4917-b0ff-f24dccf5ba60)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/d1c5cd75-493c-47b3-bfd2-e1374dfe960d)
 
 ### 26 As an administrator I want to be able to edit a course.  
-#### An administrator will be able to edit the courses page from the above link and they will be brought to the edit course page. 
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/baad6537-9564-49d9-b9f2-66b918235f31)
+#### An administrator will be able to edit a course when they click on edit on the detailed course page. Once edit is clicked they will be brought to the edit course page.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/2ab297f0-828f-4707-86d2-89be18437b43)
 #### Here once they have updated the details they can choose update course or cancel.  They will also be able to access the edit course page when the administrator goes to the all courses page then click on course details and the will be brought to the detailed course page where there is an option to edit and delete course.  
-#### All courses page which shows the two courses just added (the rest of courses not rendering due to deployment issue at present.)
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/e33acaf7-ab16-4384-8852-88948096bfbe)
-#### From the above screenshot an administrator can click on course details and then navigate to the detailed courses page where they have the option to edit or delete.  
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/08058f25-89ff-495c-a6c5-123bfc9897e4)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/add31aa6-62fb-43d0-a59d-8ad32f7a0740)
+#### A administrator can click on course details and then navigate to the detailed courses page where they have the option to edit or delete.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/806d4247-e003-49aa-a491-44bea33cbcdb))
 
 ### 27 As an administrator I want to be able to delete a course.
-#### Please see user story no 26 above to see the delete option.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/568a5bc8-85ac-4f96-813a-9d1640f737bb) 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b8f6761c-14b2-497e-9404-60e16537866b)
 
 ### 28 As an administrator I want to be able to update the general content on all pages 
 #### As the administrator the user will be able to access all parts of the site and the admin panel where they will be able to manage users.  
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/98f298de-04b5-4475-b921-7a045474c62a)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/0beb5494-f7e2-4297-affb-1471cfd6d630)
+
 
 ### 29 As an administrator I want to be able to manage all incomming orders.
-#### As per point 28 above. 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/06b2fd64-9325-49e4-85ad-e17cf89e2e29)
 
 ###  30 As an administrator I want to be able to manage all incomming contact requests. 
-#### As per point 28 above 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/06b2fd64-9325-49e4-85ad-e17cf89e2e29)
 
 ### 31 As a developer I want to be able to test all parts of the django ecommerce website 
-#### In progress not fully completed refer to this readme document.  
+Testing of user stories, features, code validation, lighthouse reports have all being carried out and detailed report is contained in this readme file.
 
-### 32 As a developer I want to be able to deploy successfully
-#### At present there is an issue with deployement to Heroku due to static file configuration which needs to be resolved.
+### 32 As a developer I want to be able to deploy successfully. This project has been deployed to Heroku 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9b499754-f851-4d26-8327-eb39fdff409e)
+
 
 ### 34 As a developer I want to be able to ensure that the site is responsive.  
-#### This is a work in progress due to time constraints for this project.  
+  
 
 
 ## Bugs & Items To Be Addressed

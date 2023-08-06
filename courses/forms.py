@@ -17,7 +17,7 @@ class CoursesForm(forms.ModelForm):
             'date_of_course': forms.DateInput(
                 attrs={
                     'type': 'datetime-local',
-                    'placeholder': 'Select the date and time'
+
                 }
             ),
         }
