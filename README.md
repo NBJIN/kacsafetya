@@ -541,8 +541,7 @@ Testing of user stories, features, code validation, lighthouse reports have all 
 
 ## Bugs & Items To Be Addressed
 #### - There is an issue with deployment and static files and alot of my images and details for my courses are not displaying at present. There are two couses there which i have added durining testing.    
-#### - Responsiveness - ran out of time in order to ge this finalised.  
-#### - Stripe - When i make a payment It successfully allows me to enter details but when i proceed to the purchase success page it is not bringinig threw my total, discount and grand total.  It is also not bringing threw the course fee for this page.  
+## The Favicon file sometime throws a 404 error in ther terminal but not always. The favicon icon is in the file and displays but on some rare occasions i have seen it to throw and error. 
 #### - On the all courses page the Group By and Location need to be addressed as it is not working. 
 #### - I had to leave debug = True in this project in order to get project to display in gitpod. In the Heroku app it is displaying without static and css. Currently trying to resolve an issue with deployment.  
 

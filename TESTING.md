@@ -133,7 +133,9 @@ if there is no items in the basket they will be able to see this when they see t
 - 3 base.css - No Errors Found
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/be8bcaf2-b429-4652-923b-29a765c58e15)
 
-## Python was validated with the Code Institute Python Linter
+## Python was validated with the Code Institute Python Linter No 
+Errors have been found in the validation of python see screenshots 
+below.
 1 bag_tools.py 
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/db612725-d77b-4cda-8f99-2bc2c19bfcb9)
 2 basket / admin.py 
@@ -231,14 +233,99 @@ if there is no items in the basket they will be able to see this when they see t
 48 custom storages 
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/e62c2949-24bb-454b-b3d1-55dc6e179bfb)
 
+## JS HINT was used to validate javascript in the project the following 
+## are the findings.  
+- 1 basket.html 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/c96ba2ef-3c8e-4d19-8719-e2e4eff3a0d9)
+- 2 quantity-input-script.html 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/ab12b185-389d-4399-838a-3a9d3cc138e4)
+- 3 add_courses.html 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b82b6d7f-5427-4216-8641-b076f039ce10)
+- 4 all_courses.html 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/29fbd2fd-48f4-4ce5-b9ca-9d176b5647dc)
+- 5 edit_courses.html
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/508bab99-0c4f-4013-911d-b2adc174ba45)
+- 6 stripe elements js file 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b7472e5f-1a3f-4a28-bed9-000eb2c6ba23)
+- 7 email.html file 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/ed3e8a6d-6237-4814-918a-b51152df4751)
+- 8 base.html 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6e6441d1-3619-4c35-b1a8-79789ae4d518)
+
 
 
 
 
 3. Accessibility
 A lighthouse test report was carried out and the results are as follows 
+Desktop Accessibility Testing for each page
+- a. Home Page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1fad2148-e0c5-46b8-a3b9-c8282b86228e)
+- b. all_courses page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/7199ed0a-d8fc-4050-9a57-184ee719304f)
+- c. course details page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/e9cddda7-0a1f-40ce-887c-fd6ca2f18c3f)
+- d. basket contents page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/f0a9d20e-29b1-4230-a916-258c010e3ae5)
+- e. secure purchase page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/0e40c594-9b3d-405b-97e0-248121aaba8c)
+- f. thank you for yoru purchase page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/952e13f1-a3a3-451a-ac84-0491e81bdf1d)
+- g. contact the kac saftey team page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b506b49f-f242-4bba-a4b6-1a0373ecd598)
+- h. contact success page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/fc887c95-11bd-49b2-86cc-0ad7fb4bc24b)
+- i. sign up page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/54afb37c-6278-411f-abeb-cf6eb067d4bf)
+- j. sign in page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/0e3b3074-539c-4488-93c8-d185a6918f66)
+- k. newsletter sign up page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/7af3641f-1c36-407e-86c1-b38620b8d09a)
+- l. newsletter sign up success page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/5434ef70-8a3f-4263-9051-d2324a1bc6af)
+- m. course administration page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a1555bf8-8e9c-482c-8a87-aacddd686155)
+- n. my dashboard page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b437efea-9603-4691-b32d-e0da0724bcb2)
+- o. sign out page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/81e61e59-24d4-42fd-ac95-329e313fbd7d)
 
-![image](https://github.com/NBJIN/constructionblog/assets/106515976/aa9401b1-2cf0-4077-93ea-bb8c94a74ddf)
+## The following are assibility validation testing on a mobile device 
+## Samsung Galaxy S8
+- a. home page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/da5ab555-8b02-4706-83cb-5cf38c8a3f9e)
+- b. all course page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/25647ab3-1078-411d-b6bb-a649a974dbd5)
+- c. detailed course page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/572876dd-8080-4607-880f-bb7c4bd6b814)
+- d. basket contents page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/74654eff-edc1-49e3-9009-8d36dd40c537)
+- e. secure purchase page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a80d283a-3d26-4066-ac3c-1e7ade88bf01)
+- f. thank you for your purchasse page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/160aa49d-7910-4e3b-b8a9-7c04bc758d22)
+- g. contact the kac safety team page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/c4170445-31db-4d78-b5bd-3ec1236cfa3e)
+- h. contact success page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/30c33973-cc5f-4101-8ba5-a0816810aafd)
+- i. course administration page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6bfdfa75-be64-46b8-88c6-a596459996ea)
+- j. edit course page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/3fe71a6f-20d0-4fe5-8513-ec44dfbab4c8)
+- k. my dashboard page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/c646e661-897e-44bf-b4dc-4e9803657a37)
+- l. sign out page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/8c12cdd6-697c-4674-b902-ad4f3915e096)
+- m. basket contents page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b2ab012b-a9e3-407b-9ffc-26299cab7a0a)
+- n. newsletter signup page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/72e896df-2a50-44fd-89e9-9000158995d3)
+- o. newsletter signup success page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/42d2d3c7-d1c9-4ffa-b6b3-80b08ec65cf3)
+- p. sign up page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/f7bc063b-4a5e-4f34-aaa6-13f72fc4121e)
+- q. sign in page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/5ffd2900-7ccc-48c9-89e6-9ad286ee74b0)
 
 
 
@@ -246,128 +333,146 @@ A lighthouse test report was carried out and the results are as follows
 
 | Goals | Acceptance | Pass | Fail
 |:----------|:----------|:----------|:----------|
-| Home Page - Signed In User |          |          |          |
-|1. Logo | When the user clicks on the logo on top of each page it will always bring the user back to the home page  | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/5b3425d9-0328-47c3-b965-1658607db66a) |          |
-|2. Welcome Message | When the user logs in it will display the welcome message with their username letting the user know that they are logged in. | Pass |          |
-|3. Navigational Link - Home | This is displayed at the top of every page when the user is logged in so when the user clicks on the home link it will bring them back to the home page | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/cc78a6b3-2827-4c45-86f5-8a2f2b45a226)|          |
-|4. Navigational Link - Logout  | This is displayed at the top of every page when the user is logged in so they can logout at any time.    | Pass  ![image](https://github.com/NBJIN/constructionblog/assets/106515976/cc78a6b3-2827-4c45-86f5-8a2f2b45a226)|    |
-|5. Navigational Link - Create Post | This is displayed at the top of every page when the user is logged in so that the user can create a post at any stage while visiting the site  | PassPass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/cc78a6b3-2827-4c45-86f5-8a2f2b45a226)  |          |
-|6. Header - List of Blogs Post  | This header advises the user that they are visiting the list of blog post page.  | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/e627afd6-ccb9-43f1-af2d-dc57e85e36ab)  |          |
-|7. Read More Link On Card   | When the read more link is clicked it brings the user to the detailed post page  | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/94f4e2b4-fa7f-4cf1-925e-fe752d9fe0ef)  |          |
-|8. Fontawesome Thumbs Up and Like Counter On Card  | When the thumbs up or the number of likes is clicked it will bring the user to the postdetail page where they can click the like button at the bottom of the page to like the post.  The number of likes on the lists of blog posts page provides the total number of likes for that post and clicking on the thumbs up as mentioned will bring the user to the postdetail where they will read the post in full and then if they wish to like the post they can click the button at the bottom of the postdetail page which automattically updates the counter on the list of blog posts page.    | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/94f4e2b4-fa7f-4cf1-925e-fe752d9fe0ef)  |          |
-|9. Pagination Next Button   | When the user clicks on the next button under the cards on the list of posts page it will bring them to the next page which has additional posts.     | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/94f4e2b4-fa7f-4cf1-925e-fe752d9fe0ef)  |          |
-|10. Footer Social Media Link - Facebook   | When the user clicks on the fontawesome icon for facebook in the footer they will be brought to the facebook login page.      | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/eaa80b05-a88b-4f08-9ea4-892273e4ac18)  |          |
-|11. Footer Social Media Link - Twitter   | When the user clicks on the fontawesome icon for Twitter in the footer they will be brought to the Twitter login page.      | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/eaa80b05-a88b-4f08-9ea4-892273e4ac18)  |          |
-|12. Footer Social Media Link - Instagram   | When the user clicks on the fontawesome icon for Instagram in the footer they will be brought to the Instagram login page.      | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/eaa80b05-a88b-4f08-9ea4-892273e4ac18)  |          |
+| Home Page  |          |          |          |
+|1. Nav Item Logo | The logo is situated at the top left of each page and when the user clicks on it the logo will always bring the user back to the home page  | Pass  |          |
+|2. Nav Item All Courses  | The all course link is situated at the top of each page in the nav bar and when the user clicks on this link it will bring the user to the all courses page.  | Pass |          |
+|3. Nav Item Contact Us  | The contact us link is situate at the top of each page in the nav bar and when the user clicks on this link it will bring the user to the contact us page| Pass |          |
+|4. Nav Item Dashboard  | This link is situated in the nav bar at the top of each page when the user clicks on this link it expands to give the user the option to login or register if they are not a registered user and to logout view my dashboard in case teh use is a registered logged in user.  In the case of an admin account it will also show course administration link    | Pass  |    |
+|5. Nav Item Basket | This link is situated at the top of the page in the nav bar and when clicked will bring the user to the basket page. if the user has an item in the basket it will show the value undeer the basket link in the nav bar otherwise it will display 0.00 if there are no items in the basket   | Pass  |          |
+|6. Nav Item Sign Up   | This link is located in the nav bar and when clicked will bring the user to the newsletter sign up page.   | Pass   |          |
+|7. Nav item search  | This is located at the top of each page in the nav bar and will allow the user to search for courses. As mentioned already all of these items in the nav bar are a constant at the top of each page.  | Pass   |          |
+|8. Banner  | The banner is a reminder to the user that if an order is placed about €200 they will receive a 10% discount as an added bonus.     | Pass   |          |
+|9. Learn More Button    | When the user clicks on the learn more button this will bring them to the all courses page    | Pass   |          |
+|10. Footer Social Media Link - Facebook   | When the user clicks on the fontawesome icon for facebook in the footer they will be brought to the comapanys facebook page.      | Pass   |          |
+|11. Footer Social Media Link - Twitter   | When the user clicks on the fontawesome icon for Twitter in the footer they will be brought to the Twitter login page.      | Pass   |          |
+|12. Footer Social Media Link - Instagram   | When the user clicks on the fontawesome icon for Instagram in the footer they will be brought to the Instagram login page.      | Pass   |          |
+|13. Footer Social Media Link - Youtube   | When the user clicks on the fontawesome icon for Youtube in the footer they will be brought to the Youtube login page.      | Pass   |          |
+|14. Footer KAC Safety Privacy Policy    | When the user clicks on the privacy policy it will open the policy in pdf format      | Pass   |          |
+|15. Footer KAC Safety Contact Details    | The footer contains the contacts details of the company and again all these footer items are a constant on all pages    | Pass   - Home Page ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b797ed08-3556-43c9-b435-7fd3ee1b264a)|          |
+| Goals | Acceptance | Pass | Fail |
+|:----------|:----------|:----------|:----------|
+| All Courses Page  |          |          |          |
+|1 Contains the Nav items and footer details as described above   | All links are functional  | Pass |          |
+|2. Group By search facility | The user can search for courses by health or safety in the group section  |Pass  |          |
+|3. Location search facility | The user can search by location weather a course is delivered online or in the classroom.  | Pass  |          |
+|4. Button - Reset To All Courses | Once the user completes a search they can reset the page to all courses | Pass  |          |
+|5. Course Cards | Each course card contains information about each course and each card contains a link to course details that brings the user to the detailed courses page when clicked.  | Pass  |          |
+|6. Pagination Button Next & Previous | The pagination buttons will allow the user to go the the next page of courses should they exist when clicked and the previous button will allow the user to revert to the previous page of courses when clicked.   | Pass  ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/f1681528-dbf0-4480-99a3-ea9476930c31)|          | 
 
 | Goals | Acceptance | Pass | Fail |
 |:----------|:----------|:----------|:----------|
-| Detailed Post Page Signed In User  |          |          |          |
-|1 Detailed Post Page  | Contains all the header and footer items above for a logged in user and all features are working.  | Pass |          |
-|2. Detailed Post Header | The header advises the user what page they are currently visiting.  |Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/f12e2f42-1da3-4d03-aa43-27da09d922ff) |          |
-|3. Card Update Post | When the user clicks on the update post link at the bottom of the card it will bring the user to the update post page | Pass - Screen shot below |          |
-|4. Card Delete Post | When the delete post link is clicked it will bring the user to the delete post page. | Pass - Screen shot below |          |
-|5. Card Create Post | When the user clicks on create post it will navigate to the create post page  | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/d835e1ff-d553-4899-af99-b279a1f7673a) |          |
-|6. Confirmation of Comments | If there is no comments it will advise the user of same and ask if they would like to add a comment  | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/cbc87569-bc4d-48ff-a1d0-a6ee671261a0) |          | 
-|7. Add comment button | If the user clicks on the add comment button they will be brought to the add comment page  | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/378beb04-0ba6-4525-bdbd-a27f4a75e294) |          | 
-|8. Delete comment button | A button had been added for Delete Comment but at present it is not functioning  | Fail ![image](https://github.com/NBJIN/constructionblog/assets/106515976/9e672d9c-d429-40d5-a00b-a94a82c2d360) |          | 
-|9. Like button | The like button when clicked will increase the counter which inturn increments the no of likes on the list of posts page.  If the user likes the post by mistake they can press the button again and it will remove the like. | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/ec438296-b63b-4978-bf31-54a2b9a09e58) |          | 
+| Detailed Courses Page  |          |          |          |
+|1. Contains the Nav items and footer details as described above  | All links are functional  | Pass  |          | 
+|2. Increment (+ sign) and decrement (- sign) | The increment button allows the user to increase the quantity of courses in the basket and the decrement button will decreate the number of courses in the basket  | Pass|          | 
+|3. Keep Shopping Button  | When the user clicks on the Keep Shopping Button it will bring the user back to the all courses page where they can continue to shop the courses.  | Pass  |          | 
+|4. Add Item To Basket  | When the user clicks on this button it will add the item to the basket and a toast will display to confirm item has been added to basked and they can click on procced to payment   | Pass  |          |
+|5. Edit Button | When this button is clicked it will bring the user to to the edit courses page   | Pass  |          |
+|5. Delete Button | When this button is clicked it will delete the course   | Pass  |          |
+|5. Home Button | This will bring the user to the home page once it is clicked   | Pass   ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/8be4d150-fe5d-4c44-a627-733c3808f157)|          |
+| Goals | Acceptance | Pass | Fail
+|:----------|:----------|:----------|:----------|
+| Basket Contents Page |          |          |          |
+|1. Contains the Nav items and footer details as described above | All links are functional|Pass   |          | 
+|2. Increment and Decrement buttons | Under the quantity column the user can click on an increment button to increase the quanity in the bag and will only go as far as 99 and the decrement button will decrease the quantity in the bag and will not pass byond the number 1 |Pass   |          | 
+|3. Update and Remove buttons | The update link when clicked will update the number of courses in the basket if a change has been applied to the quanity and the remove link will remove the course from the basket. |Pass   |          | 
+|4. Total Section | The totals section informs the user how much is due and the discount is clearly shown if the purchase goes above €200. |Pass   |          | 
+|5. Continue Browsing Button | This button when clicked will bring the user back to the all courses page to continue browsing. |Pass   |          |
+|6. Make A Purchase Button | This button when clicked when bring the user to the secure purchase page to complete the purchase. |Pass   ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/711fa031-ae87-4efc-87f8-8aeee6bdc9fb)|          |  
+
+| Goals | Acceptance | Pass | Fail
+|:----------|:----------|:----------|:----------|
+|Secure Purchase Page  |  |   |          | 
+|1.Contains the Nav items and footer details as described above | All links are functinal | Pass |          | 
+|2. Contact Form| If the user is not registered they will have to fill out the contact form in full but if the user is registered they just need to enter their name and card details.  | Pass  |          | 
+|3. Incorrect Payment Details | Should the user input incorrect payment details it will not allow the purcahse to be completed and a message will be displayed to the user under the card payment input box.    | Pass  |          | 
+|3. Save Details | When the user enters their details on the form it will give the user the opportunity to save the details to their account should they be any changes in contact details.    | Pass  |          |
+|4. Payment Summary | The payment summary displays to the user the picutre, name, quantity, subtotal, order total, discount if applicable and grand total for each order.    | Pass  ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/59cc4e31-4a53-45b0-b3c6-dc023d81ca0a)|          |  
+| Goals | Acceptance | Pass | Fail
+|:----------|:----------|:----------|:----------|
+| Thanks You For Your Purchase Page |  |   |          | 
+|1.Contains the Nav items and footer details as described above | All links are functinal | Pass |          | 
+|2. Confirmation of Purchase | The thank you for your purchase page confirm that the purchase has been sucessfully processed and that an order number has been generated for the order.  The user is also given a summary of the costings for the purchase.    | Pass ! |          | 
+|3. Return to all courses button | When this button is clicked is will bring the user back tot he all courses page   | Pass  ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/d1b3526e-82a1-4ba6-8c10-13f49b44595a)|          | 
 
 
 | Goals | Acceptance | Pass | Fail
 |:----------|:----------|:----------|:----------|
-| Add Comment Page - Signed In User |          |          |          |
-|1. Form and Submit Button | On the form the user will fill in the details of their comment on the form and when the submit button is clicked it will bring the user back to the postdetail page where they can see the comment displayed. | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/529f9253-bc4f-4e23-8514-e6be94f34e9a)
-
-![image](https://github.com/NBJIN/constructionblog/assets/106515976/17b0b75d-b38c-4370-bdca-090e7d80b6f7)  |          | 
-
-| Goals | Acceptance | Pass | Fail
-|:----------|:----------|:----------|:----------|
-|1. Sign Out Page |  |   |          | 
-|1. Sign Out Heading | Heading to advise the user what page they are currently visiting | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/ca3a7a4c-61fb-4544-bba4-050715a75f89) |          | 
-|2. Sign Out Button | When the user clicks on the signout button it will bring them to the home page  | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/bef13f93-cd22-42e8-829a-9a748b689323) |          | 
-|3. Sign Out Message | When the user is brought to the home page once they have clicked on the sign out button a message displays at the top of the homepage letting the user know they have successfully logged out.   | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/052fc651-1f0f-48ea-9d26-2b78ca87abb1) |          | 
+| Contact The KAC Safety Team Page |  |   |          | 
+|1.Contains the Nav items and footer details as described above | All links are functinal | Pass |          | 
+|2. Contact Form | This page contains the contact form in which the user enters their details should they wish to make contact with the company.  The form will not be submitted unless fullname, company, telephone, email and course title is filled out.   | Pass  |          | 
+|3. Submit Button | When the user clicks on the submit button it will submit the details and bring the user to the contact success page.    | Pass |          | 
+|4. Sign Up Error Messages  | If the user fails to input the correct information it notifys the user    | Pass  ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/25ec1d12-f4f9-44e3-bbfb-5852487c4977)|          | 
 
 | Goals | Acceptance | Pass | Fail
 |:----------|:----------|:----------|:----------|
-| Sign In Page |  |   |          | 
-|1. Sign In Heading | Heading to advise the user what page they are currently visiting | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/019174f7-13a7-4dad-9e03-4b1edcd6cf93) |          | 
-|2. Sign Up Link | If the user does not have an account they can choose the sign up link which will bring them to the sign up page  | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/6a9728ff-75c1-42e0-9331-b60c93089d7f) |          | 
-|3. Sign In Form  | The form allows the user to enter their username and password    | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/f241a70f-8cf9-4f58-a938-c2d740b8a598) |          | 
-|4. Sign In Error Message  | If the user inputs incorrect information it notifys the user    | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/3193e4ed-28f4-45d6-ad73-7a0e7462fefb) |          | 
-|5. Sign In Button  | The sign in button when clicked will bring the user to the home page    | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/8394ba66-637f-4420-bdd5-ea7bb66a5b61) |          | 
-|5. Sign In Success Message | When the user signs in successfully a message will be displayed to the user in the home page under the logo of successfull sign in    | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/04c7d453-d611-4204-99bd-f388f25f08cf) |          | 
+| Contact Succuss|  |   |          | 
+|1.Contains the Nav items and footer details as described above | All links are functinal | Pass |          | 
+|2. Contact Success | The contact success page displays confirmation back to the user that their message has been recieved and a memeber of the team will reach out within 24 hours.  | Pass ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/fd445eeb-703f-43d5-ac81-c8228fd37edd) |          | 
 
 
 | Goals | Acceptance | Pass | Fail
 |:----------|:----------|:----------|:----------|
-| Sign Up Page |  |   |          | 
-|1. Sign Up Heading | Heading to advise the user what page they are currently visiting | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/3ba07683-c364-4e5e-aee3-9e4cfa4efea1) |          | 
-|2. Sign In Link | If the user already has an account they can choose the sign in link which will bring them to the sign in page  | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/626c1cff-c03d-4f46-8280-7f5eb4e87d62) |          | 
-|3. Sign Up Form  | The form allows the user to enter their username, email and password in order to register as a user.     |![image](https://github.com/NBJIN/constructionblog/assets/106515976/90fb2793-3f22-4a78-8ef8-a344767fae4a)|          | 
-|4. Sign Up Error Messages  | If the user fails to input the correct information it notifys the user    | Pass  ![image](https://github.com/NBJIN/constructionblog/assets/106515976/5f4f59c2-bee3-414d-bfc8-4975460f5acf) ![image](https://github.com/NBJIN/constructionblog/assets/106515976/8cb361de-9d12-45b1-bd50-e64e7ad890b2)|          | 
-|5. Sign Up Button  | The sign up button when clicked will bring the user to the home page    | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/565112f6-ed50-48d0-b18b-7134f766399a) |          | 
-|5. Sign Up Success Message | When the user signs up successfully a message will be displayed to the user in the home page under the logo of successfull sign up   | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/e15291e6-f708-401a-8151-dfd34b107100)|          | 
-
+|Sign Up  |  |   |          | 
+|1.Contains the Nav items and footer details as described above | All links are functinal | Pass |          | 
+|2 Sign Up Form  | The sign up form will request the user to enter their email address, username and password in order to sign up. If the password is too short a notification will be displayed back to the user.  | Pass |          | 
+|3 Sign Up | When the user clicks on this button the user details will be submitted  | Pass ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/c22993d6-5d2a-4019-b921-387ff54a6fe7)|          | 
 
 | Goals | Acceptance | Pass | Fail
 |:----------|:----------|:----------|:----------|
-| Home Page Not Logged In  |  |   |          | 
-|1. Navigational Link Sign In | In the nav menu of home page where a user is not logged in they can chooose the sign in link which will bring them to the sign in page  | Pass - Screen Shot Below  |          | 
-|2. Navigational Link Sign Up | When the user is not logged in and clicks on the sign up link on the nav bar it will bring them to the sign up page  | Pass - Screen Shot below |          | 
-|3. Navigational Link Home  | When the user is not logged in and clicks on the home link it will bring them back to the home page    | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/af3afe93-cc26-4d80-9c87-1c009f8e95f3)|          | 
-|4. Card Message To Sign Up  | When the user is not signed in a message displays on the card to advise the user to sign in to like or comment on a post    | Pass  ![image](https://github.com/NBJIN/constructionblog/assets/106515976/065aac9c-dcfe-40df-b8ad-b82953502e36)|          | 
+|Login   |  |   |          | 
+|1.Contains the Nav items and footer details as described above | All links are functinal | Pass |          | 
+|2 Sign In Form  | The sign in form will request the user to enter their email address or username, and password in order to Login. .  | Pass |          | 
+|3 Home Button | The home button will bring the user back to the home page when clicked  | Pass | |
+|4 Sign In Button | This will sign the user into their account when the button is clicked.  | Pass | |
+|5 Forgot Password | This will allow the user to set a new password .  | Pass | |
+|6 Sign Up | This will allow the user to sign up for a new account  | Pass ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/77981fbd-a964-4685-bef8-01dccdc16028)| |
 
 | Goals | Acceptance | Pass | Fail
 |:----------|:----------|:----------|:----------|
-|Detailed Post Page Not Logged In  |  |   |          | 
-|1. Detailed Post Message To User Re Comment and Likes  | When the user is not logged in a message is displayed to the user to advise them to log in if they want to like or comment on a post.    | Pass - ![image](https://github.com/NBJIN/constructionblog/assets/106515976/fefafff0-83f6-4d02-8e81-8fe15fc764e5)  |          | 
+| Add Course Page  |  |   |          | 
+|1.Contains the Nav items and footer details as described above | All links are functinal | Pass |          | 
+|2. Add Course Form  | Here the adminstrator will enter the title, location, details, group by, fee, date of course and image url.  If the user does not have an image the place holder image will be assigned to the course. The course will not be submitted unless the Title and details of the course are filled out.   | Pass |          | 
+|3. Cancel Button  | Should the administrator not want to add the course they can click on the cancel button and this will cancel the form.   | Pass  |          | 
+|4. Add Course Button  | When the user clicks on the add course button this will submit the form and a message will be displayed back to the user to say course has been added and will return the user to the detailed course page.  | Pass  ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/787fa92d-20f2-4de6-9ae1-e7954689111a)|          | 
 
 
 
 | Goals | Acceptance | Pass | Fail
 |:----------|:----------|:----------|:----------|
-| Detailed Post Page Logged In User |  |   |          | 
-|1. Detailed Post Header  | The Header advised the user of what page they are on  | Pass - Screen Shot Below  |          | 
-|2. Link To Update Post  | When the user clicks on the update post link they will be brought to the update post page  | Pass - Screen Shot below |          | 
-|3. Link To Delete Post  | When the user clicks on the Delete Post they will be brought to the Delete Post Page    | Pass - Screen Shot Below |          | 
-|4. Link to Create A Post   | When the user clicks on create post they will be brought to the create post page    | Pass  ![image](https://github.com/NBJIN/constructionblog/assets/106515976/0d2fb4ea-b409-4ad7-bdd0-44fb65466c2a)|          | 
-
-
+| My Dashboard Page  |  |   |          | 
+|1.Contains the Nav items and footer details as described above | All links are functinal | Pass |          | 
+|2. Dashboard Form  | The dashboard form is where the user can enter their details and save same | Pass          | 
+|3. Update Information  | When the user has updated their details they will click on the update information button and this will update the details that are stored for that user.   | Pass |          | 
+|4. Purchase Record  | This section displays a list of previous purchases that the user has made and they can click into each purchase and view in detail.  | Pass  ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1dd0aed2-2be0-487e-9cbb-1201aba54587)|          | 
 
 | Goals | Acceptance | Pass | Fail
 |:----------|:----------|:----------|:----------|
-| Update Post Page Logged In User |  |   |          | 
-|1. Update Post Header  | The Header advises the user of what page they are on  | Pass - Screen Shot Below  |          | 
-|2. Update Post Form   | The form allows the user to enter details to update the post  | Pass - Screen Shot below |          | 
-|3. Submit Button  | When the user clicks on the submit button on the update post page they will be brought back to the list of post page   | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/5579625a-8cc5-4c32-91c9-a68087e7cd85) |          | 
-|4. Error Message displayed back to user   | If the user submits the form without a date an error will display to the user   | Pass  ![image](https://github.com/NBJIN/constructionblog/assets/106515976/df9d0ef0-6e32-4204-b420-ce6e93f0192e)|          | 
+| Sign Out Page |  |   |          | 
+|1.Contains the Nav items and footer details as described above | All links are functinal | Pass |          | 
+|2. Message and Sign out button   | The sign out page displays a message to the user asking them if they are sure they want to sign out.  The user can then click on the sign out button which will sign them out of their account. | Pass -	![image](https://github.com/NBJIN/kacsafetya/assets/106515976/19d5ba71-484d-42a4-87a3-361036c1499c) |          | 
 
 | Goals | Acceptance | Pass | Fail
 |:----------|:----------|:----------|:----------|
-| Delete Post Page Logged In User |  |   |          | 
-|1. Delete Post Header  | The Header advises the user of what page they are on  | Pass - Screen Shot Below  |          | 
-|2. Submit Button   | When the user clicks on the submit button the post will be deleted and the user will be brought back to the list of blog post page  | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/d3e07c35-2b64-4781-893e-b4eba0b6c798) |          | 
+| Basket Contents Page|  |   |          | 
+|1.Contains the Nav items and footer details as described above | All links are functinal | Pass |          | 
+|2.Message and Continue Browing Button  | The basket contents page displays a message to the user to say their bag is empty and if they wish they can click on the continue browsing button which will bring them back to the all courses page. | Pass  ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/3eb15d38-0a2b-4d63-b881-0b77535f33de)|          | 
 
 | Goals | Acceptance | Pass | Fail
 |:----------|:----------|:----------|:----------|
-| Create Post Page Logged In User |  |   |          | 
-|1. Create Post Header  | The Header advises the user of what page they are on  | Pass - Screen Shot Below  |          | 
-|2. Create Post Form   | The form allows the user to enter details to create the post  | Pass - Screen Shot below |          | 
-|3. Submit Button  | When the user clicks on the submit button on the update post page they will be brought back to the list of post page   | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/a8135ffb-75c5-47e5-9d07-171b743268ca) |          | 
-|4. Error Message displayed back to user   | If the user does not enter a date or a name the post will not submit and a message is displayed back to the user    | Pass  ![image](https://github.com/NBJIN/constructionblog/assets/106515976/9c1d694c-f3d6-4847-a798-785b4b309dc8)|          | 
+|Newsletter Sign Up  |  |   |          | 
+|1.Contains the Nav items and footer details as described above | All links are functinal | Pass |          | 
+|2. Newletter Signup  Form   | In order for the user to sign up for the companys newsletter they must fill out fullname, company and email.  The form will not submit unless fullname and company are filled out.  | Pass |          | 
+|3. Submit Button  | When the user clicks on the submit button it will submit their details and  the user will be carried to the newsletter signup success page  | Pass ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/0dfd5d95-ed0d-411c-aa02-ad8fccad1bd1) |          | 
 
 | Goals | Acceptance | Pass | Fail
 |:----------|:----------|:----------|:----------|
-| Add Comment Page Logged In User |  |   |          | 
-|1. Add Comment Header  | The Header advises the user of what page they are on  | Pass - Screen Shot Below  |          | 
-|2. Create Post Form   | The form allows the user to enter details to add the comment  | Pass - Screen Shot below |          | 
-|3. Submit Button  | When the user clicks on the submit button on the update post page they will be brought back to the detailed post page   | Pass ![image](https://github.com/NBJIN/constructionblog/assets/106515976/706a5bd2-861f-4ab1-8424-a961ca1c9d3d) |          | 
+|Newsletter Sign Up Success |  |   |          | 
+|1.Contains the Nav items and footer details as described above | All links are functinal | Pass |          | 
+|2. Sign up success message and home button  | The Newsletter sign up success page displays a message back to the user to say they have successfully signed up and the home button when clicked will bring the user back to the home page.  |  Pass ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/4eb858b0-68ba-4f35-8ba4-7efd303f0dc2) |          | 
 
 
-| Goals | Acceptance | Pass | Fail
-|:----------|:----------|:----------|:----------|
-| Delete Comment Page Logged In User | This page is currently not displaying  | Fail   |          | 
+
+
 
 
 <br>
