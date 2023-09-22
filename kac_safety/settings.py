@@ -33,8 +33,10 @@ DEBUG = 'DEVELOPMENT' in os.environ  # True
 # DEBUG = True
 
 ALLOWED_HOSTS = ['kac-safetya.herokuapp.com', 'localhost',
-                 '8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu102.gitpod.io']
-# was previously this 8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu101.gitpod.io
+                 '8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu104.gitpod.io']
+# 1 first it was  this 8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu101.gitpod.io
+# 2 next it was   8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu102.gitpod.io
+
 
 # Application definition
 
