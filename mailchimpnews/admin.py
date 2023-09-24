@@ -5,8 +5,16 @@ from .forms import SubscribeForm
 
 class SubscribeAdmin(admin.ModelAdmin):
     list_display = (
-        'fullname', 'company', 'email',
+        'fullname',
+        'company',
+        'email'
         )
+
+    list_filter = (
+        'fullname',
+        'company',
+        'email'
+    )
 
     ordering = ('fullname',)
 
