@@ -95,15 +95,15 @@ body {
 }
 
 .container-home {
-    margin-top: 20px;
+    margin-top: 5px;
     text-align: center;
     background-color: white; 
     opacity: 1; 
     color: black; 
     width: 100%;
     top: 0px;
-    padding-top: 20px;
-    height: 100vh;
+    padding-top: 5px;
+    height: 80vh;
 }
 
 .jumbotron-main h1,
@@ -186,6 +186,41 @@ body {
     padding-right: 5px;
 }
 
+/* heading all courses page */
+
+
+.head-allcourses {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.search-card {
+    position: relative;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.col-height {
+    height: 42.5vh;
+}
+
+.btn-previous {
+    padding-top: 10px;
+}
+
+.pagination-number {
+    color: black;
+    font-weight: bold;
+}
+
+.border-danger {
+    margin-top: 15px;
+}
+
 /* arrow button at the bottom of all courses page  */
 
 .btt-button {
@@ -198,7 +233,7 @@ body {
 }
 
 .container-fluid-allcourses {
-    height: 100vh;
+    height: 70vh;
 }
 
 /* arrow button at the bottom of all courses page  */
@@ -218,6 +253,10 @@ input[name='q']::placeholder {
 
 
 /* button outline black on the detailed courses page */
+.hr-color {
+    background-color: black;
+    
+}
 .btn-outline-black {
     background: white;
     color: black !important; 
@@ -312,6 +351,13 @@ input[name='q']::placeholder {
 .toast-body {
     padding: 1rem;
     
+}
+
+/* contact page */
+
+.contact-heading {
+    margin-top: 15px;
+  
 }
 
 /* Contact Approved */
@@ -440,6 +486,8 @@ input[name='q']::placeholder {
     }
 
 }
+
+/* media queries 474
 
 /* Media Queries - slightly larger container on xl screens - THESE DO NOT WORK  */
 @media (mid-width: 1200px) {

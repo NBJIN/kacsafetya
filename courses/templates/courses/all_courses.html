@@ -14,11 +14,12 @@
 <div class="container-fluid-allcourses">
   <div class="row">
     <div class="col text-center mt-3">
-      <h2 class="logo-font mt-5 mt-md-0">All Courses</h2>
-      <hr class="w-50 mb-1">
+      <h2 class="logo-font mt-5 mt-md-0 head-allcourses">All Courses</h2>
+      <hr class="w-50 mb-1 hr-color">
+      <!-- <hr class="w-50 mb-1"> -->
     </div>
   </div>
-  <div class="card col-md-3 d-none d-md-block" style="width: 200px;">
+  <div class="card search-card col-md-3 d-none d-md-block" style="width: 200px;">
     <article class="filter-group">
       <header class="card-header bg-secondary">       
           <h6 class="title">Group By</h6>
@@ -61,7 +62,7 @@
 
   <div class="row">
         {% for course in page_obj %}
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 col-height">
           <div class="card h-100 border-danger">
             {% if course.image %}
             <a href="{% url 'detailed_courses' course_id=course.id %}">
@@ -106,7 +107,7 @@
         {% endif %}
         {% if forloop.counter|divisibleby:4 %}
         <div class="col-12 d-none d-xl-block mb-5">
-          <hr>
+          <!-- <hr> -->
         </div>
         {% endif %}
         {% endfor %}
@@ -114,13 +115,15 @@
   <br class="d-md-none">
   <br class="d-md-none">
   <br class="d-md-none">
+  <br>
+  <br>
 
     {% if is_paginated %}
     <nav aria-label="Page navigation">
       <ul class="pagination justify-content-center">
         {% if page_obj.has_previous %}
         <li class="page-item">
-          <a class="page-link-previous btn btn-dark rounded-0" href="?page={{ page_obj.previous_page_number }}" role="button">&laquo; Previous</a>
+          <a class="page-link-previous btn  btn-previous btn-dark rounded-0" href="?page={{ page_obj.previous_page_number }}" role="button">&laquo; Previous</a>
         </li>
      
         {% endif %}
@@ -129,7 +132,7 @@
         </li>
         {% if page_obj.has_next %}
         <li class="page-item">
-          <a class="page-link-next btn btn-dark rounded-0" href="?page={{ page_obj.next_page_number }}" role="button">Next &raquo;</a></li>
+          <a class="page-link-next btn btn-previous btn-dark rounded-0" href="?page={{ page_obj.next_page_number }}" role="button">Next &raquo;</a></li>
         {% endif %}
       </ul>
     </nav>
