@@ -33,7 +33,7 @@ DEBUG = 'DEVELOPMENT' in os.environ  # True
 # DEBUG = True
 
 ALLOWED_HOSTS = ['kac-safetya.herokuapp.com', 'localhost',
-                 '8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu104.gitpod.io']
+                 '8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu105.gitpod.io']
 # 1 first it was  this 8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu101.gitpod.io
 # 2 next it was   8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu102.gitpod.io
 
@@ -118,7 +118,7 @@ AUTHENTICATION_BACKENDS = [
 SITE_ID = 1
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# was not added here originally
+# was not added here originally - if you want emails to be printed to terminal 
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True

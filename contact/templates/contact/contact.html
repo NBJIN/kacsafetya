@@ -32,7 +32,7 @@
         <p class="text-black">
             Please complete the form below.
         </p>
-        <form action="contact_approved/" method="POST" enctype="multipart/form-data">
+        <form action="{% url 'contact_view' %}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form | crispy }}
             <input type="submit" value="Submit" class="btn btn-dark rounded-0 mt-2 mb-3">

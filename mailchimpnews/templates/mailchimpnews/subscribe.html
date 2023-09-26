@@ -28,7 +28,7 @@
             <h4 class="mt-5">Please enter your details below to subscribe to our newsletter.</h4>
             <br>
 
-            <form method="POST" action="success/" enctype="multipart/form-data" class="mt-5">
+            <form method="POST" action="{% url 'subscribe_view' %}" enctype="multipart/form-data" class="mt-5">
                 {% csrf_token %}
                 {{ form | crispy }}
                 <input type="submit" value="Submit" class="btn btn-dark rounded-0 mt-5 mb-5">

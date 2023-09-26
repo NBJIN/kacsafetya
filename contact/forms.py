@@ -36,3 +36,7 @@ class ContactForm(forms.ModelForm):
             'course_title': 'Course Title',
             'message': 'Message',
         }
+
+        for field_name, field in self.fields.items():
+            field.widget.attrs['placeholder'] = placeholders.get(field_name, '')
+            field.label = labels.get(field_name, field.label)
