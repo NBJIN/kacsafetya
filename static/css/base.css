@@ -103,7 +103,7 @@ body {
     width: 100%;
     top: 0px;
     padding-top: 5px;
-    height: 80vh;
+    height: 100vh;
 }
 
 .jumbotron-main h1,
@@ -191,7 +191,9 @@ body {
 
 .head-allcourses {
     padding-top: 30px;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
+    text-align: left;
+    margin-left: 30px;
 }
 
 .search-card {
@@ -202,11 +204,32 @@ body {
     border-radius: 0.25rem;
     margin-left: 10px;
     margin-top: 15px;
+    padding-bottom: 10px;
 }
 
-.col-height {
-    height: 42.5vh;
+.card-width {
+    width: 100%;
+  
+
 }
+/* 
+.card-height {
+    padding-bottom: 100px;
+} */
+
+.card-body {
+    min-height: 80px;
+}
+
+.card-header {
+    margin-top: 15px;
+}
+
+
+
+/* .col-height {
+    height: 42.5vh;
+} */
 
 .btn-previous {
     padding-top: 10px;
@@ -233,7 +256,7 @@ body {
 }
 
 .container-fluid-allcourses {
-    height: 70vh;
+    height: 100vh;
 }
 
 /* arrow button at the bottom of all courses page  */
@@ -383,6 +406,10 @@ input[name='q']::placeholder {
 .container-basket {
     height: 100vh;
     margin: 60px;
+}
+
+.justify-content-between {
+    text-align: center;
 }
 
 /* Mailchimpnews Subscribe Page */

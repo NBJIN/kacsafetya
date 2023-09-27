@@ -15,9 +15,11 @@
 <div class="container-basket mb-2">
     <div class="row">
         <div class="col">
-            <hr>
-            <h1 class="logo-font mb-2 text-center">Basket Contents</h1>
-            <hr>
+           
+            <h1 class="logo-font mb-2">Basket Contents</h1>
+            <hr class="w-70 mb-1 hr-color">
+            <br>
+            <br>
         </div>
     </div>
 
@@ -114,18 +116,21 @@
             </tr>
             <tr>
                 <td colspan="4" class="text-right">
-                    <a href="{% url 'all_courses' %}" class="btn rounded-0 btn-lg  d-flex flex-column flex-sm-row">
-                        <span class="btn btn-dark rounded-0 mt-md-5 mt-sm-0">Continue Browsing</span>
-                    </a>
-                    <a href="{% url 'purchase' %}" class="btn rounded-0 btn-lg d-flex flex-column flex-sm-row ">
+                    <div class="d-flex">
+                  
+                    <a href="{% url 'purchase' %}" class="btn rounded-0 btn-lg d-flex flex-column flex-sm-row justify-content-between">
                         <span class="btn btn-dark rounded-0 mt-md-5 mt-sm-0">Make A Purchase</span>   
                     </a>
+                    <a href="{% url 'all_courses' %}" class="btn rounded-0 btn-lg  d-flex flex-column flex-sm-row justify-content-between ">
+                        <span class="btn btn-dark rounded-0 mt-md-5 mt-sm-0">Continue Browsing</span>
+                    </a>
+                    </div>
                 </td>
             </tr>
             </table>
         </div>
         {% else %}
-        <p class="lead mb-5">Your bag is empty.</p>
+        <p class="lead mb-5">Your basket is empty.</p>
         <a href="{% url 'all_courses' %}" class="btn btn-dark rounded-0 mt-5 btn-continue">
             <span class="text-uppercase">Continue Browsing</span>
         </a>

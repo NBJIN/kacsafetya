@@ -11,13 +11,16 @@ class CoursesForm(forms.ModelForm):
         fields = '__all__'
         widgets = {
             'image': CustomClearableFileInput,
-        }
-
-        widgets = {
             'date_of_course': forms.DateInput(
                 attrs={
                     'type': 'datetime-local',
+        }
 
-                }
+        # widgets = {
+        #     'date_of_course': forms.DateInput(
+        #         attrs={
+        #             'type': 'datetime-local',
+
+        #         }
             ),
         }
