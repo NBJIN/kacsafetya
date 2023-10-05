@@ -16,7 +16,7 @@
 <div class="container-fluid-detailedcourses pl-3 pr-3">
      <div class="col text-center mt-3">
             <h2 class="logo-font mt-5 mt-md-0 head-allcourses">Course Details</h2>
-            <hr class="w-50 mb-1 ml-4 hr-color">
+            <hr class="w-70 hr-color">
           </div>
     <div class="row mt-5">
        
@@ -38,28 +38,21 @@
 
                 <p class="mb-0"><strong>Course Title:</strong>&nbsp;&nbsp;<span>{{ courses.title }}</span></p>
                 <br>
-                <br>
                 <p class="mb-0"><strong>Course Location:</strong>&nbsp;&nbsp;<span>{{ courses.location }}</span></p>
-                <br>
                 <br>
                 <p class="mb-0"><strong>Category of Course:</strong>&nbsp;&nbsp;<span>{{ courses.group_by }} </span></p>
                 <br>
-                <br>
                 <p class="mb-0"><strong>Course Description:</strong>&nbsp;&nbsp;<span>{{ courses.details }}</span></p>
-                <br>
                 <br>
                 <p class="mb-0"><strong>Course Date:</strong>&nbsp;&nbsp;<span>{{ courses.date_of_course }}</span></p>    
                <br>
-               <br>
                 <p class="mb-0"><strong>Course Fee:</strong>&nbsp;&nbsp;<span>€{{ courses.fee }}</span></p>    
-                <br>
                 <br>
                 <form class="form" action="{% url 'add_to_basket' courses.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12">
                             <p class="mt-3"><strong>Quantity:</strong></p>
-                            <br>
                             <br>
                             <div class="form-group w-50">
                                 <div class="input-group">
@@ -85,21 +78,24 @@
                             </div>
                         </div>
                         <br>
-                        <br>
                         <div class="col-12">
+                            
                             <a href="{% url 'all_courses' %}" class="btn btn-dark rounded-0 mt-5">
-                                <span class="icon">
+                                <!-- <span class="icon">
                                     <i class="fa-solid fa-chevron-left" style="color: #cc0000;"></i>
-                                </span>
+                                </span> -->
                                 <span >Keep Shopping</span>
                             </a>
                             <input type="submit" class="btn btn-dark rounded-0 mt-5"
                                 value="Add Item To Basket">
                             {% if request.user.is_superuser %}
-                            <a class="btn btn-dark rounded-0 mt-5" href="{% url 'edit_courses' courses.id %}" role="button">Edit</a>
-                            <a class="btn btn-dark rounded-0 mt-5" href="{% url 'delete_courses' courses.id %}" role="button">Delete</a>
-                            <a class="btn btn-dark rounded-0 mt-5" href="{% url 'landing' %}" >Home</a>
+                            
+                                <a class="btn btn-dark rounded-0 mt-5" href="{% url 'edit_courses' courses.id %}" role="button">Edit</a>
+                                <a class="btn btn-dark rounded-0 mt-5" href="{% url 'delete_courses' courses.id %}" role="button">Delete</a>
+                                <a class="btn btn-dark rounded-0 mt-5" href="{% url 'landing' %}" >Home</a>
+                           
                             {% endif %}
+                        
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
