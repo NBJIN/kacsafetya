@@ -30,19 +30,16 @@
             <img src="{{ courses.image.url }}" class="card-img" alt="courses-image">
             {% endif %}
             <form method="POST" action="{% url 'add_courses' %}" class="form mb-2" enctype="multipart/form-data">
-                
                 {% csrf_token %}
-                
                 <br> 
                 <br>  
                 {% for field in form %}
                     <div class="form-group">
                         {% if field.name != 'image' %}
-                      
                         {{ field | as_crispy_field }}
-                    {% else %}
+                        {% else %}
                         {{ field }}
-                    {% endif %}
+                        {% endif %}
                     </div>
                 {% endfor %}
                 <div class="text-right">
@@ -53,7 +50,6 @@
         </div>
     </div>
 </div>
-
 
 {% endblock %}
 

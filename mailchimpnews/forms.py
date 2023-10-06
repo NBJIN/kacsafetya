@@ -3,7 +3,6 @@ from django import forms
 from mailchimpnews.models import Mailchimp
 
 
-# Create Contact Form
 class SubscribeForm(forms.ModelForm):
     class Meta:
         model = Mailchimp

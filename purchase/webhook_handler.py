@@ -2,8 +2,6 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
-
-
 from .models import Purchase, PurchaseOrderItem
 from courses.models import Courses
 from dashboard.models import UserDashboard
@@ -46,7 +44,6 @@ class StripeWH_Handler:
         """
         Handle a generic/unknown/unexpected webhook event
         """
-     
         return HttpResponse(
             content=f'Unhandled Webhook received: {event["type"]}',
             status=200)
@@ -109,7 +106,7 @@ class StripeWH_Handler:
                 time.sleep(1)
         if purchase_exists:
             self._send_confirmation_email(purchase)
-         
+
             return HttpResponse(
                 content=(
                     f'Webhook recieved: {event["type"]} | '

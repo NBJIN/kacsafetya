@@ -14,13 +14,6 @@ class CoursesForm(forms.ModelForm):
             'date_of_course': forms.DateInput(
                 attrs={
                     'type': 'datetime-local',
-        }
-
-        # widgets = {
-        #     'date_of_course': forms.DateInput(
-        #         attrs={
-        #             'type': 'datetime-local',
-
-        #         }
+                        }
             ),
         }
