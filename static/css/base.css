@@ -32,7 +32,6 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: black;
- 
 }
 
 .fontstyle {
@@ -161,7 +160,6 @@ body {
     padding-left: 0px; 
     margin-right: 0;
     margin-left: 0;
-    
 }
 
 .container-fluidfooter {
@@ -201,8 +199,6 @@ body {
 }
 
 /* heading all courses page */
-
-
 .head-allcourses {
     padding-top: 30px;
     /* padding-bottom: 30px; */
@@ -214,7 +210,6 @@ body {
     background-color: black;
     margin-left: 2%;
     margin-right: 2%;
-
 }
 
 .search-card {
@@ -230,9 +225,7 @@ body {
 
 .card-width {
     width: 100%;
-  
-
-}
+ }
 /* 
 .card-height {
     padding-bottom: 100px;
@@ -245,8 +238,6 @@ body {
 .card-header {
     margin-top: 15px;
 }
-
-
 
 /* .col-height {
     height: 42.5vh;
@@ -266,7 +257,6 @@ body {
 }
 
 /* arrow button at the bottom of all courses page  */
-
 .btt-button {
     height: 30px;
     width: 25px;
@@ -295,19 +285,16 @@ input[name='q']::placeholder {
     margin-left: 10%;
 }
 
-
 /* button outline black on the detailed courses page */
 .hr-color {
     background-color: black;
-
-    
 }
+
 .btn-outline-black {
     background: white;
     color: black !important; 
     border: 1px solid black;
 }
-
 
 /* button outline black on the detailed courses page */
 .btn-outline-black:hover,
@@ -328,7 +315,6 @@ input[name='q']::placeholder {
     right: 15px;
     z-index: 9999;
 }
-
 
 .custom-toast {
     overflow: visible; 
@@ -394,15 +380,12 @@ input[name='q']::placeholder {
 }
 
 .toast-body {
-    padding: 1rem;
-    
+    padding: 1rem;   
 }
 
 /* contact page */
-
 .contact-heading {
     margin-top: 15px;
-  
 }
 
 /* Contact Approved */
@@ -418,13 +401,11 @@ input[name='q']::placeholder {
 }
 
 /* Logout Page */
-
 .main-container-logout {
     height: 100vh;
 }
 
 /* Basket */
-
 .container-basket {
     height: 100vh;
     margin: 60px;
@@ -441,7 +422,6 @@ input[name='q']::placeholder {
     height: 100vh;
     padding: 40px;
 }
-
 
 /* Allauth form formatting */
 .allauth-form-inner-content p {
@@ -533,7 +513,6 @@ input[name='q']::placeholder {
         left: 0;
         z-index: 1030;
     }
-
 }
 
 /* media queries 474
@@ -545,22 +524,20 @@ input[name='q']::placeholder {
     }
 }
 
+
+
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-
     body {
         height: calc(100vh - 116px);
     }
 
-
     .display-4.logo-font.text-black {
         font-size: 2rem;
-
     }
 
     .nav-link {
         padding: 0.15rem;
-
     }
 
     .nav-link i.fa-lg {
@@ -574,7 +551,6 @@ input[name='q']::placeholder {
 
     #delivery-banner h4 {
         font-size: .9rem;
-
     }
 
     .btn.btn-outline-black.rounded-0,
@@ -590,12 +566,8 @@ input[name='q']::placeholder {
 
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
-
     }
-    
-
 }
-
 
 /* -------------------------------------------------------------------------------- */
 /* Media Queries */ 
@@ -605,7 +577,6 @@ input[name='q']::placeholder {
     .fontstyle {
         font-size: 20px;
     }
-
     }
       
     /** For medium screen sizes from 950px wide and down  */
@@ -614,15 +585,9 @@ input[name='q']::placeholder {
         .btn-continue {
            margin-left: 20px;
         }
-
-    
-
-       
-    
     }
 
     /** For max width 767px */
-
     @media (max-width: 767px ) {
         .container-home,
         .container-fluid-allcourses,
@@ -635,19 +600,15 @@ input[name='q']::placeholder {
             height: auto;
         }
       
-
-
         #discount-banner {
             margin-top: 0px;
             padding-top: 0px;
             padding: 0px;
-       
         }
 
         .display-10,
         .lead {
             font-size: 20px;
-
         }
 
         .fontstyle,
