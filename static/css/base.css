@@ -524,7 +524,45 @@ input[name='q']::placeholder {
     }
 }
 
+/* @media screen and (min-width: 768px) and (max-width: 1198px) {
+    .search-card { */
+         /* NEED TO INSERT CONTENT TO CORRECT  */
+    /* } */
+/* } */
 
+
+@media (max-width: 1199px) {
+
+    .container-fluidfooter {
+       
+            width: 100%;
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 70%;
+            background-color: #CC0000;
+        }
+        /* margin-top: 366px; */
+    }
+    /* .card-width {
+        width: 100%;
+        float: none;
+    } */
+
+}
+
+@media (max-width: 991px) {
+
+    .container-fluidfooter {
+        /* margin-top: 500px; */
+    }
+    /* .card-width {
+        width: 100%;
+        float: none;
+    } */
+
+}
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
@@ -623,4 +661,3 @@ input[name='q']::placeholder {
             margin-right: 1px;
         }
     }
-    
