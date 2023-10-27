@@ -24,6 +24,8 @@ body {
     margin-right: auto;
     margin-left: auto;
     background-color: lightgray;
+    /* position: fixed; */
+    bottom: 0;
 }
 
 /* Discount Banner on index.html */
@@ -171,6 +173,8 @@ body {
     margin-right: auto;
     margin-left: auto;
     background-color: #CC0000;
+    /* position: fixed; */
+    bottom: 0;
 }
 
 .nav-link-allcourses,
@@ -402,9 +406,20 @@ input[name='q']::placeholder {
     margin: 30px;
 }
 
+/*Sign In */
+.login {
+    margin-bottom: 60px;
+}
+
 /* Logout Page */
 .main-container-logout {
     height: 100vh;
+}
+
+/* Verify Your Email Address */
+
+.bottompadding {
+    padding-bottom: 230px;
 }
 
 /* Basket */
@@ -542,11 +557,30 @@ input[name='q']::placeholder {
             padding-left: 0px;
             margin-right: auto;
             margin-left: auto;
-            margin-top: 70%;
+            margin-top: 40%;
             background-color: #CC0000;
+            /* position: fixed; */
+            bottom: 0;
         }
         /* margin-top: 366px; */
     }
+
+    @media (max-width: 991px) {
+
+        .container-fluidfooter {
+           
+                width: 100%;
+                padding-right: 0px;
+                padding-left: 0px;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 60%;
+                background-color: #CC0000;
+                /* position: fixed; */
+                bottom: 0;
+            }
+            /* margin-top: 366px; */
+        }
     /* .card-width {
         width: 100%;
         float: none;
