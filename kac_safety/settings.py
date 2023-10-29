@@ -19,7 +19,6 @@ if os.path.isfile('env.py'):
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-# BASE_DIR = Path(__file__).resolve().parent.parent  # oringally in file 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
@@ -29,14 +28,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ  # True
-# DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['kac-safetya.herokuapp.com', 'localhost',
                  '8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu105.gitpod.io']
-# 1 first it was  this 8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu101.gitpod.io
-# 2 next it was   8000-nbjin-kacsafetya-c2m4cr6itw4.ws-eu102.gitpod.io
-
 
 # Application definition
 
@@ -117,9 +112,6 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# was not added here originally - if you want emails to be printed to terminal 
-
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
@@ -145,7 +137,6 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -185,39 +176,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-# # this was originally in project
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# ## this was originally in project
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'   ## MAY HAVE TO REMOVE 
-
-# if 'USE_AWS' in os.environ:
-    # Cache control
-    # AWS_S3_OBJECT_PARAMETERS = {
-    # 'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-    # 'CacheControl': 'max-age=94608000',
-    # }
-
-    # Bucket Config
-    # AWS_STORAGE_BUCKET_NAME = 'kac-safetya'
-    # AWS_S3_REGION_NAME = 'eu-west-1'
-    # AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-    # AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-    # AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
-
-    # Static and media files
-    # STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-    # STATICFILES_LOCATION = 'static'
-    # DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
-    # MEDIAFILES_LOCATION = 'media'
-
-    # Override static and media URLs in production
-    # STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
-    # MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
-
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -247,7 +210,6 @@ else:
 # Mailchimp
 MAILCHIMP_KEY = os.getenv('MAILCHIMP_KEY', '')
 MAILCHIMP_AUDIENCE_ID = os.getenv('MAILCHIMP_AUDIENCE_ID', '')
-
 
 MAILCHIMP_API_KEY = os.getenv('MAILCHIMP_API_KEY', '')
 MAILCHIMP_DATA_CENTER = os.getenv('MAILCHIMP_DATA_CENTER', '')
