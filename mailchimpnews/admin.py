@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Mailchimp
-from .forms import SubscribeForm
+# from .forms import SubscribeForm
 
 
 class SubscribeAdmin(admin.ModelAdmin):

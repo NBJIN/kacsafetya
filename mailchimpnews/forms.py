@@ -1,4 +1,4 @@
-from django.forms import ModelForm
+# from django.forms import ModelForm
 from django import forms
 from mailchimpnews.models import Mailchimp
 
@@ -16,15 +16,15 @@ class SubscribeForm(forms.ModelForm):
         labels and set autofocus on first field
         """
         super().__init__(*args, **kwargs)
-        placeholders = {
-            'fullname': 'Full Name',
-            'company': 'Company',
-            'email': 'Email',
+        # placeholders = {
+        #     'fullname': 'Full Name',
+        #     'company': 'Company',
+        #     'email': 'Email',
 
-        }
-        labels = {
-            'fullname': 'Full Name',
-            'company': 'Company',
-            'email': 'Email',
+        # }
+        # labels = {
+        #     'fullname': 'Full Name',
+        #     'company': 'Company',
+        #     'email': 'Email',
 
-        }
+        # }

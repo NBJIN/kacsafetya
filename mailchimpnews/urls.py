@@ -1,7 +1,9 @@
-from django.contrib import admin
-from django.urls import path, reverse
+# from django.contrib import admin
+from django.urls import path
+# , reverse
 from . import views
-from .views import subscribe_view, success
+# from .views import subscribe_view
+# , success
 
 
 urlpatterns = [

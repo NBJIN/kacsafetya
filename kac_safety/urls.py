@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from courses import views
+# from courses import views
 
 
 urlpatterns = [
@@ -34,4 +34,4 @@ urlpatterns = [
     path('mailchimpnews/', include('mailchimpnews.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'kac_safety.views.handler404'
+# handler404 = 'kac_safety.views.handler404'

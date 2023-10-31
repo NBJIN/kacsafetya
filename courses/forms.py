@@ -1,7 +1,8 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from .models import Courses, Group_By, Location
-from collections import OrderedDict
+from .models import Courses
+# , Group_By, Location
+# from collections import OrderedDict
 
 
 class CoursesForm(forms.ModelForm):
