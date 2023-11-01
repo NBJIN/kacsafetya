@@ -1,7 +1,5 @@
 from django.forms import ModelForm
-# from django import forms
 from .models import Purchase
-# , PurchaseOrderItem
 
 
 class PurchaseForm(ModelForm):

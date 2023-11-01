@@ -17,12 +17,3 @@ class ContactForm(forms.ModelForm):
         labels and set autofocus on first field
         """
         super().__init__(*args, **kwargs)
-        # placeholders = {
-        #     'fullname': 'Full Name',
-        #     'company': 'Company',
-        #     'telephone': 'Telephone',
-        #     'email': 'Email',
-        #     'date_added': 'Date',
-        #     'course_title': 'Course Title',
-        #     'message': 'Message',
-        # }

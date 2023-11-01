@@ -29,5 +29,4 @@ def create_or_update_user_dashboard(sender, instance, created, **kwargs):
     """
     if created:
         UserDashboard.objects.create(user=instance)
-    # Existing accounts: save the account
     instance.userdashboard.save()

@@ -1,11 +1,4 @@
 from django.shortcuts import redirect, render
-# reverse
-#  HttpResponse
-# from django.shortcuts import get_object_or_404
-# from mailchimp_marketing import Client
-# from mailchimp_marketing.api_client import ApiClientError
-# from django.contrib import messages
-# from .models import Mailchimp
 from .forms import SubscribeForm
 import os
 
@@ -21,10 +14,6 @@ def subscribe_view(request):
         form = SubscribeForm(data=request.POST)
         form = SubscribeForm(request.POST)
         if form.is_valid():
-
-            # fullname = form.cleaned_data['fullname']
-            # company = form.cleaned_data['company']
-            # email = form.cleaned_data['email']
             form.cleaned_data['fullname']
             form.cleaned_data['company']
             form.cleaned_data['email']

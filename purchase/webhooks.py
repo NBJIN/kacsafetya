@@ -32,7 +32,7 @@ def webhook(request):
         # Invalid payload
 
         return HttpResponse(content=e, status=400)
-    # except stripe.error.SignatureVerificationError as e:
+
         # Invalid signature
 
         return HttpResponse(status=400)

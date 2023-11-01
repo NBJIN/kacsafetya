@@ -14,12 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-# from .views import handler404
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-# from courses import views
 
 
 urlpatterns = [
@@ -33,5 +31,3 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('mailchimpnews/', include('mailchimpnews.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-# handler404 = 'kac_safety.views.handler404'

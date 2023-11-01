@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.contrib import messages
 from django.shortcuts import get_object_or_404
 from courses.models import Courses
-# from basket.models import Basket
 
 
 def view_basket(request):
@@ -14,7 +13,6 @@ def add_to_basket(request, item_id):
     """ Add a quantity of courses to the basket """
     courses = Courses.objects.get(pk=item_id)
 
-    # course = get_object_or_404(Courses, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     basket = request.session.get('basket', {})

@@ -14,7 +14,6 @@ from basket.contexts import basket_contents
 
 import stripe
 import json
-# import uuid
 
 
 @require_POST
@@ -78,7 +77,7 @@ def purchase(request):
                         "our database. "
                         "Make contact for assistance")
                     )
-                    # order.delete()
+
                     return redirect(reverse('view_basket'))
 
             request.session['save_info'] = 'save-info' in request.POST
@@ -169,8 +168,6 @@ def purchase_success(request, purchase_no):
 
     if 'basket' in request.session:
         del request.session['basket']
-
-    # template = 'purchase/purchase_success.html'
 
     total = purchase.total
     discount = purchase.discount
