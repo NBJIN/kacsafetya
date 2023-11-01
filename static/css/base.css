@@ -24,7 +24,6 @@ body {
     margin-right: auto;
     margin-left: auto;
     background-color: lightgray;
-    /* position: fixed; */
     bottom: 0;
 }
 
@@ -89,7 +88,6 @@ body {
 
 .form-control {
     height: 33px;  
-    /* width: 50%; */
 }
 
 .row-main {
@@ -121,22 +119,6 @@ body {
     transform: translate(-50%, -50%);    
 } 
 
-/* .row-footer1 {
-    background-color: #CC0000;
-    height: 6vh;
-    padding-bottom: 10px;
-}
-
-.row-footer2 {
-    background-color: #CC0000;
-    height: 6vh;
-}
-
-.row-footer3 {
-    background-color: #CC0000;
-    height: 6vh;
-    
-} */
 .row-footer2 {
     margin-top: 20px;
     padding-bottom: 10px;
@@ -145,8 +127,6 @@ body {
 .footer-heading {
     padding-bottom: 10px;
     padding-bottom: 5px;
-    /* margin-top: 228px; */
-
 }
 
 .fab {
@@ -173,7 +153,6 @@ body {
     margin-right: auto;
     margin-left: auto;
     background-color: #CC0000;
-    /* position: fixed; */
     bottom: 0;
 }
 
@@ -207,7 +186,6 @@ body {
 /* heading all courses page */
 .head-allcourses {
     padding-top: 30px;
-    /* padding-bottom: 30px; */
     text-align: left;
     margin-left: 30px;
 }
@@ -232,10 +210,6 @@ body {
 .card-width {
     width: 100%;
  }
-/* 
-.card-height {
-    padding-bottom: 100px;
-} */
 
 .card-body {
     min-height: 80px;
@@ -244,10 +218,6 @@ body {
 .card-header {
     margin-top: 15px;
 }
-
-/* .col-height {
-    height: 42.5vh;
-} */
 
 .btn-previous {
     padding-top: 10px;
@@ -330,7 +300,6 @@ input[name='q']::placeholder {
     height: 2px;
 }
 
-/* from css-tricks - have not used yet */
 .arrow-up {
     width: 0;
     height: 0;
@@ -476,7 +445,6 @@ input[name='q']::placeholder {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0;
-    /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
@@ -521,32 +489,16 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-}
+/* -------------------------------------------------------------------------------- */
+/* Media Queries */ 
 
-/* media queries 474
 
-/* Media Queries - slightly larger container on xl screens - THESE DO NOT WORK  */
+/* Media Queries */
 @media (mid-width: 1200px) {
     .container {
         max-width: 80%;
     }
 }
-
-/* @media screen and (min-width: 768px) and (max-width: 1198px) {
-    .search-card { */
-         /* NEED TO INSERT CONTENT TO CORRECT  */
-    /* } */
-/* } */
-
 
 @media (max-width: 1199px) {
 
@@ -559,46 +511,37 @@ input[name='q']::placeholder {
             margin-left: auto;
             margin-top: 40%;
             background-color: #CC0000;
-            /* position: fixed; */
             bottom: 0;
         }
-        /* margin-top: 366px; */
     }
 
-    @media (max-width: 991px) {
 
-        .container-fluidfooter {
-           
-                width: 100%;
-                padding-right: 0px;
-                padding-left: 0px;
-                margin-right: auto;
-                margin-left: auto;
-                margin-top: 60%;
-                background-color: #CC0000;
-                /* position: fixed; */
-                bottom: 0;
-            }
-            /* margin-top: 366px; */
-        }
-    /* .card-width {
-        width: 100%;
-        float: none;
-    } */
 
-}
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+}    
 
 @media (max-width: 991px) {
 
     .container-fluidfooter {
-        /* margin-top: 500px; */
+           
+            width: 100%;
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 60%;
+            background-color: #CC0000;
+            bottom: 0;
+        }
     }
-    /* .card-width {
-        width: 100%;
-        float: none;
-    } */
-
-}
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
@@ -642,9 +585,6 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 }
-
-/* -------------------------------------------------------------------------------- */
-/* Media Queries */ 
 
 /* For larger to medium screens size from 1200px wide and down */
 @media screen and (max-width: 1200px) {

@@ -9,58 +9,128 @@
 
 <url>
   <loc>https://kac-safetya.herokuapp.com/</loc>
-  <lastmod>2023-05-29T09:55:07+00:00</lastmod>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://kac-safetya.herokuapp.com/courses/all_courses/</loc>
-  <lastmod>2023-05-29T09:55:07+00:00</lastmod>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kac-safetya.herokuapp.com/contact/</loc>
-  <lastmod>2023-05-29T09:55:07+00:00</lastmod>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kac-safetya.herokuapp.com/accounts/signup/</loc>
-  <lastmod>2023-05-29T09:55:07+00:00</lastmod>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kac-safetya.herokuapp.com/accounts/login/</loc>
-  <lastmod>2023-05-29T09:55:07+00:00</lastmod>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kac-safetya.herokuapp.com/basket/</loc>
-  <lastmod>2023-05-29T09:55:07+00:00</lastmod>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kac-safetya.herokuapp.com/mailchimpnews/subscribe/</loc>
-  <lastmod>2023-05-29T09:55:07+00:00</lastmod>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kac-safetya.herokuapp.com/courses/all_courses/?group_by=health</loc>
-  <lastmod>2023-05-29T09:55:07+00:00</lastmod>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://kac-safetya.herokuapp.com/courses/courses/detail/3/</loc>
-  <lastmod>2023-05-29T09:55:07+00:00</lastmod>
+  <loc>https://kac-safetya.herokuapp.com/courses/all_courses/?group_by=safety</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://kac-safetya.herokuapp.com/courses/courses/detail/2/</loc>
-  <lastmod>2023-05-29T09:55:07+00:00</lastmod>
+  <loc>https://kac-safetya.herokuapp.com/courses/all_courses/?location=online</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kac-safetya.herokuapp.com/courses/all_courses/?location=classroom</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kac-safetya.herokuapp.com/courses/courses/detail/16/</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kac-safetya.herokuapp.com/courses/courses/detail/14/</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kac-safetya.herokuapp.com/courses/courses/detail/9/</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kac-safetya.herokuapp.com/courses/courses/detail/11/</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kac-safetya.herokuapp.com/courses/all_courses/?page=2</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kac-safetya.herokuapp.com/accounts/password/reset/</loc>
-  <lastmod>2023-05-29T09:55:07+00:00</lastmod>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
   <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kac-safetya.herokuapp.com/courses/courses/detail/10/</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://kac-safetya.herokuapp.com/courses/courses/detail/12/</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://kac-safetya.herokuapp.com/courses/courses/detail/15/</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://kac-safetya.herokuapp.com/courses/courses/detail/2/</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://kac-safetya.herokuapp.com/courses/courses/detail/13/</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://kac-safetya.herokuapp.com/courses/courses/detail/17/</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://kac-safetya.herokuapp.com/courses/all_courses/?page=1</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://kac-safetya.herokuapp.com/courses/all_courses/?page=3</loc>
+  <lastmod>2023-11-01T21:28:23+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 
 

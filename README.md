@@ -289,7 +289,11 @@ https://mycolor.space/ was used to research these color types.
 ### Even though there still work to be completed on this project I was able to carry out the folloiwng testing .   
 ### Validators
 #### -	Lighthouse report – Lighthouse was used to evaluate the ecommerce site performance, accessibility, best practices and SEO. The following is a screenshot.
- ![Screenshot of Lighthouse Report](https://github.com/NBJIN/kacsafetya/assets/106515976/47ff3fbf-69a5-4a19-b06b-356f737c4090)
+Home Page Desktop
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/bea67bf4-c66c-4a46-b965-9a57ab5e9369)
+
+
+
 
 #### -	HTML – code was validated using the W3C HTML Markup Validation 
 #### -	CSS – code was validated using the W3C CSS Validation 
