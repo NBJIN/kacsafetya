@@ -2,7 +2,7 @@
 from django.urls import path
 # , reverse
 from . import views
-from .views import contact_view
+# from .views import contact_view
 # contact_approved,
 
 urlpatterns = [

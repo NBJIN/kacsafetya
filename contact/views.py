@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect, reverse
 # , HttpResponse
-from django.contrib import messages
+# from django.contrib import messages
 # from django.shortcuts import get_object_or_404
 from .forms import ContactForm
-from .models import Contact
+# from .models import Contact
 
 
 def contact_view(request):

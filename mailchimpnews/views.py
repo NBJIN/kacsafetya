@@ -24,8 +24,11 @@ def subscribe_view(request):
 
             # fullname = form.cleaned_data['fullname']
             # company = form.cleaned_data['company']
-            # # email = form.cleaned_data['email']
-            # form.save()
+            # email = form.cleaned_data['email']
+            form.cleaned_data['fullname']
+            form.cleaned_data['company']
+            form.cleaned_data['email']
+            form.save()
             return redirect('success')
     else:
         form = SubscribeForm()
