@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, reverse
 from .forms import ContactForm
-# from .models import Contact
 
 
 def contact_view(request):

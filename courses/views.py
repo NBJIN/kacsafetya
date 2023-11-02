@@ -145,6 +145,8 @@ def edit_courses(request, courses_id):
         form = CoursesForm(instance=courses)
         messages.info(request, f'You are editing {courses.title}')
 
+        template = 'courses/edit_courses.html'
+
     context = {
         'form': form,
         'courses': courses,

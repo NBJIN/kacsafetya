@@ -22,7 +22,7 @@
 
 ## What the visitors will be looking for:
 
-#### - -	Visitors to the site are looking for a an ecommerce site that provides easy access to a range of courses and training materials that are relevant to their individual needs.  
+#### - 	Visitors to the site are looking for a an ecommerce site that provides easy access to a range of courses and training materials that are relevant to their individual needs.  
 #### -	An information source which has a bank of courses in relation to health and safety 
 #### -	Visitors will require some detail on each course selected.
 #### -	Visitors will want to see the cost of each course. 
@@ -33,10 +33,8 @@
 #### -	Be able to keep up to date with company announcements by way of newsletter and social media link 
 #### -	Be able to easily naviage around the site to view the specific information that a user want to see.
 
-
 ## Agile Development 
 #### Github was used to record the project milestone / epics and the kanban board within github was used to record all the user stories for the project. 
-
 
 ### User Stories
 #### This project has 5 Milestone and they are as follows: 
@@ -47,6 +45,7 @@
 #### 5	Testing and Deployment (Admin)
 
 #### Each one of the above Milestones/Epics are further divided down into their own user stories: 
+
 
 ### Milestone/Epic : Project Planning Design and Setup (Admin)
 #### -	#2 Developer – Document project user requirements, scope and goals – (This was entered twice by mistake under the project milestone above)
@@ -124,7 +123,7 @@
 #### -	Mailchimpnews - marketing Tool 
 #### -	Contact - should a user want to get in contact with kacsafety
 
-## Site map (Diagram showing all pages ************)
+
 
 ## Wireframes
 #### All wireframes were created using Balsamiq.  
@@ -243,7 +242,12 @@ https://mycolor.space/ was used to research these color types.
 
  ### Typography 
 
-#### Google fonts was used to research font styles for the project.  The principle font used on the site is *******************************************
+#### Google fonts was used to research font styles for the project.  Fonts used in the building of this site were :
+- Helvetica Neue -https://en.wikipedia.org/wiki/Helvetica 
+- Helvetica - https://en.wikipedia.org/wiki/Helvetica
+- Sans-serif - https://en.wikipedia.org/wiki/Sans-serif
+- Roboto - https://en.wikipedia.org/wiki/Roboto
+
 
 ## Technologies Used
 ## Languages
@@ -285,90 +289,20 @@ https://mycolor.space/ was used to research these color types.
 
 ## Testing
 
-## Testing under the following headings 
-### Even though there still work to be completed on this project I was able to carry out the folloiwng testing .   
+## Testing has been discussed under the following headings in the Testing.md file 
+
+1. Testing User Stories
+
+2. Code Validation
+
+3. Accessibility
+
+4. Manual and Tools Testing
+
+ 
+
+#### -	Lighthouse report – Lighthouse was used to evaluate the ecommerce site performance, accessibility, best practices and SEO which can also be seen in the testing.md file.  
 ### Validators
-#### -	Lighthouse report – Lighthouse was used to evaluate the ecommerce site performance, accessibility, best practices and SEO. The following is a screenshot.
-### Desktop 
-Home Page Desktop
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/bea67bf4-c66c-4a46-b965-9a57ab5e9369)
-
-All Courses Page Desktop 
-
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/ba595987-edba-4076-aa77-432770f82432)
-
-All Courses Page 2 Desktop 
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/8666a643-2be7-4a87-a912-6e66f72ecde6)
-
-All Courses Page 3 Desktop 
-
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/8b133049-dfe1-4d82-a071-8caf394ad869)
-
-Contact Us Page Desktop 
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/05dab8d3-0938-4776-9cf6-06108fade332)
-
-Course Administration Page Desktop
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/7ba28fa8-7864-4fd9-a44c-b16c228fba42)
-
-My Dashboard Page Desktop 
-
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/f27f7419-3d4c-4cbe-953f-702e7e7a7bca)
-
-Sign Out Page Desktop 
-
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/fb587125-03c2-41c9-8d06-7b3849d557a8)
-
-Basket Contents Page Desktop 
-
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/0047a709-4f9d-4713-86c6-ee6304d2527e)
-
-Newsletter Sign Up Page Desktop 
-
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/ef56d07a-d260-4ec7-819a-4dfacb2c2dc6)
-
-### Mobile 
-
-Home Page Mobile 
-
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/61477651-0a9f-471a-96cc-ed8152a0ad1a)
-
-All Courses Page 1 Mobile 
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/f891dcc0-bde8-4e77-b930-731cff9c9c8f)
-
-All Courses Page 2 Mobile 
-
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/2074d1b6-100d-40b2-94fc-8665201c9c91)
-
-All Courses Page 3 Mobile 
-
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/aee43f02-62f4-4382-badd-548cede37b6e)
-
-Contact Us Page Mobile 
-
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/148107cc-1aba-4ef3-bfa9-0d7de791d740)
-
-
-Course Administration Page Mobile 
-
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/c52c9c8d-784d-4b10-8e27-e0ce90a04b88)
-
-My Dashboard Page Mobile 
-
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/bf03ebbb-e559-4c03-af1b-a2424bcc9ad5)
-
-Sign Out Page Mobile 
-
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/d11fd185-e4b6-46c0-9222-e41f2e8f2f51)
-
-Basket Contents Page Mobile 
-
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/863e1be5-5ef2-46a8-9e21-27ebe778a122)
-
-Newsletter Sign Up Page Mobile 
-
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/53c4485a-75dd-449d-b1e3-8698f3d7f37c)
-
-
 #### -	HTML – code was validated using the W3C HTML Markup Validation 
 #### -	CSS – code was validated using the W3C CSS Validation 
 #### -	JavaScript – code was validated using JSHint
@@ -505,113 +439,205 @@ This project uses the Django framework
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/4f7f0113-3828-4996-afc4-876ae1357562)
 
 
-### 11 As a user i want to be able to view the course in more details so that I can make an informed decision wheather this course is suitable for my needs. #### Once the user navigates to the all_courses page they will see a list of course cards and on each course card there is a link to course details which brings the user to the detailed courses page.  Example of course details link on the course details card ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/7b8dfb83-e048-4476-9b8c-51058b3643b7) Example of the detailed course page ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1e38e621-babc-4fa0-8803-3be21be0a5ac)
+### 11 As a user i want to be able to view the course in more details so that I can make an informed decision wheather this course is suitable for my needs. 
+#### Once the user navigates to the all_courses page they will see a list of course cards and on each course card there is a link to course details which brings the user to the detailed courses page.  Example of course details link on the course details card 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/7b8dfb83-e048-4476-9b8c-51058b3643b7) 
+
+Example of the detailed course page 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1e38e621-babc-4fa0-8803-3be21be0a5ac)
 
 ### 12 As a user search courses by category of healthcare or safety so that i can choose which category is of more interest.  
+
 #### This is located in the all_courses page at the left hand side and there is a Group By search and Location serach.  
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/cc7f2599-8088-4c80-8c42-5d564902fd94)
 
 ### 13 As a user I want to be able to search by location either online or onsite in the classroom.  Also i want to be able to group courses in relation to health and safety. 
-List of online courses ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/cc7f2599-8088-4c80-8c42-5d564902fd94) List of classroom courses ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9430f98f-87d6-4f03-b5b1-6b796fae4735) list of health courses ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1a95a21e-5e6b-471c-b04a-3b3613386739) list of safety courses ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/f9b495fd-d422-4832-8b21-facc20b1e842)
 
-### 14 As a user I want to be able to add courses to the basket so that i can clearly see total cose of each course or courses.  
+List of online courses 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/cc7f2599-8088-4c80-8c42-5d564902fd94) List of classroom courses 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9430f98f-87d6-4f03-b5b1-6b796fae4735) list of health courses 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1a95a21e-5e6b-471c-b04a-3b3613386739) list of safety courses 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/f9b495fd-d422-4832-8b21-facc20b1e842)
+
+### 14 As a user I want to be able to add courses to the basket so that i can clearly see total cose of each course or courses. 
+
 #### When the user navigates to the Basket on the nav bar they can see first of all if they have items in the basket as the amount is displayed under the heading and once they click on the basket link they will be carried to the basket page where they will see items if they have added to the basket. 
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/989cc3db-1964-42e0-8774-a181bbb55b98)
+
 #### if there is not items in the basket they will be brought to the following page.  
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/92bcc968-7298-4ae4-a3d2-6a5759f7ad88)
 
 ### 15 As a user I want to be able to view all courses in the basket so that i can clearly see the total cose of each course or courses.  
+
 #### When the user clicks on the basket on the nav bar they will be brought to the basket page where they will be able to see the items added to the basket.  
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/079b6471-4dd8-4b99-b5fc-b53e0ecd411c)
 
-### 16 As a user I want to be able to change the quantity of courses in the bag so that I can accommodate my requirements should they change.  
+### 16 As a user I want to be able to change the quantity of courses in the bag so that I can accommodate my requirements should they change. 
+
 #### When the user navigates to the basket page they can increase or decrease the amount in the basket with the increment and deincrement option. 
+
  ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/01c7bdf5-24e9-4c62-9dc1-f868ed3346e6)
 
-### 17 As a user enter my payment details so that I can complete the purchase.  
-#### When the user is in the basket page they can proceed to make a purchase and they will be brought to the secure purchase page where they will see their details if they are registered but if they are not registered the user will have to enter their details.    
-Proceed to payment ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/7d6666c0-a854-4875-bb04-2dea1ba7d5ef) Secure Purchase Page ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/888f869d-2842-4a84-97ba-13c32da7770d)
+### 17 As a user enter my payment details so that I can complete the purchase. 
+
+#### When the user is in the basket page they can proceed to make a purchase and they will be brought to the secure purchase page where they will see their details if they are registered but if they are not registered the user will have to enter their details.  
+
+Proceed to payment 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/7d6666c0-a854-4875-bb04-2dea1ba7d5ef) Secure Purchase Page ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/888f869d-2842-4a84-97ba-13c32da7770d)
 
 
 ### 18 See order confriamtion once purchase is complete.  
-#### When the user is on the Secure Purchase Page above and they have all their details entered they can then click on Complete Order.  Once this is clicked the spinner will appear on a red background and when successfull will navigate to the purchase success page where the user can see their order. 
-Loading Spinner ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/12cb4196-5105-4436-aa2d-52aa89f7f678) Thank You For Your Purchase Page ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6b619a11-f61c-4d81-803a-5f0a6b02d32d)
+
+#### When the user is on the Secure Purchase Page above and they have all their details entered they can then click on Complete Order.  Once this is clicked the spinner will appear on a red background and when successfull will navigate to the purchase success page where the user can see their order.
+
+Loading Spinner 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/12cb4196-5105-4436-aa2d-52aa89f7f678)
+
+ Thank You For Your Purchase Page 
+ 
+ ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6b619a11-f61c-4d81-803a-5f0a6b02d32d)
 
 
-### 19 User can see an order history once logged in.  
+### 19 User can see an order history once logged in. 
+
 #### Once the user is logged in they will be able to navigate to My Dashboard where they will be able to see a list of purchase records once an order is place.  
 
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/66cee049-990d-437b-b51c-5b8fcd06e467)
 
 ### 20 As a user I want to be able to make a purchase without having to register 
-#### When an unregisterd user accesses the all courses page they can choose a course to go to the detailed view and once on this page they can add the cousre to the basket and proceed to purchase and then purchase success page.  On the screenshot following one can see that the user is not logged in when making the purchase 
+
+#### When an unregisterd user accesses the all courses page they can choose a course to go to the detailed view and once on this page they can add the cousre to the basket and proceed to purchase and then purchase success page.  On the screenshot following one can see that the user is not logged in when making the purchase
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/50d3978b-9f1b-4732-ab7a-34913cd8f64a)
 
 ### 21 As a user i want to be able to sign up to the company newsletter 
+
 #### On the nav bar at the top of each page there is a link to sign up.  When the user clicks on this link they will navigate to the newslwetter signup page where they will enter their fullname, company and email.  
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/433fa2c2-9e4b-4aa8-be10-2c1f9fb09939)
 #### Once these details are entered they can then click on the submit button they will be then brought to Newsletter Signup confirmation page. 
+
  ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/f04eab86-9b4d-43f9-81ca-7eac304766fe)
 
 ### 22 As a user I want to be able to submit a contact form 
+
 #### In the top nav bar there is a link to Contact Us once the user clicks on this link they will be brought to the Contact KACSafety Page where the user can enter their details and their query.  
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/c0f04159-5ff9-427b-9412-d330165ae6df)
+
 #### Once the user has entered the details and clicked on submit they will then be brought to the Contact Success Page. 
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/a8ccb9ed-e6df-4256-a2fe-8e2936cfc371)
 
 ### 23 As a user I want to be able to access company social media page 
+
 #### If the user naviages to the bottom footer they will see a list of links for social meida platforms like facebook, instagram, twitter and youtube.  If the user click on the icon of their choice they will be brought to the website page for that social media option. 
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/c4843732-b3d4-4cc7-8a15-06a4002b69c2)
 Youtube
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/bde0e16c-6755-4f92-ba95-09b39557d337)
 Facebook
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/cbc0a2ae-bb80-4827-a838-f961913041c0)
 Twitter
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/99377b81-ac63-4c8f-a097-8ca61fffae4f)
 Instagram
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6c3ffbe3-fe61-4310-8afb-750e51d3d11c)
 
 ### 24 As a user i want to be able to see confirmation of actions completed.
+
 #### When a user registers, logins etc a message will appear in the top right hand corner.  At present it is only displaying for a second so timing will have to be adjusted. 
-Successful Signin ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6a87f1bc-3e02-4e03-a699-a6c79a189ed2) Add Couse ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/fc3277d3-81a5-4e26-8767-837cb714f51e) Successful Payment ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6041196d-6045-452b-9275-7565150fc7db) Contact Success ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b26adccd-fda0-4115-acc8-67650f81359f)  newsletter signup ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/34437f01-2d3c-408a-88d3-0941afe036d5)
+
+Successful Signin 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6a87f1bc-3e02-4e03-a699-a6c79a189ed2) 
+
+Add Couse 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/fc3277d3-81a5-4e26-8767-837cb714f51e) 
+
+Successful Payment 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/6041196d-6045-452b-9275-7565150fc7db) 
+
+Contact Success 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b26adccd-fda0-4115-acc8-67650f81359f)  
+
+newsletter signup 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/34437f01-2d3c-408a-88d3-0941afe036d5)
 
 ### 25 As an administrator I want to be able to add new courses.  
+
 #### When an administrator logs in they will be able to add courses through the nav link dashboard / course administration.  
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/1e593bd2-c72b-479b-8db0-5308b7b2d746)
-#### When the form is completed and the user clicks on the Add Course button 
+
+#### When the form is completed and the user clicks on the Add Course button
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/d1c5cd75-493c-47b3-bfd2-e1374dfe960d)
 
-#### they will then be brought to the detailed courses page where they will see that course added.  
+#### they will then be brought to the detailed courses page where they will see that course added.
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/d1c5cd75-493c-47b3-bfd2-e1374dfe960d)
 
 ### 26 As an administrator I want to be able to edit a course.  
-#### An administrator will be able to edit a course when they click on edit on the detailed course page. Once edit is clicked they will be brought to the edit course page.  
+
+#### An administrator will be able to edit a course when they click on edit on the detailed course page. Once edit is clicked they will be brought to the edit course page. 
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/2ab297f0-828f-4707-86d2-89be18437b43)
-#### Here once they have updated the details they can choose update course or cancel.  They will also be able to access the edit course page when the administrator goes to the all courses page then click on course details and the will be brought to the detailed course page where there is an option to edit and delete course.  
+
+#### Here once they have updated the details they can choose update course or cancel.  They will also be able to access the edit course page when the administrator goes to the all courses page then click on course details and the will be brought to the detailed course page where there is an option to edit and delete course. 
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/add31aa6-62fb-43d0-a59d-8ad32f7a0740)
+
 #### A administrator can click on course details and then navigate to the detailed courses page where they have the option to edit or delete.  
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/806d4247-e003-49aa-a491-44bea33cbcdb))
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/806d4247-e003-49aa-a491-44bea33cbcdb)
 
 ### 27 As an administrator I want to be able to delete a course.
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/568a5bc8-85ac-4f96-813a-9d1640f737bb) 
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b8f6761c-14b2-497e-9404-60e16537866b)
 
 ### 28 As an administrator I want to be able to update the general content on all pages 
+
 #### As the administrator the user will be able to access all parts of the site and the admin panel where they will be able to manage users.  
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/98f298de-04b5-4475-b921-7a045474c62a)
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/0beb5494-f7e2-4297-affb-1471cfd6d630)
 
 
 ### 29 As an administrator I want to be able to manage all incomming orders.
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/06b2fd64-9325-49e4-85ad-e17cf89e2e29)
 
 ###  30 As an administrator I want to be able to manage all incomming contact requests. 
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/06b2fd64-9325-49e4-85ad-e17cf89e2e29)
 
 ### 31 As a developer I want to be able to test all parts of the django ecommerce website 
+
 Testing of user stories, features, code validation, lighthouse reports have all being carried out and detailed report is contained in this readme file.
 
 ### 32 As a developer I want to be able to deploy successfully. This project has been deployed to Heroku 
+
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9b499754-f851-4d26-8327-eb39fdff409e)
 
 
@@ -620,25 +646,30 @@ Testing of user stories, features, code validation, lighthouse reports have all 
 
 
 ## Bugs & Items To Be Addressed
-#### - There is an issue with deployment and static files and alot of my images and details for my courses are not displaying at present. There are two couses there which i have added durining testing.    
-#### The Favicon file sometime throws a 404 error in ther terminal but not always. The favicon icon is in the file and displays but on some rare occasions i have seen it to throw and error. 
-#### - Robots.txt file has been installed and set up but have noticed that it sometimes can throw a 404 error.  
-#### - I had to leave debug = True in this project in order to get project to display in gitpod. In the Heroku app it is displaying without static and css. Currently trying to resolve an issue with deployment.  
+    
+#### The Favicon file sometime throws a 404 error in the terminal but not always. The favicon icon is in the file and displays but on some rare occasions i have seen it to throw and error. 
+
+#### - Robots.txt file has been installed and set up.
+ 
 
 
 ### Features Testing
+
 #### Each feature in the ecommerce site was tested to ensure that it functioned correctly there are some features that still need to be implemented.  
 
 ### Responsiveness 
-#### The above is a work in progress at the minute which will need to be addressed ran out of time for this project.  
+
+#### The site is reponsive across all devices and screen sizes.   
 
 
 #### Milestone/Epic : Project Planning Design and Setup (Admin)
+
 -	#2 Developer – Document project user requirements, scope and goals – (This was entered twice by mistake under the project milestone above)
 -	#3 Developer – Create wireframes, mock-ups, layouts and interface, user stories and kanban board. 
 -	#4 Developer – Setup project workspace on hosting platform 
 
 #### Milestone/Epic : Authentication & Access (Admin and User)
+
 -	#5 (35) Admin have full access to the site 
 -	#6 Admin – Manage user accounts
 -	#7 User – Register for a new account
@@ -647,6 +678,7 @@ Testing of user stories, features, code validation, lighthouse reports have all 
 -	#10 – User – Reset password 
 
 #### Milestone/Epic : Authentication & Access (Admin and User)
+
 -	#11 User – View full list of courses
 -	#12 User – View the course in more detail
 -	#13 User – Search courses by category 
@@ -664,6 +696,7 @@ Testing of user stories, features, code validation, lighthouse reports have all 
 -	#25 User – See confirmation of actions completed 
 -	
 #### Milestone/Epic : Management of courses and site (Admin)
+
 -	#26 Admin – Add new courses
 -	#27 Admin – Edit a course 
 -	#28 Admin – Delete a course 
@@ -672,14 +705,18 @@ Testing of user stories, features, code validation, lighthouse reports have all 
 -	#31 Admin – Manage all in-coming contact requests
 
 #### Milestone/Epic : Testing and Deployment (Admin)
+
 -	#32 Developer – Test all parts of the Django site 
 -	#33 Developer – Deploy successfully
 -	#34 Developer – Ensure site is responsive 
 
 
 ## Deployment 
+
 With a fully working django ecommerce project the final steps to hosting the project are as follows:
+
 #### •	First the database is created and this will be completed by using ElephantSQL
+
 1.	Set up an account with ElephantSQL if you don’t have one already else login to your account.  
 2.	Access the dashboard on ElephantSQL and click on the button ‘Create New Instance’.
 3.	Then set up your plan by giving your plan a ‘Name’ this is usually the name of the project, then select ‘Tiny Turtle (Free) plan’ and then leave the ‘Tags’ field blank.
@@ -690,7 +727,9 @@ With a fully working django ecommerce project the final steps to hosting the pro
 8.	Go to the ElephantSQL dashboard and click on the ‘database instance name’ for the project
 9.	Under Details in the section of this page click on copy icon at the right of the url 
 10.	Leaving this for a moment we need to create a new database instance 
+
 #### •	Next we will create the Heroku app 
+
 1.	Again if a new user set up and account with Heroku or if you have an account already log in with credentials.
 2.	Then click on ‘New’ to create a new app.
 3.	Give your app a name and select the region closest to you 
@@ -698,7 +737,9 @@ With a fully working django ecommerce project the final steps to hosting the pro
 5.	Open the ‘settings’ tab in Heroku 
 6.	Click on ‘reveal config vars’
 7.	Then add the config var ‘DATABASE_URL’ and then paste in the url which would have been copied from ElephantSQL. 
+
 #### •	With the database created in ElephantSQL and app created on Heroku revert back to code specifically to the settings.py file in the project folder in Gitpod (code anywhere if using this IDE) and we need to carry out the steps to connect the db to the local development web server.
+
 1.	In the terminal of the projects Gitpod workspace install dj_database_url and psycopg2 by inserting the following command in the terminal: pip3 install dj_database_url==0.5.0 psycopg2
 2.	Update the requirements.txt file with the newly install packages by typing the following command in the terminal – pip freeze > requirements.txt
 3.	In settings.py of the project folder import dj_database_url underneath the import os at the top of the page – import dj_database_url
@@ -718,11 +759,15 @@ DATABASES = {
          'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
      }
  }
+
 #### •	Now we need to confirm the database is set up
+
 1.	In ElephantSQL page for your database in the left hand side of the page select ‘BROWSER’.
 2.	Click the ‘Table queries’ button select ‘auth_user’
-3.	Click ‘Execute’ and you will then see the newly created superuser details displayed which is confirmation that the tables have been created and data can be added.  
-#### •	Referring back to the code in the Databases section of settings.py and in particular to counteract the exposing of variable we will add an if statement so that when the app is running on Heroku whet the database URL environment variable will be defined we connect to Postgres and otherwise we connect to SQLite.  
+3.	Click ‘Execute’ and you will then see the newly created superuser details displayed which is confirmation that the tables have been created and data can be added. 
+
+#### •	Referring back to the code in the Databases section of settings.py and in particular to counteract the exposing of variable we will add an if statement so that when the app is running on Heroku whet the database URL environment variable will be defined we connect to Postgres and otherwise we connect to SQLite. 
+
 1.	In settings.py and above DATABASES we will add the following code –
  if ‘DATABASE_URL’ in os.environ:
 	DATABASES = {
@@ -755,7 +800,9 @@ SECRET_KEY = os.environ.get(‘SECRET_KEY’, ‘’)
 17.	Then push changes to GitHub.
 18.	You can go to Heroku and see the build log of the project and you can view same under ‘more view logs’.
 19.	Once this process if finished you will see the link for the app and note saying it was successfully deployed to Heroku.  
-#### •	Creating a AWS account – the site needs a place to store the static files and images for the site so we will use a cloud-based storage called Amazon Web Services s3 AWS for short.  
+
+#### •	Creating a AWS account – the site needs a place to store the static files and images for the site so we will use a cloud-based storage called Amazon Web Services s3 AWS for short. 
+
 1.	Create a AWS account if you have not an account already else you can login by going to the following page https://aws.amazon.com/console/ and click on my account on the nav menu at the top of the page click on the dropdown and click on ‘AWS Management Console’.
 2.	Once logged in you need to search of s3  under the services menu 
 3.	When you navigate to the S3 page click on ‘create bucket’  and give it the same name as your Heroku app New we will create a bucket.
@@ -765,11 +812,9 @@ SECRET_KEY = os.environ.get(‘SECRET_KEY’, ‘’)
 7.	Then click on ‘Create Bucket’ and this will bring you to the bucket list page
 8.	Locate the bucket that you have just created click on it and  and you will be brought to the settings section
 9.	Click on the properties tab and then click on ‘Static website hosting’ (which will give a new endpoint which can be used to access it from the internet) this will open a new dialog box called Static website hosting.  In the input box under Index document type ‘index.html’ and in the input box under Error document type ‘error.html’.  Then click on save.  
-10.	Navigate to the permissions tab and then click on ‘CORS configuration’ (this will set up the required access between the Heroku app and this s3 bucket’
+10.	Navigate to the permissions tab and then click on ‘CORS configuration’ (this will set up the required access between the Heroku app and this s3 bucket’)
 
-***** PUT IN TWO IMAGES 
-
-Then click on Save
+11. Then click on Save
 
 12.	Now navigate to the Bucket Policy tab and click on the ‘policy generator’ at the bottom of the screen so that we can create a security policy for this bucket.  
 13.	This will bring you to the AWS Policy Generator Page where you will need to input some data.
@@ -799,8 +844,10 @@ Then click on Save
 37.	Then create a ‘user name’ and give the user ‘programmatic access’ and then click on ‘next’. 
 38.	Under Add user to group click on the ‘policy for the project’  to attach to the user and then click on ‘next tags’ then ‘next review’ and then click ‘create user’.
 39.	This will bring you to the page where there is a success message to say you have successfully created the users shown on this page.
-40.	We need to download the csv file on that page as it contain the users access key and secret access key which will be used to authenticate the user from the django app. V.I This file can only be downloaded once and should be completed at this stage.  
+40.	We need to download the csv file on that page as it contain the users access key and secret access key which will be used to authenticate the user from the django app. V.I This file can only be downloaded once and should be completed at this stage. 
+
 #### •	Connect Django to s3
+
 1.	To connect Django to s3  we need to install two packages boto3 and django-storages
 2.	Back in our project in Gitpod type the following command in the termianl to install boto3 – pip3 install boto3
 3.	And to install django-storages type the following command in the terminal – pip3 install django-storages
@@ -816,6 +863,7 @@ If ‘USE_AWS’ in os.environ:
 8.	Now we need to go to Heroku and add aws keys to config variables in the deploy section 
 
 ## Github
+
 -	Login to GitHub and create your new repository 
 -	Go to the Repositories tab click on New 
 -	Then enter the name of the repository you wish to create 
@@ -823,6 +871,7 @@ If ‘USE_AWS’ in os.environ:
 -	New repository is now ready to use 
 
 ## Setting Up Django 
+
 This project uses the Django framework 
 -	First of all the user needs to install Django so in the terminal enter the command –                        pip3 install django
 -	Then to create a new project the user needs to type the following command in the terminal  - django-admin startproject ‘insert your project name here’
@@ -843,10 +892,13 @@ This project uses the Django framework
 -	This will push all the setup and changes for this project up to GitHub.  
 
 ## All Auth 
+
 #### To cover user account for example registration and login the user will use Allauth which automatically handles the user account process.   The steps to installing django allauth are in the attached link: 
+
 https://django-allauth.readthedocs.io/en/latest/installation.html
 
 ## Heroku 
+
 #### The user will do the final deployment to Heroku 
 #### Login to your account click on the new button and crate new app
 #### Choose a name for the app, select the region which is closest to you and click create new app
@@ -857,47 +909,58 @@ https://django-allauth.readthedocs.io/en/latest/installation.html
 #### To use Postgres you will need to install dj_database_url and psycopg2. This should be done in whatever IDE you are using.
 #### 1	In your IDE type the command:
 pip3 install dj_database_url
+
 #### 2	Then once that is installed type the command:
 pip3 install psycopg2-binary
+
 #### 3	Then, to make sure Heroku install all your apps requirements when you deploy it, run the command:
 pip3 freeze > requirements.txt
+
 #### 4	Next, navigate to your setting.py file in your main project folder. At the top of the file add the line: import dj_database_url
+
 #### 5	Then scroll down the file till you find your database settings. Comment out the default configuration and underneath insert the code:
+
 #### 6	DATABASES = {
 'default': dj_database_url.parse(*Enter Database URL here*)
 }
 #### 7 The database URL can be found in the settings tab of your app in heroku, under Config Vars. Make sure to have the link in quotation marks
+
 #### 8 If you want to migrate any data from your current database to the Postgres database in Heroku, make sure you run this line before connecting to Postgres:
 ./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json
+
 #### 9 Once that's saved, you will now need to run migrations because you have connected to a new database. This is done by running the command: python3 manage.py migrate If you had previously saved your data to import into the postgres database, you can now run the command:
 ./manage.py loaddata db.json
+
 #### 10	Now that's setup you will now need to create a superuser for the new database. The command is: python3 manage.py createsuperuser Note, once the superuser is created, it's a good idea to sign into the admin panel, locate the user, and check the option that says their email is verified. This is needed otherwise Allauth won't allow the user to sign into the store.
+
 #### 11 Before you commit these changes, you will need to remove the Databases section in the settings.py and uncomment the original database. This is to stop your Postgres database URL from ending up in version control.
+
 #### 12 Now we can create an if statement in our settings.py to run the postgres database when using the app on heroku or sqlite if not. Scroll back to the database section and refactor the code to look like this: 
 	if 'DATABASE_URL' in os.environ:
         DATABASES = {
-7.	        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-8.	    }
-9.	else:
-10.	    DATABASES = {
-11.	        'default': {
-12.	            'ENGINE': 'django.db.backends.sqlite3',
-13.	            'NAME': BASE_DIR / 'db.sqlite3',
-14.	        }
-15.	}
+	        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+	    }
+	else:
+	    DATABASES = {
+	        'default': {
+	            'ENGINE': 'django.db.backends.sqlite3',
+	            'NAME': BASE_DIR / 'db.sqlite3',
+	        }
+	}
 
 
 
 # Credits
-## Content
-### Content for courses were taken from HSA website.  
+### Content
+### Content for courses were taken from Helath and Safety Authority  website.  
 
-## Media
+### Media
 ### Most pictures were taken form pexels.com
 
 # Acknowledgements
+
 #### Thanks to our Cohort Facilitator Iris, Class Lead Ivette, to my amazing class mates for their time and knowlege, to the all the patient people in Tutor Assitance and to Student Care.  
-#### Also want to say a big thank you to Mentor Sammy and also to Marcel for all their help and support along this journey.  
+#### Also want to say a big thank you to Mentor Sammy, Marcel and Luke for all their help and support along this journey.  
 
 
 
