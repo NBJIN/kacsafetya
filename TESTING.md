@@ -84,9 +84,11 @@
 
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/d3fcbb66-c99f-45b6-bc14-af58cf722cf4)
 
+
  - 3 all_courses page 2 - No Errors or Warnings 
 
  ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/471aeeed-9a5f-421d-a799-6259388aaa33)
+
 
 - 4 all_courses page 3 - No Errors or Warnings
 
@@ -122,9 +124,14 @@
 
 
 
-- 12 courses/edit (edit a course) - No Errors or warnings 
+- 12 courses/edit (edit a course) - Error
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+I have an error in my edit course page re date field that its a bad value.  The way 
+its shown on the page is the way that the developer wants it to display.  
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/b119a15b-d17c-4163-94ec-a2ca264ab494)
+
+
 
 - 13 My Dashboard - No Errors or Warnings
 
