@@ -645,9 +645,11 @@ Testing of user stories, features, code validation, lighthouse reports have all 
   
 
 
-## Bugs & Items To Be Addressed
+## Known Bugs 
     
 #### The Favicon file sometime throws a 404 error in the terminal but not always. The favicon icon is in the file and displays but on some rare occasions i have seen it to throw and error. 
+
+#### Got an error at one stage in under the Network tab in relation to static files storage cloudinary storage have done some work with this code in settings.py and the 404 doesnt seem to be appearing now.  
 
 #### - Robots.txt file has been installed and set up.
  
