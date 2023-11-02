@@ -649,7 +649,7 @@ Testing of user stories, features, code validation, lighthouse reports have all 
     
 #### The Favicon file sometime throws a 404 error in the terminal but not always. The favicon icon is in the file and displays but on some rare occasions i have seen it to throw and error. 
 
-#### Got an error at one stage in under the Network tab in relation to static files storage cloudinary storage have done some work with this code in settings.py and the 404 doesnt seem to be appearing now.  
+#### Got an error as i was about to submit project in under the Network tab in relation "GET https://res.cloudinary.com/dc4lcot1r/raw/upload/v1/static/contact/css/contact.d41d8cd98f00.css net::ERR_ABORTED 404" tried to do some work on it was in contact with tutor support but ran out of time.
 
 #### - Robots.txt file has been installed and set up.
  
