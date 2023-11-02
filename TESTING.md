@@ -76,53 +76,64 @@ if there is no items in the basket they will be able to see this when they see t
 
  ## Starting with HTML below is a screenshot of each page which has been passed through W3C Validator.  
  - 1 Landing Page - No Errors or Warnings
- ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/40452372-6a51-4a29-a95b-0aea73e5b23c)
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/3ee465e9-67e2-4795-b654-453de7cc9aa7)
+
  - 2 all_courses page 1 - No Errors or Warnings
- ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/7966de88-a3e1-4942-b4b4-2bd0a5b5fe05)
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/2f4a0636-88b6-42db-94db-345d0fde9b28)
+
  - 3 all_courses page 2 - No Errors or Warnings 
-  ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/0bd702ab-10db-42e2-9876-8e0241a94e34)
+
+  ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/de127a78-b903-4e57-9473-73f0ec79ca15)
+
 - 4 all_courses page 3 - No Errors or Warnings
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9b0f429a-4bbe-4576-8bfc-617a64aa41b2)
-- 5 all_courses page 4 - No Errors or Warnings 
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/cecb2497-0dbf-4d8a-b9c7-c8d24eac6114)
-- 6 coourses/courses/detail (detailed courses page) - No Errors or Warnings
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9f191817-de1f-4697-af50-57b78b6eda45)
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/9b736ddd-e35c-4415-8cc7-f19a1553b2a1)
+
+- 5 courses/courses/detail (detailed courses page) - No Errors or Warnings
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/5c5e72ce-252d-4deb-bd01-c792b95d9519)
+
+- 6 courses/edit (edit a course) - No Errors or warnings 
+
 - 7 courses/courses/detail/16 (Add course to basket) - No Errors or Warnings
-![image](https://github.com/NBJIN/kacsafetya/assets/106515976/cb3d543a-151e-43a0-8b6f-609265d77f28)
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/ea368ff0-841c-4a58-897c-b849eb9a71b1)
+
 - 8 basket page - No Errors or warnings
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/e9800504-92b1-482a-8b50-64060889d9cd)
-- 9 Purchase Page (Secure Purchase Page) - No Errors or Warnings
+- 8 Purchase Page (Secure Purchase Page) - No Errors or Warnings
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/2e20a9ac-81b1-45b8-99cd-6b7d306414e7)
--10 purchase/purchase/purchase_success/ (Thank Your For Your Purchase page) - No Errors or Warnings
+-9 purchase/purchase/purchase_success/ (Thank Your For Your Purchase page) - No Errors or Warnings
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/aeb31c79-6230-4165-8eca-5bf938b400ed)
-- 11 contact page - (Contact The KAC Safety Team Page) - No Errors or Warnings
+- 10 contact page - (Contact The KAC Safety Team Page) - No Errors or Warnings
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/feb3dc59-e7c6-4343-a00e-3ce04d02864e)
-- 12 contact/contact_approved (Contact Success Page ) - No Errors or Warnings
+- 11 contact/contact_approved (Contact Success Page ) - No Errors or Warnings
 
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/bca1511a-0b1c-4336-a880-168359b95949)
 
-- 13 courses/add (Course Administration Page) - No Errors or Warnings
+- 12 courses/add (Course Administration Page) - No Errors or Warnings
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/4ad8a816-35f0-49c2-b237-133343e7ab65)
 
-- 14 dashboard (My Dashboard Page) - No Errors or Warnings
+- 13 dashboard (My Dashboard Page) - No Errors or Warnings
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/7571f7c7-f21f-4bd3-8cee-a040cc4aef6e)
 
-- 15 accounts/logout/ (Sign Out Page) - No Errors or Warnings
+- 14 accounts/logout/ (Sign Out Page) - No Errors or Warnings
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/123b835a-d62e-4264-b48c-f09f576d0c12)
 
-- 16 basket/ (Basket Contents Page) - No Errors or Warnings
+- 15 basket/ (Basket Contents Page) - No Errors or Warnings
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/d5989a7d-00e8-426c-a55b-575e728d929b)
 
-- 17 mailchimpnews/subscribe (Newsletter Signup Page) - No Errors or Warnings 
+- 16 mailchimpnews/subscribe (Newsletter Signup Page) - No Errors or Warnings 
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/8db08f2e-abf8-477c-b53a-ae209e344a9d)
 
-- 18 mailchimpnews/subscribe/success (Newsletter Signup )
+- 17 mailchimpnews/subscribe/success (Newsletter Signup )
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/5a2049e8-e66f-47ef-91e6-37346cd04c44)
 
-- 19 accounts/signup/ (Sign UP Page) - No Errors or Warnings
+- 18 accounts/signup/ (Sign UP Page) - No Errors or Warnings
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/846dcaba-c7c1-4ed9-a689-01ecf0c25085)
 
-- 20 accounts/login/ (Sign In Page) - No Errors or Warnings
+- 19 accounts/login/ (Sign In Page) - No Errors or Warnings
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/5be30326-ccdd-4434-bf32-4c9af486a13b)
 
 ## CSS was validated through the W3

@@ -289,10 +289,84 @@ https://mycolor.space/ was used to research these color types.
 ### Even though there still work to be completed on this project I was able to carry out the folloiwng testing .   
 ### Validators
 #### -	Lighthouse report – Lighthouse was used to evaluate the ecommerce site performance, accessibility, best practices and SEO. The following is a screenshot.
+### Desktop 
 Home Page Desktop
 ![image](https://github.com/NBJIN/kacsafetya/assets/106515976/bea67bf4-c66c-4a46-b965-9a57ab5e9369)
 
+All Courses Page Desktop 
 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/ba595987-edba-4076-aa77-432770f82432)
+
+All Courses Page 2 Desktop 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/8666a643-2be7-4a87-a912-6e66f72ecde6)
+
+All Courses Page 3 Desktop 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/8b133049-dfe1-4d82-a071-8caf394ad869)
+
+Contact Us Page Desktop 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/05dab8d3-0938-4776-9cf6-06108fade332)
+
+Course Administration Page Desktop
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/7ba28fa8-7864-4fd9-a44c-b16c228fba42)
+
+My Dashboard Page Desktop 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/f27f7419-3d4c-4cbe-953f-702e7e7a7bca)
+
+Sign Out Page Desktop 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/fb587125-03c2-41c9-8d06-7b3849d557a8)
+
+Basket Contents Page Desktop 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/0047a709-4f9d-4713-86c6-ee6304d2527e)
+
+Newsletter Sign Up Page Desktop 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/ef56d07a-d260-4ec7-819a-4dfacb2c2dc6)
+
+### Mobile 
+
+Home Page Mobile 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/61477651-0a9f-471a-96cc-ed8152a0ad1a)
+
+All Courses Page 1 Mobile 
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/f891dcc0-bde8-4e77-b930-731cff9c9c8f)
+
+All Courses Page 2 Mobile 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/2074d1b6-100d-40b2-94fc-8665201c9c91)
+
+All Courses Page 3 Mobile 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/aee43f02-62f4-4382-badd-548cede37b6e)
+
+Contact Us Page Mobile 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/148107cc-1aba-4ef3-bfa9-0d7de791d740)
+
+
+Course Administration Page Mobile 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/c52c9c8d-784d-4b10-8e27-e0ce90a04b88)
+
+My Dashboard Page Mobile 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/bf03ebbb-e559-4c03-af1b-a2424bcc9ad5)
+
+Sign Out Page Mobile 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/d11fd185-e4b6-46c0-9222-e41f2e8f2f51)
+
+Basket Contents Page Mobile 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/863e1be5-5ef2-46a8-9e21-27ebe778a122)
+
+Newsletter Sign Up Page Mobile 
+
+![image](https://github.com/NBJIN/kacsafetya/assets/106515976/53c4485a-75dd-449d-b1e3-8698f3d7f37c)
 
 
 #### -	HTML – code was validated using the W3C HTML Markup Validation 
